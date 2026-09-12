@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.7.1]
+- Updated to 26.2
+  - does not use new blocks added in 26.2, straight port from 26.1.2
+  - sulfur cave biomes unchanged
+
 ## [2.7.0]
 - Updated to 26.1.2 with a lot of help from the community. 
   - Special thanks to @Jayden Police44 (jaydenpolice44.1.0) and @j (libxrtas)

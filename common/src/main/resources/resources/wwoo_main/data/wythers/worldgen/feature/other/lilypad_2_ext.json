@@ -1,0 +1,105 @@
+{
+  "type": "minecraft:sequence",
+  "features": [
+    {
+      "feature": "wythers:other/lilypad_2",
+      "placement": []
+    },
+    {
+      "feature": {
+        "type": "minecraft:overlay",
+        "features": [
+          {
+            "feature": "wythers:other/lilypad_leaf_north",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 1,
+                "y": 0,
+                "z": -1
+              }
+            ]
+          },
+          {
+            "feature": "wythers:other/lilypad_leaf_north",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": 0,
+                "z": -1
+              }
+            ]
+          },
+          {
+            "feature": "wythers:other/lilypad_leaf_south",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 1,
+                "y": 0,
+                "z": 2
+              }
+            ]
+          },
+          {
+            "feature": "wythers:other/lilypad_leaf_south",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": 0,
+                "z": 2
+              }
+            ]
+          },
+          {
+            "feature": "wythers:other/lilypad_leaf_east",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 2,
+                "y": 0,
+                "z": 1
+              }
+            ]
+          },
+          {
+            "feature": "wythers:other/lilypad_leaf_east",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 2,
+                "y": 0,
+                "z": 0
+              }
+            ]
+          },
+          {
+            "feature": "wythers:other/lilypad_leaf_west",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": -1,
+                "y": 0,
+                "z": 1
+              }
+            ]
+          },
+          {
+            "feature": "wythers:other/lilypad_leaf_west",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": -1,
+                "y": 0,
+                "z": 0
+              }
+            ]
+          }
+        ]
+      },
+      "placement": []
+    }
+  ]
+}

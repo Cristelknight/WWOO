@@ -1,0 +1,53 @@
+{
+  "type": "minecraft:block_column",
+  "direction": "down",
+  "allowed_placement": {
+    "type": "minecraft:true"
+  },
+  "prioritize_tip": true,
+  "layers": [
+    {
+      "height": 1,
+      "provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:pale_moss_carpet"
+        }
+      }
+    },
+    {
+      "height": 1,
+      "provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:weeping_vines_plant"
+        }
+      }
+    },
+    {
+      "height": 1,
+      "provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:weeping_vines",
+          "properties": {
+            "age": "0"
+          }
+        }
+      }
+    },
+    {
+      "height": 1,
+      "provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:light",
+          "properties": {
+            "level": "0",
+            "waterlogged": "false"
+          }
+        }
+      }
+    }
+  ]
+}

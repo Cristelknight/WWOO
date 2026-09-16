@@ -1,0 +1,84 @@
+{
+  "feature": {
+    "type": "minecraft:random_selector",
+    "features": [
+      {
+        "chance": 0.0,
+        "feature": {
+          "feature": "wythers:tree/dark_forest_yew",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.0,
+        "feature": {
+          "feature": "wythers:tree/ancient_copper_beech",
+          "placement": []
+        }
+      }
+    ],
+    "default": {
+      "feature": "wythers:tree/dark_forest_beech",
+      "placement": []
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 2
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_block_tag",
+        "tag": "wythers:air_and_plants"
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": [
+          "minecraft:grass_block",
+          "minecraft:pale_moss_block"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -2,
+          0
+        ],
+        "blocks": [
+          "minecraft:dirt",
+          "minecraft:rooted_dirt"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_biomes",
+        "biomes": [
+          "pale_garden"
+        ]
+      }
+    }
+  ]
+}

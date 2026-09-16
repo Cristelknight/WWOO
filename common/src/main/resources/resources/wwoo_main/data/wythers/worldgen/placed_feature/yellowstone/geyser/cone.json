@@ -1,0 +1,34 @@
+{
+  "feature": {
+    "type": "minecraft:template",
+    "templates": [
+      {
+        "weight": 0,
+        "data": {
+          "id": "wythers:feature/yellowstone_geyser_cone_1"
+        }
+      },
+      {
+        "weight": 2,
+        "data": {
+          "id": "wythers:feature/yellowstone_geyser_cone_2"
+        }
+      },
+      {
+        "weight": 3,
+        "data": {
+          "id": "wythers:feature/yellowstone_geyser_cone_3"
+        }
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:smooth_quartz_slab"
+      }
+    }
+  ]
+}

@@ -14,13 +14,9 @@
       "condition": {
         "type": "minecraft:biome",
         "biomes": [
-          "minecraft:badlands",
-          "minecraft:eroded_badlands",
-          "minecraft:wooded_badlands",
-          "minecraft:jungle",
-          "minecraft:swamp",
-          "minecraft:mangrove_swamp"
-        ]
+                        "minecraft:forest",
+                        "minecraft:river"
+                      ]
       },
       "priority": 1
     }

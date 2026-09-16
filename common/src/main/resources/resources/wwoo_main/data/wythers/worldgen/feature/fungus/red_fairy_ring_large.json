@@ -1,0 +1,115 @@
+{
+  "type": "minecraft:overlay",
+  "features": [
+    {
+      "feature": "wythers:fungus/red_mushroom",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 4,
+          "y": 1,
+          "z": 1
+        }
+      ]
+    },
+    {
+      "feature": "wythers:fungus/red_mushroom",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 4,
+          "y": 1,
+          "z": -1
+        }
+      ]
+    },
+    {
+      "feature": "wythers:fungus/red_mushroom",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": -4,
+          "y": 1,
+          "z": 1
+        }
+      ]
+    },
+    {
+      "feature": "wythers:fungus/red_mushroom",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": -4,
+          "y": 1,
+          "z": -1
+        }
+      ]
+    },
+    {
+      "feature": "wythers:fungus/red_mushroom",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 1,
+          "z": 4
+        }
+      ]
+    },
+    {
+      "feature": "wythers:fungus/red_mushroom",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 1,
+          "z": -4
+        }
+      ]
+    },
+    {
+      "feature": "wythers:fungus/red_mushroom",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 2,
+          "y": 1,
+          "z": 3
+        }
+      ]
+    },
+    {
+      "feature": "wythers:fungus/red_mushroom",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 2,
+          "y": 1,
+          "z": -3
+        }
+      ]
+    },
+    {
+      "feature": "wythers:fungus/red_mushroom",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": -2,
+          "y": 1,
+          "z": 3
+        }
+      ]
+    },
+    {
+      "feature": "wythers:fungus/red_mushroom",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": -2,
+          "y": 1,
+          "z": -3
+        }
+      ]
+    }
+  ]
+}

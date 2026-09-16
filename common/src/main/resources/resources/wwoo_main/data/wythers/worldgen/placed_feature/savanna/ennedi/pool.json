@@ -1,0 +1,132 @@
+{
+  "feature": {
+    "type": "minecraft:lake",
+    "fluid": {
+      "type": "minecraft:simple",
+      "state": {
+        "id": "minecraft:water",
+        "properties": {
+          "level": "0"
+        }
+      }
+    },
+    "barrier": {
+      "type": "minecraft:simple",
+      "state": {
+        "id": "minecraft:smooth_sandstone"
+      }
+    },
+    "can_place_feature": {
+      "type": "minecraft:true"
+    },
+    "can_replace_with_air_or_fluid": {
+      "type": "minecraft:all_of",
+      "predicates": [
+        {
+          "type": "minecraft:matching_blocks",
+          "blocks": [
+            "minecraft:sand",
+            "minecraft:sandstone",
+            "minecraft:smooth_sandstone"
+          ]
+        },
+        {
+          "type": "minecraft:not",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": [
+              "minecraft:packed_mud",
+              "minecraft:granite",
+              "minecraft:dripstone_block",
+              "minecraft:sandstone",
+              "minecraft:smooth_sandstone"
+            ]
+          }
+        }
+      ]
+    },
+    "can_replace_with_barrier": {
+      "type": "minecraft:matching_blocks",
+      "blocks": [
+        "minecraft:sand",
+        "minecraft:sandstone"
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 3
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": "minecraft:sulfur"
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:smooth_sandstone"
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:offset",
+      "x": 0,
+      "z": 0,
+      "y": -1
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": [
+              "minecraft:cave_air"
+            ]
+          },
+          {
+            "type": "minecraft:solid"
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

@@ -1,0 +1,319 @@
+{
+  "feature": {
+    "type": "minecraft:overlay",
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:block_column",
+          "direction": "up",
+          "allowed_placement": {
+            "type": "minecraft:true",
+            "blocks": [
+              "minecraft:air",
+              "minecraft:dead_bush",
+              "minecraft:sweet_berry_bush"
+            ]
+          },
+          "prioritize_tip": true,
+          "layers": [
+            {
+              "height": 1,
+              "provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:dead_bush"
+                }
+              }
+            },
+            {
+              "height": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 0,
+                "max_inclusive": 1
+              },
+              "provider": {
+                "type": "minecraft:weighted",
+                "entries": [
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:sweet_berry_bush",
+                      "properties": {
+                        "age": "3"
+                      }
+                    }
+                  },
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:dead_bush"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "height": 1,
+              "provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:sweet_berry_bush",
+                  "properties": {
+                    "age": "1"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 10
+          },
+          {
+            "type": "minecraft:offset",
+            "x": {
+              "type": "minecraft:trapezoid",
+              "min": -2,
+              "max": 2,
+              "plateau": 0
+            },
+            "y": 0,
+            "z": {
+              "type": "minecraft:trapezoid",
+              "min": -2,
+              "max": 2,
+              "plateau": 0
+            }
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": [
+                    "minecraft:air",
+                    "minecraft:dead_bush",
+                    "minecraft:sweet_berry_bush"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_block_tag",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "tag": "minecraft:grass_blocks"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "feature": {
+          "type": "minecraft:block_column",
+          "direction": "up",
+          "allowed_placement": {
+            "type": "minecraft:true",
+            "blocks": [
+              "minecraft:air",
+              "minecraft:sweet_berry_bush"
+            ]
+          },
+          "prioritize_tip": true,
+          "layers": [
+            {
+              "height": 1,
+              "provider": {
+                "type": "minecraft:weighted",
+                "entries": [
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:sweet_berry_bush",
+                      "properties": {
+                        "age": "3"
+                      }
+                    }
+                  },
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:dead_bush"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "height": 1,
+              "provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:sweet_berry_bush",
+                  "properties": {
+                    "age": "1"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 20
+          },
+          {
+            "type": "minecraft:offset",
+            "x": {
+              "type": "minecraft:trapezoid",
+              "min": -3,
+              "max": 3,
+              "plateau": 0
+            },
+            "y": {
+              "type": "minecraft:trapezoid",
+              "min": -1,
+              "max": 0,
+              "plateau": 0
+            },
+            "z": {
+              "type": "minecraft:trapezoid",
+              "min": -3,
+              "max": 3,
+              "plateau": 0
+            }
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": [
+                    "minecraft:air",
+                    "minecraft:sweet_berry_bush"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_block_tag",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "tag": "minecraft:grass_blocks"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "feature": {
+          "type": "minecraft:simple_block",
+          "to_place": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:sweet_berry_bush",
+              "properties": {
+                "age": "0"
+              }
+            }
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 70
+          },
+          {
+            "type": "minecraft:offset",
+            "x": {
+              "type": "minecraft:trapezoid",
+              "min": -5,
+              "max": 5,
+              "plateau": 0
+            },
+            "y": {
+              "type": "minecraft:trapezoid",
+              "min": -2,
+              "max": 1,
+              "plateau": 0
+            },
+            "z": {
+              "type": "minecraft:trapezoid",
+              "min": -5,
+              "max": 5,
+              "plateau": 0
+            }
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": [
+                    "minecraft:air"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_block_tag",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "tag": "minecraft:grass_blocks"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 2
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 1
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "blocks": [
+            "minecraft:sulfur"
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "type": "minecraft:block_column",
+  "direction": "down",
+  "allowed_placement": {
+    "type": "minecraft:true"
+  },
+  "prioritize_tip": true,
+  "layers": [
+    {
+      "height": 1,
+      "provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:pale_moss_carpet"
+        }
+      }
+    },
+    {
+      "height": {
+        "type": "minecraft:weighted_list",
+        "distribution": [
+          {
+            "weight": 0,
+            "data": 1
+          },
+          {
+            "weight": 1,
+            "data": 0
+          }
+        ]
+      },
+      "provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:pale_hanging_moss",
+          "properties": {
+            "tip": "false"
+          }
+        }
+      }
+    },
+    {
+      "height": 1,
+      "provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:pale_hanging_moss",
+          "properties": {
+            "tip": "true"
+          }
+        }
+      }
+    },
+    {
+      "height": 1,
+      "provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:light",
+          "properties": {
+            "level": "0",
+            "waterlogged": "false"
+          }
+        }
+      }
+    }
+  ]
+}

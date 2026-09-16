@@ -1,0 +1,1860 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "state_provider": {
+      "type": "minecraft:rule_based",
+      "rules": [
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:dead_brain_coral_block"
+          },
+          "then": {
+            "type": "minecraft:noise",
+            "noise": {
+              "base_octave": -4,
+              "amplitude_modifiers": [
+                2,
+                2,
+                2
+              ],
+              "octave_count": 3,
+              "normalize": "legacy"
+            },
+            "scale": 1,
+            "seed": -817103696,
+            "states": [
+              {
+                "id": "minecraft:dead_brain_coral_block"
+              },
+              {
+                "id": "minecraft:brain_coral_block"
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:dead_bubble_coral_block"
+          },
+          "then": {
+            "type": "minecraft:noise",
+            "noise": {
+              "base_octave": -4,
+              "amplitude_modifiers": [
+                2,
+                2,
+                2
+              ],
+              "octave_count": 3,
+              "normalize": "legacy"
+            },
+            "scale": 1,
+            "seed": -817103696,
+            "states": [
+              {
+                "id": "minecraft:dead_bubble_coral_block"
+              },
+              {
+                "id": "minecraft:bubble_coral_block"
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:dead_fire_coral_block"
+          },
+          "then": {
+            "type": "minecraft:noise",
+            "noise": {
+              "base_octave": -4,
+              "amplitude_modifiers": [
+                2,
+                2,
+                2
+              ],
+              "octave_count": 3,
+              "normalize": "legacy"
+            },
+            "scale": 1,
+            "seed": -817103696,
+            "states": [
+              {
+                "id": "minecraft:dead_fire_coral_block"
+              },
+              {
+                "id": "minecraft:fire_coral_block"
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:dead_horn_coral_block"
+          },
+          "then": {
+            "type": "minecraft:noise",
+            "noise": {
+              "base_octave": -4,
+              "amplitude_modifiers": [
+                2,
+                2,
+                2
+              ],
+              "octave_count": 3,
+              "normalize": "legacy"
+            },
+            "scale": 1,
+            "seed": -817103696,
+            "states": [
+              {
+                "id": "minecraft:dead_bubble_coral_block"
+              },
+              {
+                "id": "minecraft:bubble_coral_block"
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:dead_tube_coral_block"
+          },
+          "then": {
+            "type": "minecraft:noise",
+            "noise": {
+              "base_octave": -4,
+              "amplitude_modifiers": [
+                2,
+                2,
+                2
+              ],
+              "octave_count": 3,
+              "normalize": "legacy"
+            },
+            "scale": 1,
+            "seed": -817103696,
+            "states": [
+              {
+                "id": "minecraft:dead_tube_coral_block"
+              },
+              {
+                "id": "minecraft:tube_coral_block"
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:brain_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 3,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:brain_coral_wall_fan",
+                  "properties": {
+                    "facing": "west",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              -1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:brain_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 3,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:brain_coral_wall_fan",
+                  "properties": {
+                    "facing": "east",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              1
+            ],
+            "blocks": [
+              "minecraft:brain_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 3,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:brain_coral_wall_fan",
+                  "properties": {
+                    "facing": "north",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              -1
+            ],
+            "blocks": [
+              "minecraft:brain_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 3,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:brain_coral_wall_fan",
+                  "properties": {
+                    "facing": "south",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:bubble_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 3,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:bubble_coral_wall_fan",
+                  "properties": {
+                    "facing": "west",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              -1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:bubble_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 3,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:bubble_coral_wall_fan",
+                  "properties": {
+                    "facing": "east",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              1
+            ],
+            "blocks": [
+              "minecraft:bubble_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 3,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:bubble_coral_wall_fan",
+                  "properties": {
+                    "facing": "north",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              -1
+            ],
+            "blocks": [
+              "minecraft:bubble_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 3,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:bubble_coral_wall_fan",
+                  "properties": {
+                    "facing": "south",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:fire_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 3,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:fire_coral_wall_fan",
+                  "properties": {
+                    "facing": "west",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              -1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:fire_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 3,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:fire_coral_wall_fan",
+                  "properties": {
+                    "facing": "east",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              1
+            ],
+            "blocks": [
+              "minecraft:fire_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 3,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:fire_coral_wall_fan",
+                  "properties": {
+                    "facing": "north",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              -1
+            ],
+            "blocks": [
+              "minecraft:fire_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 3,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:fire_coral_wall_fan",
+                  "properties": {
+                    "facing": "south",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:tube_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 3,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:tube_coral_wall_fan",
+                  "properties": {
+                    "facing": "west",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              -1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:tube_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 3,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:tube_coral_wall_fan",
+                  "properties": {
+                    "facing": "east",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              1
+            ],
+            "blocks": [
+              "minecraft:tube_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 3,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:tube_coral_wall_fan",
+                  "properties": {
+                    "facing": "north",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              -1
+            ],
+            "blocks": [
+              "minecraft:tube_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 3,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:tube_coral_wall_fan",
+                  "properties": {
+                    "facing": "south",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:dead_brain_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_brain_coral_wall_fan",
+                  "properties": {
+                    "facing": "west",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              -1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:dead_brain_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_brain_coral_wall_fan",
+                  "properties": {
+                    "facing": "east",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              1
+            ],
+            "blocks": [
+              "minecraft:dead_brain_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_brain_coral_wall_fan",
+                  "properties": {
+                    "facing": "north",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              -1
+            ],
+            "blocks": [
+              "minecraft:dead_brain_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_brain_coral_wall_fan",
+                  "properties": {
+                    "facing": "south",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:dead_bubble_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_bubble_coral_wall_fan",
+                  "properties": {
+                    "facing": "west",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              -1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:dead_bubble_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_bubble_coral_wall_fan",
+                  "properties": {
+                    "facing": "east",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              1
+            ],
+            "blocks": [
+              "minecraft:dead_bubble_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_bubble_coral_wall_fan",
+                  "properties": {
+                    "facing": "north",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              -1
+            ],
+            "blocks": [
+              "minecraft:dead_bubble_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_bubble_coral_wall_fan",
+                  "properties": {
+                    "facing": "south",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:dead_fire_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_fire_coral_wall_fan",
+                  "properties": {
+                    "facing": "west",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              -1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:dead_fire_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_fire_coral_wall_fan",
+                  "properties": {
+                    "facing": "east",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              1
+            ],
+            "blocks": [
+              "minecraft:dead_fire_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_fire_coral_wall_fan",
+                  "properties": {
+                    "facing": "north",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              -1
+            ],
+            "blocks": [
+              "minecraft:dead_fire_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_fire_coral_wall_fan",
+                  "properties": {
+                    "facing": "south",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:dead_horn_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_horn_coral_wall_fan",
+                  "properties": {
+                    "facing": "west",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              -1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:dead_horn_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_horn_coral_wall_fan",
+                  "properties": {
+                    "facing": "east",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              1
+            ],
+            "blocks": [
+              "minecraft:dead_horn_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_horn_coral_wall_fan",
+                  "properties": {
+                    "facing": "north",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              -1
+            ],
+            "blocks": [
+              "minecraft:dead_horn_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_horn_coral_wall_fan",
+                  "properties": {
+                    "facing": "south",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:dead_tube_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_tube_coral_wall_fan",
+                  "properties": {
+                    "facing": "west",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              -1,
+              0,
+              0
+            ],
+            "blocks": [
+              "minecraft:dead_tube_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_tube_coral_wall_fan",
+                  "properties": {
+                    "facing": "east",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              1
+            ],
+            "blocks": [
+              "minecraft:dead_tube_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_tube_coral_wall_fan",
+                  "properties": {
+                    "facing": "north",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              -1
+            ],
+            "blocks": [
+              "minecraft:dead_tube_coral_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 50,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_tube_coral_wall_fan",
+                  "properties": {
+                    "facing": "south",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": "minecraft:brain_coral_block"
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:brain_coral"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:brain_coral_fan"
+                }
+              },
+              {
+                "weight": 2,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": "minecraft:bubble_coral_block"
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:bubble_coral"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:bubble_coral_fan"
+                }
+              },
+              {
+                "weight": 2,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": "minecraft:fire_coral_block"
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:fire_coral"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:fire_coral_fan"
+                }
+              },
+              {
+                "weight": 2,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": "minecraft:tube_coral_block"
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:tube_coral"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:tube_coral_fan"
+                }
+              },
+              {
+                "weight": 2,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": "minecraft:dead_brain_coral_block"
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_brain_coral"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_brain_coral_fan"
+                }
+              },
+              {
+                "weight": 20,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": "minecraft:dead_bubble_coral_block"
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_bubble_coral"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_bubble_coral_fan"
+                }
+              },
+              {
+                "weight": 20,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": "minecraft:dead_fire_coral_block"
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_fire_coral"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_fire_coral_fan"
+                }
+              },
+              {
+                "weight": 20,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": "minecraft:dead_horn_coral_block"
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_horn_coral"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_horn_coral_fan"
+                }
+              },
+              {
+                "weight": 20,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": "minecraft:dead_tube_coral_block"
+          },
+          "then": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_tube_coral"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:dead_tube_coral_fan"
+                }
+              },
+              {
+                "weight": 20,
+                "data": {
+                  "id": "minecraft:water",
+                  "properties": {
+                    "level": "0"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "target": {
+      "type": "minecraft:any_of",
+      "predicates": [
+        {
+          "type": "minecraft:matching_block_tag",
+          "tag": "wythers:dead_coral_blocks"
+        },
+        {
+          "type": "minecraft:matching_fluids",
+          "fluids": "minecraft:water"
+        }
+      ]
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 8,
+      "max_inclusive": 8
+    },
+    "half_height": 4
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 44
+        },
+        "max_inclusive": {
+          "absolute": 56
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "feature": {
+    "type": "minecraft:random_selector",
+    "features": [
+      {
+        "chance": 0.25,
+        "feature": {
+          "feature": {
+            "type": "minecraft:template",
+            "templates": [
+              {
+                "weight": 1,
+                "data": {
+                  "id": "wythers:fauna/parrots/hyacinth_macaws"
+                }
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.25,
+        "feature": {
+          "feature": {
+            "type": "minecraft:template",
+            "templates": [
+              {
+                "weight": 1,
+                "data": {
+                  "id": "wythers:fauna/parrots/blue_and_yellow_macaws"
+                }
+              }
+            ]
+          },
+          "placement": []
+        }
+      }
+    ],
+    "default": {
+      "feature": {
+        "type": "minecraft:template",
+        "templates": [
+          {
+            "weight": 1,
+            "data": {
+              "id": "wythers:fauna/parrots/scarlet_macaws"
+            }
+          }
+        ]
+      },
+      "placement": []
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 5
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          2,
+          0
+        ],
+        "blocks": "minecraft:moss_block"
+      }
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_block_tag",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "tag": "minecraft:leaves"
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

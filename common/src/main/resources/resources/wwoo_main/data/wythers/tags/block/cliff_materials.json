@@ -1,0 +1,12 @@
+{
+  "values": [
+    "#minecraft:terracotta",
+    "minecraft:stone",
+    "minecraft:andesite",
+    "minecraft:diorite",
+    "minecraft:granite",
+    "minecraft:calcite",
+    "minecraft:packed_mud",
+    "minecraft:dripstone_block"
+  ]
+}

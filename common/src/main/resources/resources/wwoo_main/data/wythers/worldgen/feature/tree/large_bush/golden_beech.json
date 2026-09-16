@@ -1,0 +1,586 @@
+{
+  "type": "minecraft:sequence",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:overlay",
+        "features": [
+          {
+            "feature": {
+              "type": "minecraft:tree",
+              "minimum_size": {
+                "type": "minecraft:two_layers_feature_size"
+              },
+              "below_trunk_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:rooted_dirt"
+                }
+              },
+              "trunk_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:stripped_poplar_log",
+                  "properties": {
+                    "waterlogged": "false"
+                  }
+                }
+              },
+              "foliage_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:orange_poplar_leaves",
+                  "properties": {
+                    "distance": "7",
+                    "persistent": "false",
+                    "waterlogged": "false"
+                  }
+                }
+              },
+              "trunk_placer": {
+                "type": "minecraft:straight_trunk_placer",
+                "base_height": 1,
+                "height_rand_a": 0,
+                "height_rand_b": 0
+              },
+              "foliage_placer": {
+                "type": "minecraft:fancy_foliage_placer",
+                "radius": 1,
+                "offset": 0,
+                "height": 2
+              },
+              "decorators": []
+            },
+            "placement": [
+              {
+                "type": "minecraft:environment_scan",
+                "direction_of_search": "down",
+                "max_steps": 3,
+                "target_condition": {
+                  "type": "minecraft:matching_block_tag",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "tag": "minecraft:grass_blocks"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "placement": []
+    },
+    {
+      "feature": {
+        "type": "minecraft:ore",
+        "targets": [
+          {
+            "target": {
+              "predicate_type": "minecraft:tag_match",
+              "tag": "wythers:bush_replaceable"
+            },
+            "state": {
+              "id": "minecraft:orange_poplar_leaves",
+              "properties": {
+                "distance": "1",
+                "persistent": "true",
+                "waterlogged": "false"
+              }
+            }
+          }
+        ],
+        "size": 30,
+        "discard_chance_on_air_exposure": 0
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 3,
+          "z": 0
+        },
+        {
+          "type": "minecraft:environment_scan",
+          "direction_of_search": "down",
+          "max_steps": 7,
+          "target_condition": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -2,
+              0
+            ],
+            "blocks": "minecraft:stripped_poplar_log"
+          }
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:orange_poplar_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "true",
+              "waterlogged": "false"
+            }
+          }
+        },
+        "schedule_tick": false
+      },
+      "placement": [
+        {
+          "type": "minecraft:count",
+          "count": 256
+        },
+        {
+          "type": "minecraft:offset",
+          "x": {
+            "type": "minecraft:trapezoid",
+            "min": -5,
+            "max": 5,
+            "plateau": 0
+          },
+          "y": {
+            "type": "minecraft:trapezoid",
+            "min": -7,
+            "max": 0,
+            "plateau": 0
+          },
+          "z": {
+            "type": "minecraft:trapezoid",
+            "min": -5,
+            "max": 5,
+            "plateau": 0
+          }
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:air"
+              },
+              {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      1,
+                      0
+                    ],
+                    "blocks": "minecraft:orange_poplar_leaves"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      1,
+                      1,
+                      0
+                    ],
+                    "blocks": "minecraft:orange_poplar_leaves"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      1,
+                      0
+                    ],
+                    "blocks": "minecraft:orange_poplar_leaves"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      1,
+                      1
+                    ],
+                    "blocks": "minecraft:orange_poplar_leaves"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      1,
+                      -1
+                    ],
+                    "blocks": "minecraft:orange_poplar_leaves"
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      1,
+                      0,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:tuff_bricks",
+                      "minecraft:chiseled_tuff"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      0,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:tuff_bricks",
+                      "minecraft:chiseled_tuff"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      1
+                    ],
+                    "blocks": [
+                      "minecraft:tuff_bricks",
+                      "minecraft:chiseled_tuff"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      -1
+                    ],
+                    "blocks": [
+                      "minecraft:tuff_bricks",
+                      "minecraft:chiseled_tuff"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:weighted",
+          "entries": [
+            {
+              "weight": 20,
+              "data": {
+                "id": "minecraft:resin_clump",
+                "properties": {
+                  "down": "true"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:wildflowers",
+                "properties": {
+                  "facing": "north",
+                  "flower_amount": "1"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:wildflowers",
+                "properties": {
+                  "facing": "north",
+                  "flower_amount": "2"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:wildflowers",
+                "properties": {
+                  "facing": "north",
+                  "flower_amount": "3"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:wildflowers",
+                "properties": {
+                  "facing": "north",
+                  "flower_amount": "4"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:wildflowers",
+                "properties": {
+                  "facing": "south",
+                  "flower_amount": "1"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:wildflowers",
+                "properties": {
+                  "facing": "south",
+                  "flower_amount": "2"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:wildflowers",
+                "properties": {
+                  "facing": "south",
+                  "flower_amount": "3"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:wildflowers",
+                "properties": {
+                  "facing": "south",
+                  "flower_amount": "4"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:wildflowers",
+                "properties": {
+                  "facing": "east",
+                  "flower_amount": "1"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:wildflowers",
+                "properties": {
+                  "facing": "east",
+                  "flower_amount": "2"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:wildflowers",
+                "properties": {
+                  "facing": "east",
+                  "flower_amount": "3"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:wildflowers",
+                "properties": {
+                  "facing": "east",
+                  "flower_amount": "4"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:wildflowers",
+                "properties": {
+                  "facing": "west",
+                  "flower_amount": "1"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:wildflowers",
+                "properties": {
+                  "facing": "west",
+                  "flower_amount": "2"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:wildflowers",
+                "properties": {
+                  "facing": "west",
+                  "flower_amount": "3"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:wildflowers",
+                "properties": {
+                  "facing": "west",
+                  "flower_amount": "4"
+                }
+              }
+            }
+          ]
+        },
+        "schedule_tick": false
+      },
+      "placement": [
+        {
+          "type": "minecraft:count",
+          "count": 96
+        },
+        {
+          "type": "minecraft:offset",
+          "x": {
+            "type": "minecraft:trapezoid",
+            "min": -5,
+            "max": 5,
+            "plateau": 0
+          },
+          "y": {
+            "type": "minecraft:trapezoid",
+            "min": -7,
+            "max": 3,
+            "plateau": -2
+          },
+          "z": {
+            "type": "minecraft:trapezoid",
+            "min": -5,
+            "max": 5,
+            "plateau": 0
+          }
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "blocks": [
+              "minecraft:orange_poplar_leaves",
+              "minecraft:yellow_poplar_leaves"
+            ]
+          }
+        },
+        {
+          "type": "minecraft:count",
+          "count": 8
+        },
+        {
+          "type": "minecraft:offset",
+          "x": {
+            "type": "minecraft:trapezoid",
+            "min": -1,
+            "max": 1,
+            "plateau": 0
+          },
+          "y": 2,
+          "z": {
+            "type": "minecraft:trapezoid",
+            "min": -1,
+            "max": 1,
+            "plateau": 0
+          }
+        },
+        {
+          "type": "minecraft:environment_scan",
+          "direction_of_search": "down",
+          "max_steps": 10,
+          "target_condition": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_block_tag",
+                "tag": "wythers:air_and_plants"
+              },
+              {
+                "type": "minecraft:has_sturdy_face",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "direction": "up"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:disk",
+        "state_provider": {
+          "type": "minecraft:weighted",
+          "entries": [
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:orange_poplar_leaves",
+                "properties": {
+                  "distance": "7",
+                  "persistent": "true",
+                  "waterlogged": "false"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:yellow_poplar_leaves",
+                "properties": {
+                  "distance": "7",
+                  "persistent": "true",
+                  "waterlogged": "false"
+                }
+              }
+            }
+          ]
+        },
+        "radius": 8,
+        "half_height": 4,
+        "target": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "minecraft:orange_poplar_leaves"
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": -3,
+          "z": 0
+        }
+      ]
+    }
+  ]
+}

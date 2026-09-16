@@ -1,0 +1,49 @@
+{
+  "feature": "wythers:boulder_deepslate",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 1
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 3,
+        "max_inclusive": 5
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:offset",
+      "x": 0,
+      "y": -2,
+      "z": 0
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:deepslate"
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_biomes",
+        "biomes": [
+          "minecraft:snowy_plains"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

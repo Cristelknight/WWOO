@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "features": [
+    {
+      "feature": "wythers:tree/palm/foxtail/drupes_cluster_green",
+      "placement": []
+    },
+    {
+      "feature": "wythers:tree/palm/foxtail/drupes_cluster_grey",
+      "placement": []
+    },
+    {
+      "feature": "wythers:tree/palm/foxtail/drupes_cluster_red",
+      "placement": []
+    },
+    {
+      "feature": "wythers:tree/palm/foxtail/drupes_cluster_ripening",
+      "placement": []
+    },
+    {
+      "feature": "wythers:tree/palm/foxtail/drupes_cluster_dying",
+      "placement": []
+    },
+    {
+      "feature": "wythers:tree/palm/foxtail/drupes_cluster_mixed",
+      "placement": []
+    },
+    {
+      "feature": {
+        "type": "minecraft:no_op"
+      },
+      "placement": []
+    }
+  ]
+}

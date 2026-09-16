@@ -1,0 +1,91 @@
+{
+  "type": "minecraft:overlay",
+  "features": [
+    {
+      "feature": "wythers:tree/pine/sylvestris/rand",
+      "placement": []
+    },
+    {
+      "feature": {
+        "type": "minecraft:overlay",
+        "features": [
+          {
+            "feature": "wythers:tree/pine/sylvestris/branch_6_1",
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 2,
+                  "max_inclusive": 4
+                }
+              }
+            ]
+          },
+          {
+            "feature": "wythers:tree/pine/sylvestris/branch_11_2",
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 2,
+                  "max_inclusive": 4
+                }
+              }
+            ]
+          },
+          {
+            "feature": "wythers:tree/pine/sylvestris/branch_16_1",
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 2,
+                  "max_inclusive": 4
+                }
+              }
+            ]
+          },
+          {
+            "feature": "wythers:tree/pine/sylvestris/core_19",
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": 2
+              }
+            ]
+          }
+        ]
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 0,
+            "max_inclusive": 3
+          },
+          "z": 0
+        }
+      ]
+    },
+    {
+      "feature": "wythers:tree/pine/sylvestris/low_bark",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 0,
+            "max_inclusive": 3
+          },
+          "z": 0
+        }
+      ]
+    }
+  ]
+}

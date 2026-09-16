@@ -1,0 +1,107 @@
+{
+  "features": [
+    {
+      "feature": {
+        "to_place": {
+          "type": "minecraft:weighted",
+          "entries": [
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:azalea_leaves"
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:flowering_azalea_leaves"
+              }
+            },
+            {
+              "weight": 3,
+              "data": {
+                "id": "minecraft:cherry_leaves"
+              }
+            }
+          ]
+        },
+        "type": "minecraft:simple_block"
+      },
+      "placement": [
+        {
+          "direction_of_search": "up",
+          "max_steps": 6,
+          "target_condition": {
+            "predicates": [
+              {
+                "blocks": [
+                  "minecraft:cherry_leaves",
+                  "minecraft:azalea_leaves",
+                  "minecraft:flowering_azalea_leaves"
+                ],
+                "offset": [
+                  1,
+                  0,
+                  0
+                ],
+                "type": "minecraft:matching_blocks"
+              },
+              {
+                "blocks": [
+                  "minecraft:cherry_leaves",
+                  "minecraft:azalea_leaves",
+                  "minecraft:flowering_azalea_leaves"
+                ],
+                "offset": [
+                  0,
+                  0,
+                  1
+                ],
+                "type": "minecraft:matching_blocks"
+              },
+              {
+                "blocks": [
+                  "minecraft:cherry_leaves",
+                  "minecraft:azalea_leaves",
+                  "minecraft:flowering_azalea_leaves"
+                ],
+                "offset": [
+                  -1,
+                  0,
+                  0
+                ],
+                "type": "minecraft:matching_blocks"
+              },
+              {
+                "blocks": [
+                  "minecraft:cherry_leaves",
+                  "minecraft:azalea_leaves",
+                  "minecraft:flowering_azalea_leaves"
+                ],
+                "offset": [
+                  0,
+                  0,
+                  -1
+                ],
+                "type": "minecraft:matching_blocks"
+              }
+            ],
+            "type": "minecraft:all_of"
+          },
+          "type": "minecraft:environment_scan"
+        },
+        {
+          "predicate": {
+            "blocks": [
+              "minecraft:air",
+              "minecraft:vine"
+            ],
+            "type": "minecraft:matching_blocks"
+          },
+          "type": "minecraft:block_predicate_filter"
+        }
+      ]
+    }
+  ],
+  "type": "minecraft:simple_random_selector"
+}

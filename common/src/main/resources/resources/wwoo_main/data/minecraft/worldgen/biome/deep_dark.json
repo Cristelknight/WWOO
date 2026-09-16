@@ -9,14 +9,17 @@
     },
     "minecraft:visual/sky_color": 134413,
     "minecraft:visual/fog_color": 203546,
-    "minecraft:visual/water_fog_color": 134413,
-    "minecraft:audio/music_volume": 1,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "block_search_extent": 8,
-        "offset": 2,
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000
+    "minecraft:gameplay/natural_mob_spawns": {
+      "spawn_costs": {},
+      "spawns_by_category": {
+        "ambient": [],
+        "axolotls": [],
+        "creature": [],
+        "misc": [],
+        "monster": [],
+        "underground_water_creature": [],
+        "water_ambient": [],
+        "water_creature": []
       }
     }
   },
@@ -33,9 +36,9 @@
   },
   "features": [
     [
-      "wythers:placer/deep_dark_extended",
-      "wythers:placer/deep_dark",
-      "wythers:placer/bedrock_sealer"
+      "wythers:bedrock_seal",
+      "wythers:stony_cliffs",
+      "wythers:placer/deep_dark"
     ],
     [],
     [
@@ -46,13 +49,8 @@
       "minecraft:monster_room_deep"
     ],
     [],
+    [],
     [
-      "wythers:terrain/local/cave_disk_basalt",
-      "wythers:terrain/local/cave_disk_blackstone",
-      "wythers:terrain/local/cave_disk_magma"
-    ],
-    [
-      "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
       "minecraft:ore_granite_lower",
@@ -71,6 +69,7 @@
       "minecraft:ore_redstone",
       "minecraft:ore_redstone_lower",
       "minecraft:ore_diamond",
+      "minecraft:ore_diamond_medium",
       "minecraft:ore_diamond_large",
       "minecraft:ore_diamond_buried",
       "minecraft:ore_lapis",
@@ -87,24 +86,19 @@
     ],
     [],
     [
-      "minecraft:glow_lichen"
+      "minecraft:glow_lichen",
+      "minecraft:patch_tall_grass_2",
+      "minecraft:trees_plains",
+      "minecraft:flower_plains",
+      "minecraft:patch_grass_plain",
+      "minecraft:brown_mushroom_normal",
+      "minecraft:red_mushroom_normal",
+      "minecraft:patch_pumpkin"
     ],
     [
-      "minecraft:freeze_top_layer",
-      "wythers:terrain/local/underground_volcanifier"
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,
-  "spawn_costs": {},
-  "spawners": {
-    "ambient": [],
-    "axolotls": [],
-    "creature": [],
-    "misc": [],
-    "monster": [],
-    "underground_water_creature": [],
-    "water_ambient": [],
-    "water_creature": []
-  },
   "temperature": 0.8
 }

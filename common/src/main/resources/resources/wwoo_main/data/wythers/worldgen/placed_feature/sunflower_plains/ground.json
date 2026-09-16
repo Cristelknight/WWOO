@@ -1,0 +1,395 @@
+{
+  "feature": {
+    "type": "minecraft:vegetation_patch",
+    "surface": "floor",
+    "depth": 1,
+    "vertical_range": 7,
+    "extra_bottom_block_chance": 0,
+    "extra_edge_column_chance": 0.5,
+    "vegetation_chance": 1,
+    "xz_radius": 7,
+    "replaceable": [
+      "minecraft:grass_block"
+    ],
+    "ground_state": {
+      "type": "minecraft:rule_based",
+      "rules": [
+        {
+          "if_true": {
+            "type": "minecraft:any_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  1,
+                  -1,
+                  0
+                ],
+                "tag": "wythers:air_and_plants"
+              },
+              {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  -1,
+                  -1,
+                  0
+                ],
+                "tag": "wythers:air_and_plants"
+              },
+              {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  0,
+                  -1,
+                  1
+                ],
+                "tag": "wythers:air_and_plants"
+              },
+              {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  0,
+                  -1,
+                  -1
+                ],
+                "tag": "wythers:air_and_plants"
+              }
+            ]
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": "minecraft:air"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_biomes",
+              "biomes": [
+                "sunflower_plains"
+              ]
+            }
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": "minecraft:grass_block"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_biomes",
+                "biomes": [
+                  "sunflower_plains"
+                ]
+              }
+            ]
+          },
+          "then": {
+            "type": "minecraft:rule_based",
+            "fallback": {
+              "type": "minecraft:dual_noise",
+              "noise": {
+                "base_octave": -4,
+                "amplitude_modifiers": [
+                  2,
+                  2,
+                  1
+                ],
+                "octave_count": 3,
+                "normalize": false
+              },
+              "scale": 1,
+              "seed": -817103696,
+              "variety": 1,
+              "slow_noise": {
+                "base_octave": -5,
+                "octave_count": 2,
+                "normalize": false,
+                "amplitude_modifiers": [
+                  4,
+                  2
+                ]
+              },
+              "slow_scale": 1,
+              "states": [
+                {
+                  "id": "minecraft:grass_block"
+                },
+                {
+                  "id": "minecraft:grass_block"
+                },
+                {
+                  "id": "minecraft:grass_block"
+                },
+                {
+                  "id": "minecraft:grass_block"
+                },
+                {
+                  "id": "minecraft:grass_block"
+                },
+                {
+                  "id": "minecraft:grass_block"
+                },
+                {
+                  "id": "minecraft:grass_block"
+                },
+                {
+                  "id": "minecraft:grass_block"
+                },
+                {
+                  "id": "minecraft:grass_block"
+                }
+              ]
+            },
+            "rules": [
+              {
+                "if_true": {
+                  "type": "minecraft:height_range",
+                  "min_inclusive": {
+                    "absolute": 0
+                  },
+                  "max_inclusive": {
+                    "absolute": 63
+                  }
+                },
+                "then": {
+                  "type": "minecraft:simple",
+                  "state": {
+                    "id": "minecraft:sand"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "vegetation_feature": {
+      "feature": {
+        "type": "minecraft:block_column",
+        "direction": "down",
+        "allowed_placement": {
+          "type": "minecraft:true"
+        },
+        "prioritize_tip": false,
+        "layers": [
+          {
+            "height": 20,
+            "provider": {
+              "type": "minecraft:rule_based",
+              "rules": [
+                {
+                  "if_true": {
+                    "type": "minecraft:all_of",
+                    "predicates": [
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "blocks": [
+                          "minecraft:dirt",
+                          "minecraft:stone"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:any_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              1,
+                              0
+                            ],
+                            "tag": "wythers:air_and_plants"
+                          },
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              1,
+                              1,
+                              0
+                            ],
+                            "tag": "wythers:air_and_plants"
+                          },
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              -1,
+                              1,
+                              0
+                            ],
+                            "tag": "wythers:air_and_plants"
+                          },
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              1,
+                              1
+                            ],
+                            "tag": "wythers:air_and_plants"
+                          },
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              1,
+                              -1
+                            ],
+                            "tag": "wythers:air_and_plants"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              1,
+                              0
+                            ],
+                            "blocks": [
+                              "minecraft:granite",
+                              "minecraft:granite",
+                              "minecraft:dripstone_block",
+                              "minecraft:tuff"
+                            ]
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              1,
+                              1,
+                              0
+                            ],
+                            "blocks": [
+                              "minecraft:granite",
+                              "minecraft:granite",
+                              "minecraft:dripstone_block",
+                              "minecraft:tuff"
+                            ]
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              -1,
+                              1,
+                              0
+                            ],
+                            "blocks": [
+                              "minecraft:granite",
+                              "minecraft:granite",
+                              "minecraft:dripstone_block",
+                              "minecraft:tuff"
+                            ]
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              1,
+                              1
+                            ],
+                            "blocks": [
+                              "minecraft:granite",
+                              "minecraft:granite",
+                              "minecraft:dripstone_block",
+                              "minecraft:tuff"
+                            ]
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              1,
+                              -1
+                            ],
+                            "blocks": [
+                              "minecraft:granite",
+                              "minecraft:granite",
+                              "minecraft:dripstone_block",
+                              "minecraft:tuff"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "then": {
+                    "type": "minecraft:dual_noise",
+                    "noise": {
+                      "base_octave": -4,
+                      "amplitude_modifiers": [
+                        2,
+                        2,
+                        1
+                      ],
+                      "octave_count": 3,
+                      "normalize": false
+                    },
+                    "scale": 1,
+                    "seed": -817103696,
+                    "variety": 1,
+                    "slow_noise": {
+                      "base_octave": -5,
+                      "octave_count": 2,
+                      "normalize": false,
+                      "amplitude_modifiers": [
+                        4,
+                        2
+                      ]
+                    },
+                    "slow_scale": 1,
+                    "states": [
+                      {
+                        "id": "minecraft:tuff"
+                      },
+                      {
+                        "id": "minecraft:dripstone_block"
+                      },
+                      {
+                        "id": "minecraft:granite"
+                      },
+                      {
+                        "id": "minecraft:granite"
+                      },
+                      {
+                        "id": "minecraft:granite"
+                      },
+                      {
+                        "id": "minecraft:granite"
+                      },
+                      {
+                        "id": "minecraft:granite"
+                      },
+                      {
+                        "id": "minecraft:granite"
+                      },
+                      {
+                        "id": "minecraft:granite"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "placement": []
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 15
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    }
+  ]
+}

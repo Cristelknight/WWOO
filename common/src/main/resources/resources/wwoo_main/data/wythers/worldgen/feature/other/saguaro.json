@@ -1,0 +1,337 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:sequence",
+        "features": [
+          {
+            "feature": "wythers:other/saguaro_core",
+            "placement": []
+          },
+          {
+            "feature": {
+              "type": "minecraft:overlay",
+              "features": [
+                {
+                  "feature": "wythers:other/saguaro_arm",
+                  "placement": [
+                    {
+                      "type": "minecraft:random_chance",
+                      "chance": 0.95
+                    },
+                    {
+                      "type": "minecraft:offset",
+                      "x": 1,
+                      "y": 0,
+                      "z": 1
+                    }
+                  ]
+                },
+                {
+                  "feature": "wythers:other/saguaro_arm_upper",
+                  "placement": [
+                    {
+                      "type": "minecraft:random_chance",
+                      "chance": 0.95
+                    },
+                    {
+                      "type": "minecraft:offset",
+                      "x": -1,
+                      "y": {
+                        "type": "minecraft:uniform",
+                        "min_inclusive": 0,
+                        "max_inclusive": 1
+                      },
+                      "z": -1
+                    }
+                  ]
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:environment_scan",
+                "direction_of_search": "up",
+                "max_steps": 5,
+                "target_condition": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        1,
+                        0
+                      ],
+                      "blocks": "minecraft:bamboo_block"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        2,
+                        0
+                      ],
+                      "blocks": "minecraft:cactus"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "placement": []
+    },
+    {
+      "feature": {
+        "type": "minecraft:sequence",
+        "features": [
+          {
+            "feature": "wythers:other/saguaro_core",
+            "placement": []
+          },
+          {
+            "feature": {
+              "type": "minecraft:overlay",
+              "features": [
+                {
+                  "feature": "wythers:other/saguaro_arm_upper",
+                  "placement": [
+                    {
+                      "type": "minecraft:random_chance",
+                      "chance": 0.95
+                    },
+                    {
+                      "type": "minecraft:offset",
+                      "x": 1,
+                      "y": {
+                        "type": "minecraft:uniform",
+                        "min_inclusive": 0,
+                        "max_inclusive": 1
+                      },
+                      "z": 1
+                    }
+                  ]
+                },
+                {
+                  "feature": "wythers:other/saguaro_arm",
+                  "placement": [
+                    {
+                      "type": "minecraft:random_chance",
+                      "chance": 0.95
+                    },
+                    {
+                      "type": "minecraft:offset",
+                      "x": -1,
+                      "y": 0,
+                      "z": -1
+                    }
+                  ]
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:environment_scan",
+                "direction_of_search": "up",
+                "max_steps": 5,
+                "target_condition": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        1,
+                        0
+                      ],
+                      "blocks": "minecraft:bamboo_block"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        2,
+                        0
+                      ],
+                      "blocks": "minecraft:cactus"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "placement": []
+    },
+    {
+      "feature": {
+        "type": "minecraft:sequence",
+        "features": [
+          {
+            "feature": "wythers:other/saguaro_core",
+            "placement": []
+          },
+          {
+            "feature": {
+              "type": "minecraft:overlay",
+              "features": [
+                {
+                  "feature": "wythers:other/saguaro_arm",
+                  "placement": [
+                    {
+                      "type": "minecraft:random_chance",
+                      "chance": 0.95
+                    },
+                    {
+                      "type": "minecraft:offset",
+                      "x": 1,
+                      "y": 0,
+                      "z": -1
+                    }
+                  ]
+                },
+                {
+                  "feature": "wythers:other/saguaro_arm_upper",
+                  "placement": [
+                    {
+                      "type": "minecraft:random_chance",
+                      "chance": 0.95
+                    },
+                    {
+                      "type": "minecraft:offset",
+                      "x": -1,
+                      "y": {
+                        "type": "minecraft:uniform",
+                        "min_inclusive": 0,
+                        "max_inclusive": 1
+                      },
+                      "z": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:environment_scan",
+                "direction_of_search": "up",
+                "max_steps": 5,
+                "target_condition": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        1,
+                        0
+                      ],
+                      "blocks": "minecraft:bamboo_block"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        2,
+                        0
+                      ],
+                      "blocks": "minecraft:cactus"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "placement": []
+    },
+    {
+      "feature": {
+        "type": "minecraft:sequence",
+        "features": [
+          {
+            "feature": "wythers:other/saguaro_core",
+            "placement": []
+          },
+          {
+            "feature": {
+              "type": "minecraft:overlay",
+              "features": [
+                {
+                  "feature": "wythers:other/saguaro_arm_upper",
+                  "placement": [
+                    {
+                      "type": "minecraft:random_chance",
+                      "chance": 0.95
+                    },
+                    {
+                      "type": "minecraft:offset",
+                      "x": 1,
+                      "y": {
+                        "type": "minecraft:uniform",
+                        "min_inclusive": 0,
+                        "max_inclusive": 1
+                      },
+                      "z": -1
+                    }
+                  ]
+                },
+                {
+                  "feature": "wythers:other/saguaro_arm",
+                  "placement": [
+                    {
+                      "type": "minecraft:random_chance",
+                      "chance": 0.95
+                    },
+                    {
+                      "type": "minecraft:offset",
+                      "x": -1,
+                      "y": 0,
+                      "z": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:environment_scan",
+                "direction_of_search": "up",
+                "max_steps": 5,
+                "target_condition": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        1,
+                        0
+                      ],
+                      "blocks": "minecraft:bamboo_block"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        2,
+                        0
+                      ],
+                      "blocks": "minecraft:cactus"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "placement": []
+    }
+  ]
+}

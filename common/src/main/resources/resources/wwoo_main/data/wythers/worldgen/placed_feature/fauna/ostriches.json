@@ -1,0 +1,85 @@
+{
+  "feature": {
+    "type": "minecraft:overlay",
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:template",
+          "templates": [
+            {
+              "weight": 1,
+              "data": {
+                "id": "wythers:fauna/ostrich_male"
+              }
+            }
+          ]
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min_inclusive": 1,
+              "max_inclusive": 1
+            }
+          }
+        ]
+      },
+      {
+        "feature": {
+          "type": "minecraft:template",
+          "templates": [
+            {
+              "weight": 1,
+              "data": {
+                "id": "wythers:fauna/ostrich_female"
+              }
+            }
+          ]
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min_inclusive": 1,
+              "max_inclusive": 3
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 192
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING_NO_LEAVES"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": [
+          "minecraft:grass_block",
+          "minecraft:coarse_dirt",
+          "minecraft:rooted_dirt"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

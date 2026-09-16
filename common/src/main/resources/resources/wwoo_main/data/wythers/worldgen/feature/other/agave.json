@@ -1,0 +1,316 @@
+{
+  "type": "minecraft:sequence",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:cactus",
+            "properties": {
+              "age": "0"
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": "minecraft:sand"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:disk",
+        "state_provider": {
+          "type": "minecraft:rule_based",
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  1,
+                  0,
+                  0
+                ],
+                "blocks": "minecraft:cactus"
+              },
+              "then": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:big_dripleaf",
+                  "properties": {
+                    "facing": "west",
+                    "tilt": "partial",
+                    "waterlogged": "false"
+                  }
+                }
+              }
+            },
+            {
+              "if_true": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  -1,
+                  0,
+                  0
+                ],
+                "blocks": "minecraft:cactus"
+              },
+              "then": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:big_dripleaf",
+                  "properties": {
+                    "facing": "east",
+                    "tilt": "partial",
+                    "waterlogged": "false"
+                  }
+                }
+              }
+            },
+            {
+              "if_true": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  0,
+                  1
+                ],
+                "blocks": "minecraft:cactus"
+              },
+              "then": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:big_dripleaf",
+                  "properties": {
+                    "facing": "north",
+                    "tilt": "partial",
+                    "waterlogged": "false"
+                  }
+                }
+              }
+            },
+            {
+              "if_true": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  0,
+                  -1
+                ],
+                "blocks": "minecraft:cactus"
+              },
+              "then": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:big_dripleaf",
+                  "properties": {
+                    "facing": "south",
+                    "tilt": "partial",
+                    "waterlogged": "false"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "radius": 1,
+        "half_height": 0,
+        "target": {
+          "type": "minecraft:all_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "blocks": "minecraft:air"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -1,
+                0
+              ],
+              "blocks": "minecraft:sand"
+            }
+          ]
+        }
+      },
+      "placement": []
+    },
+    {
+      "feature": {
+        "type": "minecraft:random_selector",
+        "features": [],
+        "default": {
+          "feature": {
+            "type": "minecraft:simple_random_selector",
+            "features": [
+              {
+                "feature": {
+                  "type": "minecraft:block_column",
+                  "direction": "up",
+                  "allowed_placement": {
+                    "type": "minecraft:true"
+                  },
+                  "prioritize_tip": true,
+                  "layers": [
+                    {
+                      "height": {
+                        "type": "minecraft:uniform",
+                        "min_inclusive": 2,
+                        "max_inclusive": 4
+                      },
+                      "provider": {
+                        "type": "minecraft:simple",
+                        "state": {
+                          "id": "minecraft:bamboo",
+                          "properties": {
+                            "age": "0",
+                            "leaves": "none",
+                            "stage": "0"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "height": 1,
+                      "provider": {
+                        "type": "minecraft:simple",
+                        "state": {
+                          "id": "minecraft:bamboo",
+                          "properties": {
+                            "age": "0",
+                            "leaves": "small",
+                            "stage": "0"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "height": {
+                        "type": "minecraft:uniform",
+                        "min_inclusive": 1,
+                        "max_inclusive": 3
+                      },
+                      "provider": {
+                        "type": "minecraft:simple",
+                        "state": {
+                          "id": "minecraft:bamboo",
+                          "properties": {
+                            "age": "0",
+                            "leaves": "large",
+                            "stage": "0"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "placement": []
+              },
+              {
+                "feature": {
+                  "type": "minecraft:block_column",
+                  "direction": "up",
+                  "allowed_placement": {
+                    "type": "minecraft:true"
+                  },
+                  "prioritize_tip": true,
+                  "layers": [
+                    {
+                      "height": {
+                        "type": "minecraft:uniform",
+                        "min_inclusive": 2,
+                        "max_inclusive": 4
+                      },
+                      "provider": {
+                        "type": "minecraft:simple",
+                        "state": {
+                          "id": "minecraft:bamboo",
+                          "properties": {
+                            "age": "0",
+                            "leaves": "none",
+                            "stage": "0"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "height": 1,
+                      "provider": {
+                        "type": "minecraft:simple",
+                        "state": {
+                          "id": "minecraft:bamboo",
+                          "properties": {
+                            "age": "0",
+                            "leaves": "small",
+                            "stage": "0"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "height": 1,
+                      "provider": {
+                        "type": "minecraft:simple",
+                        "state": {
+                          "id": "minecraft:rose_bush",
+                          "properties": {
+                            "half": "lower"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "height": 1,
+                      "provider": {
+                        "type": "minecraft:simple",
+                        "state": {
+                          "id": "minecraft:rose_bush",
+                          "properties": {
+                            "half": "upper"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "placement": []
+              }
+            ]
+          },
+          "placement": [
+            {
+              "type": "minecraft:offset",
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          ]
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:random_chance",
+          "chance": 0.75
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "feature": {
+    "type": "minecraft:simple_random_selector",
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:random_selector",
+          "features": [
+            {
+              "chance": 0.2,
+              "feature": {
+                "feature": "wythers:tree/cliff/cherry/1_north",
+                "placement": []
+              }
+            },
+            {
+              "chance": 0,
+              "feature": {
+                "feature": "wythers:tree/cliff/maple/tinted_1_north",
+                "placement": []
+              }
+            },
+            {
+              "chance": 0.2,
+              "feature": {
+                "feature": "wythers:tree/cliff/maple/yellow_1_north",
+                "placement": []
+              }
+            },
+            {
+              "chance": 0.2,
+              "feature": {
+                "feature": "wythers:tree/cliff/maple/orange_1_north",
+                "placement": []
+              }
+            }
+          ],
+          "default": {
+            "feature": "wythers:tree/cliff/maple/red_1_north",
+            "placement": []
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:volume_match",
+                  "match": {
+                    "type": "minecraft:matching_block_tag",
+                    "tag": "wythers:air_and_plants"
+                  },
+                  "max": [
+                    4,
+                    12,
+                    -3
+                  ],
+                  "min": [
+                    -4,
+                    -2,
+                    -11
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    -3,
+                    -2
+                  ],
+                  "blocks": "minecraft:air"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "feature": {
+          "type": "minecraft:random_selector",
+          "features": [
+            {
+              "chance": 0.1,
+              "feature": {
+                "feature": "wythers:tree/cliff/cherry/1_south",
+                "placement": []
+              }
+            },
+            {
+              "chance": 0,
+              "feature": {
+                "feature": "wythers:tree/cliff/maple/tinted_1_south",
+                "placement": []
+              }
+            },
+            {
+              "chance": 0.2,
+              "feature": {
+                "feature": "wythers:tree/cliff/maple/yellow_1_south",
+                "placement": []
+              }
+            },
+            {
+              "chance": 0.2,
+              "feature": {
+                "feature": "wythers:tree/cliff/maple/orange_1_south",
+                "placement": []
+              }
+            }
+          ],
+          "default": {
+            "feature": "wythers:tree/cliff/maple/red_1_south",
+            "placement": []
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:volume_match",
+                  "match": {
+                    "type": "minecraft:matching_block_tag",
+                    "tag": "wythers:air_and_plants"
+                  },
+                  "max": [
+                    4,
+                    12,
+                    11
+                  ],
+                  "min": [
+                    -4,
+                    -2,
+                    3
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    -3,
+                    2
+                  ],
+                  "blocks": "minecraft:air"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "feature": {
+          "type": "minecraft:random_selector",
+          "features": [
+            {
+              "chance": 0.1,
+              "feature": {
+                "feature": "wythers:tree/cliff/cherry/1_west",
+                "placement": []
+              }
+            },
+            {
+              "chance": 0,
+              "feature": {
+                "feature": "wythers:tree/cliff/maple/tinted_1_west",
+                "placement": []
+              }
+            },
+            {
+              "chance": 0.2,
+              "feature": {
+                "feature": "wythers:tree/cliff/maple/yellow_1_west",
+                "placement": []
+              }
+            },
+            {
+              "chance": 0.2,
+              "feature": {
+                "feature": "wythers:tree/cliff/maple/orange_1_west",
+                "placement": []
+              }
+            }
+          ],
+          "default": {
+            "feature": "wythers:tree/cliff/maple/red_1_west",
+            "placement": []
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:volume_match",
+                  "match": {
+                    "type": "minecraft:matching_block_tag",
+                    "tag": "wythers:air_and_plants"
+                  },
+                  "max": [
+                    -3,
+                    12,
+                    4
+                  ],
+                  "min": [
+                    -11,
+                    -2,
+                    -4
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    -2,
+                    -3,
+                    0
+                  ],
+                  "blocks": "minecraft:air"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "feature": {
+          "type": "minecraft:random_selector",
+          "features": [
+            {
+              "chance": 0.1,
+              "feature": {
+                "feature": "wythers:tree/cliff/cherry/1_east",
+                "placement": []
+              }
+            },
+            {
+              "chance": 0,
+              "feature": {
+                "feature": "wythers:tree/cliff/maple/tinted_1_east",
+                "placement": []
+              }
+            },
+            {
+              "chance": 0.2,
+              "feature": {
+                "feature": "wythers:tree/cliff/maple/yellow_1_east",
+                "placement": []
+              }
+            },
+            {
+              "chance": 0.2,
+              "feature": {
+                "feature": "wythers:tree/cliff/maple/orange_1_east",
+                "placement": []
+              }
+            }
+          ],
+          "default": {
+            "feature": "wythers:tree/cliff/maple/red_1_east",
+            "placement": []
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:volume_match",
+                  "match": {
+                    "type": "minecraft:matching_block_tag",
+                    "tag": "wythers:air_and_plants"
+                  },
+                  "max": [
+                    11,
+                    12,
+                    4
+                  ],
+                  "min": [
+                    3,
+                    -2,
+                    -4
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    2,
+                    -3,
+                    0
+                  ],
+                  "blocks": "minecraft:air"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 5
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:offset",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:would_survive",
+            "state": {
+              "id": "minecraft:fern"
+            }
+          },
+          {
+            "type": "minecraft:height_range",
+            "min_inclusive": {
+              "absolute": 80
+            },
+            "max_inclusive": {
+              "below_top": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            -1,
+            0
+          ],
+          "blocks": "minecraft:bamboo"
+        }
+      }
+    }
+  ]
+}

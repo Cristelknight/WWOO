@@ -1,0 +1,384 @@
+{
+  "feature": {
+    "type": "minecraft:sequence",
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:overlay",
+          "features": [
+            {
+              "feature": "wythers:other/lodalith",
+              "placement": [
+                {
+                  "type": "minecraft:offset",
+                  "x": 4,
+                  "y": 1,
+                  "z": 1
+                }
+              ]
+            },
+            {
+              "feature": "wythers:other/lodalith",
+              "placement": [
+                {
+                  "type": "minecraft:offset",
+                  "x": 4,
+                  "y": 1,
+                  "z": -1
+                }
+              ]
+            },
+            {
+              "feature": "wythers:other/lodalith",
+              "placement": [
+                {
+                  "type": "minecraft:offset",
+                  "x": -4,
+                  "y": 1,
+                  "z": 1
+                }
+              ]
+            },
+            {
+              "feature": "wythers:other/lodalith",
+              "placement": [
+                {
+                  "type": "minecraft:offset",
+                  "x": -4,
+                  "y": 1,
+                  "z": -1
+                }
+              ]
+            },
+            {
+              "feature": "wythers:other/lodalith",
+              "placement": [
+                {
+                  "type": "minecraft:offset",
+                  "x": 0,
+                  "y": 1,
+                  "z": 4
+                }
+              ]
+            },
+            {
+              "feature": "wythers:other/lodalith",
+              "placement": [
+                {
+                  "type": "minecraft:offset",
+                  "x": 0,
+                  "y": 1,
+                  "z": -4
+                }
+              ]
+            },
+            {
+              "feature": "wythers:other/lodalith",
+              "placement": [
+                {
+                  "type": "minecraft:offset",
+                  "x": 2,
+                  "y": 1,
+                  "z": 3
+                }
+              ]
+            },
+            {
+              "feature": "wythers:other/lodalith",
+              "placement": [
+                {
+                  "type": "minecraft:offset",
+                  "x": 2,
+                  "y": 1,
+                  "z": -3
+                }
+              ]
+            },
+            {
+              "feature": "wythers:other/lodalith",
+              "placement": [
+                {
+                  "type": "minecraft:offset",
+                  "x": -2,
+                  "y": 1,
+                  "z": 3
+                }
+              ]
+            },
+            {
+              "feature": "wythers:other/lodalith",
+              "placement": [
+                {
+                  "type": "minecraft:offset",
+                  "x": -2,
+                  "y": 1,
+                  "z": -3
+                }
+              ]
+            }
+          ]
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:disk",
+          "state_provider": {
+            "type": "minecraft:rule_based",
+            "rules": [
+              {
+                "if_true": {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:smooth_stone",
+                    "minecraft:lodestone"
+                  ]
+                },
+                "then": {
+                  "type": "minecraft:weighted",
+                  "entries": [
+                    {
+                      "weight": 1,
+                      "data": {
+                        "id": "minecraft:air"
+                      }
+                    },
+                    {
+                      "weight": 1,
+                      "data": {
+                        "id": "minecraft:vine",
+                        "properties": {
+                          "east": "true",
+                          "north": "false",
+                          "south": "false",
+                          "up": "false",
+                          "west": "false"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "if_true": {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    -1,
+                    0,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:smooth_stone",
+                    "minecraft:lodestone"
+                  ]
+                },
+                "then": {
+                  "type": "minecraft:weighted",
+                  "entries": [
+                    {
+                      "weight": 1,
+                      "data": {
+                        "id": "minecraft:air"
+                      }
+                    },
+                    {
+                      "weight": 1,
+                      "data": {
+                        "id": "minecraft:vine",
+                        "properties": {
+                          "east": "false",
+                          "north": "false",
+                          "south": "false",
+                          "up": "false",
+                          "west": "true"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "if_true": {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "blocks": [
+                    "minecraft:smooth_stone",
+                    "minecraft:lodestone"
+                  ]
+                },
+                "then": {
+                  "type": "minecraft:weighted",
+                  "entries": [
+                    {
+                      "weight": 1,
+                      "data": {
+                        "id": "minecraft:air"
+                      }
+                    },
+                    {
+                      "weight": 1,
+                      "data": {
+                        "id": "minecraft:vine",
+                        "properties": {
+                          "east": "false",
+                          "north": "false",
+                          "south": "true",
+                          "up": "false",
+                          "west": "false"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "if_true": {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "blocks": [
+                    "minecraft:smooth_stone",
+                    "minecraft:lodestone"
+                  ]
+                },
+                "then": {
+                  "type": "minecraft:weighted",
+                  "entries": [
+                    {
+                      "weight": 1,
+                      "data": {
+                        "id": "minecraft:air"
+                      }
+                    },
+                    {
+                      "weight": 1,
+                      "data": {
+                        "id": "minecraft:vine",
+                        "properties": {
+                          "east": "false",
+                          "north": "true",
+                          "south": "false",
+                          "up": "false",
+                          "west": "false"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "radius": 8,
+          "half_height": 4,
+          "target": {
+            "type": "minecraft:matching_block_tag",
+            "tag": "wythers:air_and_plants"
+          }
+        },
+        "placement": []
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 30
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING_NO_LEAVES"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "id": "minecraft:fern"
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:all_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                10,
+                0
+              ],
+              "blocks": "minecraft:air"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                11,
+                0
+              ],
+              "blocks": "minecraft:air"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                12,
+                0
+              ],
+              "blocks": "minecraft:air"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                13,
+                0
+              ],
+              "blocks": "minecraft:air"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                14,
+                0
+              ],
+              "blocks": "minecraft:air"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                15,
+                0
+              ],
+              "blocks": "minecraft:air"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

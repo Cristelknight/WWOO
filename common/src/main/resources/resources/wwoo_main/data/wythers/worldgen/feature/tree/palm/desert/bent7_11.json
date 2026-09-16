@@ -1,0 +1,135 @@
+{
+  "type": "minecraft:sequence",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:tree",
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size"
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:rooted_dirt"
+          }
+        },
+        "trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:poplar_log"
+          }
+        },
+        "foliage_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:poplar_wood"
+          }
+        },
+        "trunk_placer": {
+          "type": "minecraft:straight_trunk_placer",
+          "base_height": 3,
+          "height_rand_a": 0,
+          "height_rand_b": 0
+        },
+        "foliage_placer": {
+          "type": "minecraft:fancy_foliage_placer",
+          "radius": 1,
+          "offset": 0,
+          "height": 1
+        },
+        "decorators": []
+      },
+      "placement": []
+    },
+    {
+      "feature": {
+        "type": "minecraft:tree",
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size"
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:poplar_wood"
+          }
+        },
+        "trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:poplar_log"
+          }
+        },
+        "foliage_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:poplar_wood"
+          }
+        },
+        "trunk_placer": {
+          "type": "minecraft:straight_trunk_placer",
+          "base_height": 3,
+          "height_rand_a": 0,
+          "height_rand_b": 0
+        },
+        "foliage_placer": {
+          "type": "minecraft:fancy_foliage_placer",
+          "radius": 0,
+          "offset": 0,
+          "height": 0
+        },
+        "decorators": []
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 1,
+          "y": 4,
+          "z": 1
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:template",
+        "templates": [
+          {
+            "weight": 1,
+            "data": {
+              "id": "wythers:feature/desert_palm_head_1"
+            }
+          }
+        ]
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 1,
+          "y": 7,
+          "z": 1
+        }
+      ]
+    },
+    {
+      "feature": "wythers:tree/palm/desert/beard",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 1,
+          "y": 6,
+          "z": 1
+        }
+      ]
+    },
+    {
+      "feature": "wythers:tree/palm/desert/fruit",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 1,
+          "y": 9,
+          "z": 1
+        }
+      ]
+    }
+  ]
+}

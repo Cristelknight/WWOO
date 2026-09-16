@@ -1,0 +1,113 @@
+{
+  "type": "minecraft:sequence",
+  "features": [
+    {
+      "feature": "wythers:other/lilypad_stemmed",
+      "placement": []
+    },
+    {
+      "feature": {
+        "type": "minecraft:overlay",
+        "features": [
+          {
+            "feature": "wythers:other/lilypad_south",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 1,
+                "y": 0,
+                "z": 0
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:not",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      1,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:lily_pad",
+                      "minecraft:brain_coral_fan",
+                      "minecraft:bubble_coral_fan",
+                      "minecraft:tube_coral_fan",
+                      "minecraft:horn_coral_fan"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "feature": "wythers:other/lilypad_north",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": 0,
+                "z": 1
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:not",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      1,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:lily_pad",
+                      "minecraft:brain_coral_fan",
+                      "minecraft:bubble_coral_fan",
+                      "minecraft:tube_coral_fan",
+                      "minecraft:horn_coral_fan"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "feature": "wythers:other/lilypad_south",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 1,
+                "y": 0,
+                "z": 1
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:not",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      1,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:lily_pad",
+                      "minecraft:brain_coral_fan",
+                      "minecraft:bubble_coral_fan",
+                      "minecraft:tube_coral_fan",
+                      "minecraft:horn_coral_fan"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "placement": []
+    }
+  ]
+}

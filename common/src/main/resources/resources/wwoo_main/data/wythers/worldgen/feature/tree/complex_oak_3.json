@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:sequence",
+  "features": [
+    "wythers:tree/complex_oak/1"
+  ]
+}

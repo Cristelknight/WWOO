@@ -1,0 +1,85 @@
+{
+  "feature": {
+    "type": "minecraft:simple_random_selector",
+    "features": [
+      {
+        "feature": "wythers:other/spooky_pumpkin_north",
+        "placement": []
+      },
+      {
+        "feature": "wythers:other/spooky_pumpkin_south",
+        "placement": []
+      },
+      {
+        "feature": "wythers:other/spooky_pumpkin_east",
+        "placement": []
+      },
+      {
+        "feature": "wythers:other/spooky_pumpkin_west",
+        "placement": []
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 16
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING_NO_LEAVES"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 128
+    },
+    {
+      "type": "minecraft:offset",
+      "x": {
+        "type": "minecraft:trapezoid",
+        "max": 7,
+        "min": -7,
+        "plateau": 0
+      },
+      "y": {
+        "type": "minecraft:trapezoid",
+        "max": 3,
+        "min": -3,
+        "plateau": 0
+      },
+      "z": {
+        "type": "minecraft:trapezoid",
+        "max": 7,
+        "min": -7,
+        "plateau": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_block_tag",
+            "tag": "wythers:air_and_plants"
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:grass_block",
+            "offset": [
+              0,
+              -1,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

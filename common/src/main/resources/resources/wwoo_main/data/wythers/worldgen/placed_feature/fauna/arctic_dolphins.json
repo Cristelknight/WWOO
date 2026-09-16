@@ -1,0 +1,107 @@
+{
+  "feature": {
+    "type": "minecraft:overlay",
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:template",
+          "templates": [
+            {
+              "weight": 1,
+              "data": {
+                "id": "wythers:fauna/dolphin_large"
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "wythers:fauna/dolphin_medium"
+              }
+            }
+          ]
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min_inclusive": 1,
+              "max_inclusive": 4
+            }
+          }
+        ]
+      },
+      {
+        "feature": {
+          "type": "minecraft:template",
+          "templates": [
+            {
+              "weight": 1,
+              "data": {
+                "id": "wythers:fauna/dolphin_baby"
+              }
+            }
+          ]
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min_inclusive": 0,
+              "max_inclusive": 2
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 64
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": "minecraft:water"
+      }
+    },
+    {
+      "type": "minecraft:offset",
+      "x": 0,
+      "y": -2,
+      "z": 0
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": [
+          "minecraft:water"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "type": "minecraft:overlay",
+  "features": [
+    {
+      "feature": {
+        "ignore_vines": true,
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size",
+          "min_clipped_height": 1,
+          "limit": 1,
+          "lower_size": 1,
+          "upper_size": 1
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:rooted_dirt"
+          }
+        },
+        "trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:oak_wood"
+          }
+        },
+        "foliage_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:oak_leaves"
+          }
+        },
+        "trunk_placer": {
+          "type": "minecraft:forking_trunk_placer",
+          "base_height": 7,
+          "height_rand_a": 2,
+          "height_rand_b": 0
+        },
+        "foliage_placer": {
+          "type": "minecraft:fancy_foliage_placer",
+          "radius": 2,
+          "offset": 0,
+          "height": 2
+        },
+        "decorators": [
+          {
+            "type": "minecraft:place_on_ground",
+            "tries": 30,
+            "radius": 1,
+            "height": 2,
+            "block_state_provider": {
+              "type": "minecraft:weighted",
+              "entries": [
+                {
+                  "weight": 3,
+                  "data": {
+                    "id": "fern"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "minecraft:brown_mushroom"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "type": "minecraft:tree"
+      },
+      "placement": []
+    },
+    {
+      "feature": {
+        "ignore_vines": true,
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size",
+          "min_clipped_height": 1,
+          "limit": 1,
+          "lower_size": 1,
+          "upper_size": 1
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:rooted_dirt"
+          }
+        },
+        "trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:oak_wood"
+          }
+        },
+        "foliage_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:oak_leaves"
+          }
+        },
+        "trunk_placer": {
+          "type": "minecraft:forking_trunk_placer",
+          "base_height": 11,
+          "height_rand_a": 2,
+          "height_rand_b": 0
+        },
+        "foliage_placer": {
+          "type": "minecraft:fancy_foliage_placer",
+          "radius": 2,
+          "offset": 0,
+          "height": 2
+        },
+        "decorators": [],
+        "type": "minecraft:tree"
+      },
+      "placement": []
+    },
+    {
+      "feature": {
+        "ignore_vines": true,
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size",
+          "min_clipped_height": 1,
+          "limit": 1,
+          "lower_size": 1,
+          "upper_size": 1
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:rooted_dirt"
+          }
+        },
+        "trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:oak_wood"
+          }
+        },
+        "foliage_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:oak_leaves"
+          }
+        },
+        "trunk_placer": {
+          "type": "minecraft:forking_trunk_placer",
+          "base_height": 15,
+          "height_rand_a": 2,
+          "height_rand_b": 0
+        },
+        "foliage_placer": {
+          "type": "minecraft:jungle_foliage_placer",
+          "radius": 0,
+          "offset": 0,
+          "height": 0
+        },
+        "decorators": [],
+        "type": "minecraft:tree"
+      },
+      "placement": [
+        {
+          "type": "minecraft:rarity_filter",
+          "chance": 2
+        }
+      ]
+    }
+  ]
+}

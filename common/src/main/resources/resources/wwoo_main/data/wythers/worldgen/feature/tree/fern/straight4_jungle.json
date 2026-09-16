@@ -1,0 +1,60 @@
+{
+  "type": "minecraft:sequence",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:tree",
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size"
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:poplar_wood"
+          }
+        },
+        "trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:mangrove_roots"
+          }
+        },
+        "foliage_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:mangrove_roots"
+          }
+        },
+        "trunk_placer": {
+          "type": "minecraft:straight_trunk_placer",
+          "base_height": 5,
+          "height_rand_a": 0,
+          "height_rand_b": 0
+        },
+        "foliage_placer": {
+          "type": "minecraft:fancy_foliage_placer",
+          "radius": 0,
+          "offset": 0,
+          "height": 0
+        },
+        "decorators": [
+          {
+            "type": "minecraft:trunk_vine"
+          }
+        ]
+      },
+      "placement": []
+    },
+    {
+      "feature": "wythers:tree/fern/crown",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 4,
+          "z": 0
+        }
+      ]
+    }
+  ]
+}

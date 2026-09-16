@@ -1,0 +1,460 @@
+{
+  "feature": {
+    "type": "minecraft:overlay",
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:simple_random_selector",
+          "features": [
+            {
+              "feature": {
+                "type": "minecraft:disk",
+                "state_provider": {
+                  "type": "minecraft:rule_based",
+                  "rules": [
+                    {
+                      "if_true": {
+                        "type": "minecraft:volume_match",
+                        "min": [
+                          -1,
+                          0,
+                          -1
+                        ],
+                        "max": [
+                          1,
+                          0,
+                          1
+                        ],
+                        "match": {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": [
+                            "minecraft:potent_sulfur",
+                            "minecraft:light"
+                          ]
+                        }
+                      },
+                      "then": {
+                        "type": "minecraft:simple",
+                        "state": {
+                          "id": "minecraft:light",
+                          "properties": {
+                            "level": "0",
+                            "waterlogged": "true"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "if_true": {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:not",
+                            "predicate": {
+                              "type": "minecraft:matching_fluids",
+                              "fluids": "water"
+                            }
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              1,
+                              0
+                            ],
+                            "blocks": "minecraft:air"
+                          }
+                        ]
+                      },
+                      "then": {
+                        "type": "minecraft:simple",
+                        "state": "minecraft:potent_sulfur"
+                      }
+                    },
+                    {
+                      "if_true": {
+                        "type": "minecraft:volume_match",
+                        "min": [
+                          -2,
+                          1,
+                          -2
+                        ],
+                        "max": [
+                          2,
+                          1,
+                          2
+                        ],
+                        "match": {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": "minecraft:light"
+                        }
+                      },
+                      "then": {
+                        "type": "minecraft:simple",
+                        "state": {
+                          "id": "minecraft:light",
+                          "properties": {
+                            "level": "0",
+                            "waterlogged": "true"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "if_true": {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          1,
+                          0
+                        ],
+                        "blocks": "minecraft:light"
+                      },
+                      "then": {
+                        "type": "minecraft:rule_based",
+                        "fallback": {
+                          "type": "minecraft:simple",
+                          "state": "minecraft:blue_concrete"
+                        },
+                        "rules": [
+                          {
+                            "if_true": {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                0,
+                                2,
+                                0
+                              ],
+                              "blocks": "minecraft:air"
+                            },
+                            "then": {
+                              "type": "minecraft:simple",
+                              "state": "minecraft:sulfur"
+                            }
+                          },
+                          {
+                            "if_true": {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                0,
+                                3,
+                                0
+                              ],
+                              "blocks": "minecraft:air"
+                            },
+                            "then": {
+                              "type": "minecraft:simple",
+                              "state": "minecraft:lime_terracotta"
+                            }
+                          },
+                          {
+                            "if_true": {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                0,
+                                4,
+                                0
+                              ],
+                              "blocks": "minecraft:air"
+                            },
+                            "then": {
+                              "type": "minecraft:simple",
+                              "state": "minecraft:green_terracotta"
+                            }
+                          },
+                          {
+                            "if_true": {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                0,
+                                5,
+                                0
+                              ],
+                              "blocks": "minecraft:air"
+                            },
+                            "then": {
+                              "type": "minecraft:simple",
+                              "state": "minecraft:cyan_concrete"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "radius": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 8,
+                  "max_inclusive": 8
+                },
+                "half_height": 4,
+                "target": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:volume_match",
+                      "min": [
+                        -1,
+                        -1,
+                        -1
+                      ],
+                      "max": [
+                        1,
+                        0,
+                        1
+                      ],
+                      "match": {
+                        "type": "minecraft:matching_blocks",
+                        "blocks": [
+                          "minecraft:dripstone_block",
+                          "minecraft:potent_sulfur",
+                          "minecraft:sulfur",
+                          "minecraft:lime_terracotta",
+                          "minecraft:green_terracotta",
+                          "minecraft:cyan_concrete",
+                          "minecraft:blue_concrete",
+                          "minecraft:light"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "placement": []
+            }
+          ]
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 40
+          },
+          {
+            "type": "minecraft:in_square"
+          },
+          {
+            "type": "minecraft:heightmap",
+            "heightmap": "WORLD_SURFACE_WG"
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": -1,
+            "z": 0
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:volume_match",
+              "min": [
+                -4,
+                0,
+                -4
+              ],
+              "max": [
+                4,
+                0,
+                4
+              ],
+              "match": {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:dripstone_block",
+                  "minecraft:potent_sulfur",
+                  "minecraft:sulfur",
+                  "minecraft:lime_terracotta",
+                  "minecraft:green_terracotta",
+                  "minecraft:cyan_concrete",
+                  "minecraft:blue_concrete",
+                  "minecraft:light"
+                ]
+              }
+            }
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:volume_match",
+              "min": [
+                -6,
+                1,
+                -6
+              ],
+              "max": [
+                6,
+                2,
+                6
+              ],
+              "match": {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:dripstone_block",
+                  "minecraft:tuff",
+                  "minecraft:calcite",
+                  "minecraft:air",
+                  "minecraft:light"
+                ]
+              }
+            }
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": -4,
+            "z": 0
+          },
+          {
+            "type": "minecraft:count",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "feature": {
+          "type": "minecraft:simple_random_selector",
+          "features": [
+            {
+              "feature": {
+                "type": "minecraft:disk",
+                "state_provider": {
+                  "type": "minecraft:rule_based",
+                  "rules": [
+                    {
+                      "if_true": {
+                        "type": "minecraft:volume_match",
+                        "min": [
+                          -1,
+                          1,
+                          -1
+                        ],
+                        "max": [
+                          1,
+                          1,
+                          1
+                        ],
+                        "match": {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": "minecraft:air"
+                        }
+                      },
+                      "then": {
+                        "type": "minecraft:simple",
+                        "state": {
+                          "id": "minecraft:smooth_quartz_slab",
+                          "properties": {
+                            "type": "bottom",
+                            "waterlogged": "true"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "radius": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 8,
+                  "max_inclusive": 8
+                },
+                "half_height": 0,
+                "target": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:volume_match",
+                      "min": [
+                        -1,
+                        -1,
+                        -1
+                      ],
+                      "max": [
+                        1,
+                        0,
+                        1
+                      ],
+                      "match": {
+                        "type": "minecraft:matching_blocks",
+                        "blocks": [
+                          "minecraft:calcite",
+                          "minecraft:smooth_quartz_slab"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "placement": []
+            }
+          ]
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 30
+          },
+          {
+            "type": "minecraft:in_square"
+          },
+          {
+            "type": "minecraft:heightmap",
+            "heightmap": "WORLD_SURFACE_WG"
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": -1,
+            "z": 0
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:volume_match",
+              "min": [
+                -8,
+                0,
+                -8
+              ],
+              "max": [
+                8,
+                0,
+                8
+              ],
+              "match": {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:tuff",
+                  "minecraft:calcite",
+                  "minecraft:smooth_quartz_slab"
+                ]
+              }
+            }
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:volume_match",
+              "min": [
+                -8,
+                1,
+                -8
+              ],
+              "max": [
+                8,
+                2,
+                8
+              ],
+              "match": {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:tuff",
+                  "minecraft:calcite",
+                  "minecraft:air"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "placement": []
+}

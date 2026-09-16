@@ -1,0 +1,39 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "state_provider": {
+      "fallback": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:bedrock"
+        }
+      },
+      "rules": [],
+      "type": "minecraft:rule_based"
+    },
+    "target": {
+      "type": "minecraft:true"
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 8,
+      "max_inclusive": 8
+    },
+    "half_height": 0
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 60
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 3
+      }
+    }
+  ]
+}

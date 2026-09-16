@@ -1,18 +1,126 @@
 {
   "attributes": {
-    "minecraft:audio/background_music": {},
-    "minecraft:visual/sky_color": 6269917,
-    "minecraft:visual/fog_color": 12638463,
-    "minecraft:visual/water_fog_color": 331305,
-    "minecraft:audio/music_volume": 1,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "block_search_extent": 8,
-        "offset": 2,
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000
+    "minecraft:gameplay/natural_mob_spawns": {
+      "spawn_costs": {},
+      "spawns_by_category": {
+        "ambient": [
+          {
+            "type": "minecraft:bat",
+            "weight": 10,
+            "count": 8
+          }
+        ],
+        "axolotls": [],
+        "creature": [
+          {
+            "type": "minecraft:sheep",
+            "weight": 12,
+            "count": 4
+          },
+          {
+            "type": "minecraft:pig",
+            "weight": 10,
+            "count": 4
+          },
+          {
+            "type": "minecraft:chicken",
+            "weight": 10,
+            "count": 4
+          },
+          {
+            "type": "minecraft:cow",
+            "weight": 8,
+            "count": 4
+          },
+          {
+            "type": "minecraft:horse",
+            "weight": 5,
+            "count": {
+              "type": "minecraft:uniform",
+              "max_inclusive": 6,
+              "min_inclusive": 2
+            }
+          },
+          {
+            "type": "minecraft:donkey",
+            "weight": 1,
+            "count": {
+              "type": "minecraft:uniform",
+              "max_inclusive": 3,
+              "min_inclusive": 1
+            }
+          }
+        ],
+        "misc": [],
+        "monster": [
+          {
+            "type": "minecraft:spider",
+            "weight": 100,
+            "count": 4
+          },
+          {
+            "type": "minecraft:zombie",
+            "weight": 90,
+            "count": 4
+          },
+          {
+            "type": "minecraft:zombie_villager",
+            "weight": 5,
+            "count": 1
+          },
+          {
+            "type": "minecraft:zombie_horse",
+            "weight": 5,
+            "count": 1
+          },
+          {
+            "type": "minecraft:skeleton",
+            "weight": 100,
+            "count": 4
+          },
+          {
+            "type": "minecraft:creeper",
+            "weight": 100,
+            "count": 4
+          },
+          {
+            "type": "minecraft:slime",
+            "weight": 100,
+            "count": 4
+          },
+          {
+            "type": "minecraft:enderman",
+            "weight": 10,
+            "count": {
+              "type": "minecraft:uniform",
+              "max_inclusive": 4,
+              "min_inclusive": 1
+            }
+          },
+          {
+            "type": "minecraft:witch",
+            "weight": 5,
+            "count": 1
+          }
+        ],
+        "underground_water_creature": [
+          {
+            "type": "minecraft:glow_squid",
+            "weight": 10,
+            "count": {
+              "type": "minecraft:uniform",
+              "max_inclusive": 6,
+              "min_inclusive": 4
+            }
+          }
+        ],
+        "water_ambient": [],
+        "water_creature": []
       }
-    }
+    },
+    "minecraft:gameplay/piglins_zombify": false,
+    "minecraft:visual/sky_color": 6269917,
+    "minecraft:visual/fog_color": 9760255
   },
   "carvers": [
     "minecraft:cave",
@@ -25,27 +133,12 @@
   },
   "features": [
     [
-      "wythers:placer/plains",
-      "wythers:terrain/local/stone_boulders",
-      "wythers:terrain/local/highland_stone_cliffs_surface",
-      "wythers:terrain/local/highland_stone_cliffs",
-      "wythers:terrain/local/stone_cliffs_sheer",
-      "wythers:terrain/local/crust_grass",
-      "wythers:terrain/extended/scree",
-      "wythers:road/harvest_fields_1",
-      "wythers:road/harvest_fields_1b",
-      "wythers:road/harvest_fields_2",
-      "wythers:road/harvest_fields_2b",
-      "wythers:road/harvest_fields_3",
-      "wythers:road/harvest_fields_4",
-      "wythers:farm/harvest_fields_1",
-      "wythers:farm/harvest_fields_2",
-      "wythers:farm/harvest_fields_3"
+      "wythers:bedrock_seal",
+      "wythers:stony_cliffs"
     ],
     [
       "minecraft:lake_lava_underground",
-      "minecraft:lake_lava_surface",
-      "wythers:terrain/extended/base_mangrove_swamp_plains"
+      "minecraft:lake_lava_surface"
     ],
     [
       "minecraft:amethyst_geode"
@@ -57,7 +150,6 @@
     [],
     [],
     [
-      "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
       "minecraft:ore_granite_lower",
@@ -76,14 +168,16 @@
       "minecraft:ore_redstone",
       "minecraft:ore_redstone_lower",
       "minecraft:ore_diamond",
+      "minecraft:ore_diamond_medium",
       "minecraft:ore_diamond_large",
       "minecraft:ore_diamond_buried",
       "minecraft:ore_lapis",
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "wythers:terrain/local/riverbank_plains",
-      "wythers:terrain/extended/badlands_edge"
+      "minecraft:disk_sand",
+      "minecraft:disk_clay",
+      "minecraft:disk_gravel"
     ],
     [],
     [
@@ -92,146 +186,20 @@
     ],
     [
       "minecraft:glow_lichen",
-      "wythers:farm/harvest_fields_scarecrow",
-      "wythers:farm/harvest_fields_hay",
-      "wythers:farm/harvest_fields_hay_2",
-      "wythers:farm/harvest_fields_pumpkin",
-      "wythers:farm/harvest_fields_wheat",
-      "wythers:farm/harvest_fields_wheat_2",
       "minecraft:patch_tall_grass_2",
-      "wythers:vegetation/local/patch/sunflower_birch_forest",
-      "wythers:farm/harvest_fields_stumps",
-      "wythers:vegetation/local/trees/willows",
+      "minecraft:patch_bush",
+      "minecraft:trees_plains",
       "minecraft:patch_grass_plain",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
-      "wythers:vegetation/extended/patch/beach_reeds",
-      "wythers:vegetation/local/patch/beach_reeds"
+      "minecraft:patch_pumpkin",
+      "minecraft:patch_sugar_cane",
+      "minecraft:patch_firefly_bush_near_water"
     ],
     [
-      "minecraft:freeze_top_layer",
-      "wythers:terrain/extended/volcanic_extinction",
-      "wythers:terrain/local/replace_basalt_to_tuff",
-      "wythers:terrain/extended/replace_basalt_to_deepslate"
+      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,
-  "spawn_costs": {},
-  "spawners": {
-    "ambient": [
-      {
-        "type": "minecraft:bat",
-        "maxCount": 8,
-        "minCount": 8,
-        "weight": 10
-      }
-    ],
-    "axolotls": [],
-    "creature": [
-      {
-        "type": "minecraft:sheep",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 12
-      },
-      {
-        "type": "minecraft:pig",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 10
-      },
-      {
-        "type": "minecraft:chicken",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 10
-      },
-      {
-        "type": "minecraft:cow",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 8
-      },
-      {
-        "type": "minecraft:horse",
-        "maxCount": 6,
-        "minCount": 2,
-        "weight": 5
-      },
-      {
-        "type": "minecraft:donkey",
-        "maxCount": 3,
-        "minCount": 1,
-        "weight": 1
-      }
-    ],
-    "misc": [],
-    "monster": [
-      {
-        "type": "minecraft:spider",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 100
-      },
-      {
-        "type": "minecraft:zombie",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 95
-      },
-      {
-        "type": "minecraft:zombie_villager",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 5
-      },
-      {
-        "type": "minecraft:skeleton",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 100
-      },
-      {
-        "type": "minecraft:creeper",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 100
-      },
-      {
-        "type": "minecraft:slime",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 100
-      },
-      {
-        "type": "minecraft:enderman",
-        "maxCount": 4,
-        "minCount": 1,
-        "weight": 10
-      },
-      {
-        "type": "minecraft:witch",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 5
-      },
-      {
-        "type": "minecraft:zombie_horse",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 5
-      }
-    ],
-    "underground_water_creature": [
-      {
-        "type": "minecraft:glow_squid",
-        "maxCount": 6,
-        "minCount": 4,
-        "weight": 10
-      }
-    ],
-    "water_ambient": [],
-    "water_creature": []
-  },
   "temperature": 0.8
 }

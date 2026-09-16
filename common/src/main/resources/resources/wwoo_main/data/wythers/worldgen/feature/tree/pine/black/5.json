@@ -1,0 +1,180 @@
+{
+  "type": "minecraft:overlay",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:sequence",
+        "features": [
+          {
+            "feature": {
+              "type": "minecraft:overlay",
+              "features": [
+          {
+            "feature": "wythers:tree/pine/black/branch_small",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": 12,
+                "z": 0
+              },
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 20,
+                  "max_inclusive": 20
+                }
+              }
+            ]
+          },
+          {
+            "feature": "wythers:tree/pine/black/branch_medium",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": 8,
+                "z": 0
+              },
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 20,
+                  "max_inclusive": 20
+                }
+              }
+            ]
+          },
+          {
+            "feature": "wythers:tree/pine/black/branch_medium",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": 4,
+                "z": 0
+              },
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 20,
+                  "max_inclusive": 20
+                }
+              }
+            ]
+          },
+          {
+            "feature": "wythers:tree/pine/black/branch_wide",
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 20,
+                  "max_inclusive": 20
+                }
+              }
+            ]
+          },
+          {
+            "feature": "wythers:tree/pine/black/core",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": 16,
+                "z": 0
+              },
+              {
+                "type": "minecraft:count",
+                "count": 5
+              }
+            ]
+          }
+        ]
+            },
+            "placement": []
+          },
+                {
+                  "feature": "wythers:tree/pine/black/core",
+                  "placement": []
+                },
+          {
+            "feature": {
+              "type": "minecraft:overlay",
+              "features": [
+          {
+            "feature": "wythers:tree/pine/black/clear",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 1,
+                "y": 16,
+                "z": 0
+              }
+            ]
+          },
+          {
+            "feature": "wythers:tree/pine/black/clear",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": -1,
+                "y": 16,
+                "z": 0
+              }
+            ]
+          },
+          {
+            "feature": "wythers:tree/pine/black/clear",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": 16,
+                "z": 1
+              }
+            ]
+          },
+          {
+            "feature": "wythers:tree/pine/black/clear",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": 16,
+                "z": -1
+              }
+            ]
+          }
+        ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": 3,
+                "z": 0
+              }
+            ]
+          }
+        ]
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 1,
+            "max_inclusive": 5
+          },
+          "z": 0
+        }
+      ]
+    }
+  ]
+}

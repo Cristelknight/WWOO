@@ -1,0 +1,187 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "state_provider": {
+      "type": "minecraft:rule_based",
+      "fallback": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:cinnabar_slab",
+          "properties": {
+            "type": "bottom",
+            "waterlogged": "true"
+          }
+        }
+      },
+      "rules": []
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 6,
+      "max_inclusive": 8
+    },
+    "half_height": 0,
+    "target": {
+      "type": "minecraft:all_of",
+      "predicates": [
+        {
+          "type": "minecraft:any_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                1,
+                0
+              ],
+              "blocks": [
+                "minecraft:air",
+                "minecraft:snow"
+              ]
+            },
+            {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    1,
+                    0
+                  ],
+                  "blocks": "minecraft:light"
+                },
+                {
+                  "type": "minecraft:not",
+                  "predicate": {
+                    "type": "minecraft:matching_fluids",
+                    "offset": [
+                      0,
+                      1,
+                      0
+                    ],
+                    "fluids": "minecraft:water"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:matching_blocks",
+          "blocks": [
+            "minecraft:calcite",
+            "minecraft:cinnabar_slab"
+          ]
+        },
+        {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            -1,
+            0
+          ],
+          "blocks": "minecraft:calcite"
+        },
+        {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            1,
+            0,
+            0
+          ],
+          "blocks": [
+            "minecraft:calcite",
+            "minecraft:cinnabar_slab",
+            "minecraft:smooth_quartz"
+          ]
+        },
+        {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            -1,
+            0,
+            0
+          ],
+          "blocks": [
+            "minecraft:calcite",
+            "minecraft:cinnabar_slab",
+            "minecraft:smooth_quartz"
+          ]
+        },
+        {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            0,
+            1
+          ],
+          "blocks": [
+            "minecraft:calcite",
+            "minecraft:cinnabar_slab",
+            "minecraft:smooth_quartz"
+          ]
+        },
+        {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            0,
+            -1
+          ],
+          "blocks": [
+            "minecraft:calcite",
+            "minecraft:cinnabar_slab",
+            "minecraft:smooth_quartz"
+          ]
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              8,
+              0,
+              0
+            ],
+            "blocks": "calcite"
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              -8,
+              0,
+              0
+            ],
+            "blocks": "calcite"
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              8
+            ],
+            "blocks": "calcite"
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              -8
+            ],
+            "blocks": "calcite"
+          }
+        ]
+      }
+    }
+  ]
+}

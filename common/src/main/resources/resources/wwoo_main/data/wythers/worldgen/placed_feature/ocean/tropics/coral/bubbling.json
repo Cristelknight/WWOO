@@ -1,0 +1,20 @@
+{
+  "feature": {
+    "type": "minecraft:template",
+    "templates": [
+      {
+        "weight": 1,
+        "data": {
+          "id": "wythers:feature/bubble_coral_1"
+        }
+      },
+      {
+        "weight": 1,
+        "data": {
+          "id": "wythers:feature/bubble_coral_2"
+        }
+      }
+    ]
+  },
+  "placement": []
+}

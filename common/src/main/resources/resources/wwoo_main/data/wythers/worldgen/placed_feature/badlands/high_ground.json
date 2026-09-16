@@ -1,0 +1,248 @@
+{
+  "feature": {
+    "type": "minecraft:vegetation_patch",
+    "surface": "floor",
+    "depth": 1,
+    "vertical_range": 7,
+    "extra_bottom_block_chance": 0,
+    "extra_edge_column_chance": 0.5,
+    "vegetation_chance": 0.01,
+    "xz_radius": 7,
+    "replaceable": "#minecraft:terracotta",
+    "ground_state": {
+      "type": "minecraft:rule_based",
+      "rules": [
+        {
+          "if_true": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_biomes",
+                "biomes": [
+                  "badlands",
+                  "eroded_badlands"
+                ]
+              },
+              {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_block_tag",
+                      "offset": [
+                        1,
+                        -1,
+                        0
+                      ],
+                      "tag": "wythers:air_and_plants"
+                    },
+                    {
+                      "type": "minecraft:matching_block_tag",
+                      "offset": [
+                        -1,
+                        -1,
+                        0
+                      ],
+                      "tag": "wythers:air_and_plants"
+                    },
+                    {
+                      "type": "minecraft:matching_block_tag",
+                      "offset": [
+                        0,
+                        -1,
+                        1
+                      ],
+                      "tag": "wythers:air_and_plants"
+                    },
+                    {
+                      "type": "minecraft:matching_block_tag",
+                      "offset": [
+                        0,
+                        -1,
+                        -1
+                      ],
+                      "tag": "wythers:air_and_plants"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "then": {
+            "type": "minecraft:rule_based",
+            "rules": [
+              {
+                "if_true": {
+                  "type": "minecraft:height_range",
+                  "min_inclusive": {
+                    "absolute": 80
+                  },
+                  "max_inclusive": {
+                    "absolute": 154
+                  }
+                },
+                "then": {
+                  "type": "minecraft:noise",
+                  "noise": {
+                    "base_octave": -4,
+                    "amplitude_modifiers": [
+                      2,
+                      1,
+                      1,
+                      2
+                    ],
+                    "octave_count": 4,
+                    "normalize": "legacy"
+                  },
+                  "scale": 1,
+                  "seed": -817103696,
+                  "states": [
+                    {
+                      "id": "minecraft:grass_block"
+                    },
+                    {
+                      "id": "minecraft:rooted_dirt"
+                    },
+                    {
+                      "id": "minecraft:packed_mud"
+                    },
+                    {
+                      "id": "minecraft:coarse_dirt"
+                    },
+                    {
+                      "id": "minecraft:brown_concrete_powder"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "vegetation_feature": {
+      "feature": {
+        "to_place": {
+          "type": "minecraft:rule_based",
+          "fallback": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:air"
+            }
+          },
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": "minecraft:rooted_dirt"
+              },
+              "then": {
+                "type": "minecraft:weighted",
+                "entries": [
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:dead_bush"
+                    }
+                  },
+                  {
+                    "weight": 2,
+                    "data": {
+                      "id": "minecraft:short_dry_grass"
+                    }
+                  },
+                  {
+                    "weight": 2,
+                    "data": {
+                      "id": "minecraft:tall_dry_grass"
+                    }
+                  },
+                  {
+                    "weight": 20,
+                    "data": {
+                      "id": "minecraft:short_grass"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "if_true": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:coarse_dirt",
+                  "minecraft:brown_concrete_powder"
+                ]
+              },
+              "then": {
+                "type": "minecraft:weighted",
+                "entries": [
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:dead_bush"
+                    }
+                  },
+                  {
+                    "weight": 3,
+                    "data": {
+                      "id": "minecraft:air"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "if_true": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": "minecraft:grass_block"
+              },
+              "then": {
+                "type": "minecraft:weighted",
+                "entries": [
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:short_grass"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "type": "minecraft:simple_block"
+      },
+      "placement": []
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 15
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    }
+  ]
+}

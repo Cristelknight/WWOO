@@ -1,0 +1,173 @@
+{
+  "features": [
+    {
+      "feature": {
+        "to_place": {
+          "state": {
+            "id": "minecraft:spruce_log",
+            "properties": {
+              "axis": "x"
+            }
+          },
+          "type": "minecraft:simple"
+        },
+        "type": "minecraft:simple_block"
+      },
+      "placement": [
+        {
+          "x": {
+            "min_inclusive": 0,
+            "max_inclusive": 1,
+            "type": "minecraft:uniform"
+          },
+          "y": 0,
+          "z": {
+            "min_inclusive": 0,
+            "max_inclusive": 1,
+            "type": "minecraft:uniform"
+          },
+          "type": "minecraft:offset"
+        },
+        {
+          "predicate": {
+            "blocks": "minecraft:spruce_log",
+            "offset": [
+              -1,
+              -1,
+              0
+            ],
+            "type": "minecraft:matching_blocks"
+          },
+          "type": "minecraft:block_predicate_filter"
+        }
+      ]
+    },
+    {
+      "feature": {
+        "to_place": {
+          "state": {
+            "id": "minecraft:spruce_log",
+            "properties": {
+              "axis": "z"
+            }
+          },
+          "type": "minecraft:simple"
+        },
+        "type": "minecraft:simple_block"
+      },
+      "placement": [
+        {
+          "x": {
+            "min_inclusive": 0,
+            "max_inclusive": 1,
+            "type": "minecraft:uniform"
+          },
+          "y": 0,
+          "z": {
+            "min_inclusive": 0,
+            "max_inclusive": 1,
+            "type": "minecraft:uniform"
+          },
+          "type": "minecraft:offset"
+        },
+        {
+          "predicate": {
+            "blocks": "minecraft:spruce_log",
+            "offset": [
+              0,
+              -1,
+              -1
+            ],
+            "type": "minecraft:matching_blocks"
+          },
+          "type": "minecraft:block_predicate_filter"
+        }
+      ]
+    },
+    {
+      "feature": {
+        "to_place": {
+          "state": {
+            "id": "minecraft:spruce_log",
+            "properties": {
+              "axis": "x"
+            }
+          },
+          "type": "minecraft:simple"
+        },
+        "type": "minecraft:simple_block"
+      },
+      "placement": [
+        {
+          "x": {
+            "min_inclusive": -1,
+            "max_inclusive": 0,
+            "type": "minecraft:uniform"
+          },
+          "y": 0,
+          "z": {
+            "min_inclusive": -1,
+            "max_inclusive": 0,
+            "type": "minecraft:uniform"
+          },
+          "type": "minecraft:offset"
+        },
+        {
+          "predicate": {
+            "blocks": "minecraft:spruce_log",
+            "offset": [
+              1,
+              -1,
+              0
+            ],
+            "type": "minecraft:matching_blocks"
+          },
+          "type": "minecraft:block_predicate_filter"
+        }
+      ]
+    },
+    {
+      "feature": {
+        "to_place": {
+          "state": {
+            "id": "minecraft:spruce_log",
+            "properties": {
+              "axis": "z"
+            }
+          },
+          "type": "minecraft:simple"
+        },
+        "type": "minecraft:simple_block"
+      },
+      "placement": [
+        {
+          "x": {
+            "min_inclusive": -1,
+            "max_inclusive": 0,
+            "type": "minecraft:uniform"
+          },
+          "y": 0,
+          "z": {
+            "min_inclusive": -1,
+            "max_inclusive": 0,
+            "type": "minecraft:uniform"
+          },
+          "type": "minecraft:offset"
+        },
+        {
+          "predicate": {
+            "blocks": "minecraft:spruce_log",
+            "offset": [
+              0,
+              -1,
+              1
+            ],
+            "type": "minecraft:matching_blocks"
+          },
+          "type": "minecraft:block_predicate_filter"
+        }
+      ]
+    }
+  ],
+  "type": "minecraft:simple_random_selector"
+}

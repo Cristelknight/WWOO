@@ -1,0 +1,95 @@
+{
+  "type": "minecraft:overlay",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:tree",
+        "ignore_vines": true,
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size",
+          "min_clipped_height": 0,
+          "limit": 0,
+          "lower_size": 0,
+          "upper_size": 0
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:rooted_dirt"
+          }
+        },
+        "trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:oak_wood"
+          }
+        },
+        "foliage_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:birch_leaves"
+          }
+        },
+        "trunk_placer": {
+          "type": "minecraft:forking_trunk_placer",
+          "base_height": 8,
+          "height_rand_a": 3,
+          "height_rand_b": 0
+        },
+        "foliage_placer": {
+          "type": "minecraft:fancy_foliage_placer",
+          "radius": 2,
+          "offset": 1,
+          "height": 2
+        },
+        "decorators": []
+      },
+      "placement": []
+    },
+    {
+      "feature": {
+        "type": "minecraft:tree",
+        "ignore_vines": true,
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size",
+          "min_clipped_height": 0,
+          "limit": 0,
+          "lower_size": 0,
+          "upper_size": 0
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:rooted_dirt"
+          }
+        },
+        "trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:oak_wood"
+          }
+        },
+        "foliage_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:birch_leaves"
+          }
+        },
+        "trunk_placer": {
+          "type": "minecraft:forking_trunk_placer",
+          "base_height": 5,
+          "height_rand_a": 1,
+          "height_rand_b": 0
+        },
+        "foliage_placer": {
+          "type": "minecraft:fancy_foliage_placer",
+          "radius": 2,
+          "offset": 1,
+          "height": 2
+        },
+        "decorators": []
+      },
+      "placement": []
+    }
+  ]
+}

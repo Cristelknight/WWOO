@@ -1,0 +1,62 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "state_provider": {
+      "fallback": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:andesite"
+        }
+      },
+      "rules": [
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "oak_wood"
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": "minecraft:gray_wool"
+          }
+        }
+      ],
+      "type": "minecraft:rule_based"
+    },
+    "target": {
+      "type": "minecraft:all_of",
+      "predicates": [
+        {
+          "type": "minecraft:matching_blocks",
+          "blocks": [
+            "minecraft:bedrock",
+            "minecraft:deepslate",
+            "minecraft:tuff",
+            "minecraft:lava",
+            "minecraft:oak_wood"
+          ]
+        }
+      ]
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 8,
+      "max_inclusive": 8
+    },
+    "half_height": 0
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 60
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "values": [
+    "#minecraft:substrate_overworld",
+    "#minecraft:sand",
+    "minecraft:sandstone_stairs",
+    "minecraft:farmland",
+    "minecraft:soul_soil"
+  ]
+}

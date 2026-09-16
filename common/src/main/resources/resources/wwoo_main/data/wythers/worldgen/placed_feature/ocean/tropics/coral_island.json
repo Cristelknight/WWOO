@@ -1,0 +1,79 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "state_provider": {
+      "type": "minecraft:rule_based",
+      "fallback": {
+        "type": "minecraft:simple",
+        "state": "minecraft:dead_brain_coral_block"
+      },
+      "rules": []
+    },
+    "target": {
+      "type": "minecraft:all_of",
+      "predicates": [
+        {
+          "type": "minecraft:matching_block_tag",
+          "offset": [
+            0,
+            -3,
+            0
+          ],
+          "tag": "wythers:karst"
+        },
+        {
+          "type": "minecraft:matching_block_tag",
+          "offset": [
+            0,
+            -1,
+            0
+          ],
+          "tag": "wythers:karst"
+        },
+        {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            -4,
+            0
+          ],
+          "blocks": [
+            "sand",
+            "minecraft:dirt",
+            "minecraft:grass_block"
+          ]
+        },
+        {
+          "type": "minecraft:height_range",
+          "min_inclusive": {
+            "absolute": 57
+          },
+          "max_inclusive": {
+            "below_top": 0
+          }
+        }
+      ]
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 8,
+      "max_inclusive": 8
+    },
+    "half_height": 4
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 60
+      }
+    }
+  ]
+}

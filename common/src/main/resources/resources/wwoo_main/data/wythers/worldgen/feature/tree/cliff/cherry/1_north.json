@@ -1,0 +1,222 @@
+{
+  "type": "minecraft:overlay",
+  "features": {
+    "feature": {
+      "type": "minecraft:overlay",
+      "features": [
+        {
+          "feature": {
+            "type": "minecraft:template",
+            "templates": [
+              {
+                "weight": 1,
+                "data": {
+                  "id": "wythers:feature/cliff_cherry/low_branch_1",
+                  "rotations": [
+                    "none"
+                  ]
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "wythers:feature/cliff_cherry/low_branch_2",
+                  "rotations": [
+                    "none"
+                  ]
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "wythers:feature/cliff_cherry/low_branch_3",
+                  "rotations": [
+                    "none"
+                  ]
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "wythers:feature/cliff_cherry/low_branch_4",
+                  "rotations": [
+                    "none"
+                  ]
+                }
+              }
+            ]
+          },
+          "placement": []
+        },
+        {
+          "feature": {
+            "type": "minecraft:simple_random_selector",
+            "features": [
+              {
+                "feature": {
+                  "type": "minecraft:overlay",
+                  "features": [
+                    {
+                      "feature": {
+                        "type": "minecraft:template",
+                        "templates": [
+                          {
+                            "weight": 1,
+                            "data": {
+                              "id": "wythers:feature/cliff_cherry/mid_branch_1",
+                              "rotations": [
+                                "none"
+                              ]
+                            }
+                          },
+                          {
+                            "weight": 1,
+                            "data": {
+                              "id": "wythers:feature/cliff_cherry/mid_branch_2",
+                              "rotations": [
+                                "none"
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      "placement": []
+                    },
+                    {
+                      "feature": {
+                        "type": "minecraft:template",
+                        "templates": [
+                          {
+                            "weight": 1,
+                            "data": {
+                              "id": "wythers:feature/cliff_cherry/high_branch_1",
+                              "rotations": [
+                                "none"
+                              ]
+                            }
+                          },
+                          {
+                            "weight": 1,
+                            "data": {
+                              "id": "wythers:feature/cliff_cherry/high_branch_2",
+                              "rotations": [
+                                "none"
+                              ]
+                            }
+                          },
+                          {
+                            "weight": 1,
+                            "data": {
+                              "id": "wythers:feature/cliff_cherry/high_branch_3",
+                              "rotations": [
+                                "none"
+                              ]
+                            }
+                          },
+                          {
+                            "weight": 1,
+                            "data": {
+                              "id": "wythers:feature/cliff_cherry/high_branch_4",
+                              "rotations": [
+                                "none"
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      "placement": []
+                    }
+                  ]
+                },
+                "placement": []
+              },
+              {
+                "feature": {
+                  "type": "minecraft:overlay",
+                  "features": [
+                    {
+                      "feature": {
+                        "type": "minecraft:template",
+                        "templates": [
+                          {
+                            "weight": 1,
+                            "data": {
+                              "id": "wythers:feature/cliff_cherry/mid_branch_3",
+                              "rotations": [
+                                "none"
+                              ]
+                            }
+                          },
+                          {
+                            "weight": 1,
+                            "data": {
+                              "id": "wythers:feature/cliff_cherry/mid_branch_4",
+                              "rotations": [
+                                "none"
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      "placement": []
+                    },
+                    {
+                      "feature": {
+                        "type": "minecraft:template",
+                        "templates": [
+                          {
+                            "weight": 1,
+                            "data": {
+                              "id": "wythers:feature/cliff_cherry/high_branch_5",
+                              "rotations": [
+                                "none"
+                              ]
+                            }
+                          },
+                          {
+                            "weight": 2,
+                            "data": {
+                              "id": "wythers:feature/cliff_cherry/high_branch_6",
+                              "rotations": [
+                                "none"
+                              ]
+                            }
+                          },
+                          {
+                            "weight": 1,
+                            "data": {
+                              "id": "wythers:feature/cliff_cherry/high_branch_7",
+                              "rotations": [
+                                "none"
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      "placement": [
+                        {
+                          "type": "minecraft:random_chance",
+                          "chance": 0.5
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "placement": []
+              }
+            ]
+          },
+          "placement": []
+        }
+      ]
+    },
+    "placement": [
+      {
+        "type": "minecraft:offset",
+        "x": 0,
+        "y": -2,
+        "z": 0
+      }
+    ]
+  }
+}

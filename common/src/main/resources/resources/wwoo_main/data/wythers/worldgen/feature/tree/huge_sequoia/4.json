@@ -1,0 +1,735 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:simple_random_selector",
+        "features": [
+          {
+            "feature": {
+              "type": "minecraft:simple_random_selector",
+              "features": [
+                {
+                  "feature": {
+                    "type": "minecraft:simple_random_selector",
+                    "features": [
+                      {
+                        "feature": {
+                          "type": "minecraft:tree",
+                          "decorators": [],
+                          "ignore_vines": true,
+                          "minimum_size": {
+                            "limit": 3,
+                            "lower_size": 1,
+                            "upper_size": 1,
+                            "type": "minecraft:two_layers_feature_size"
+                          },
+                          "trunk_provider": {
+                            "state": {
+                              "properties": {
+                                "axis": "y"
+                              },
+                              "id": "minecraft:stripped_acacia_log"
+                            },
+                            "type": "minecraft:simple"
+                          },
+                          "trunk_placer": {
+                            "base_height": 1,
+                            "height_rand_a": 5,
+                            "height_rand_b": 0,
+                            "type": "minecraft:straight_trunk_placer"
+                          },
+                          "foliage_provider": {
+                            "state": {
+                              "properties": {
+                                "axis": "y"
+                              },
+                              "id": "minecraft:stripped_acacia_log"
+                            },
+                            "type": "minecraft:simple"
+                          },
+                          "foliage_placer": {
+                            "radius": 2,
+                            "offset": 0,
+                            "height": 1,
+                            "type": "minecraft:blob_foliage_placer"
+                          },
+                          "below_trunk_provider": {
+                            "type": "minecraft:rule_based",
+                            "rules": [
+                              {
+                                "if_true": {
+                                  "type": "minecraft:not",
+                                  "predicate": {
+                                    "type": "minecraft:matching_block_tag",
+                                    "tag": "minecraft:cannot_replace_below_tree_trunk"
+                                  }
+                                },
+                                "then": {
+                                  "state": {
+                                    "id": "minecraft:rooted_dirt"
+                                  },
+                                  "type": "minecraft:simple"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "placement": [
+                          {
+                            "predicate": {
+                              "type": "minecraft:replaceable"
+                            },
+                            "type": "minecraft:block_predicate_filter"
+                          },
+                          {
+                            "count": 64,
+                            "type": "minecraft:count"
+                          }
+                        ]
+                      },
+                      {
+                        "feature": {
+                          "type": "minecraft:vegetation_patch",
+                          "vegetation_chance": 1.0,
+                          "xz_radius": 1,
+                          "extra_edge_column_chance": 0.0,
+                          "extra_bottom_block_chance": 0.0,
+                          "vertical_range": 2,
+                          "vegetation_feature": {
+                            "feature": {
+                              "type": "minecraft:block_column",
+                              "layers": [
+                                {
+                                  "height": {
+                                    "min_inclusive": 29,
+                                    "max_inclusive": 30,
+                                    "type": "minecraft:uniform"
+                                  },
+                                  "provider": {
+                                    "state": {
+                                      "properties": {
+                                        "axis": "y"
+                                      },
+                                      "id": "minecraft:stripped_acacia_log"
+                                    },
+                                    "type": "minecraft:simple"
+                                  }
+                                }
+                              ],
+                              "direction": "up",
+                              "allowed_placement": {
+                                "blocks": "#wythers:tree_branch_replaceable",
+                                "type": "minecraft:matching_blocks"
+                              },
+                              "prioritize_tip": false
+                            },
+                            "placement": []
+                          },
+                          "surface": "floor",
+                          "depth": 1,
+                          "replaceable": "#wythers:spruce_stuff",
+                          "ground_state": {
+                            "state": {
+                              "properties": {
+                                "axis": "y"
+                              },
+                              "id": "minecraft:stripped_acacia_log"
+                            },
+                            "type": "minecraft:simple"
+                          }
+                        },
+                        "placement": [
+                          {
+                            "predicate": {
+                              "predicates": [
+                                {
+                                  "blocks": "minecraft:stripped_acacia_log",
+                                  "type": "minecraft:matching_blocks"
+                                },
+                                {
+                                  "offset": [
+                                    0,
+                                    10,
+                                    0
+                                  ],
+                                  "type": "minecraft:replaceable"
+                                }
+                              ],
+                              "type": "minecraft:all_of"
+                            },
+                            "type": "minecraft:block_predicate_filter"
+                          },
+                          {
+                            "direction_of_search": "up",
+                            "target_condition": {
+                              "blocks": "minecraft:air",
+                              "offset": [
+                                0,
+                                1,
+                                0
+                              ],
+                              "type": "minecraft:matching_blocks"
+                            },
+                            "max_steps": 8,
+                            "type": "minecraft:environment_scan"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "placement": [
+                    {
+                      "predicate": {
+                        "type": "minecraft:replaceable"
+                      },
+                      "type": "minecraft:block_predicate_filter"
+                    },
+                    {
+                      "count": 28,
+                      "type": "minecraft:count"
+                    }
+                  ]
+                },
+                {
+                  "feature": {
+                    "type": "minecraft:simple_random_selector",
+                    "features": [
+                      {
+                        "feature": {
+                          "type": "minecraft:tree",
+                          "decorators": [],
+                          "ignore_vines": true,
+                          "minimum_size": {
+                            "limit": 1,
+                            "lower_size": 0,
+                            "upper_size": 0,
+                            "type": "minecraft:two_layers_feature_size"
+                          },
+                          "trunk_provider": {
+                            "state": {
+                              "properties": {
+                                "axis": "y"
+                              },
+                              "id": "minecraft:stripped_acacia_log"
+                            },
+                            "type": "minecraft:simple"
+                          },
+                          "trunk_placer": {
+                            "base_height": 12,
+                            "height_rand_a": 2,
+                            "height_rand_b": 0,
+                            "type": "minecraft:straight_trunk_placer"
+                          },
+                          "foliage_provider": {
+                            "state": {
+                              "properties": {
+                                "axis": "y"
+                              },
+                              "id": "minecraft:stripped_acacia_log"
+                            },
+                            "type": "minecraft:simple"
+                          },
+                          "foliage_placer": {
+                            "radius": 1,
+                            "offset": 0,
+                            "height": 16,
+                            "type": "minecraft:fancy_foliage_placer"
+                          },
+                          "below_trunk_provider": {
+                            "type": "minecraft:rule_based",
+                            "rules": [
+                              {
+                                "if_true": {
+                                  "type": "minecraft:not",
+                                  "predicate": {
+                                    "type": "minecraft:matching_block_tag",
+                                    "tag": "minecraft:cannot_replace_below_tree_trunk"
+                                  }
+                                },
+                                "then": {
+                                  "state": {
+                                    "properties": {
+                                      "axis": "y"
+                                    },
+                                    "id": "minecraft:stripped_acacia_log"
+                                  },
+                                  "type": "minecraft:simple"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "placement": [
+                          {
+                            "predicate": {
+                              "offset": [
+                                0,
+                                1,
+                                0
+                              ],
+                              "type": "minecraft:replaceable"
+                            },
+                            "type": "minecraft:block_predicate_filter"
+                          }
+                        ]
+                      },
+                      {
+                        "feature": {
+                          "type": "minecraft:simple_random_selector",
+                          "features": [
+                            {
+                              "feature": {
+                                "type": "minecraft:tree",
+                                "decorators": [
+                                  {
+                                    "block_provider": {
+                                      "state": {
+                                        "properties": {
+                                          "persistent": "false",
+                                          "distance": "2",
+                                          "waterlogged": "false"
+                                        },
+                                        "id": "minecraft:acacia_leaves"
+                                      },
+                                      "type": "minecraft:simple"
+                                    },
+                                    "required_empty_blocks": 2,
+                                    "directions": [
+                                      "down"
+                                    ],
+                                    "probability": 0.35,
+                                    "exclusion_radius_xz": 0,
+                                    "exclusion_radius_y": 0,
+                                    "type": "minecraft:attached_to_leaves"
+                                  }
+                                ],
+                                "ignore_vines": true,
+                                "minimum_size": {
+                                  "limit": 0,
+                                  "lower_size": 0,
+                                  "upper_size": 0,
+                                  "type": "minecraft:two_layers_feature_size"
+                                },
+                                "trunk_provider": {
+                                  "state": {
+                                    "properties": {
+                                      "axis": "y"
+                                    },
+                                    "id": "minecraft:stripped_acacia_log"
+                                  },
+                                  "type": "minecraft:simple"
+                                },
+                                "trunk_placer": {
+                                  "base_height": 14,
+                                  "height_rand_a": 0,
+                                  "height_rand_b": 0,
+                                  "type": "minecraft:straight_trunk_placer"
+                                },
+                                "foliage_provider": {
+                                  "state": {
+                                    "properties": {
+                                      "persistent": "false",
+                                      "distance": "1",
+                                      "waterlogged": "false"
+                                    },
+                                    "id": "minecraft:acacia_leaves"
+                                  },
+                                  "type": "minecraft:simple"
+                                },
+                                "foliage_placer": {
+                                  "radius": 2,
+                                  "offset": 2,
+                                  "crown_height": 7,
+                                  "type": "minecraft:mega_pine_foliage_placer"
+                                },
+                                "below_trunk_provider": {
+                                  "type": "minecraft:rule_based",
+                                  "rules": [
+                                    {
+                                      "if_true": {
+                                        "type": "minecraft:not",
+                                        "predicate": {
+                                          "type": "minecraft:matching_block_tag",
+                                          "tag": "minecraft:cannot_replace_below_tree_trunk"
+                                        }
+                                      },
+                                      "then": {
+                                        "state": {
+                                          "properties": {
+                                            "axis": "y"
+                                          },
+                                          "id": "minecraft:stripped_acacia_log"
+                                        },
+                                        "type": "minecraft:simple"
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              "placement": [
+                                {
+                                  "predicate": {
+                                    "predicate": {
+                                      "blocks": "minecraft:acacia_leaves",
+                                      "offset": [
+                                        0,
+                                        15,
+                                        0
+                                      ],
+                                      "type": "minecraft:matching_blocks"
+                                    },
+                                    "type": "minecraft:not"
+                                  },
+                                  "type": "minecraft:block_predicate_filter"
+                                }
+                              ]
+                            },
+                            {
+                              "feature": {
+                                "type": "minecraft:simple_random_selector",
+                                "features": [
+                                  {
+                                    "feature": "wythers:tree/huge_sequoia/branch_set/3",
+                                    "placement": [
+                                      {
+                                        "count": 2,
+                                        "type": "minecraft:count"
+                                      },
+                                      {
+                                        "type": "minecraft:offset",
+                                        "x": 0,
+                                        "z": 0,
+                                        "y": {
+                                          "min_inclusive": -4,
+                                          "max_inclusive": -2,
+                                          "type": "minecraft:uniform"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "feature": "wythers:tree/huge_sequoia/branch_set/3",
+                                    "placement": [
+                                      {
+                                        "type": "minecraft:offset",
+                                        "x": 0,
+                                        "z": 0,
+                                        "y": {
+                                          "min_inclusive": 2,
+                                          "max_inclusive": 4,
+                                          "type": "minecraft:uniform"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "feature": "wythers:tree/huge_sequoia/branch_set/4",
+                                    "placement": [
+                                      {
+                                        "type": "minecraft:offset",
+                                        "x": 0,
+                                        "z": 0,
+                                        "y": {
+                                          "min_inclusive": 7,
+                                          "max_inclusive": 9,
+                                          "type": "minecraft:uniform"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              "placement": []
+                            }
+                          ]
+                        },
+                        "placement": [
+                          {
+                            "predicate": {
+                              "blocks": "minecraft:stripped_acacia_log",
+                              "offset": [
+                                0,
+                                10,
+                                0
+                              ],
+                              "type": "minecraft:matching_blocks"
+                            },
+                            "type": "minecraft:block_predicate_filter"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "placement": [
+                    {
+                      "predicate": {
+                        "blocks": "minecraft:stripped_acacia_log",
+                        "type": "minecraft:matching_blocks"
+                      },
+                      "type": "minecraft:block_predicate_filter"
+                    },
+                    {
+                      "type": "minecraft:offset",
+                      "x": 0,
+                      "z": 0,
+                      "y": 15
+                    },
+                    {
+                      "type": "minecraft:offset",
+                      "x": 0,
+                      "z": 0,
+                      "y": 12
+                    },
+                    {
+                      "direction_of_search": "up",
+                      "target_condition": {
+                        "predicates": [
+                          {
+                            "blocks": "minecraft:air",
+                            "offset": [
+                              0,
+                              1,
+                              0
+                            ],
+                            "type": "minecraft:matching_blocks"
+                          },
+                          {
+                            "blocks": "minecraft:stripped_acacia_log",
+                            "type": "minecraft:matching_blocks"
+                          }
+                        ],
+                        "type": "minecraft:all_of"
+                      },
+                      "max_steps": 10,
+                      "type": "minecraft:environment_scan"
+                    },
+                    {
+                      "count": 96,
+                      "type": "minecraft:count"
+                    }
+                  ]
+                }
+              ]
+            },
+            "placement": [
+              {
+                "predicate": {
+                  "type": "minecraft:replaceable"
+                },
+                "type": "minecraft:block_predicate_filter"
+              },
+              {
+                "count": 28,
+                "type": "minecraft:count"
+              }
+            ]
+          },
+          {
+            "feature": "wythers:tree/huge_sequoia/roots/4",
+            "placement": [
+              {
+                "predicate": {
+                  "blocks": "minecraft:stripped_acacia_log",
+                  "type": "minecraft:matching_blocks"
+                },
+                "type": "minecraft:block_predicate_filter"
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:block_column",
+              "layers": [
+                {
+                  "height": {
+                    "min_inclusive": 1,
+                    "max_inclusive": 2,
+                    "type": "minecraft:uniform"
+                  },
+                  "provider": {
+                    "state": {
+                      "id": "minecraft:rooted_dirt"
+                    },
+                    "type": "minecraft:simple"
+                  }
+                }
+              ],
+              "direction": "down",
+              "allowed_placement": {
+                "blocks": "#wythers:dirt",
+                "type": "minecraft:matching_blocks"
+              },
+              "prioritize_tip": false
+            },
+            "placement": [
+              {
+                "predicate": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "blocks": "minecraft:stripped_acacia_log",
+                      "type": "minecraft:matching_blocks"
+                    },
+                    {
+                      "type": "minecraft:not",
+                      "predicate": {
+                        "type": "minecraft:matching_blocks",
+                        "blocks": "minecraft:stripped_acacia_log",
+                        "offset": [
+                          0,
+                          -1,
+                          0
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "type": "minecraft:block_predicate_filter"
+              },
+              {
+                "type": "minecraft:count",
+                "count": 24
+              },
+              {
+                "type": "minecraft:offset",
+                "x": {
+                  "type": "minecraft:trapezoid",
+                  "min": -2,
+                  "max": 2,
+                  "plateau": 0
+                },
+                "z": {
+                  "type": "minecraft:trapezoid",
+                  "min": -2,
+                  "max": 2,
+                  "plateau": 0
+                },
+                "y": {
+                  "type": "minecraft:trapezoid",
+                  "min": -2,
+                  "max": 0,
+                  "plateau": 0
+                }
+              },
+              {
+                "predicate": {
+                  "predicates": [
+                    {
+                      "blocks": "#wythers:dirt",
+                      "type": "minecraft:matching_blocks"
+                    },
+                    {
+                      "predicate": {
+                        "offset": [
+                          0,
+                          1,
+                          0
+                        ],
+                        "blocks": "#wythers:dirt",
+                        "type": "minecraft:matching_blocks"
+                      },
+                      "type": "minecraft:not"
+                    }
+                  ],
+                  "type": "minecraft:all_of"
+                },
+                "type": "minecraft:block_predicate_filter"
+              }
+            ]
+          }
+        ]
+      },
+      "placement": [
+        {
+          "predicate": {
+            "state": {
+              "properties": {
+                "stage": "0"
+              },
+              "id": "minecraft:spruce_sapling"
+            },
+            "type": "minecraft:would_survive"
+          },
+          "type": "minecraft:block_predicate_filter"
+        },
+        {
+          "predicate": {
+            "predicates": [
+              {
+                "offset": [
+                  1,
+                  -2,
+                  0
+                ],
+                "type": "minecraft:solid"
+              },
+              {
+                "offset": [
+                  1,
+                  -2,
+                  1
+                ],
+                "type": "minecraft:solid"
+              },
+              {
+                "offset": [
+                  0,
+                  -2,
+                  1
+                ],
+                "type": "minecraft:solid"
+              },
+              {
+                "offset": [
+                  -1,
+                  -2,
+                  1
+                ],
+                "type": "minecraft:solid"
+              },
+              {
+                "offset": [
+                  -1,
+                  -2,
+                  0
+                ],
+                "type": "minecraft:solid"
+              },
+              {
+                "offset": [
+                  -1,
+                  -2,
+                  -1
+                ],
+                "type": "minecraft:solid"
+              },
+              {
+                "offset": [
+                  0,
+                  -2,
+                  -1
+                ],
+                "type": "minecraft:solid"
+              },
+              {
+                "offset": [
+                  1,
+                  -2,
+                  -1
+                ],
+                "type": "minecraft:solid"
+              }
+            ],
+            "type": "minecraft:all_of"
+          },
+          "type": "minecraft:block_predicate_filter"
+        },
+        {
+          "count": 64,
+          "type": "minecraft:count"
+        }
+      ]
+    }
+  ]
+}

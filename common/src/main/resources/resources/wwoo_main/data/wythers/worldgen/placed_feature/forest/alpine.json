@@ -1,0 +1,223 @@
+{
+  "feature": {
+    "type": "minecraft:random_selector",
+    "features": [
+      {
+        "chance": 0.075,
+        "feature": {
+          "feature": "wythers:tree/birch/yellow",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.075,
+        "feature": {
+          "feature": "wythers:tree/birch/orange",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.075,
+        "feature": {
+          "feature": "wythers:tree/birch/red",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_biomes",
+                "biomes": "taiga"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.05,
+        "feature": {
+          "feature": "wythers:tree/birch/bright",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.075,
+        "feature": {
+          "feature": "wythers:tree/birch/dark",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.075,
+        "feature": {
+          "feature": "wythers:tree/birch/tinted",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.075,
+        "feature": {
+          "feature": "wythers:tree/poplar/boreal/yellow",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.075,
+        "feature": {
+          "feature": "wythers:tree/poplar/boreal/orange",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.075,
+        "feature": {
+          "feature": "wythers:tree/poplar/boreal/red",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_biomes",
+                "biomes": "taiga"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chance": 0.05,
+        "feature": {
+          "feature": "wythers:tree/poplar/boreal/bright",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.075,
+        "feature": {
+          "feature": "wythers:tree/poplar/boreal/dark",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.075,
+        "feature": {
+          "feature": "wythers:tree/poplar/boreal/tinted",
+          "placement": []
+        }
+      }
+    ],
+    "default": {
+      "feature": {
+        "type": "minecraft:random_selector",
+        "features": [
+          {
+            "chance": 0.1,
+            "feature": {
+              "feature": "wythers:tree/spruce/1",
+              "placement": []
+            }
+          },
+          {
+            "chance": 0.1,
+            "feature": {
+              "feature": "wythers:tree/spruce/2",
+              "placement": []
+            }
+          },
+          {
+            "chance": 0.1,
+            "feature": {
+              "feature": "wythers:tree/spruce/3",
+              "placement": []
+            }
+          },
+          {
+            "chance": 0.3,
+            "feature": {
+              "feature": "wythers:tree/spruce/4",
+              "placement": []
+            }
+          }
+        ],
+        "default": {
+          "feature": "wythers:tree/spruce/5",
+          "placement": []
+        }
+      },
+      "placement": []
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "minecraft:brown_wool"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_block_tag",
+        "tag": "wythers:air_and_plants"
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": [
+          "minecraft:grass_block",
+          "minecraft:coarse_dirt"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -2,
+          0
+        ],
+        "blocks": [
+          "minecraft:dirt"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_biomes",
+        "biomes": [
+          "taiga",
+          "forest",
+          "birch_forest",
+          "old_growth_birch_forest"
+        ]
+      }
+    }
+  ]
+}

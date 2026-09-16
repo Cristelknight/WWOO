@@ -1,0 +1,192 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "state_provider": {
+      "type": "minecraft:rule_based",
+      "fallback": {
+        "type": "minecraft:noise",
+        "noise": {
+          "base_octave": -5,
+          "amplitude_modifiers": [
+            2,
+            3
+          ],
+          "octave_count": 2,
+          "normalize": "legacy"
+        },
+        "scale": 1,
+        "seed": -817103696,
+        "states": [
+          {
+            "id": "minecraft:cinnabar"
+          },
+          {
+            "id": "minecraft:cinnabar"
+          },
+          {
+            "id": "minecraft:granite"
+          },
+          {
+            "id": "minecraft:sulfur"
+          },
+          {
+            "id": "minecraft:sulfur"
+          },
+          {
+            "id": "minecraft:sulfur"
+          }
+        ]
+      },
+      "rules": [
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:sulfur"
+          },
+          "then": {
+            "type": "minecraft:noise",
+            "noise": {
+              "base_octave": -4,
+              "amplitude_modifiers": [
+                2,
+                3
+              ],
+              "octave_count": 2,
+              "normalize": "legacy"
+            },
+            "scale": 1,
+            "seed": -817103696,
+            "states": [
+              {
+                "id": "minecraft:potent_sulfur"
+              },
+              {
+                "id": "minecraft:potent_sulfur"
+              },
+              {
+                "id": "minecraft:sulfur"
+              },
+              {
+                "id": "minecraft:potent_sulfur"
+              },
+              {
+                "id": "minecraft:potent_sulfur"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 2,
+      "max_inclusive": 7
+    },
+    "half_height": 4,
+    "target": {
+      "type": "minecraft:any_of",
+      "predicates": [
+        {
+          "type": "minecraft:all_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                1,
+                0
+              ],
+              "blocks": "minecraft:air"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "blocks": "minecraft:sulfur"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:all_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                1,
+                0
+              ],
+              "blocks": [
+                "minecraft:smooth_red_sandstone",
+                "minecraft:orange_terracotta",
+                "minecraft:red_sand",
+                "minecraft:grass_block",
+                "minecraft:dirt",
+                "minecraft:stone",
+                "minecraft:air",
+                "minecraft:light"
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:smooth_sandstone",
+                "minecraft:sandstone",
+                "minecraft:sand",
+                "minecraft:smooth_red_sandstone",
+                "minecraft:orange_terracotta",
+                "minecraft:red_sand",
+                "minecraft:grass_block",
+                "minecraft:dirt",
+                "minecraft:stone"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 50
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": -51
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_biomes",
+        "biomes": "dripstone_caves"
+      }
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 63
+      }
+    },
+    {
+      "type": "minecraft:environment_scan",
+      "direction_of_search": "down",
+      "max_steps": 10,
+      "target_condition": {
+        "type": "minecraft:solid"
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_biomes",
+        "biomes": [
+          "river"
+        ]
+      }
+    }
+  ]
+}

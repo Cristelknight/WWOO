@@ -1,0 +1,113 @@
+{
+  "type": "minecraft:overlay",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:simple_random_selector",
+        "features": [
+          {
+            "feature": "wythers:tree/palm/foxtail/drupes_red",
+            "placement": []
+          },
+          {
+            "feature": "wythers:tree/palm/foxtail/drupes_grey",
+            "placement": []
+          },
+          {
+            "feature": "wythers:tree/palm/foxtail/drupes_green",
+            "placement": []
+          }
+        ]
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 1,
+          "y": 0,
+          "z": 0
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_random_selector",
+        "features": [
+          {
+            "feature": "wythers:tree/palm/foxtail/drupes_red",
+            "placement": []
+          },
+          {
+            "feature": "wythers:tree/palm/foxtail/drupes_grey",
+            "placement": []
+          },
+          {
+            "feature": "wythers:tree/palm/foxtail/drupes_green",
+            "placement": []
+          }
+        ]
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": -1,
+          "y": 0,
+          "z": 0
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_random_selector",
+        "features": [
+          {
+            "feature": "wythers:tree/palm/foxtail/drupes_red",
+            "placement": []
+          },
+          {
+            "feature": "wythers:tree/palm/foxtail/drupes_grey",
+            "placement": []
+          },
+          {
+            "feature": "wythers:tree/palm/foxtail/drupes_green",
+            "placement": []
+          }
+        ]
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 0,
+          "z": 1
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_random_selector",
+        "features": [
+          {
+            "feature": "wythers:tree/palm/foxtail/drupes_red",
+            "placement": []
+          },
+          {
+            "feature": "wythers:tree/palm/foxtail/drupes_grey",
+            "placement": []
+          },
+          {
+            "feature": "wythers:tree/palm/foxtail/drupes_green",
+            "placement": []
+          }
+        ]
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 0,
+          "z": -1
+        }
+      ]
+    }
+  ]
+}

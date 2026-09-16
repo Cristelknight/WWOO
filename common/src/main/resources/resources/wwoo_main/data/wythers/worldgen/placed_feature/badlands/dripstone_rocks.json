@@ -1,0 +1,227 @@
+{
+  "feature": {
+    "type": "minecraft:random_selector",
+    "features": [
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": {
+            "type": "minecraft:ore",
+            "targets": [
+              {
+                "target": {
+                  "predicate_type": "minecraft:tag_match",
+                  "tag": "wythers:air_and_plants"
+                },
+                "state": "minecraft:dripstone_block"
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:block_match",
+                  "block": "minecraft:rooted_dirt"
+                },
+                "state": "minecraft:dripstone_block"
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:block_match",
+                  "block": "minecraft:grass_block"
+                },
+                "state": "minecraft:dripstone_block"
+              }
+            ],
+            "size": 24,
+            "discard_chance_on_air_exposure": 0
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": {
+            "type": "minecraft:ore",
+            "targets": [
+              {
+                "target": {
+                  "predicate_type": "minecraft:tag_match",
+                  "tag": "wythers:air_and_plants"
+                },
+                "state": "minecraft:dripstone_block"
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:block_match",
+                  "block": "minecraft:rooted_dirt"
+                },
+                "state": "minecraft:dripstone_block"
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:block_match",
+                  "block": "minecraft:grass_block"
+                },
+                "state": "minecraft:dripstone_block"
+              }
+            ],
+            "size": 16,
+            "discard_chance_on_air_exposure": 0
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.2,
+        "feature": {
+          "feature": {
+            "type": "minecraft:ore",
+            "targets": [
+              {
+                "target": {
+                  "predicate_type": "minecraft:tag_match",
+                  "tag": "wythers:air_and_plants"
+                },
+                "state": "minecraft:dripstone_block"
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:block_match",
+                  "block": "minecraft:rooted_dirt"
+                },
+                "state": "minecraft:dripstone_block"
+              },
+              {
+                "target": {
+                  "predicate_type": "minecraft:block_match",
+                  "block": "minecraft:grass_block"
+                },
+                "state": "minecraft:dripstone_block"
+              }
+            ],
+            "size": 48,
+            "discard_chance_on_air_exposure": 0
+          },
+          "placement": []
+        }
+      }
+    ],
+    "default": {
+      "feature": {
+        "type": "minecraft:ore",
+        "targets": [
+          {
+            "target": {
+              "predicate_type": "minecraft:tag_match",
+              "tag": "wythers:air_and_plants"
+            },
+            "state": "minecraft:dripstone_block"
+          },
+          {
+            "target": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:rooted_dirt"
+            },
+            "state": "minecraft:dripstone_block"
+          },
+          {
+            "target": {
+              "predicate_type": "minecraft:block_match",
+              "block": "minecraft:grass_block"
+            },
+            "state": "minecraft:dripstone_block"
+          }
+        ],
+        "size": 32,
+        "discard_chance_on_air_exposure": 0
+      },
+      "placement": []
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 50,
+      "noise_offset": 0
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 1
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 1,
+        "max_inclusive": 4
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            1,
+            0
+          ],
+          "blocks": "minecraft:dripstone_block"
+        }
+      }
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:height_range",
+        "min_inclusive": {
+          "above_bottom": 0
+        },
+        "max_inclusive": {
+          "relative_to_sea_level": 18
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": [
+          "minecraft:rooted_dirt"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:offset",
+      "x": 0,
+      "y": {
+        "type": "minecraft:uniform",
+        "min_inclusive": -1,
+        "max_inclusive": 0
+      },
+      "z": 0
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "feature": {
+    "type": "minecraft:random_selector",
+    "features": [
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": "wythers:tree/poplar/lombardy/red",
+          "placement": []
+        }
+      }
+    ],
+    "default": {
+      "feature": "wythers:tree/poplar/lombardy/orange",
+      "placement": []
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 3
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_block_tag",
+        "tag": "wythers:air_and_plants"
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": [
+          "minecraft:grass_block"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -2,
+          0
+        ],
+        "blocks": [
+          "minecraft:dirt"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_biomes",
+        "biomes": [
+          "ice_spikes"
+        ]
+      }
+    }
+  ]
+}

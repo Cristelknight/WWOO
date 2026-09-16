@@ -1,75 +1,38 @@
 {
   "feature": {
     "type": "minecraft:disk",
-    "config": {
-      "state_provider": {
-        "type": "minecraft:rule_based_state_provider",
-        "fallback": {
-          "type": "minecraft:simple_state_provider",
-          "state": {
-            "Name": "minecraft:sandstone"
-          }
-        },
-        "rules": [
-          {
-            "if_true": {
-              "type": "minecraft:matching_blocks",
-              "blocks": [
-                "coarse_dirt",
-                "rooted_dirt"
-              ]
-            },
-            "then": {
-              "type": "minecraft:simple_state_provider",
-              "state": {
-                "Name": "minecraft:brown_terracotta"
-              }
-            }
-          },
-          {
-            "if_true": {
-              "type": "minecraft:matching_blocks",
-              "blocks": [
-                "oak_wood"
-              ]
-            },
-            "then": {
-              "type": "minecraft:simple_state_provider",
-              "state": {
-                "Name": "minecraft:stripped_oak_wood"
-              }
-            }
-          }
-        ]
+    "state_provider": {
+      "fallback": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:sandstone"
+        }
       },
-      "target": {
-        "type": "minecraft:all_of",
-        "predicates": [
-          {
-            "type": "minecraft:matching_blocks",
-            "blocks": [
-              "minecraft:bedrock",
-              "minecraft:lime_terracotta",
-              "minecraft:jungle_wood",
-              "minecraft:oak_wood",
-              "minecraft:dark_oak_wood",
-              "minecraft:acacia_wood",
-              "minecraft:birch_wood",
-              "minecraft:spruce_wood",
-              "minecraft:bamboo_block",
-              "minecraft:coarse_dirt",
-              "minecraft:rooted_dirt"
-            ]
-          }
-        ]
-      },
-      "radius": {
-        "type": "minecraft:uniform",
-        "min_inclusive": 7,
-        "max_inclusive": 7
-      },
-      "half_height": 0
-    }
+      "rules": [],
+      "type": "minecraft:rule_based"
+    },
+    "target": {
+      "type": "minecraft:all_of",
+      "predicates": [
+        {
+          "type": "minecraft:matching_blocks",
+          "blocks": [
+            "minecraft:bedrock",
+            "minecraft:deepslate",
+            "minecraft:tuff",
+            "minecraft:lava",
+            "minecraft:jungle_wood",
+            "minecraft:dead_brain_coral_block"
+          ]
+        }
+      ]
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 8,
+      "max_inclusive": 8
+    },
+    "half_height": 0
   },
   "placement": [
     {

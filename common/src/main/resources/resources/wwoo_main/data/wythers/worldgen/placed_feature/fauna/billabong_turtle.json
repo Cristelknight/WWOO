@@ -1,0 +1,78 @@
+{
+  "feature": {
+    "type": "minecraft:template",
+    "templates": [
+      {
+        "weight": 1,
+        "data": {
+          "id": "wythers:fauna/turtle_small"
+        }
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 1
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          1,
+          0
+        ],
+        "blocks": "minecraft:moss_block"
+      }
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 63
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "minecraft:air"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": [
+          "minecraft:packed_mud"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_biomes",
+        "biomes": [
+          "wooded_badlands"
+        ]
+      }
+    }
+  ]
+}

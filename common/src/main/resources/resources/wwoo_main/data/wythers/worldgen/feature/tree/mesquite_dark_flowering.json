@@ -1,0 +1,112 @@
+{
+  "type": "minecraft:overlay",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:tree",
+        "ignore_vines": true,
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size",
+          "min_clipped_height": 0,
+          "limit": 0,
+          "lower_size": 0,
+          "upper_size": 0
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:rooted_dirt"
+          }
+        },
+        "trunk_provider": {
+          "type": "minecraft:rule_based",
+          "fallback": {
+            "type": "minecraft:simple",
+            "state": "minecraft:mangrove_roots"
+          },
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:sand",
+                  "minecraft:rooted_dirt"
+                ]
+              },
+              "then": {
+                "type": "minecraft:simple",
+                "state": "minecraft:poplar_wood"
+              }
+            }
+          ]
+        },
+        "foliage_provider": {
+          "type": "minecraft:weighted",
+          "entries": [
+            {
+              "weight": 4,
+              "data": {
+                "id": "minecraft:birch_leaves",
+                "properties": {
+                  "distance": "1",
+                  "persistent": "false",
+                  "waterlogged": "false"
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:yellow_poplar_leaves",
+                "properties": {
+                  "distance": "1",
+                  "persistent": "false",
+                  "waterlogged": "false"
+                }
+              }
+            }
+          ]
+        },
+        "trunk_placer": {
+          "type": "minecraft:forking_trunk_placer",
+          "base_height": 2,
+          "height_rand_a": 3,
+          "height_rand_b": 0
+        },
+        "foliage_placer": {
+          "type": "minecraft:random_spread_foliage_placer",
+          "radius": 2,
+          "offset": 0,
+          "foliage_height": 2,
+          "leaf_placement_attempts": 20
+        },
+        "decorators": []
+      },
+      "placement": [
+        {
+          "type": "minecraft:count",
+          "count": 4
+        },
+        {
+          "type": "minecraft:offset",
+          "x": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 0,
+            "max_inclusive": 1
+          },
+          "y": 0,
+          "z": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 0,
+            "max_inclusive": 1
+          }
+        }
+      ]
+    }
+  ]
+}

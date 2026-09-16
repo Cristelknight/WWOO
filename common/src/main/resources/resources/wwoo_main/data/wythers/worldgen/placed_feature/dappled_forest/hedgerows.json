@@ -1,0 +1,166 @@
+{
+  "feature": {
+    "type": "minecraft:vegetation_patch",
+    "surface": "floor",
+    "depth": 1,
+    "vertical_range": 7,
+    "extra_bottom_block_chance": 0,
+    "extra_edge_column_chance": 0.5,
+    "vegetation_chance": 1,
+    "xz_radius": 7,
+    "replaceable": [
+      "minecraft:grass_block"
+    ],
+    "ground_state": {
+      "type": "minecraft:rule_based",
+      "fallback": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:grass_block"
+        }
+      },
+      "rules": [
+        {
+          "if_true": {
+            "type": "minecraft:matching_biomes",
+            "biomes": "dappled_forest"
+          },
+          "then": {
+            "type": "minecraft:rule_based",
+            "fallback": {
+              "type": "minecraft:noise",
+              "noise": {
+                "base_octave": -5,
+                "amplitude_modifiers": [
+                  3,
+                  1
+                ],
+                "octave_count": 2,
+                "normalize": "legacy"
+              },
+              "scale": 1,
+              "seed": -817103696,
+              "states": [
+                {
+                  "id": "minecraft:grass_block"
+                },
+                {
+                  "id": "minecraft:grass_block"
+                },
+                {
+                  "id": "minecraft:grass_block"
+                },
+                {
+                  "id": "minecraft:podzol"
+                },
+                {
+                  "id": "minecraft:grass_block"
+                },
+                {
+                  "id": "minecraft:grass_block"
+                },
+                {
+                  "id": "minecraft:grass_block"
+                }
+              ]
+            },
+            "rules": []
+          }
+        }
+      ]
+    },
+    "vegetation_feature": {
+      "feature": {
+        "type": "minecraft:block_column",
+        "direction": "up",
+        "allowed_placement": {
+          "type": "minecraft:true"
+        },
+        "prioritize_tip": false,
+        "layers": [
+          {
+            "height": {
+              "type": "minecraft:uniform",
+              "min_inclusive": 1,
+              "max_inclusive": 2
+            },
+            "provider": {
+              "type": "minecraft:rule_based",
+              "fallback": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:birch_leaves",
+                  "properties": {
+                    "distance": "1",
+                    "persistent": "true",
+                    "waterlogged": "false"
+                  }
+                }
+              },
+              "rules": []
+            }
+          }
+        ]
+      },
+      "placement": [
+        {
+          "type": "minecraft:count",
+          "count": 1
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_biomes",
+            "biomes": "dappled_forest"
+          }
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": "minecraft:podzol"
+          }
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 15
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          1,
+          0
+        ],
+        "blocks": "minecraft:dripstone_block"
+      }
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

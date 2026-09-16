@@ -1,69 +1,37 @@
 {
   "feature": {
     "type": "minecraft:disk",
-    "config": {
-      "state_provider": {
-        "type": "minecraft:rule_based_state_provider",
-        "fallback": {
-          "type": "minecraft:simple_state_provider",
-          "state": {
-            "Name": "minecraft:dark_oak_wood"
-          }
-        },
-        "rules": [
-          {
-            "if_true": {
-              "type": "minecraft:matching_blocks",
-              "blocks": [
-                "minecraft:coarse_dirt"
-              ]
-            },
-            "then": {
-              "type": "minecraft:simple_state_provider",
-              "state": {
-                "Name": "dark_oak_log"
-              }
-            }
-          },
-          {
-            "if_true": {
-              "type": "minecraft:matching_blocks",
-              "blocks": [
-                "minecraft:rooted_dirt"
-              ]
-            },
-            "then": {
-              "type": "minecraft:simple_state_provider",
-              "state": {
-                "Name": "stripped_dark_oak_wood"
-              }
-            }
-          }
-        ]
+    "state_provider": {
+      "fallback": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:dark_oak_wood"
+        }
       },
-      "target": {
-        "type": "minecraft:all_of",
-        "predicates": [
-          {
-            "type": "minecraft:matching_blocks",
-            "blocks": [
-              "minecraft:bedrock",
-              "minecraft:green_terracotta",
-              "minecraft:lime_terracotta",
-              "minecraft:coarse_dirt",
-              "minecraft:rooted_dirt",
-              "minecraft:mud"
-            ]
-          }
-        ]
-      },
-      "radius": {
-        "type": "minecraft:uniform",
-        "min_inclusive": 7,
-        "max_inclusive": 7
-      },
-      "half_height": 0
-    }
+      "rules": [],
+      "type": "minecraft:rule_based"
+    },
+    "target": {
+      "type": "minecraft:all_of",
+      "predicates": [
+        {
+          "type": "minecraft:matching_blocks",
+          "blocks": [
+            "minecraft:bedrock",
+            "minecraft:deepslate",
+            "minecraft:tuff",
+            "minecraft:lava",
+            "minecraft:birch_wood"
+          ]
+        }
+      ]
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 8,
+      "max_inclusive": 8
+    },
+    "half_height": 0
   },
   "placement": [
     {

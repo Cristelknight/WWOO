@@ -1,50 +1,94 @@
 {
   "feature": {
-    "type": "minecraft:disk",
-    "config": {
-      "state_provider": {
-        "type": "minecraft:rule_based_state_provider",
-        "fallback": {
-          "type": "minecraft:simple_state_provider",
-          "state": {
-            "Name": "minecraft:dripstone_block"
-          }
+    "type": "minecraft:overlay",
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:disk",
+          "state_provider": {
+            "fallback": {
+              "type": "minecraft:simple",
+              "state": {
+                "id": "minecraft:dripstone_block"
+              }
+            },
+            "rules": [],
+            "type": "minecraft:rule_based"
+          },
+          "target": {
+            "type": "minecraft:true"
+          },
+          "radius": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 7,
+            "max_inclusive": 7
+          },
+          "half_height": 0
         },
-        "rules": []
-      },
-      "target": {
-        "type": "minecraft:all_of",
-        "predicates": [
+        "placement": [
           {
-            "type": "minecraft:matching_blocks",
-            "blocks": [
-              "minecraft:bedrock",
-              "minecraft:deepslate"
-            ]
+            "type": "minecraft:count",
+            "count": 12
+          },
+          {
+            "type": "minecraft:in_square"
+          },
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "above_bottom": 1
+            }
           }
         ]
       },
-      "radius": {
-        "type": "minecraft:uniform",
-        "min_inclusive": 7,
-        "max_inclusive": 7
-      },
-      "half_height": 0
-    }
-  },
-  "placement": [
-    {
-      "type": "minecraft:count",
-      "count": 60
-    },
-    {
-      "type": "minecraft:in_square"
-    },
-    {
-      "type": "minecraft:height_range",
-      "height": {
-        "above_bottom": 1
+      {
+        "feature": {
+          "type": "minecraft:vegetation_patch",
+          "surface": "floor",
+          "depth": 1,
+          "vertical_range": 8,
+          "extra_bottom_block_chance": 0,
+          "extra_edge_column_chance": 1,
+          "vegetation_chance": 1,
+          "xz_radius": 8,
+          "replaceable": "#minecraft:blocks_motion_in_heightmap_no_leaves",
+          "ground_state": {
+            "type": "minecraft:rule_based",
+            "rules": []
+          },
+          "vegetation_feature": {
+            "feature": {
+              "type": "minecraft:simple_block",
+              "to_place": {
+                "type": "minecraft:simple",
+                "state": "minecraft:dripstone_block"
+              }
+            },
+            "placement": [
+              {
+                "type": "minecraft:height_range",
+                "height": {
+                  "above_bottom": 1
+                }
+              }
+            ]
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 6
+          },
+          {
+            "type": "minecraft:in_square"
+          },
+          {
+            "type": "minecraft:heightmap",
+            "heightmap": "WORLD_SURFACE_WG"
+          }
+        ]
       }
-    }
-  ]
+    ]
+  },
+  "placement": []
 }

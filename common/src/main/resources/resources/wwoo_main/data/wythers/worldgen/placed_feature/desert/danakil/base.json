@@ -1,0 +1,327 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "state_provider": {
+      "type": "minecraft:rule_based",
+      "fallback": {
+        "type": "minecraft:noise",
+        "noise": {
+          "base_octave": -5,
+          "amplitude_modifiers": [
+            2,
+            3
+          ],
+          "octave_count": 2,
+          "normalize": "legacy"
+        },
+        "scale": 1,
+        "seed": -817103696,
+        "states": [
+          {
+            "id": "minecraft:smooth_basalt"
+          },
+          {
+            "id": "minecraft:tuff"
+          },
+          {
+            "id": "minecraft:cinnabar"
+          },
+          {
+            "id": "minecraft:granite"
+          },
+          {
+            "id": "minecraft:rooted_dirt"
+          },
+          {
+            "id": "minecraft:packed_mud"
+          },
+          {
+            "id": "minecraft:sulfur"
+          },
+          {
+            "id": "minecraft:sulfur"
+          }
+        ]
+      },
+      "rules": [
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": "minecraft:smooth_basalt"
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:smooth_basalt"
+            }
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": "minecraft:tuff"
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:tuff"
+            }
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": "minecraft:cinnabar"
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:cinnabar"
+            }
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": "minecraft:granite"
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:granite"
+            }
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": [
+              "minecraft:packed_mud",
+              "minecraft:rooted_dirt"
+            ]
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:packed_mud"
+            }
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": "sulfur"
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "sulfur"
+            }
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:smooth_basalt"
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:basalt"
+            }
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:sulfur"
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:potent_sulfur"
+            }
+          }
+        }
+      ]
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 2,
+      "max_inclusive": 7
+    },
+    "half_height": 4,
+    "target": {
+      "type": "minecraft:any_of",
+      "predicates": [
+        {
+          "type": "minecraft:all_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "blocks": "minecraft:smooth_basalt"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                3,
+                0,
+                0
+              ],
+              "blocks": [
+                "minecraft:basalt",
+                "minecraft:smooth_basalt",
+                "minecraft:air"
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -3,
+                0,
+                0
+              ],
+              "blocks": [
+                "minecraft:basalt",
+                "minecraft:smooth_basalt",
+                "minecraft:air"
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                0,
+                3
+              ],
+              "blocks": [
+                "minecraft:basalt",
+                "minecraft:smooth_basalt",
+                "minecraft:air"
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                0,
+                -3
+              ],
+              "blocks": [
+                "minecraft:basalt",
+                "minecraft:smooth_basalt",
+                "minecraft:air"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:all_of",
+          "predicates": [
+            {
+              "type": "minecraft:not",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:sand",
+                  "minecraft:sandstone"
+                ]
+              }
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:sand",
+                "minecraft:sandstone",
+                "minecraft:smooth_sandstone",
+                "minecraft:grass_block",
+                "minecraft:dirt",
+                "minecraft:stone"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 50
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": -51
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_biomes",
+        "biomes": "dripstone_caves"
+      }
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 63
+      }
+    },
+    {
+      "type": "minecraft:environment_scan",
+      "direction_of_search": "down",
+      "max_steps": 10,
+      "target_condition": {
+        "type": "minecraft:solid"
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_biomes",
+        "biomes": [
+          "desert"
+        ]
+      }
+    }
+  ]
+}

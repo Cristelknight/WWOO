@@ -1,0 +1,76 @@
+{
+  "ignore_vines": true,
+  "minimum_size": {
+    "type": "minecraft:two_layers_feature_size",
+    "min_clipped_height": 1,
+    "limit": 1,
+    "lower_size": 1,
+    "upper_size": 1
+  },
+  "trunk_provider": {
+    "type": "minecraft:simple",
+    "state": {
+      "id": "minecraft:oak_wood"
+    }
+  },
+  "foliage_provider": {
+    "type": "minecraft:simple",
+    "state": {
+      "id": "minecraft:oak_leaves"
+    }
+  },
+  "trunk_placer": {
+    "type": "minecraft:upwards_branching_trunk_placer",
+    "base_height": 6,
+    "height_rand_a": 1,
+    "height_rand_b": 3,
+    "extra_branch_steps": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 1,
+      "max_inclusive": 3
+    },
+    "extra_branch_length": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 0,
+      "max_inclusive": 1
+    },
+    "place_branch_per_log_probability": 0.5,
+    "can_grow_through": "#minecraft:mangrove_logs_can_grow_through"
+  },
+  "foliage_placer": {
+    "type": "minecraft:jungle_foliage_placer",
+    "radius": 0,
+    "offset": 0,
+    "height": 0
+  },
+  "decorators": [
+    {
+      "type": "minecraft:attached_to_leaves",
+      "probability": 1,
+      "exclusion_radius_xz": 1,
+      "exclusion_radius_y": 1,
+      "required_empty_blocks": 1,
+      "block_provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:oak_leaves",
+          "properties": {
+            "distance": "7",
+            "persistent": "false",
+            "waterlogged": "false"
+          }
+        }
+      },
+      "directions": [
+        "down"
+      ]
+    }
+  ],
+  "below_trunk_provider": {
+    "type": "minecraft:simple",
+    "state": {
+      "id": "minecraft:oak_wood"
+    }
+  },
+  "type": "minecraft:tree"
+}

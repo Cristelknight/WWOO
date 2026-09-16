@@ -1,0 +1,49 @@
+{
+  "type": "minecraft:overlay",
+  "features": [
+    {
+      "feature": "wythers:tree/palm/foxtail/drupes_grey",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 1,
+          "y": 0,
+          "z": 0
+        }
+      ]
+    },
+    {
+      "feature": "wythers:tree/palm/foxtail/drupes_grey",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": -1,
+          "y": 0,
+          "z": 0
+        }
+      ]
+    },
+    {
+      "feature": "wythers:tree/palm/foxtail/drupes_grey",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 0,
+          "z": 1
+        }
+      ]
+    },
+    {
+      "feature": "wythers:tree/palm/foxtail/drupes_grey",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 0,
+          "z": -1
+        }
+      ]
+    }
+  ]
+}

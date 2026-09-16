@@ -1,0 +1,265 @@
+{
+  "feature": {
+    "type": "minecraft:simple_random_selector",
+    "features": [
+      {
+        "feature": "wythers:tree/eucalypt/rough_bark",
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:would_survive",
+                  "state": {
+                    "id": "minecraft:oak_sapling"
+                  }
+                },
+                {
+                  "type": "minecraft:height_range",
+                  "min_inclusive": {
+                    "absolute": 65
+                  },
+                  "max_inclusive": {
+                    "below_top": 0
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "feature": "wythers:tree/eucalypt/stringy_ash",
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:would_survive",
+                  "state": {
+                    "id": "minecraft:oak_sapling"
+                  }
+                },
+                {
+                  "type": "minecraft:height_range",
+                  "min_inclusive": {
+                    "absolute": 65
+                  },
+                  "max_inclusive": {
+                    "below_top": 0
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "feature": "wythers:tree/eucalypt/stringy_white",
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:would_survive",
+                  "state": {
+                    "id": "minecraft:oak_sapling"
+                  }
+                },
+                {
+                  "type": "minecraft:height_range",
+                  "min_inclusive": {
+                    "absolute": 65
+                  },
+                  "max_inclusive": {
+                    "below_top": 0
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "feature": "wythers:tree/eucalypt/rough_bark_luxuriant",
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:would_survive",
+                  "state": {
+                    "id": "minecraft:oak_sapling"
+                  }
+                },
+                {
+                  "type": "minecraft:height_range",
+                  "min_inclusive": {
+                    "absolute": 63
+                  },
+                  "max_inclusive": {
+                    "absolute": 64
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "feature": "wythers:tree/eucalypt/stringy_ash_luxuriant",
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:would_survive",
+                  "state": {
+                    "id": "minecraft:oak_sapling"
+                  }
+                },
+                {
+                  "type": "minecraft:height_range",
+                  "min_inclusive": {
+                    "absolute": 63
+                  },
+                  "max_inclusive": {
+                    "absolute": 64
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "feature": "wythers:tree/eucalypt/stringy_white_luxuriant",
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:would_survive",
+                  "state": {
+                    "id": "minecraft:oak_sapling"
+                  }
+                },
+                {
+                  "type": "minecraft:height_range",
+                  "min_inclusive": {
+                    "absolute": 63
+                  },
+                  "max_inclusive": {
+                    "absolute": 64
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "feature": "wythers:tree/eucalypt/salix_nigra",
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:would_survive",
+                  "state": {
+                    "id": "minecraft:oak_sapling"
+                  }
+                },
+                {
+                  "type": "minecraft:height_range",
+                  "min_inclusive": {
+                    "absolute": 63
+                  },
+                  "max_inclusive": {
+                    "absolute": 64
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "feature": "wythers:tree/eucalypt/ghost_gum",
+        "placement": [
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:would_survive",
+                  "state": {
+                    "id": "minecraft:oak_sapling"
+                  }
+                },
+                {
+                  "type": "minecraft:height_range",
+                  "min_inclusive": {
+                    "absolute": 65
+                  },
+                  "max_inclusive": {
+                    "below_top": 0
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              2,
+              0
+            ],
+            "blocks": "minecraft:moss_block"
+          }
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "type": "minecraft:tree",
+  "ignore_vines": true,
+  "minimum_size": {
+    "type": "minecraft:two_layers_feature_size",
+    "limit": 1,
+    "lower_size": 1,
+    "upper_size": 2
+  },
+  "trunk_provider": {
+    "type": "minecraft:simple",
+    "state": {
+      "id": "minecraft:dark_oak_wood",
+      "properties": {
+        "axis": "y"
+      }
+    }
+  },
+  "foliage_provider": {
+    "type": "minecraft:rule_based",
+    "fallback": {
+      "type": "minecraft:weighted",
+      "entries": [
+        {
+          "weight": 1,
+          "data": {
+            "id": "minecraft:void_air"
+          }
+        },
+        {
+          "weight": 10,
+          "data": {
+            "id": "minecraft:birch_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "false",
+              "waterlogged": "false"
+            }
+          }
+        }
+      ]
+    },
+    "rules": [
+      {
+        "if_true": {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            1,
+            0
+          ],
+          "blocks": "minecraft:air"
+        },
+        "then": {
+          "type": "minecraft:weighted",
+          "entries": [
+            {
+              "weight": 1,
+              "data": {
+                "id": "minecraft:air"
+              }
+            },
+            {
+              "weight": 5,
+              "data": {
+                "id": "minecraft:red_poplar_leaves",
+                "properties": {
+                  "distance": "7",
+                  "persistent": "false",
+                  "waterlogged": "false"
+                }
+              }
+            },
+            {
+              "weight": 5,
+              "data": {
+                "id": "minecraft:birch_leaves",
+                "properties": {
+                  "distance": "7",
+                  "persistent": "false",
+                  "waterlogged": "false"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "trunk_placer": {
+    "type": "minecraft:cherry_trunk_placer",
+    "base_height": 9,
+    "height_rand_a": 0,
+    "height_rand_b": 0,
+    "branch_count": {
+      "type": "minecraft:weighted_list",
+      "distribution": [
+        {
+          "weight": 1,
+          "data": 2
+        },
+        {
+          "weight": 1,
+          "data": 3
+        }
+      ]
+    },
+    "branch_horizontal_length": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 5,
+      "max_inclusive": 8
+    },
+    "branch_start_offset_from_top": {
+      "min_inclusive": -4,
+      "max_inclusive": -3
+    },
+    "branch_end_offset_from_top": {
+      "type": "minecraft:uniform",
+      "min_inclusive": -6,
+      "max_inclusive": -5
+    }
+  },
+  "foliage_placer": {
+    "type": "minecraft:cherry_foliage_placer",
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 4,
+      "max_inclusive": 5
+    },
+    "offset": 1,
+    "height": 4,
+    "wide_bottom_layer_hole_chance": 1,
+    "corner_hole_chance": 1,
+    "hanging_leaves_chance": 0.5,
+    "hanging_leaves_extension_chance": 0
+  },
+  "decorators": [],
+  "below_trunk_provider": {
+    "type": "minecraft:simple",
+    "state": {
+      "id": "minecraft:dark_oak_wood",
+      "properties": {
+        "axis": "y"
+      }
+    }
+  }
+}

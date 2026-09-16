@@ -1,0 +1,91 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "state_provider": {
+      "type": "minecraft:rule_based",
+      "fallback": {
+        "type": "minecraft:noise",
+        "noise": {
+          "base_octave": -5,
+          "amplitude_modifiers": [
+            2,
+            3
+          ],
+          "octave_count": 2,
+          "normalize": "legacy"
+        },
+        "scale": 1,
+        "seed": -817103696,
+        "states": [
+          {
+            "id": "minecraft:packed_ice"
+          },
+          {
+            "id": "minecraft:packed_ice"
+          },
+          {
+            "id": "minecraft:packed_ice"
+          },
+          {
+            "id": "minecraft:cave_air"
+          },
+          {
+            "id": "minecraft:cave_air"
+          },
+          {
+            "id": "minecraft:cave_air"
+          },
+          {
+            "id": "minecraft:packed_ice"
+          },
+          {
+            "id": "minecraft:packed_ice"
+          },
+          {
+            "id": "minecraft:packed_ice"
+          }
+        ]
+      },
+      "rules": []
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 4,
+      "max_inclusive": 8
+    },
+    "half_height": 2,
+    "target": {
+      "type": "minecraft:all_of",
+      "predicates": [
+        {
+          "type": "minecraft:matching_blocks",
+          "blocks": [
+            "minecraft:air",
+            "minecraft:water",
+            "minecraft:snow",
+            "minecraft:snow_block",
+            "minecraft:blue_ice",
+            "minecraft:packed_ice",
+            "minecraft:ice"
+          ]
+        },
+        {
+          "type": "minecraft:matching_biomes",
+          "biomes": "deep_frozen_ocean"
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 2
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 65
+      }
+    }
+  ]
+}

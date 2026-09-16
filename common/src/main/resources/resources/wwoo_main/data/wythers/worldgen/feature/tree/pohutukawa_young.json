@@ -1,0 +1,120 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "features": [
+    {
+      "feature": {
+        "ignore_vines": true,
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size",
+          "min_clipped_height": 1,
+          "limit": 1,
+          "lower_size": 1,
+          "upper_size": 1
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:rooted_dirt"
+          }
+        },
+        "trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:dark_oak_wood"
+          }
+        },
+        "foliage_provider": {
+          "type": "minecraft:rule_based",
+          "fallback": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:void_air"
+                }
+              },
+              {
+                "weight": 10,
+                "data": {
+                  "id": "minecraft:birch_leaves",
+                  "properties": {
+                    "distance": "7",
+                    "persistent": "false",
+                    "waterlogged": "false"
+                  }
+                }
+              }
+            ]
+          },
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "blocks": "minecraft:air"
+              },
+              "then": {
+                "type": "minecraft:weighted",
+                "entries": [
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:air"
+                    }
+                  },
+                  {
+                    "weight": 5,
+                    "data": {
+                      "id": "minecraft:red_poplar_leaves",
+                      "properties": {
+                        "distance": "7",
+                        "persistent": "false",
+                        "waterlogged": "false"
+                      }
+                    }
+                  },
+                  {
+                    "weight": 5,
+                    "data": {
+                      "id": "minecraft:birch_leaves",
+                      "properties": {
+                        "distance": "7",
+                        "persistent": "false",
+                        "waterlogged": "false"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "trunk_placer": {
+          "type": "minecraft:forking_trunk_placer",
+          "base_height": 3,
+          "height_rand_a": 1,
+          "height_rand_b": 5
+        },
+        "foliage_placer": {
+          "type": "minecraft:acacia_foliage_placer",
+          "radius": 1,
+          "offset": 0,
+          "height": 2
+        },
+        "decorators": [],
+        "type": "minecraft:tree"
+      },
+      "placement": [
+        {
+          "type": "minecraft:count",
+          "count": 4
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:template",
+  "templates": [
+    {
+      "weight": 1,
+      "data": {
+        "id": "wythers:feature/rafflesia",
+        "rotations": [
+          "none"
+        ]
+      }
+    }
+  ]
+}

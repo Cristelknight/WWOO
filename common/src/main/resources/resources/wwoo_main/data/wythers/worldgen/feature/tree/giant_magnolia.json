@@ -1,0 +1,837 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:simple_random_selector",
+        "features": [
+          {
+            "feature": {
+              "type": "minecraft:tree",
+              "ignore_vines": true,
+              "minimum_size": {
+                "type": "minecraft:two_layers_feature_size",
+                "limit": 1,
+                "lower_size": 0,
+                "upper_size": 2
+              },
+              "trunk_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:mangrove_wood",
+                  "properties": {
+                    "axis": "y"
+                  }
+                }
+              },
+              "foliage_provider": {
+                "type": "minecraft:weighted",
+                "entries": [
+                  {
+                    "weight": 4,
+                    "data": {
+                      "id": "minecraft:cherry_leaves"
+                    }
+                  },
+                  {
+                    "weight": 4,
+                    "data": {
+                      "id": "minecraft:flowering_azalea_leaves"
+                    }
+                  },
+                  {
+                    "weight": 2,
+                    "data": {
+                      "id": "minecraft:azalea_leaves",
+                      "properties": {
+                        "distance": "7",
+                        "persistent": "false",
+                        "waterlogged": "false"
+                      }
+                    }
+                  },
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:air"
+                    }
+                  }
+                ]
+              },
+              "trunk_placer": {
+                "type": "minecraft:cherry_trunk_placer",
+                "base_height": 9,
+                "height_rand_a": 0,
+                "height_rand_b": 0,
+                "branch_count": {
+                  "type": "minecraft:weighted_list",
+                  "distribution": [
+                    {
+                      "weight": 1,
+                      "data": 2
+                    },
+                    {
+                      "weight": 1,
+                      "data": 3
+                    }
+                  ]
+                },
+                "branch_horizontal_length": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 8,
+                  "max_inclusive": 10
+                },
+                "branch_start_offset_from_top": {
+                  "min_inclusive": -4,
+                  "max_inclusive": -3
+                },
+                "branch_end_offset_from_top": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": -1,
+                  "max_inclusive": 0
+                }
+              },
+              "foliage_placer": {
+                "type": "minecraft:cherry_foliage_placer",
+                "radius": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 4,
+                  "max_inclusive": 5
+                },
+                "offset": 1,
+                "height": 4,
+                "wide_bottom_layer_hole_chance": 1,
+                "corner_hole_chance": 1,
+                "hanging_leaves_chance": 0.5,
+                "hanging_leaves_extension_chance": 0
+              },
+              "decorators": [
+                {
+                  "type": "minecraft:attached_to_logs",
+                  "probability": 0.02,
+                  "block_provider": {
+                    "type": "minecraft:simple",
+                    "state": {
+                      "id": "minecraft:spore_blossom"
+                    }
+                  },
+                  "directions": [
+                    "down"
+                  ]
+                },
+                {
+                  "type": "minecraft:place_on_ground",
+                  "block_state_provider": {
+                    "type": "minecraft:weighted",
+                    "entries": [
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "north",
+                            "flower_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "east",
+                            "flower_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "south",
+                            "flower_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "west",
+                            "flower_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "north",
+                            "flower_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "east",
+                            "flower_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "south",
+                            "flower_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "west",
+                            "flower_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "north",
+                            "flower_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "east",
+                            "flower_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "south",
+                            "flower_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "west",
+                            "flower_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      }
+                    ]
+                  },
+                  "height": 2,
+                  "radius": 5,
+                  "tries": 300
+                },
+                {
+                  "type": "minecraft:place_on_ground",
+                  "block_state_provider": {
+                    "type": "minecraft:weighted",
+                    "entries": [
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "north",
+                            "flower_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "east",
+                            "flower_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "south",
+                            "flower_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "west",
+                            "flower_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "north",
+                            "flower_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "east",
+                            "flower_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "south",
+                            "flower_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "west",
+                            "flower_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "north",
+                            "flower_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "east",
+                            "flower_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "south",
+                            "flower_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "west",
+                            "flower_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      }
+                    ]
+                  },
+                  "height": 2,
+                  "radius": 8,
+                  "tries": 150
+                }
+              ],
+              "below_trunk_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:mangrove_wood",
+                  "properties": {
+                    "axis": "y"
+                  }
+                }
+              }
+            },
+            "placement": [
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:would_survive",
+                  "state": {
+                    "id": "minecraft:fern"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:tree",
+              "ignore_vines": true,
+              "minimum_size": {
+                "type": "minecraft:two_layers_feature_size",
+                "limit": 1,
+                "lower_size": 0,
+                "upper_size": 2
+              },
+              "trunk_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:mangrove_wood",
+                  "properties": {
+                    "axis": "y"
+                  }
+                }
+              },
+              "foliage_provider": {
+                "type": "minecraft:weighted",
+                "entries": [
+                  {
+                    "weight": 4,
+                    "data": {
+                      "id": "minecraft:cherry_leaves"
+                    }
+                  },
+                  {
+                    "weight": 4,
+                    "data": {
+                      "id": "minecraft:flowering_azalea_leaves"
+                    }
+                  },
+                  {
+                    "weight": 2,
+                    "data": {
+                      "id": "minecraft:azalea_leaves",
+                      "properties": {
+                        "distance": "7",
+                        "persistent": "false",
+                        "waterlogged": "false"
+                      }
+                    }
+                  },
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:air"
+                    }
+                  }
+                ]
+              },
+              "trunk_placer": {
+                "type": "minecraft:cherry_trunk_placer",
+                "base_height": 9,
+                "height_rand_a": 5,
+                "height_rand_b": 0,
+                "branch_count": {
+                  "type": "minecraft:weighted_list",
+                  "distribution": [
+                    {
+                      "weight": 1,
+                      "data": 2
+                    },
+                    {
+                      "weight": 1,
+                      "data": 3
+                    }
+                  ]
+                },
+                "branch_horizontal_length": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 7
+                },
+                "branch_start_offset_from_top": {
+                  "min_inclusive": -4,
+                  "max_inclusive": -3
+                },
+                "branch_end_offset_from_top": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": -1,
+                  "max_inclusive": 0
+                }
+              },
+              "foliage_placer": {
+                "type": "minecraft:cherry_foliage_placer",
+                "radius": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 4,
+                  "max_inclusive": 5
+                },
+                "offset": 1,
+                "height": 4,
+                "wide_bottom_layer_hole_chance": 1,
+                "corner_hole_chance": 1,
+                "hanging_leaves_chance": 0.5,
+                "hanging_leaves_extension_chance": 0
+              },
+              "decorators": [
+                {
+                  "type": "minecraft:attached_to_logs",
+                  "probability": 0.02,
+                  "block_provider": {
+                    "type": "minecraft:simple",
+                    "state": {
+                      "id": "minecraft:spore_blossom"
+                    }
+                  },
+                  "directions": [
+                    "down"
+                  ]
+                },
+                {
+                  "type": "minecraft:place_on_ground",
+                  "block_state_provider": {
+                    "type": "minecraft:weighted",
+                    "entries": [
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "north",
+                            "flower_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "east",
+                            "flower_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "south",
+                            "flower_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "west",
+                            "flower_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "north",
+                            "flower_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "east",
+                            "flower_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "south",
+                            "flower_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "west",
+                            "flower_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "north",
+                            "flower_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "east",
+                            "flower_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "south",
+                            "flower_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "west",
+                            "flower_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      }
+                    ]
+                  },
+                  "height": 2,
+                  "radius": 5,
+                  "tries": 300
+                },
+                {
+                  "type": "minecraft:place_on_ground",
+                  "block_state_provider": {
+                    "type": "minecraft:weighted",
+                    "entries": [
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "north",
+                            "flower_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "east",
+                            "flower_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "south",
+                            "flower_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "west",
+                            "flower_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "north",
+                            "flower_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "east",
+                            "flower_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "south",
+                            "flower_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "west",
+                            "flower_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "north",
+                            "flower_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "east",
+                            "flower_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "south",
+                            "flower_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:pink_petals",
+                          "properties": {
+                            "facing": "west",
+                            "flower_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      }
+                    ]
+                  },
+                  "height": 2,
+                  "radius": 8,
+                  "tries": 150
+                }
+              ],
+              "below_trunk_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:mangrove_wood",
+                  "properties": {
+                    "axis": "y"
+                  }
+                }
+              }
+            },
+            "placement": [
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:would_survive",
+                  "state": {
+                    "id": "minecraft:fern"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "placement": [
+        {
+          "type": "minecraft:count",
+          "count": 64
+        },
+        {
+          "type": "minecraft:offset",
+          "x": {
+            "type": "minecraft:trapezoid",
+            "min": -1,
+            "max": 1,
+            "plateau": 0
+          },
+          "z": {
+            "type": "minecraft:trapezoid",
+            "min": -1,
+            "max": 1,
+            "plateau": 0
+          },
+          "y": {
+            "type": "minecraft:trapezoid",
+            "min": -2,
+            "max": 2,
+            "plateau": 0
+          }
+        }
+      ]
+    }
+  ]
+}

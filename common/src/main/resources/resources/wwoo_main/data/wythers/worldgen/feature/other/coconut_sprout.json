@@ -1,0 +1,44 @@
+{
+  "type": "minecraft:block_column",
+  "direction": "up",
+  "allowed_placement": {
+    "type": "minecraft:true"
+  },
+  "prioritize_tip": true,
+  "layers": [
+    {
+      "height": 1,
+      "provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:suspicious_sand"
+        }
+      }
+    },
+    {
+      "height": 1,
+      "provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:pitcher_crop",
+          "properties": {
+            "age": "3",
+            "half": "lower"
+          }
+        }
+      }
+    },
+    {
+      "height": 1,
+      "provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:large_fern",
+          "properties": {
+            "half": "upper"
+          }
+        }
+      }
+    }
+  ]
+}

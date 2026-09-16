@@ -1,0 +1,181 @@
+{
+  "type": "minecraft:tree",
+  "minimum_size": {
+    "type": "minecraft:two_layers_feature_size",
+    "min_clipped_height": 0,
+    "limit": 0,
+    "lower_size": 0,
+    "upper_size": 0
+  },
+  "below_trunk_provider": {
+    "type": "minecraft:simple",
+    "state": {
+      "id": "minecraft:dirt"
+    }
+  },
+  "trunk_provider": {
+    "type": "minecraft:rule_based",
+    "fallback": {
+      "type": "minecraft:simple",
+      "state": {
+        "id": "minecraft:mangrove_roots",
+        "properties": {
+          "waterlogged": "false"
+        }
+      }
+    },
+    "rules": [
+      {
+        "if_true": {
+          "type": "minecraft:any_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_fluids",
+              "offset": [
+                1,
+                0,
+                0
+              ],
+              "fluids": "minecraft:water"
+            },
+            {
+              "type": "minecraft:matching_fluids",
+              "offset": [
+                -1,
+                0,
+                0
+              ],
+              "fluids": "minecraft:water"
+            },
+            {
+              "type": "minecraft:matching_fluids",
+              "offset": [
+                0,
+                0,
+                1
+              ],
+              "fluids": "minecraft:water"
+            },
+            {
+              "type": "minecraft:matching_fluids",
+              "offset": [
+                0,
+                0,
+                -1
+              ],
+              "fluids": "minecraft:water"
+            }
+          ]
+        },
+        "then": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:mangrove_roots",
+            "properties": {
+              "waterlogged": "true"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "foliage_provider": {
+    "type": "minecraft:simple",
+    "state": {
+      "id": "minecraft:air"
+    }
+  },
+  "trunk_placer": {
+    "type": "minecraft:cherry_trunk_placer",
+    "base_height": 1,
+    "height_rand_a": 0,
+    "height_rand_b": 0,
+    "branch_count": 2,
+    "branch_horizontal_length": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 2,
+      "max_inclusive": 8
+    },
+    "branch_start_offset_from_top": {
+      "min_inclusive": -1,
+      "max_inclusive": 0
+    },
+    "branch_end_offset_from_top": {
+      "type": "minecraft:uniform",
+      "min_inclusive": -10,
+      "max_inclusive": -9
+    }
+  },
+  "foliage_placer": {
+    "type": "minecraft:random_spread_foliage_placer",
+    "radius": 1,
+    "offset": 0,
+    "foliage_height": 1,
+    "leaf_placement_attempts": 5
+  },
+  "decorators": [
+    {
+      "type": "minecraft:attached_to_logs",
+      "probability": 0.1,
+      "block_provider": {
+        "type": "minecraft:weighted",
+        "entries": [
+          {
+            "weight": 1,
+            "data": {
+              "id": "minecraft:sweet_berry_bush",
+              "properties": {
+                "age": "0"
+              }
+            }
+          },
+          {
+            "weight": 1,
+            "data": {
+              "id": "minecraft:sweet_berry_bush",
+              "properties": {
+                "age": "1"
+              }
+            }
+          }
+        ]
+      },
+      "directions": [
+        "up"
+      ]
+    },
+    {
+      "type": "minecraft:attached_to_logs",
+      "probability": 0.8,
+      "block_provider": {
+        "type": "minecraft:weighted",
+        "entries": [
+          {
+            "weight": 1,
+            "data": {
+              "id": "minecraft:spruce_leaves",
+              "properties": {
+                "distance": "7",
+                "persistent": "false",
+                "waterlogged": "false"
+              }
+            }
+          },
+          {
+            "weight": 1,
+            "data": {
+              "id": "minecraft:mangrove_roots"
+            }
+          }
+        ]
+      },
+      "directions": [
+        "up",
+        "north",
+        "east",
+        "south",
+        "west"
+      ]
+    }
+  ]
+}

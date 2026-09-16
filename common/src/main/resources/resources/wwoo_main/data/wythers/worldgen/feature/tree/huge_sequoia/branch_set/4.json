@@ -1,0 +1,21 @@
+{
+  "features": [
+    {
+      "feature": "wythers:tree/huge_sequoia/branch/5_east",
+      "placement": []
+    },
+    {
+      "feature": "wythers:tree/huge_sequoia/branch/5_south",
+      "placement": []
+    },
+    {
+      "feature": "wythers:tree/huge_sequoia/branch/5_west",
+      "placement": []
+    },
+    {
+      "feature": "wythers:tree/huge_sequoia/branch/5_north",
+      "placement": []
+    }
+  ],
+  "type": "minecraft:simple_random_selector"
+}

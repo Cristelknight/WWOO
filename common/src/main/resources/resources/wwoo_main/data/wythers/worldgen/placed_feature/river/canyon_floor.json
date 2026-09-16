@@ -1,0 +1,188 @@
+{
+  "feature": {
+    "type": "minecraft:sequence",
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:disk",
+          "state_provider": {
+            "type": "minecraft:rule_based",
+            "rules": [
+              {
+                "if_true": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:height_range",
+                      "min_inclusive": {
+                        "absolute": 62
+                      },
+                      "max_inclusive": {
+                        "absolute": 62
+                      }
+                    },
+                    {
+                      "type": "minecraft:not",
+                      "predicate": {
+                        "type": "minecraft:any_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:volume_match",
+                            "match": {
+                              "type": "minecraft:matching_block_tag",
+                              "tag": "wythers:air_and_plants"
+                            },
+                            "max": [
+                              8,
+                              1,
+                              8
+                            ],
+                            "min": [
+                              -8,
+                              1,
+                              -8
+                            ]
+                          },
+                          {
+                            "type": "minecraft:volume_match",
+                            "match": {
+                              "type": "minecraft:matching_block_tag",
+                              "tag": "minecraft:leaves"
+                            },
+                            "max": [
+                              8,
+                              1,
+                              8
+                            ],
+                            "min": [
+                              -8,
+                              1,
+                              -8
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "then": {
+                  "type": "minecraft:simple",
+                  "state": "minecraft:red_sandstone"
+                }
+              },
+              {
+                "if_true": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:height_range",
+                      "min_inclusive": {
+                        "absolute": 54
+                      },
+                      "max_inclusive": {
+                        "absolute": 61
+                      }
+                    },
+                    {
+                      "type": "minecraft:not",
+                      "predicate": {
+                        "type": "minecraft:any_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:volume_match",
+                            "match": {
+                              "type": "minecraft:matching_fluids",
+                              "fluids": "water"
+                            },
+                            "max": [
+                              3,
+                              1,
+                              3
+                            ],
+                            "min": [
+                              -3,
+                              1,
+                              -3
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "then": {
+                  "type": "minecraft:simple",
+                  "state": "minecraft:red_sandstone"
+                }
+              }
+            ]
+          },
+          "radius": 8,
+          "half_height": 4,
+          "target": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_fluids",
+                "fluids": "minecraft:water"
+              },
+              {
+                "type": "minecraft:matching_biomes",
+                "biomes": [
+                  "river",
+                  "wooded_badlands",
+                  "badlands",
+                  "eroded_badlands"
+                ]
+              }
+            ]
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "absolute": 58
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 5
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "smooth_red_sandstone"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          1,
+          0
+        ],
+        "blocks": "minecraft:dripstone_block"
+      }
+    }
+  ]
+}

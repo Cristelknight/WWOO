@@ -1,0 +1,60 @@
+{
+  "feature": {
+    "type": "minecraft:spike",
+    "can_place_on": {
+      "type": "minecraft:matching_blocks",
+      "blocks": "minecraft:snow_block"
+    },
+    "can_replace": {
+      "type": "minecraft:matching_block_tag",
+      "tag": "minecraft:ice_spike_replaceable"
+    },
+    "state": {
+      "id": "minecraft:snow",
+      "properties": {
+        "layers": "8"
+      }
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 1
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:dripstone_block"
+      }
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 0
+      }
+    },
+    {
+      "type": "minecraft:surface_relative_threshold_filter",
+      "heightmap": "WORLD_SURFACE_WG",
+      "min_inclusive": -240,
+      "max_inclusive": -71
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

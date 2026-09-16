@@ -1,0 +1,104 @@
+{
+  "feature": {
+    "type": "minecraft:template",
+    "templates": [
+      {
+        "weight": 1,
+        "data": {
+          "id": "wythers:fauna/seagull"
+        }
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 8
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 7,
+        "max_inclusive": 10
+      }
+    },
+    {
+      "type": "minecraft:offset",
+      "x": {
+        "type": "minecraft:trapezoid",
+        "min": -3,
+        "max": 3,
+        "plateau": 0
+      },
+      "y": 0,
+      "z": {
+        "type": "minecraft:trapezoid",
+        "min": -3,
+        "max": 3,
+        "plateau": 0
+      }
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:any_of",
+        "predicates": [
+          {
+            "type": "minecraft:has_sturdy_face",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "direction": "up"
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "tag": "minecraft:wooden_stairs"
+          },
+          {
+            "type": "minecraft:matching_block_tag",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "tag": "minecraft:leaves"
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_biomes",
+        "biomes": [
+          "beach",
+          "snowy_beach",
+          "stony_shore",
+          "warm_ocean",
+          "lukewarm_ocean",
+          "ocean",
+          "cold_ocean",
+          "frozen_ocean",
+          "deep_lukewarm_ocean",
+          "deep_ocean",
+          "deep_cold_ocean"
+        ]
+      }
+    }
+  ]
+}

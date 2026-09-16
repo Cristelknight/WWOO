@@ -14,9 +14,8 @@
       "condition": {
         "type": "minecraft:biome",
         "biomes": [
-          "minecraft:desert",
-          "minecraft:savanna"
-        ]
+                        "minecraft:desert"
+                      ]
       },
       "priority": 1
     }

@@ -1,0 +1,459 @@
+{
+  "feature": {
+    "type": "minecraft:vegetation_patch",
+    "surface": "floor",
+    "depth": 1,
+    "vertical_range": 7,
+    "extra_bottom_block_chance": 0,
+    "extra_edge_column_chance": 0.5,
+    "vegetation_chance": 0.01,
+    "xz_radius": 7,
+    "replaceable": [
+      "minecraft:red_sand",
+      "minecraft:red_sandstone",
+      "minecraft:grass_block"
+    ],
+    "ground_state": {
+      "type": "minecraft:rule_based",
+      "rules": [
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:red_sandstone"
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": "minecraft:packed_mud"
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_biomes",
+                "biomes": "river"
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:grass_block"
+              }
+            ]
+          },
+          "then": {
+            "type": "minecraft:rule_based",
+            "fallback": {
+              "type": "minecraft:noise",
+              "noise": {
+                "base_octave": -4,
+                "amplitude_modifiers": [
+                  2,
+                  1,
+                  1,
+                  2
+                ],
+                "octave_count": 4,
+                "normalize": "legacy"
+              },
+              "scale": 1,
+              "seed": -817103696,
+              "states": [
+                {
+                  "id": "minecraft:rooted_dirt"
+                },
+                {
+                  "id": "minecraft:rooted_dirt"
+                },
+                {
+                  "id": "minecraft:packed_mud"
+                },
+                {
+                  "id": "minecraft:coarse_dirt"
+                },
+                {
+                  "id": "minecraft:coarse_dirt"
+                }
+              ]
+            },
+            "rules": [
+              {
+                "if_true": {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "fluids": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        -1,
+                        0,
+                        0
+                      ],
+                      "fluids": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        0,
+                        0,
+                        1
+                      ],
+                      "fluids": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        0,
+                        0,
+                        -1
+                      ],
+                      "fluids": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        2,
+                        0,
+                        0
+                      ],
+                      "fluids": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        -2,
+                        0,
+                        0
+                      ],
+                      "fluids": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        0,
+                        0,
+                        2
+                      ],
+                      "fluids": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        0,
+                        0,
+                        -2
+                      ],
+                      "fluids": "minecraft:water"
+                    }
+                  ]
+                },
+                "then": {
+                  "type": "minecraft:simple",
+                  "state": {
+                    "id": "minecraft:coarse_dirt"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_biomes",
+                "biomes": [
+                  "badlands",
+                  "eroded_badlands"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:red_sand",
+                  "minecraft:red_sandstone",
+                  "minecraft:grass_block"
+                ]
+              }
+            ]
+          },
+          "then": {
+            "type": "minecraft:rule_based",
+            "fallback": {
+              "type": "minecraft:noise",
+              "noise": {
+                "base_octave": -4,
+                "amplitude_modifiers": [
+                  2,
+                  1,
+                  1,
+                  2
+                ],
+                "octave_count": 4,
+                "normalize": "legacy"
+              },
+              "scale": 1,
+              "seed": -817103696,
+              "states": [
+                {
+                  "id": "minecraft:grass_block"
+                },
+                {
+                  "id": "minecraft:rooted_dirt"
+                },
+                {
+                  "id": "minecraft:packed_mud"
+                },
+                {
+                  "id": "minecraft:coarse_dirt"
+                },
+                {
+                  "id": "minecraft:brown_concrete_powder"
+                }
+              ]
+            },
+            "rules": [
+              {
+                "if_true": {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "fluids": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        -1,
+                        0,
+                        0
+                      ],
+                      "fluids": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        0,
+                        0,
+                        1
+                      ],
+                      "fluids": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        0,
+                        0,
+                        -1
+                      ],
+                      "fluids": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        2,
+                        0,
+                        0
+                      ],
+                      "fluids": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        -2,
+                        0,
+                        0
+                      ],
+                      "fluids": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        0,
+                        0,
+                        2
+                      ],
+                      "fluids": "minecraft:water"
+                    },
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "offset": [
+                        0,
+                        0,
+                        -2
+                      ],
+                      "fluids": "minecraft:water"
+                    }
+                  ]
+                },
+                "then": {
+                  "type": "minecraft:simple",
+                  "state": {
+                    "id": "minecraft:grass_block"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "vegetation_feature": {
+      "feature": {
+        "to_place": {
+          "type": "minecraft:rule_based",
+          "fallback": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:air"
+            }
+          },
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": "minecraft:rooted_dirt"
+              },
+              "then": {
+                "type": "minecraft:weighted",
+                "entries": [
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:dead_bush"
+                    }
+                  },
+                  {
+                    "weight": 2,
+                    "data": {
+                      "id": "minecraft:short_dry_grass"
+                    }
+                  },
+                  {
+                    "weight": 2,
+                    "data": {
+                      "id": "minecraft:tall_dry_grass"
+                    }
+                  },
+                  {
+                    "weight": 20,
+                    "data": {
+                      "id": "minecraft:short_grass"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "if_true": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:coarse_dirt",
+                  "minecraft:brown_concrete_powder"
+                ]
+              },
+              "then": {
+                "type": "minecraft:weighted",
+                "entries": [
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:dead_bush"
+                    }
+                  },
+                  {
+                    "weight": 3,
+                    "data": {
+                      "id": "minecraft:air"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "if_true": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": "minecraft:grass_block"
+              },
+              "then": {
+                "type": "minecraft:weighted",
+                "entries": [
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:short_grass"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "type": "minecraft:simple_block"
+      },
+      "placement": []
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 15
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                1,
+                0
+              ],
+              "blocks": "minecraft:dripstone_block"
+            }
+      }
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    }
+  ]
+}

@@ -14,16 +14,11 @@
       "condition": {
         "type": "minecraft:biome",
         "biomes": [
-          "minecraft:badlands",
-          "minecraft:eroded_badlands",
-          "minecraft:wooded_badlands",
-          "minecraft:sparse_jungle",
-          "minecraft:bamboo_jungle",
-          "minecraft:savanna_plateau",
-          "minecraft:birch_forest",
-          "minecraft:old_growth_birch_forest",
-          "minecraft:lukewarm_ocean"
-        ]
+                        "minecraft:jungle",
+                        "minecraft:bamboo_jungle",
+                        "minecraft:sparse_jungle",
+                        "minecraft:wooded_badlands"
+                      ]
       },
       "priority": 1
     }

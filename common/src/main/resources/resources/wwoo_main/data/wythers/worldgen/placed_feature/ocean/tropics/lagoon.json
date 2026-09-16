@@ -1,0 +1,24 @@
+{
+  "feature": {
+    "type": "minecraft:sequence",
+    "features": [
+      "wythers:ocean/tropics/coral_base",
+      "wythers:ocean/tropics/lagoon_sand",
+      "wythers:ocean/tropics/coral_depth"
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 46
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:solid"
+      }
+    }
+  ]
+}

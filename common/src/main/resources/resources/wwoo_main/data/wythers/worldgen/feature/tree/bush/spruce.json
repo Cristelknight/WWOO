@@ -1,0 +1,116 @@
+{
+  "type": "minecraft:overlay",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:tree",
+        "ignore_vines": true,
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size",
+          "min_clipped_height": 0,
+          "limit": 0,
+          "lower_size": 0,
+          "upper_size": 0
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:rooted_dirt"
+          }
+        },
+        "trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_wood"
+          }
+        },
+        "foliage_provider": {
+          "type": "minecraft:rule_based",
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:rooted_dirt",
+                    "minecraft:coarse_dirt"
+                  ]
+                }
+              },
+              "then": {
+                "type": "minecraft:simple",
+                "state": "minecraft:spruce_leaves"
+              }
+            }
+          ]
+        },
+        "trunk_placer": {
+          "type": "minecraft:straight_trunk_placer",
+          "base_height": 1,
+          "height_rand_a": 1,
+          "height_rand_b": 0
+        },
+        "foliage_placer": {
+          "type": "minecraft:fancy_foliage_placer",
+          "radius": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 1,
+            "max_inclusive": 2
+          },
+          "offset": 0,
+          "height": 2
+        },
+        "decorators": [
+          {
+            "type": "minecraft:attached_to_leaves",
+            "probability": 1,
+            "exclusion_radius_xz": 0,
+            "exclusion_radius_y": 0,
+            "required_empty_blocks": 1,
+            "block_provider": {
+          "type": "minecraft:rule_based",
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:rooted_dirt",
+                    "minecraft:coarse_dirt"
+                  ]
+                }
+              },
+              "then": {
+                "type": "minecraft:simple",
+                "state": "minecraft:spruce_leaves"
+              }
+            }
+          ]
+        },
+            "directions": [
+              "down",
+              "up",
+              "north",
+              "east",
+              "south",
+              "west"
+            ]
+          }
+        ]
+      },
+      "placement": []
+    }
+  ]
+}

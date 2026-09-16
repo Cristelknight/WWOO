@@ -1,6 +1,5 @@
 {
   "attributes": {
-    "minecraft:gameplay/increased_fire_burnout": true,
     "minecraft:audio/background_music": {
       "default": {
         "max_delay": 24000,
@@ -8,131 +7,122 @@
         "sound": "minecraft:music.overworld.snowy_slopes"
       }
     },
-    "minecraft:visual/sky_color": 10858685,
-    "minecraft:visual/fog_color": 14145761,
-    "minecraft:visual/water_fog_color": 270131,
-    "minecraft:audio/music_volume": 1.0,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000,
-        "block_search_extent": 8,
-        "offset": 2
+    "minecraft:gameplay/natural_mob_spawns": {
+      "spawn_costs": {},
+      "spawns_by_category": {
+        "ambient": [
+          {
+            "type": "minecraft:bat",
+            "weight": 10,
+            "count": 8
+          }
+        ],
+        "axolotls": [],
+        "creature": [
+          {
+            "type": "minecraft:rabbit",
+            "weight": 4,
+            "count": {
+              "type": "minecraft:uniform",
+              "max_inclusive": 3,
+              "min_inclusive": 2
+            }
+          },
+          {
+            "type": "minecraft:goat",
+            "weight": 5,
+            "count": {
+              "type": "minecraft:uniform",
+              "max_inclusive": 3,
+              "min_inclusive": 1
+            }
+          }
+        ],
+        "misc": [],
+        "monster": [
+          {
+            "type": "minecraft:spider",
+            "weight": 100,
+            "count": 4
+          },
+          {
+            "type": "minecraft:zombie",
+            "weight": 95,
+            "count": 4
+          },
+          {
+            "type": "minecraft:zombie_villager",
+            "weight": 5,
+            "count": 1
+          },
+          {
+            "type": "minecraft:skeleton",
+            "weight": 100,
+            "count": 4
+          },
+          {
+            "type": "minecraft:creeper",
+            "weight": 100,
+            "count": 4
+          },
+          {
+            "type": "minecraft:slime",
+            "weight": 100,
+            "count": 4
+          },
+          {
+            "type": "minecraft:enderman",
+            "weight": 10,
+            "count": {
+              "type": "minecraft:uniform",
+              "max_inclusive": 4,
+              "min_inclusive": 1
+            }
+          },
+          {
+            "type": "minecraft:witch",
+            "weight": 5,
+            "count": 1
+          }
+        ],
+        "underground_water_creature": [
+          {
+            "type": "minecraft:glow_squid",
+            "weight": 10,
+            "count": {
+              "type": "minecraft:uniform",
+              "max_inclusive": 6,
+              "min_inclusive": 4
+            }
+          }
+        ],
+        "water_ambient": [],
+        "water_creature": []
       }
-    }
+    },
+    "minecraft:gameplay/piglins_zombify": false,
+    "minecraft:gameplay/increased_fire_burnout": true,
+    "minecraft:visual/sky_color": 12769535,
+    "minecraft:visual/fog_color": 13558014,
+    "minecraft:visual/cloud_color": "#11ffffff"
   },
-  "temperature": 0.0,
-  "downfall": 0.8,
-  "has_precipitation": true,
+  "carvers": [
+    "minecraft:cave",
+    "minecraft:cave_extra_underground",
+    "minecraft:canyon"
+  ],
+  "downfall": 0.9,
   "effects": {
     "dry_foliage_color": 12638463,
     "water_color": 10217203,
     "grass_color": 16765810,
     "foliage_color": 11012890
   },
-  "spawners": {
-    "ambient": [
-      {
-        "type": "minecraft:bat",
-        "weight": 10,
-        "minCount": 8,
-        "maxCount": 8
-      }
-    ],
-    "axolotls": [],
-    "creature": [
-      {
-        "type": "minecraft:donkey",
-        "weight": 1,
-        "minCount": 1,
-        "maxCount": 2
-      },
-      {
-        "type": "minecraft:rabbit",
-        "weight": 2,
-        "minCount": 2,
-        "maxCount": 6
-      },
-      {
-        "type": "minecraft:sheep",
-        "weight": 2,
-        "minCount": 2,
-        "maxCount": 4
-      }
-    ],
-    "misc": [],
-    "monster": [
-      {
-        "type": "minecraft:spider",
-        "weight": 100,
-        "minCount": 4,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:zombie",
-        "weight": 95,
-        "minCount": 4,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:zombie_villager",
-        "weight": 5,
-        "minCount": 1,
-        "maxCount": 1
-      },
-      {
-        "type": "minecraft:skeleton",
-        "weight": 100,
-        "minCount": 4,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:creeper",
-        "weight": 100,
-        "minCount": 4,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:slime",
-        "weight": 100,
-        "minCount": 4,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:enderman",
-        "weight": 10,
-        "minCount": 1,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:witch",
-        "weight": 5,
-        "minCount": 1,
-        "maxCount": 1
-      }
-    ],
-    "underground_water_creature": [
-      {
-        "type": "minecraft:glow_squid",
-        "weight": 10,
-        "minCount": 4,
-        "maxCount": 6
-      }
-    ],
-    "water_ambient": [],
-    "water_creature": []
-  },
-  "spawn_costs": {},
-  "carvers": [
-    "minecraft:cave",
-    "minecraft:cave_extra_underground",
-    "minecraft:canyon"
-  ],
   "features": [
     [
-      "wythers:terrain/local/stone_cliffs",
-      "wythers:terrain/extended/scree",
-      "wythers:terrain/extended/gravelify_packed_mud"
+      "wythers:bedrock_seal",
+      "wythers:stony_cliffs",
+      "wythers:placer/cold_mountains"
     ],
     [
       "minecraft:lake_lava_underground",
@@ -148,7 +138,6 @@
     [],
     [],
     [
-      "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
       "minecraft:ore_granite_lower",
@@ -167,6 +156,7 @@
       "minecraft:ore_redstone",
       "minecraft:ore_redstone_lower",
       "minecraft:ore_diamond",
+      "minecraft:ore_diamond_medium",
       "minecraft:ore_diamond_large",
       "minecraft:ore_diamond_buried",
       "minecraft:ore_lapis",
@@ -183,17 +173,17 @@
     ],
     [
       "minecraft:spring_water",
-      "minecraft:spring_lava"
+      "minecraft:spring_lava",
+      "minecraft:spring_lava_frozen"
     ],
     [
-      "minecraft:glow_lichen"
+      "minecraft:glow_lichen",
+      "minecraft:patch_pumpkin"
     ],
     [
-      "minecraft:freeze_top_layer",
-      "wythers:terrain/local/snow_blocks",
-      "wythers:vegetation/local/patch/grass_forest",
-      "wythers:decor/dense_steam",
-      "wythers:terrain/local/snowy_slopes"
+      "minecraft:freeze_top_layer"
     ]
-  ]
+  ],
+  "has_precipitation": true,
+  "temperature": -0.3
 }

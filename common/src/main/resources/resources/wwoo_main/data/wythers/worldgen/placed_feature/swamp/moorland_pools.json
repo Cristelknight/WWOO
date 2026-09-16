@@ -1,0 +1,119 @@
+{
+  "feature": {
+    "type": "minecraft:overlay",
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:disk",
+          "state_provider": {
+            "type": "minecraft:rule_based",
+            "rules": [
+              {
+                "if_true": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:volume_match",
+                      "match": {
+                        "type": "minecraft:matching_blocks",
+                        "blocks": [
+                          "minecraft:grass_block",
+                          "minecraft:dirt",
+                          "minecraft:water"
+                        ]
+                      },
+                      "max": [
+                        3,
+                        0,
+                        3
+                      ],
+                      "min": [
+                        -3,
+                        0,
+                        -3
+                      ]
+                    }
+                  ]
+                },
+                "then": {
+                  "type": "minecraft:rule_based",
+                  "fallback": {
+                    "type": "minecraft:noise",
+                    "noise": {
+                      "base_octave": -3,
+                      "amplitude_modifiers": [
+                        2,
+                        3
+                      ],
+                      "octave_count": 2,
+                      "normalize": "legacy"
+                    },
+                    "scale": 1,
+                    "seed": -817103696,
+                    "states": [
+                      {
+                        "id": "minecraft:water"
+                      },
+                      {
+                        "id": "minecraft:grass_block"
+                      },
+                      {
+                        "id": "minecraft:water"
+                      }
+                    ]
+                  },
+                  "rules": []
+                }
+              }
+            ]
+          },
+          "radius": 8,
+          "half_height": 4,
+          "target": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:grass_block"
+                ]
+              },
+              {
+                "type": "minecraft:matching_biomes",
+                "biomes": [
+                  "swamp"
+                ]
+              },
+              {
+                "type": "minecraft:height_range",
+                "min_inclusive": {
+                  "absolute": 63
+                },
+                "max_inclusive": {
+                  "below_top": 0
+                }
+              }
+            ]
+          }
+        },
+        "placement": []
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

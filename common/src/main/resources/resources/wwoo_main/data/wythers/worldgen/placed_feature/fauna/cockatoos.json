@@ -1,0 +1,55 @@
+{
+  "feature": {
+    "type": "minecraft:template",
+    "templates": [
+      {
+        "weight": 1,
+        "data": {
+          "id": "wythers:fauna/parrots/cockatoos"
+        }
+      },
+      {
+        "weight": 1,
+        "data": {
+          "id": "wythers:fauna/parrots/cockatiels"
+        }
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 4
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_block_tag",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "tag": "minecraft:leaves"
+      }
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:biased_to_bottom",
+        "min_inclusive": 1,
+        "max_inclusive": 3
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

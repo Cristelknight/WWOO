@@ -1,0 +1,176 @@
+{
+  "type": "minecraft:overlay",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:overlay",
+        "features": [
+          {
+            "feature": {
+              "type": "minecraft:tree",
+              "minimum_size": {
+                "type": "minecraft:two_layers_feature_size",
+                "min_clipped_height": 0,
+                "limit": 0,
+                "lower_size": 0,
+                "upper_size": 0
+              },
+              "below_trunk_provider": {
+                "type": "minecraft:rule_based",
+                "rules": []
+              },
+              "trunk_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:poplar_log"
+                }
+              },
+              "foliage_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:red_poplar_leaves"
+                }
+              },
+              "trunk_placer": {
+                "type": "minecraft:straight_trunk_placer",
+                "base_height": 6,
+                "height_rand_a": 0,
+                "height_rand_b": 0
+              },
+              "foliage_placer": {
+                "type": "minecraft:random_spread_foliage_placer",
+                "radius": 2,
+                "offset": 0,
+                "foliage_height": 5,
+                "leaf_placement_attempts": 256
+              },
+              "decorators": [
+                {
+                  "type": "minecraft:attached_to_leaves",
+                  "probability": 1,
+                  "exclusion_radius_xz": 0,
+                  "exclusion_radius_y": 0,
+                  "required_empty_blocks": 1,
+                  "block_provider": {
+                    "type": "minecraft:simple",
+                    "state": {
+                      "id": "minecraft:red_poplar_leaves"
+                    }
+                  },
+                  "directions": [
+                    "down",
+                    "up",
+                    "north",
+                    "east",
+                    "south",
+                    "west"
+                  ]
+                }
+              ]
+            },
+            "placement": []
+          },
+          {
+            "feature": {
+              "type": "minecraft:tree",
+              "minimum_size": {
+                "type": "minecraft:two_layers_feature_size",
+                "min_clipped_height": 0,
+                "limit": 0,
+                "lower_size": 0,
+                "upper_size": 0
+              },
+              "below_trunk_provider": {
+                "type": "minecraft:rule_based",
+                "rules": []
+              },
+              "trunk_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:poplar_log"
+                }
+              },
+              "foliage_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:red_poplar_leaves"
+                }
+              },
+              "trunk_placer": {
+                "type": "minecraft:straight_trunk_placer",
+                "base_height": 12,
+                "height_rand_a": 0,
+                "height_rand_b": 0
+              },
+              "foliage_placer": {
+                "type": "minecraft:fancy_foliage_placer",
+                "radius": 1,
+                "offset": 1,
+                "height": 6
+              },
+              "decorators": []
+            },
+            "placement": []
+          }
+        ]
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 0,
+            "max_inclusive": 6
+          },
+          "z": 0
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:tree",
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size"
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:rule_based",
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:grass_block"
+              },
+              "then": {
+                "type": "minecraft:simple",
+                "state": "minecraft:rooted_dirt"
+              }
+            }
+          ]
+        },
+        "trunk_provider": {
+          "type": "minecraft:simple",
+          "state": "minecraft:poplar_log"
+        },
+        "foliage_provider": {
+          "type": "minecraft:simple",
+          "state": "minecraft:poplar_log"
+        },
+        "trunk_placer": {
+          "type": "minecraft:straight_trunk_placer",
+          "base_height": 10,
+          "height_rand_a": 0,
+          "height_rand_b": 2
+        },
+        "foliage_placer": {
+          "type": "minecraft:fancy_foliage_placer",
+          "radius": 0,
+          "offset": 0,
+          "height": 0
+        },
+        "decorators": []
+      },
+      "placement": []
+    }
+  ]
+}

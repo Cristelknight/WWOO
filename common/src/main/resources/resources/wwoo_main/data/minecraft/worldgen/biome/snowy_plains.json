@@ -1,18 +1,112 @@
 {
   "attributes": {
-    "minecraft:audio/background_music": {},
-    "minecraft:visual/sky_color": 16777215,
-    "minecraft:visual/fog_color": 13224393,
-    "minecraft:visual/water_fog_color": 2171215,
-    "minecraft:audio/music_volume": 1.0,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "block_search_extent": 8,
-        "offset": 2.0,
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000
+    "minecraft:gameplay/natural_mob_spawns": {
+      "spawn_costs": {},
+      "spawns_by_category": {
+        "ambient": [
+          {
+            "type": "minecraft:bat",
+            "weight": 10,
+            "count": 8
+          }
+        ],
+        "axolotls": [],
+        "creature": [
+          {
+            "type": "minecraft:rabbit",
+            "weight": 10,
+            "count": {
+              "type": "minecraft:uniform",
+              "max_inclusive": 3,
+              "min_inclusive": 2
+            }
+          },
+          {
+            "type": "minecraft:polar_bear",
+            "weight": 1,
+            "count": {
+              "type": "minecraft:uniform",
+              "max_inclusive": 2,
+              "min_inclusive": 1
+            }
+          }
+        ],
+        "misc": [],
+        "monster": [
+          {
+            "type": "minecraft:spider",
+            "weight": 100,
+            "count": 4
+          },
+          {
+            "type": "minecraft:zombie",
+            "weight": 90,
+            "count": 4
+          },
+          {
+            "type": "minecraft:zombie_villager",
+            "weight": 5,
+            "count": 1
+          },
+          {
+            "type": "minecraft:zombie_horse",
+            "weight": 5,
+            "count": 1
+          },
+          {
+            "type": "minecraft:skeleton",
+            "weight": 20,
+            "count": 4
+          },
+          {
+            "type": "minecraft:creeper",
+            "weight": 100,
+            "count": 4
+          },
+          {
+            "type": "minecraft:slime",
+            "weight": 100,
+            "count": 4
+          },
+          {
+            "type": "minecraft:enderman",
+            "weight": 10,
+            "count": {
+              "type": "minecraft:uniform",
+              "max_inclusive": 4,
+              "min_inclusive": 1
+            }
+          },
+          {
+            "type": "minecraft:witch",
+            "weight": 5,
+            "count": 1
+          },
+          {
+            "type": "minecraft:stray",
+            "weight": 80,
+            "count": 4
+          }
+        ],
+        "underground_water_creature": [
+          {
+            "type": "minecraft:glow_squid",
+            "weight": 10,
+            "count": {
+              "type": "minecraft:uniform",
+              "max_inclusive": 6,
+              "min_inclusive": 4
+            }
+          }
+        ],
+        "water_ambient": [],
+        "water_creature": []
       }
-    }
+    },
+    "minecraft:gameplay/piglins_zombify": false,
+    "minecraft:visual/sky_color": 10735871,
+    "minecraft:visual/fog_color": 13558014,
+    "minecraft:visual/cloud_color": "#20ffffff"
   },
   "carvers": [
     "minecraft:cave",
@@ -24,12 +118,19 @@
   "effects": {
     "dry_foliage_color": 12638463,
     "water_color": 5334160,
-    "grass_color": 13081978,
-    "foliage_color": 15405056
+    "grass_color": 15769180,
+    "foliage_color": 14086143
   },
   "features": [
     [
-      "wythers:terrain/local/stone_cliffs"
+      "wythers:bedrock_seal",
+      "wythers:stony_cliffs",
+      "wythers:placer/snowy_plains",
+      "wythers:tundra/snowy_ground",
+      "wythers:tundra/dusty_ground",
+      "wythers:tundra/mossy_ground",
+      "wythers:tundra/snow_clear_upper",
+      "wythers:tundra/snow_clear_lower"
     ],
     [
       "minecraft:lake_lava_underground",
@@ -45,7 +146,6 @@
     [],
     [],
     [
-      "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
       "minecraft:ore_granite_lower",
@@ -64,16 +164,16 @@
       "minecraft:ore_redstone",
       "minecraft:ore_redstone_lower",
       "minecraft:ore_diamond",
+      "minecraft:ore_diamond_medium",
       "minecraft:ore_diamond_large",
       "minecraft:ore_diamond_buried",
       "minecraft:ore_lapis",
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
+      "minecraft:disk_sand",
       "minecraft:disk_clay",
-      "wythers:terrain/local/disk_gravel_river",
-      "wythers:terrain/extended/windswept_snow",
-      "wythers:terrain/local/frozen_river"
+      "minecraft:disk_gravel"
     ],
     [],
     [
@@ -82,119 +182,25 @@
     ],
     [
       "minecraft:glow_lichen",
-      "wythers:vegetation/local/trees/forest_holly",
-      "wythers:vegetation/local/trees/tundra_woods",
-      "wythers:vegetation/local/trees/tundra_dwarf_woods",
-      "wythers:vegetation/local/bushes/tundra",
+      "minecraft:trees_snowy",
+      "minecraft:flower_default",
+      "minecraft:patch_grass_badlands",
       "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal"
+      "minecraft:red_mushroom_normal",
+      "minecraft:patch_pumpkin",
+      "minecraft:patch_sugar_cane",
+      "minecraft:patch_firefly_bush_near_water"
     ],
     [
       "minecraft:freeze_top_layer",
-      "wythers:terrain/local/snowy_ground",
-      "wythers:terrain/local/snowy_slopes",
-      "wythers:terrain/local/snowy_edges"
+      "wythers:tundra/snow_depth",
+      "wythers:tundra/glacier",
+      "wythers:tundra/grasses",
+      "wythers:tundra/mosses",
+      "wythers:tundra/flowers",
+      "wythers:tundra/berry_bush"
     ]
   ],
   "has_precipitation": true,
-  "spawn_costs": {},
-  "spawners": {
-    "ambient": [
-      {
-        "type": "minecraft:bat",
-        "maxCount": 8,
-        "minCount": 8,
-        "weight": 10
-      }
-    ],
-    "axolotls": [],
-    "creature": [
-      {
-        "type": "minecraft:rabbit",
-        "maxCount": 3,
-        "minCount": 2,
-        "weight": 10
-      },
-      {
-        "type": "minecraft:polar_bear",
-        "maxCount": 2,
-        "minCount": 1,
-        "weight": 1
-      }
-    ],
-    "misc": [],
-    "monster": [
-      {
-        "type": "minecraft:spider",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 100
-      },
-      {
-        "type": "minecraft:zombie",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 95
-      },
-      {
-        "type": "minecraft:zombie_villager",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 5
-      },
-      {
-        "type": "minecraft:skeleton",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 20
-      },
-      {
-        "type": "minecraft:creeper",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 100
-      },
-      {
-        "type": "minecraft:slime",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 100
-      },
-      {
-        "type": "minecraft:enderman",
-        "maxCount": 4,
-        "minCount": 1,
-        "weight": 10
-      },
-      {
-        "type": "minecraft:witch",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 5
-      },
-      {
-        "type": "minecraft:stray",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 80
-      },
-      {
-        "type": "minecraft:zombie_horse",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 5
-      }
-    ],
-    "underground_water_creature": [
-      {
-        "type": "minecraft:glow_squid",
-        "maxCount": 6,
-        "minCount": 4,
-        "weight": 10
-      }
-    ],
-    "water_ambient": [],
-    "water_creature": []
-  },
   "temperature": 0.0
 }

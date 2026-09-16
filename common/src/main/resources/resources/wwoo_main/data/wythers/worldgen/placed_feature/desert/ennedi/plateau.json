@@ -1,0 +1,397 @@
+{
+  "feature": {
+    "type": "minecraft:vegetation_patch",
+    "surface": "floor",
+    "depth": 10,
+    "vertical_range": 10,
+    "extra_bottom_block_chance": 0,
+    "extra_edge_column_chance": 0.5,
+    "vegetation_chance": 1,
+    "xz_radius": 5,
+    "replaceable": "minecraft:sand",
+    "ground_state": {
+      "type": "minecraft:noise",
+      "noise": {
+        "base_octave": -5,
+        "amplitude_modifiers": [
+          2,
+          3
+        ],
+        "octave_count": 2,
+        "normalize": "legacy"
+      },
+      "scale": 1,
+      "seed": -817103696,
+      "states": [
+        {
+          "id": "minecraft:sandstone"
+        },
+        {
+          "id": "minecraft:sandstone"
+        },
+        {
+          "id": "minecraft:sandstone"
+        },
+        {
+          "id": "minecraft:sand"
+        },
+        {
+          "id": "minecraft:sand"
+        },
+        {
+          "id": "minecraft:sand"
+        },
+        {
+          "id": "minecraft:sandstone"
+        },
+        {
+          "id": "minecraft:sandstone"
+        },
+        {
+          "id": "minecraft:sandstone"
+        }
+      ]
+    },
+    "vegetation_feature": {
+      "feature": {
+        "type": "minecraft:disk",
+        "state_provider": {
+          "type": "minecraft:rule_based",
+          "fallback": {
+            "type": "minecraft:noise",
+            "noise": {
+              "base_octave": -5,
+              "amplitude_modifiers": [
+                2,
+                3
+              ],
+              "octave_count": 2,
+              "normalize": "legacy"
+            },
+            "scale": 1,
+            "seed": -817103696,
+            "states": [
+              {
+                "id": "minecraft:packed_mud"
+              },
+              {
+                "id": "minecraft:packed_mud"
+              },
+              {
+                "id": "minecraft:packed_mud"
+              },
+              {
+                "id": "minecraft:cave_air"
+              },
+              {
+                "id": "minecraft:cave_air"
+              },
+              {
+                "id": "minecraft:cave_air"
+              },
+              {
+                "id": "minecraft:packed_mud"
+              },
+              {
+                "id": "minecraft:packed_mud"
+              },
+              {
+                "id": "minecraft:packed_mud"
+              }
+            ]
+          },
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:height_range",
+                    "min_inclusive": {
+                      "absolute": 75
+                    },
+                    "max_inclusive": {
+                      "absolute": 75
+                    }
+                  },
+                  {
+                    "type": "minecraft:height_range",
+                    "min_inclusive": {
+                      "absolute": 85
+                    },
+                    "max_inclusive": {
+                      "absolute": 85
+                    }
+                  },
+                  {
+                    "type": "minecraft:height_range",
+                    "min_inclusive": {
+                      "absolute": 95
+                    },
+                    "max_inclusive": {
+                      "absolute": 95
+                    }
+                  }
+                ]
+              },
+              "then": {
+                "type": "minecraft:noise",
+                "noise": {
+                  "base_octave": -5,
+                  "amplitude_modifiers": [
+                    2,
+                    3
+                  ],
+                  "octave_count": 2,
+                  "normalize": "legacy"
+                },
+                "scale": 1,
+                "seed": -817103696,
+                "states": [
+                  {
+                    "id": "minecraft:dripstone_block"
+                  },
+                  {
+                    "id": "minecraft:dripstone_block"
+                  },
+                  {
+                    "id": "minecraft:dripstone_block"
+                  },
+                  {
+                    "id": "minecraft:cave_air"
+                  },
+                  {
+                    "id": "minecraft:cave_air"
+                  },
+                  {
+                    "id": "minecraft:cave_air"
+                  },
+                  {
+                    "id": "minecraft:dripstone_block"
+                  },
+                  {
+                    "id": "minecraft:dripstone_block"
+                  },
+                  {
+                    "id": "minecraft:dripstone_block"
+                  }
+                ]
+              }
+            },
+            {
+              "if_true": {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:height_range",
+                    "min_inclusive": {
+                      "absolute": 70
+                    },
+                    "max_inclusive": {
+                      "absolute": 70
+                    }
+                  },
+                  {
+                    "type": "minecraft:height_range",
+                    "min_inclusive": {
+                      "absolute": 74
+                    },
+                    "max_inclusive": {
+                      "absolute": 76
+                    }
+                  },
+                  {
+                    "type": "minecraft:height_range",
+                    "min_inclusive": {
+                      "absolute": 80
+                    },
+                    "max_inclusive": {
+                      "absolute": 80
+                    }
+                  },
+                  {
+                    "type": "minecraft:height_range",
+                    "min_inclusive": {
+                      "absolute": 84
+                    },
+                    "max_inclusive": {
+                      "absolute": 86
+                    }
+                  },
+                  {
+                    "type": "minecraft:height_range",
+                    "min_inclusive": {
+                      "absolute": 90
+                    },
+                    "max_inclusive": {
+                      "absolute": 90
+                    }
+                  },
+                  {
+                    "type": "minecraft:height_range",
+                    "min_inclusive": {
+                      "absolute": 94
+                    },
+                    "max_inclusive": {
+                      "absolute": 96
+                    }
+                  }
+                ]
+              },
+              "then": {
+                "type": "minecraft:noise",
+                "noise": {
+                  "base_octave": -5,
+                  "amplitude_modifiers": [
+                    2,
+                    3
+                  ],
+                  "octave_count": 2,
+                  "normalize": "legacy"
+                },
+                "scale": 1,
+                "seed": -817103696,
+                "states": [
+                  {
+                    "id": "minecraft:granite"
+                  },
+                  {
+                    "id": "minecraft:granite"
+                  },
+                  {
+                    "id": "minecraft:granite"
+                  },
+                  {
+                    "id": "minecraft:cave_air"
+                  },
+                  {
+                    "id": "minecraft:cave_air"
+                  },
+                  {
+                    "id": "minecraft:cave_air"
+                  },
+                  {
+                    "id": "minecraft:granite"
+                  },
+                  {
+                    "id": "minecraft:granite"
+                  },
+                  {
+                    "id": "minecraft:granite"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "radius": 0,
+        "half_height": 4,
+        "target": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "minecraft:air"
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:height_range",
+          "height": {
+            "above_bottom": 0
+          }
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "blocks": "minecraft:sulfur"
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:smooth_sandstone"
+              }
+            ]
+          }
+        },
+        {
+          "type": "minecraft:height_range",
+          "height": {
+            "absolute": 86
+          }
+        },
+        {
+          "type": "minecraft:environment_scan",
+          "direction_of_search": "down",
+          "max_steps": 15,
+          "target_condition": {
+            "type": "minecraft:any_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -4,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:sand",
+                  "minecraft:sandstone",
+                  "minecraft:smooth_sandstone"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 15
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": "minecraft:sulfur"
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:smooth_sandstone"
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

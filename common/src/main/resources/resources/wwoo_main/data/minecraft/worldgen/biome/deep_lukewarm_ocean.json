@@ -17,18 +17,137 @@
         "sound": "minecraft:music.under_water"
       }
     },
-    "minecraft:visual/sky_color": 8103167,
-    "minecraft:visual/fog_color": 12638463,
-    "minecraft:visual/water_fog_color": 267827,
-    "minecraft:audio/music_volume": 1.0,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "block_search_extent": 8,
-        "offset": 2.0,
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000
+    "minecraft:gameplay/natural_mob_spawns": {
+      "spawn_costs": {},
+      "spawns_by_category": {
+        "ambient": [
+          {
+            "type": "minecraft:bat",
+            "weight": 10,
+            "count": 8
+          }
+        ],
+        "axolotls": [],
+        "creature": [],
+        "misc": [],
+        "monster": [
+          {
+            "type": "minecraft:spider",
+            "weight": 100,
+            "count": 4
+          },
+          {
+            "type": "minecraft:zombie",
+            "weight": 95,
+            "count": 4
+          },
+          {
+            "type": "minecraft:zombie_villager",
+            "weight": 5,
+            "count": 1
+          },
+          {
+            "type": "minecraft:skeleton",
+            "weight": 100,
+            "count": 4
+          },
+          {
+            "type": "minecraft:creeper",
+            "weight": 100,
+            "count": 4
+          },
+          {
+            "type": "minecraft:slime",
+            "weight": 100,
+            "count": 4
+          },
+          {
+            "type": "minecraft:enderman",
+            "weight": 10,
+            "count": {
+              "type": "minecraft:uniform",
+              "max_inclusive": 4,
+              "min_inclusive": 1
+            }
+          },
+          {
+            "type": "minecraft:witch",
+            "weight": 5,
+            "count": 1
+          },
+          {
+            "type": "minecraft:drowned",
+            "weight": 5,
+            "count": 1
+          }
+        ],
+        "underground_water_creature": [
+          {
+            "type": "minecraft:glow_squid",
+            "weight": 10,
+            "count": {
+              "type": "minecraft:uniform",
+              "max_inclusive": 6,
+              "min_inclusive": 4
+            }
+          }
+        ],
+        "water_ambient": [
+          {
+            "type": "minecraft:cod",
+            "weight": 8,
+            "count": {
+              "type": "minecraft:uniform",
+              "max_inclusive": 6,
+              "min_inclusive": 3
+            }
+          },
+          {
+            "type": "minecraft:pufferfish",
+            "weight": 5,
+            "count": {
+              "type": "minecraft:uniform",
+              "max_inclusive": 3,
+              "min_inclusive": 1
+            }
+          },
+          {
+            "type": "minecraft:tropical_fish",
+            "weight": 25,
+            "count": 8
+          }
+        ],
+        "water_creature": [
+          {
+            "type": "minecraft:squid",
+            "weight": 8,
+            "count": {
+              "type": "minecraft:uniform",
+              "max_inclusive": 4,
+              "min_inclusive": 1
+            }
+          },
+          {
+            "type": "minecraft:dolphin",
+            "weight": 2,
+            "count": {
+              "type": "minecraft:uniform",
+              "max_inclusive": 2,
+              "min_inclusive": 1
+            }
+          },
+          {
+            "type": "minecraft:nautilus",
+            "weight": 5,
+            "count": 1
+          }
+        ]
       }
-    }
+    },
+    "minecraft:gameplay/piglins_zombify": false,
+    "minecraft:visual/sky_color": 6078719,
+    "minecraft:visual/fog_color": 9760255,
+    "minecraft:visual/water_fog_color": "#041633"
   },
   "carvers": [
     "minecraft:cave",
@@ -38,17 +157,15 @@
   "downfall": 0.5,
   "effects": {
     "dry_foliage_color": 8033086,
-    "water_color": 4566514
+    "water_color": 4566514,
+    "grass_color": 11122488
   },
   "features": [
     [
-      "wythers:terrain/local/ocean_bore_holes",
-      "wythers:terrain/local/lukewarm_ocean_caves",
-      "wythers:terrain/local/volcanic_flooded_cavern_mud",
-      "wythers:terrain/extended/dead_coral_stone",
-      "wythers:terrain/extended/dead_coral_stone_2",
-      "wythers:terrain/local/replace_dirt_to_sand",
-      "wythers:terrain/local/dead_coral_stack_2"
+      "wythers:bedrock_seal",
+      "wythers:stony_cliffs",
+      "wythers:ocean/tropics/atoll",
+      "wythers:ocean/tropics/reef_edge"
     ],
     [
       "minecraft:lake_lava_underground",
@@ -64,7 +181,6 @@
     [],
     [],
     [
-      "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
       "minecraft:ore_granite_lower",
@@ -83,13 +199,13 @@
       "minecraft:ore_redstone",
       "minecraft:ore_redstone_lower",
       "minecraft:ore_diamond",
+      "minecraft:ore_diamond_medium",
       "minecraft:ore_diamond_large",
       "minecraft:ore_diamond_buried",
       "minecraft:ore_lapis",
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
       "minecraft:underwater_magma",
-      "wythers:terrain/local/bore_hole_corals",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
       "minecraft:disk_gravel"
@@ -101,137 +217,25 @@
     ],
     [
       "minecraft:glow_lichen",
+      "minecraft:trees_water",
+      "minecraft:flower_default",
+      "minecraft:patch_grass_badlands",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
-      "wythers:vegetation/local/other/coral_reef",
+      "minecraft:patch_pumpkin",
+      "minecraft:patch_sugar_cane",
+      "minecraft:patch_firefly_bush_near_water",
       "minecraft:seagrass_deep_warm",
       "minecraft:kelp_warm"
     ],
     [
       "minecraft:freeze_top_layer",
-      "wythers:terrain/local/fan_corals",
-      "wythers:terrain/local/hydrothermal_vents",
-      "wythers:vegetation/local/patch/tube_worms"
+      "wythers:fauna/ocean_turtle",
+      "wythers:fauna/dolphins",
+      "wythers:fauna/seagulls",
+      "wythers:fauna/tuna"
     ]
   ],
   "has_precipitation": true,
-  "spawn_costs": {},
-  "spawners": {
-    "ambient": [
-      {
-        "type": "minecraft:bat",
-        "maxCount": 8,
-        "minCount": 8,
-        "weight": 10
-      }
-    ],
-    "axolotls": [],
-    "creature": [],
-    "misc": [],
-    "monster": [
-      {
-        "type": "minecraft:spider",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 100
-      },
-      {
-        "type": "minecraft:zombie",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 95
-      },
-      {
-        "type": "minecraft:zombie_villager",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 5
-      },
-      {
-        "type": "minecraft:skeleton",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 100
-      },
-      {
-        "type": "minecraft:creeper",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 100
-      },
-      {
-        "type": "minecraft:slime",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 100
-      },
-      {
-        "type": "minecraft:enderman",
-        "maxCount": 4,
-        "minCount": 1,
-        "weight": 10
-      },
-      {
-        "type": "minecraft:witch",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 5
-      },
-      {
-        "type": "minecraft:drowned",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 5
-      }
-    ],
-    "underground_water_creature": [
-      {
-        "type": "minecraft:glow_squid",
-        "maxCount": 6,
-        "minCount": 4,
-        "weight": 10
-      }
-    ],
-    "water_ambient": [
-      {
-        "type": "minecraft:cod",
-        "maxCount": 6,
-        "minCount": 3,
-        "weight": 8
-      },
-      {
-        "type": "minecraft:pufferfish",
-        "maxCount": 3,
-        "minCount": 1,
-        "weight": 5
-      },
-      {
-        "type": "minecraft:tropical_fish",
-        "maxCount": 8,
-        "minCount": 8,
-        "weight": 25
-      }
-    ],
-    "water_creature": [
-      {
-        "type": "minecraft:squid",
-        "maxCount": 4,
-        "minCount": 1,
-        "weight": 8
-      },
-      {
-        "type": "minecraft:dolphin",
-        "maxCount": 2,
-        "minCount": 1,
-        "weight": 2
-      },
-      {
-        "type": "minecraft:nautilus",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 5
-      }
-    ]
-  },
   "temperature": 0.5
 }

@@ -1,0 +1,109 @@
+{
+  "feature": {
+    "type": "minecraft:overlay",
+    "features": {
+      "feature": {
+        "type": "minecraft:simple_random_selector",
+        "features": [
+          {
+            "feature": "wythers:tree/palm/bamboo/green",
+            "placement": []
+          },
+          {
+            "feature": "wythers:tree/palm/bamboo/green",
+            "placement": []
+          },
+          {
+            "feature": "wythers:tree/palm/bamboo/green_broad",
+            "placement": []
+          }
+        ]
+      },
+      "placement": []
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 4
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          1,
+          0
+        ],
+        "blocks": "minecraft:moss_block"
+      }
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING_NO_LEAVES"
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 3,
+        "max_inclusive": 8
+      }
+    },
+    {
+      "type": "minecraft:offset",
+      "x": {
+        "type": "minecraft:trapezoid",
+        "min": -5,
+        "max": 5,
+        "plateau": 0
+      },
+      "y": 3,
+      "z": {
+        "type": "minecraft:trapezoid",
+        "min": -5,
+        "max": 5,
+        "plateau": 0
+      }
+    },
+    {
+      "type": "minecraft:environment_scan",
+      "direction_of_search": "down",
+      "max_steps": 6,
+      "target_condition": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_block_tag",
+            "tag": "wythers:air_and_plants"
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": "minecraft:grass_block"
+          }
+        ]
+      },
+      "allowed_search_condition": {
+        "type": "minecraft:unobstructed"
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

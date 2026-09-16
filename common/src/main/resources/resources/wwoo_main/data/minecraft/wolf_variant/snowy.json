@@ -14,14 +14,12 @@
       "condition": {
         "type": "minecraft:biome",
         "biomes": [
-          "minecraft:snowy_plains",
-          "minecraft:snowy_taiga",
-          "minecraft:snowy_slopes",
-          "minecraft:frozen_peaks",
-          "minecraft:jagged_peaks",
-          "minecraft:ice_spikes",
-          "minecraft:pale_garden"
-        ]
+                        "minecraft:snowy_plains",
+                        "minecraft:snowy_slopes",
+                        "minecraft:snowy_beach",
+                        "minecraft:frozen_ocean",
+                        "minecraft:deep_frozen_ocean"
+                      ]
       },
       "priority": 1
     }

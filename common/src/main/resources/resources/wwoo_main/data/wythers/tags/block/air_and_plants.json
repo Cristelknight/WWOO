@@ -2,7 +2,7 @@
   "values": [
     "#minecraft:flowers",
     "#minecraft:saplings",
-    "minecraft:air",
+    "#minecraft:air",
     "minecraft:short_grass",
     "minecraft:fern",
     "minecraft:tall_grass",
@@ -14,10 +14,15 @@
     "minecraft:brown_mushroom",
     "minecraft:red_mushroom",
     "minecraft:pale_hanging_moss",
+    "minecraft:pale_moss_carpet",
+    "minecraft:moss_carpet",
     "minecraft:bush",
     "minecraft:firefly_bush",
     "minecraft:short_dry_grass",
     "minecraft:tall_dry_grass",
-    "minecraft:sugar_cane"
+    "minecraft:sugar_cane",
+    "minecraft:shelf_mushroom",
+    "minecraft:vine",
+    "minecraft:resin_clump"
   ]
 }

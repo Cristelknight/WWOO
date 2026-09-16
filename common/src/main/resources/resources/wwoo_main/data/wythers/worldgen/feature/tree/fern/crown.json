@@ -1,0 +1,475 @@
+{
+  "type": "minecraft:overlay",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:disk",
+        "state_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "false",
+              "waterlogged": "false"
+            }
+          }
+        },
+        "radius": 1,
+        "half_height": 0,
+        "target": {
+          "type": "minecraft:matching_blocks",
+          "blocks": [
+            "minecraft:air",
+            "minecraft:vine"
+          ]
+        }
+      },
+      "placement": []
+    },
+    {
+      "feature": {
+        "type": "minecraft:disk",
+        "state_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "false",
+              "waterlogged": "false"
+            }
+          }
+        },
+        "radius": 2,
+        "half_height": 0,
+        "target": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "minecraft:air"
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 1,
+          "z": 0
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:disk",
+        "state_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "false",
+              "waterlogged": "false"
+            }
+          }
+        },
+        "radius": 1,
+        "half_height": 0,
+        "target": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "minecraft:air"
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 2,
+          "z": 0
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "true",
+              "waterlogged": "false"
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 2,
+          "y": -1,
+          "z": 0
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "true",
+              "waterlogged": "false"
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": -2,
+          "y": -1,
+          "z": 0
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "true",
+              "waterlogged": "false"
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": -1,
+          "z": 2
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "true",
+              "waterlogged": "false"
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": -1,
+          "z": -2
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "true",
+              "waterlogged": "false"
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 2,
+          "y": 0,
+          "z": 2
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "true",
+              "waterlogged": "false"
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 2,
+          "y": 0,
+          "z": -2
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "true",
+              "waterlogged": "false"
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": -2,
+          "y": 0,
+          "z": 2
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "true",
+              "waterlogged": "false"
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": -2,
+          "y": 0,
+          "z": -2
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "true",
+              "waterlogged": "false"
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 2,
+          "y": 2,
+          "z": 2
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "true",
+              "waterlogged": "false"
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 2,
+          "y": 2,
+          "z": -2
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "true",
+              "waterlogged": "false"
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": -2,
+          "y": 2,
+          "z": 2
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "true",
+              "waterlogged": "false"
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": -2,
+          "y": 2,
+          "z": -2
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "true",
+              "waterlogged": "false"
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 2,
+          "y": 3,
+          "z": 0
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "true",
+              "waterlogged": "false"
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": -2,
+          "y": 3,
+          "z": 0
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "true",
+              "waterlogged": "false"
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 3,
+          "z": 2
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves",
+            "properties": {
+              "distance": "7",
+              "persistent": "true",
+              "waterlogged": "false"
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 3,
+          "z": -2
+        }
+      ]
+    }
+  ]
+}

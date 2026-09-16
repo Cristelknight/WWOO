@@ -8,6 +8,7 @@
     "#minecraft:is_badlands",
     "minecraft:mangrove_swamp",
     "minecraft:deep_lukewarm_ocean",
-    "minecraft:lukewarm_ocean"
+    "minecraft:lukewarm_ocean",
+    "minecraft:dappled_forest"
   ]
 }

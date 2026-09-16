@@ -1,0 +1,93 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "state_provider": {
+      "type": "minecraft:noise",
+      "noise": {
+        "base_octave": -3,
+        "amplitude_modifiers": [
+          2,
+          2
+        ],
+        "octave_count": 2,
+        "normalize": "legacy"
+      },
+      "scale": 1,
+      "seed": -817103696,
+      "states": [
+        {
+          "id": "minecraft:dead_brain_coral_block"
+        },
+        {
+          "id": "minecraft:dead_bubble_coral_block"
+        },
+        {
+          "id": "minecraft:dead_tube_coral_block"
+        },
+        {
+          "id": "minecraft:dead_horn_coral_block"
+        },
+        {
+          "id": "minecraft:dead_fire_coral_block"
+        }
+      ]
+    },
+    "target": {
+      "type": "minecraft:all_of",
+      "predicates": [
+        {
+          "type": "minecraft:matching_fluids",
+          "offset": [
+            0,
+            1,
+            0
+          ],
+          "fluids": "minecraft:water"
+        },
+        {
+          "type": "minecraft:matching_blocks",
+          "blocks": "minecraft:sand"
+        },
+        {
+          "type": "minecraft:matching_block_tag",
+          "offset": [
+            0,
+            -1,
+            0
+          ],
+          "tag": "wythers:dead_coral_blocks"
+        },
+        {
+          "type": "minecraft:matching_biomes",
+          "biomes": [
+            "minecraft:lukewarm_ocean"
+          ]
+        }
+      ]
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 8,
+      "max_inclusive": 8
+    },
+    "half_height": 0
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 55
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

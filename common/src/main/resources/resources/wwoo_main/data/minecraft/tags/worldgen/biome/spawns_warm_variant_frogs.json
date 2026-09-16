@@ -13,9 +13,10 @@
     "minecraft:frozen_river",
     "minecraft:snowy_taiga",
     "minecraft:snowy_beach",
-    "minecraft:mushroom_fields",
     "#minecraft:is_end",
+    "minecraft:warm_ocean",
     "minecraft:desert",
-    "minecraft:dark_forest"
+    "minecraft:beach",
+    "minecraft:flower_forest"
   ]
 }

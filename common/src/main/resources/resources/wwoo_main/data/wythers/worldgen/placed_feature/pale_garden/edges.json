@@ -1,0 +1,767 @@
+{
+  "feature": {
+    "type": "minecraft:vegetation_patch",
+    "surface": "floor",
+    "depth": 4,
+    "vertical_range": 7,
+    "extra_bottom_block_chance": 0,
+    "extra_edge_column_chance": 0.5,
+    "vegetation_chance": 1,
+    "xz_radius": 7,
+    "replaceable": [
+      "minecraft:grass_block",
+      "minecraft:pale_moss_block"
+    ],
+    "ground_state": {
+      "type": "minecraft:rule_based",
+      "rules": [
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": [
+              "minecraft:pale_moss_block",
+              "minecraft:grass_block"
+            ]
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:dirt"
+            }
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:grass_block"
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:grass_block"
+            }
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:pale_moss_block"
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:pale_moss_block"
+            }
+          }
+        }
+      ]
+    },
+    "vegetation_feature": {
+      "feature": {
+        "type": "minecraft:disk",
+        "state_provider": {
+          "type": "minecraft:rule_based",
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_block_tag",
+                    "offset": [
+                      0,
+                      1,
+                      0
+                    ],
+                    "tag": "wythers:air_and_plants"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": [
+                      "minecraft:pale_moss_block",
+                      "minecraft:grass_block"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:any_of",
+                    "predicates": [
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          1,
+                          -1,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          1,
+                          -2,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          1,
+                          -3,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          1,
+                          -4,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block",
+                          "minecraft:air"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          -1,
+                          -1,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          -1,
+                          -2,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          -1,
+                          -3,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          -1,
+                          -4,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block",
+                          "minecraft:air"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -1,
+                          1
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -2,
+                          1
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -3,
+                          1
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -4,
+                          1
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block",
+                          "minecraft:air"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -1,
+                          -1
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -2,
+                          -1
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -3,
+                          -1
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -4,
+                          -1
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block",
+                          "minecraft:air"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "then": {
+                "type": "minecraft:rule_based",
+                "rules": [
+                  {
+                    "if_true": {
+                      "type": "minecraft:height_range",
+                      "min_inclusive": {
+                        "absolute": 118
+                      },
+                      "max_inclusive": {
+                        "absolute": 118
+                      }
+                    },
+                    "then": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:chiseled_tuff"
+                      }
+                    }
+                  },
+                  {
+                    "if_true": {
+                      "type": "minecraft:height_range",
+                      "min_inclusive": {
+                        "absolute": 123
+                      },
+                      "max_inclusive": {
+                        "absolute": 123
+                      }
+                    },
+                    "then": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:chiseled_tuff"
+                      }
+                    }
+                  },
+                  {
+                    "if_true": {
+                      "type": "minecraft:height_range",
+                      "min_inclusive": {
+                        "absolute": 128
+                      },
+                      "max_inclusive": {
+                        "absolute": 128
+                      }
+                    },
+                    "then": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:chiseled_tuff"
+                      }
+                    }
+                  },
+                  {
+                    "if_true": {
+                      "type": "minecraft:height_range",
+                      "min_inclusive": {
+                        "absolute": 133
+                      },
+                      "max_inclusive": {
+                        "absolute": 133
+                      }
+                    },
+                    "then": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:chiseled_tuff"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "if_true": {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": [
+                      "minecraft:rooted_dirt"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:any_of",
+                    "predicates": [
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          1,
+                          0,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          1,
+                          -1,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block",
+                          "minecraft:air"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          1,
+                          -2,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block",
+                          "minecraft:air"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          1,
+                          -3,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block",
+                          "minecraft:air"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          -1,
+                          0,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          -1,
+                          -1,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block",
+                          "minecraft:air"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          -1,
+                          -2,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block",
+                          "minecraft:air"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          -1,
+                          -3,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block",
+                          "minecraft:air"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          0,
+                          1
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -1,
+                          1
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block",
+                          "minecraft:air"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -2,
+                          1
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block",
+                          "minecraft:air"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -3,
+                          1
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block",
+                          "minecraft:air"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          0,
+                          -1
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -1,
+                          -1
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block",
+                          "minecraft:air"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -2,
+                          -1
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block",
+                          "minecraft:air"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -3,
+                          -1
+                        ],
+                        "blocks": [
+                          "minecraft:polished_tuff_slab",
+                          "minecraft:polished_tuff_stairs",
+                          "minecraft:chiseled_tuff",
+                          "minecraft:grass_block",
+                          "minecraft:air"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "then": {
+                "type": "minecraft:rule_based",
+                "rules": [
+                  {
+                    "if_true": {
+                      "type": "minecraft:height_range",
+                      "min_inclusive": {
+                        "absolute": 114
+                      },
+                      "max_inclusive": {
+                        "absolute": 117
+                      }
+                    },
+                    "then": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:tuff_bricks"
+                      }
+                    }
+                  },
+                  {
+                    "if_true": {
+                      "type": "minecraft:height_range",
+                      "min_inclusive": {
+                        "absolute": 119
+                      },
+                      "max_inclusive": {
+                        "absolute": 122
+                      }
+                    },
+                    "then": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:tuff_bricks"
+                      }
+                    }
+                  },
+                  {
+                    "if_true": {
+                      "type": "minecraft:height_range",
+                      "min_inclusive": {
+                        "absolute": 124
+                      },
+                      "max_inclusive": {
+                        "absolute": 127
+                      }
+                    },
+                    "then": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:tuff_bricks"
+                      }
+                    }
+                  },
+                  {
+                    "if_true": {
+                      "type": "minecraft:height_range",
+                      "min_inclusive": {
+                        "absolute": 129
+                      },
+                      "max_inclusive": {
+                        "absolute": 132
+                      }
+                    },
+                    "then": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:tuff_bricks"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "radius": 0,
+        "half_height": 4,
+        "target": {
+          "type": "minecraft:any_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:pale_moss_block",
+                "minecraft:grass_block",
+                "minecraft:rooted_dirt",
+                "minecraft:dirt"
+              ]
+            }
+          ]
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": -1,
+          "z": 0
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_biomes",
+            "biomes": "pale_garden"
+          }
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 15
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    }
+  ]
+}

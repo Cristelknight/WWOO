@@ -1,0 +1,254 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "state_provider": {
+      "type": "minecraft:rule_based",
+      "fallback": {
+        "type": "minecraft:noise",
+        "noise": {
+          "base_octave": -5,
+          "amplitude_modifiers": [
+            3,
+            2,
+            2,
+            2,
+            2
+          ],
+          "octave_count": 5,
+          "normalize": "legacy"
+        },
+        "scale": 1,
+        "seed": -817103696,
+        "states": [
+          {
+            "id": "minecraft:air"
+          },
+          {
+            "id": "minecraft:air"
+          },
+          {
+            "id": "minecraft:light",
+            "properties": {
+              "level": "0",
+              "waterlogged": "false"
+            }
+          }
+        ]
+      },
+      "rules": [
+        {
+          "if_true": {
+            "type": "minecraft:matching_fluids",
+            "fluids": "minecraft:water"
+          },
+          "then": {
+            "type": "minecraft:noise",
+            "noise": {
+              "base_octave": -5,
+              "amplitude_modifiers": [
+                3,
+                2,
+                2,
+                2,
+                2
+              ],
+              "octave_count": 5,
+              "normalize": "legacy"
+            },
+            "scale": 1,
+            "seed": -817103696,
+            "states": [
+              {
+                "id": "minecraft:water",
+                "properties": {
+                  "level": "0"
+                }
+              },
+              {
+                "id": "minecraft:water",
+                "properties": {
+                  "level": "0"
+                }
+              },
+              {
+                "id": "minecraft:light",
+                "properties": {
+                  "level": "0",
+                  "waterlogged": "true"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:snow"
+          },
+          "then": {
+            "type": "minecraft:noise",
+            "noise": {
+              "base_octave": -5,
+              "amplitude_modifiers": [
+                3,
+                2,
+                2,
+                2,
+                2
+              ],
+              "octave_count": 5,
+              "normalize": "legacy"
+            },
+            "scale": 1,
+            "seed": -817103696,
+            "states": [
+              {
+                "id": "minecraft:snow"
+              },
+              {
+                "id": "minecraft:snow"
+              },
+              {
+                "id": "minecraft:light",
+                "properties": {
+                  "level": "0",
+                  "waterlogged": "false"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 8,
+      "max_inclusive": 8
+    },
+    "half_height": 4,
+    "target": {
+      "type": "minecraft:all_of",
+      "predicates": [
+        {
+          "type": "minecraft:matching_biomes",
+          "biomes": [
+            "snowy_plains",
+            "frozen_river"
+          ]
+        },
+        {
+          "type": "minecraft:any_of",
+          "predicates": [
+            {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:not",
+                  "predicate": {
+                    "type": "minecraft:matching_fluids",
+                    "offset": [
+                      0,
+                      1,
+                      0
+                    ],
+                    "fluids": "minecraft:water"
+                  }
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    1,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:light",
+                    "minecraft:air"
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": "minecraft:water"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": [
+                    "minecraft:air",
+                    "minecraft:snow"
+                  ]
+                },
+                {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:solid",
+                      "offset": [
+                        0,
+                        -1,
+                        0
+                      ]
+                    },
+                    {
+                      "type": "minecraft:matching_block_tag",
+                      "tag": "minecraft:leaves"
+                    },
+                    {
+                      "type": "minecraft:matching_fluids",
+                      "fluids": "minecraft:water"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 1
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "blocks": [
+            "minecraft:dripstone_block"
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 75
+      }
+    },
+    {
+      "type": "minecraft:environment_scan",
+      "direction_of_search": "down",
+      "max_steps": 25,
+      "target_condition": {
+        "type": "minecraft:solid"
+      }
+    }
+  ]
+}

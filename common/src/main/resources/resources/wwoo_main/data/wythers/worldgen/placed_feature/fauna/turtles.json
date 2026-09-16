@@ -1,0 +1,108 @@
+{
+  "feature": {
+    "type": "minecraft:overlay",
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:template",
+          "templates": [
+            {
+              "weight": 1,
+              "data": {
+                "id": "wythers:fauna/turtle"
+              }
+            }
+          ]
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min_inclusive": 1,
+              "max_inclusive": 2
+            }
+          }
+        ]
+      },
+      {
+        "feature": {
+          "type": "minecraft:template",
+          "templates": [
+            {
+              "weight": 1,
+              "data": {
+                "id": "wythers:fauna/turtle_egg_1"
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "wythers:fauna/turtle_egg_2"
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "wythers:fauna/turtle_egg_3"
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "id": "wythers:fauna/turtle_egg_4"
+              }
+            }
+          ]
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": {
+              "type": "minecraft:biased_to_bottom",
+              "min_inclusive": 0,
+              "max_inclusive": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 6
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": [
+          "minecraft:sand"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_biomes",
+          "biomes": "desert"
+        }
+      }
+    }
+  ]
+}

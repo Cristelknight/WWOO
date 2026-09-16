@@ -1,0 +1,78 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "state_provider": {
+      "type": "minecraft:simple",
+      "state": {
+        "id": "minecraft:mud"
+      }
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 3,
+      "max_inclusive": 6
+    },
+    "half_height": 1,
+    "target": {
+      "type": "minecraft:all_of",
+      "predicates": [
+        {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            1,
+            0
+          ],
+          "blocks": [
+            "minecraft:air",
+            "minecraft:water",
+            "minecraft:ice"
+          ]
+        },
+        {
+          "type": "minecraft:matching_blocks",
+          "blocks": [
+            "minecraft:sand",
+            "minecraft:gravel",
+            "minecraft:dirt",
+            "minecraft:grass_block"
+          ]
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR_WG"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_fluids",
+        "fluids": "minecraft:water"
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_biomes",
+        "biomes": [
+          "minecraft:snowy_plains",
+          "minecraft:snowy_beach",
+          "minecraft:snowy_taiga",
+          "minecraft:frozen_river",
+          "minecraft:frozen_ocean",
+          "minecraft:taiga"
+        ]
+      }
+    }
+  ]
+}

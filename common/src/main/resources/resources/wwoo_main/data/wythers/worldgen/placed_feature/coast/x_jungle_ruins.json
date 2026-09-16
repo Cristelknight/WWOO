@@ -1,0 +1,255 @@
+{
+  "feature": {
+    "type": "minecraft:vegetation_patch",
+    "surface": "floor",
+    "depth": 1,
+    "vertical_range": 7,
+    "extra_bottom_block_chance": 0,
+    "extra_edge_column_chance": 0.5,
+    "vegetation_chance": 0.01,
+    "xz_radius": 7,
+    "replaceable": [
+      "minecraft:grass_block"
+    ],
+    "ground_state": {
+      "type": "minecraft:simple",
+      "state": {
+        "id": "minecraft:grass_block"
+      }
+    },
+    "vegetation_feature": {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:rule_based",
+          "fallback": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:stone_bricks"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:mossy_stone_bricks"
+                }
+              },
+              {
+                "weight": 0,
+                "data": {
+                  "id": "minecraft:cracked_stone_bricks"
+                }
+              }
+            ]
+          },
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": "minecraft:void_air"
+              },
+              "then": {
+                "type": "minecraft:rule_based",
+                "rules": [
+                  {
+                    "if_true": {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -2,
+                        0
+                      ],
+                      "blocks": "minecraft:stone_brick_slab"
+                    },
+                    "then": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:void_air"
+                      }
+                    }
+                  },
+                  {
+                    "if_true": {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -3,
+                        0
+                      ],
+                      "blocks": "minecraft:stone_brick_slab"
+                    },
+                    "then": {
+                      "type": "minecraft:weighted",
+                      "entries": [
+                        {
+                          "weight": 1,
+                          "data": {
+                            "id": "minecraft:stone_brick_slab",
+                            "properties": {
+                              "type": "top",
+                              "waterlogged": "false"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "if_true": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:smooth_stone_slab"
+              },
+              "then": {
+                "type": "minecraft:weighted",
+                "entries": [
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:stone_brick_slab"
+                    }
+                  },
+                  {
+                    "weight": 3,
+                    "data": {
+                      "id": "minecraft:stone_bricks"
+                    }
+                  },
+                  {
+                    "weight": 3,
+                    "data": {
+                      "id": "minecraft:cracked_stone_bricks"
+                    }
+                  },
+                  {
+                    "weight": 3,
+                    "data": {
+                      "id": "minecraft:mossy_stone_bricks"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "if_true": {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:has_sturdy_face",
+                      "offset": [
+                        0,
+                        -1,
+                        0
+                      ],
+                      "direction": "up"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -1,
+                        0
+                      ],
+                      "blocks": "minecraft:smooth_stone_slab"
+                    }
+                  ]
+                }
+              },
+              "then": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:smooth_stone_slab"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:height_range",
+            "min_inclusive": {
+              "relative_to_sea_level": 12
+            },
+            "max_inclusive": {
+              "below_top": 0
+            }
+          }
+        },
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": -5,
+          "z": 0
+        },
+        {
+          "type": "minecraft:cuboid",
+          "xz_size": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 5,
+            "max_inclusive": 8
+          },
+          "y_size": {
+            "type": "minecraft:biased_to_bottom",
+            "min_inclusive": 5,
+            "max_inclusive": 15
+          },
+          "include_interior": false,
+          "include_edges": true
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:grass_block",
+                  "minecraft:air",
+                  "minecraft:short_grass",
+                  "minecraft:smooth_stone_slab",
+                  "minecraft:bamboo"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 15
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_biomes",
+        "biomes": "stony_shore"
+      }
+    }
+  ]
+}

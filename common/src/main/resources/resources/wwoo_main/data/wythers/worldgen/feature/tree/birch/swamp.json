@@ -1,0 +1,85 @@
+{
+  "type": "minecraft:tree",
+   "ignore_vines": true,
+    "minimum_size": {
+      "type": "minecraft:two_layers_feature_size",
+      "limit": 3,
+      "lower_size": 0,
+      "upper_size": 2
+    },
+    "trunk_provider": {
+      "type": "minecraft:simple",
+      "state": {
+        "id": "minecraft:birch_log",
+        "properties": {
+          "axis": "y"
+        }
+      }
+    },
+    "foliage_provider": {
+    "type": "minecraft:rule_based",
+    "rules": [
+      {
+        "if_true": {
+          "type": "minecraft:not",
+          "predicate": {
+            "type": "minecraft:matching_fluids",
+            "fluids": "minecraft:water"
+          }
+        },
+        "then": {
+          "type": "minecraft:simple",
+          "state": "minecraft:birch_leaves"
+        }
+      }
+    ]
+  },
+    "trunk_placer": {
+      "type": "minecraft:upwards_branching_trunk_placer",
+      "base_height": 8,
+      "height_rand_a": 1,
+      "height_rand_b": 9,
+      "extra_branch_steps": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 1,
+        "max_inclusive": 6
+      },
+      "extra_branch_length": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 0,
+        "max_inclusive": 1
+      },
+      "place_branch_per_log_probability": 0.5,
+      "can_grow_through": "#minecraft:mangrove_logs_can_grow_through"
+    },
+    "foliage_placer": {
+      "type": "minecraft:random_spread_foliage_placer",
+      "radius": 2,
+      "offset": 0,
+      "foliage_height": 2,
+      "leaf_placement_attempts": 30
+    },
+    "decorators": [
+      {
+        "type": "minecraft:leave_vine",
+        "probability": 0.125
+      },
+      {
+        "type": "minecraft:beehive",
+        "probability": 0.01
+      },
+    {
+      "type": "minecraft:shelf_mushroom",
+      "probability": 1
+    }
+    ],
+    "below_trunk_provider": {
+      "type": "minecraft:simple",
+      "state": {
+        "id": "minecraft:birch_log",
+        "properties": {
+          "axis": "y"
+        }
+      }
+    }
+}

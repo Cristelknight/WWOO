@@ -1,0 +1,237 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "state_provider": {
+      "type": "minecraft:rule_based",
+      "fallback": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:white_concrete_powder"
+        }
+      },
+      "rules": [
+        {
+          "if_true": {
+            "type": "minecraft:any_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_fluids",
+                "offset": [
+                  1,
+                  0,
+                  0
+                ],
+                "fluids": "minecraft:water"
+              },
+              {
+                "type": "minecraft:matching_fluids",
+                "offset": [
+                  -1,
+                  0,
+                  0
+                ],
+                "fluids": "minecraft:water"
+              },
+              {
+                "type": "minecraft:matching_fluids",
+                "offset": [
+                  0,
+                  0,
+                  1
+                ],
+                "fluids": "minecraft:water"
+              },
+              {
+                "type": "minecraft:matching_fluids",
+                "offset": [
+                  0,
+                  0,
+                  -1
+                ],
+                "fluids": "minecraft:water"
+              }
+            ]
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:clay"
+            }
+          }
+        }
+      ]
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 3,
+      "max_inclusive": 5
+    },
+    "half_height": 1,
+    "target": {
+      "type": "minecraft:all_of",
+      "predicates": [
+        {
+          "type": "minecraft:matching_blocks",
+          "blocks": [
+            "minecraft:dirt",
+            "minecraft:coarse_dirt",
+            "minecraft:rooted_dirt",
+            "minecraft:moss_block",
+            "minecraft:grass_block",
+            "minecraft:dirt_path",
+            "minecraft:gravel"
+          ]
+        },
+        {
+          "type": "minecraft:any_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_block_tag",
+              "offset": [
+                0,
+                1,
+                0
+              ],
+              "tag": "wythers:air_and_plants"
+            },
+            {
+              "type": "minecraft:matching_fluids",
+              "offset": [
+                0,
+                1,
+                0
+              ],
+              "fluids": "minecraft:water"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:any_of",
+          "predicates": [
+            {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_biomes",
+                  "biomes": [
+                    "forest",
+                    "river"
+                  ]
+                },
+                {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -1,
+                        0
+                      ],
+                      "blocks": [
+                        "minecraft:diorite",
+                        "minecraft:calcite"
+                      ]
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -2,
+                        0
+                      ],
+                      "blocks": [
+                        "minecraft:diorite",
+                        "minecraft:calcite"
+                      ]
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -3,
+                        0
+                      ],
+                      "blocks": [
+                        "minecraft:diorite",
+                        "minecraft:calcite"
+                      ]
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -4,
+                        0
+                      ],
+                      "blocks": [
+                        "minecraft:diorite",
+                        "minecraft:calcite"
+                      ]
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -5,
+                        0
+                      ],
+                      "blocks": [
+                        "minecraft:diorite",
+                        "minecraft:calcite"
+                      ]
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -6,
+                        0
+                      ],
+                      "blocks": [
+                        "minecraft:diorite",
+                        "minecraft:calcite"
+                      ]
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -7,
+                        0
+                      ],
+                      "blocks": [
+                        "minecraft:diorite",
+                        "minecraft:calcite"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 30
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR_WG"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_fluids",
+        "fluids": "minecraft:water"
+      }
+    }
+  ]
+}

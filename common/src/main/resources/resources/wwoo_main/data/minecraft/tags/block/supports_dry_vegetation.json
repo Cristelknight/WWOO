@@ -1,8 +1,10 @@
 {
   "values": [
-    "#minecraft:sand",
-    "#minecraft:terracotta",
-    "#minecraft:supports_vegetation",
-    "minecraft:dirt_path"
+    "minecraft:tall_grass",
+    "minecraft:sulfur",
+    "minecraft:cinnabar",
+    "minecraft:dripstone_block",
+    "minecraft:brown_concrete",
+    "minecraft:bamboo_fence"
   ]
 }

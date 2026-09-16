@@ -1,0 +1,94 @@
+{
+  "feature": {
+    "type": "minecraft:lake",
+    "barrier": {
+      "type": "minecraft:simple",
+      "state": "minecraft:magma_block"
+    },
+    "can_place_feature": {
+      "type": "minecraft:true"
+    },
+    "can_replace_with_air_or_fluid": {
+      "type": "minecraft:not",
+      "predicate": {
+        "type": "minecraft:matching_block_tag",
+        "tag": "minecraft:features_cannot_replace"
+      }
+    },
+    "can_replace_with_barrier": {
+      "type": "minecraft:not",
+      "predicate": {
+        "type": "minecraft:matching_block_tag",
+        "tag": "minecraft:lava_pool_stone_cannot_replace"
+      }
+    },
+    "fluid": {
+      "type": "minecraft:simple",
+      "state": "minecraft:lava"
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 100
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:volume_match",
+        "min": [
+          -5,
+          -3,
+          -5
+        ],
+        "max": [
+          5,
+          3,
+          5
+        ],
+        "match": {
+          "type": "minecraft:matching_blocks",
+          "blocks": [
+            "minecraft:blackstone",
+            "minecraft:air",
+            "minecraft:lava",
+            "minecraft:magma_block"
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:volume_match",
+        "min": [
+          -8,
+          -3,
+          -8
+        ],
+        "max": [
+          8,
+          3,
+          8
+        ],
+        "match": {
+          "type": "minecraft:matching_biomes",
+          "biomes": [
+            "windswept_hills",
+            "windswept_forest"
+          ]
+        }
+      }
+    }
+  ]
+}

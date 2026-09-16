@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:template",
+  "templates": [
+    {
+      "weight": 1,
+      "data": {
+        "id": "wythers:feature/tropicoast_house_1"
+      }
+    }
+  ]
+}

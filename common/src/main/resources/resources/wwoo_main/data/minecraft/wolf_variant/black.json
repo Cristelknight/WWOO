@@ -13,10 +13,7 @@
     {
       "condition": {
         "type": "minecraft:biome",
-        "biomes": [
-          "minecraft:dark_forest",
-          "minecraft:swamp"
-        ]
+        "biomes": "minecraft:dark_forest"
       },
       "priority": 1
     }

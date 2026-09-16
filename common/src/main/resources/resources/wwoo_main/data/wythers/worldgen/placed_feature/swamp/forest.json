@@ -1,0 +1,117 @@
+{
+  "feature": {
+    "type": "minecraft:random_selector",
+    "features": [
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": "wythers:tree/complex_oak_1",
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:volume_match",
+                "match": {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": [
+                    "minecraft:grass_block"
+                  ]
+                },
+                "max": [
+                  1,
+                  -1,
+                  1
+                ],
+                "min": [
+                  -1,
+                  -1,
+                  -1
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "default": {
+      "feature": "wythers:tree/oak/swamp",
+      "placement": []
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 5
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:any_of",
+          "predicates": [
+            {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    1,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:dripstone_block",
+                    "minecraft:moss_block"
+                  ]
+                },
+                {
+                  "type": "minecraft:not",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "minecraft:oak_wood"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:birch_wood",
+                "minecraft:dark_oak_wood",
+                "minecraft:spruce_wood"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:surface_water_depth_filter",
+      "max_water_depth": 2
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": "minecraft:oak_sapling"
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

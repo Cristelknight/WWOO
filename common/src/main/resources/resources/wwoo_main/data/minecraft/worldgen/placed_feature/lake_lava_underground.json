@@ -2,8 +2,8 @@
   "feature": "minecraft:lake_lava",
   "placement": [
     {
-      "type": "minecraft:count",
-      "count": 0
+      "type": "minecraft:rarity_filter",
+      "chance": 9
     },
     {
       "type": "minecraft:in_square"
@@ -30,8 +30,8 @@
           {
             "type": "minecraft:not",
             "predicate": {
-              "type": "minecraft:matching_blocks",
-              "blocks": "minecraft:air"
+              "type": "minecraft:matching_block_tag",
+              "tag": "minecraft:air"
             }
           },
           {
@@ -48,7 +48,7 @@
     {
       "type": "minecraft:surface_relative_threshold_filter",
       "heightmap": "OCEAN_FLOOR_WG",
-      "max_inclusive": -5
+      "max_inclusive": -20
     },
     {
       "type": "minecraft:biome"

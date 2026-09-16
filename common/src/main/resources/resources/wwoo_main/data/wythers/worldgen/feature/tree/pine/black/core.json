@@ -1,0 +1,179 @@
+{
+  "type": "minecraft:overlay",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:tree",
+        "decorators": [],
+        "foliage_placer": {
+          "type": "minecraft:jungle_foliage_placer",
+          "offset": 1,
+          "radius": 0,
+          "height": 0
+        },
+        "foliage_provider": {
+          "type": "minecraft:weighted",
+          "entries": [
+            {
+              "data": {
+                "id": "minecraft:spruce_leaves",
+                "properties": {
+                  "distance": "7",
+                  "persistent": "false",
+                  "waterlogged": "false"
+                }
+              },
+              "weight": 3
+            }
+          ]
+        },
+        "ignore_vines": false,
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size",
+          "limit": 1,
+          "lower_size": 0,
+          "upper_size": 1
+        },
+        "trunk_placer": {
+          "type": "minecraft:straight_trunk_placer",
+          "base_height": 2,
+          "height_rand_a": 0,
+          "height_rand_b": 0
+        },
+        "trunk_provider": {
+          "type": "minecraft:rule_based",
+          "fallback": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:spruce_log"
+            }
+          },
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:air",
+                  "minecraft:spruce_leaves"
+                ]
+              },
+              "then": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:spruce_wood"
+                }
+              }
+            }
+          ]
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:rule_based",
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:matching_block_tag",
+                "tag": "minecraft:grass_blocks"
+              },
+              "then": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:rooted_dirt"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "placement": []
+    },
+    {
+      "feature": {
+        "type": "minecraft:block_column",
+        "direction": "down",
+        "allowed_placement": {
+          "type": "minecraft:true"
+        },
+        "prioritize_tip": false,
+        "layers": [
+          {
+            "height": 25,
+            "provider": {
+              "type": "minecraft:rule_based",
+              "rules": [
+                {
+                  "if_true": {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "minecraft:spruce_wood"
+                  },
+                  "then": {
+                    "type": "minecraft:simple",
+                    "state": "minecraft:spruce_log"
+                  }
+                },
+                {
+                  "if_true": {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "minecraft:grass_block"
+                  },
+                  "then": {
+                    "type": "minecraft:simple",
+                    "state": "minecraft:rooted_dirt"
+                  }
+                },
+                {
+                  "if_true": {
+                    "type": "minecraft:all_of",
+                    "predicates": [
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          1,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:spruce_leaves",
+                          "minecraft:spruce_log",
+                          "minecraft:spruce_wood"
+                        ]
+                      },
+                      {
+                        "type": "minecraft:any_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "tag": "wythers:air_and_plants"
+                          },
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "tag": "minecraft:leaves"
+                          },
+                          {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": [
+                              "minecraft:snow"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "then": {
+                    "type": "minecraft:simple",
+                    "state": "minecraft:spruce_log"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "placement": []
+    }
+  ]
+}

@@ -1,0 +1,1032 @@
+{
+  "feature": {
+    "type": "minecraft:overlay",
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:disk",
+          "state_provider": {
+            "type": "minecraft:simple",
+            "state": "minecraft:water"
+          },
+          "radius": 8,
+          "half_height": 4,
+          "target": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:snow_block",
+                  "minecraft:ice",
+                  "minecraft:packed_ice",
+                  "minecraft:blue_ice"
+                ]
+              },
+              {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:matching_biomes",
+                  "biomes": [
+                    "deep_frozen_ocean"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": -9,
+            "z": 0
+          }
+        ]
+      },
+      {
+        "feature": {
+          "type": "minecraft:overlay",
+          "features": [
+            {
+              "feature": {
+                "type": "minecraft:disk",
+                "state_provider": {
+                  "type": "minecraft:rule_based",
+                  "fallback": {
+                    "type": "minecraft:simple",
+                    "state": "minecraft:air"
+                  },
+                  "rules": [
+                    {
+                      "if_true": {
+                        "type": "minecraft:height_range",
+                        "min_inclusive": {
+                          "above_bottom": 0
+                        },
+                        "max_inclusive": {
+                          "absolute": 62
+                        }
+                      },
+                      "then": {
+                        "type": "minecraft:rule_based",
+                        "fallback": {
+                          "type": "minecraft:simple",
+                          "state": "minecraft:water"
+                        },
+                        "rules": [
+                          {
+                            "if_true": {
+                              "type": "minecraft:all_of",
+                              "predicates": [
+                                {
+                                  "type": "minecraft:matching_biomes",
+                                  "biomes": "frozen_ocean"
+                                },
+                                {
+                                  "type": "minecraft:height_range",
+                                  "min_inclusive": {
+                                    "absolute": 62
+                                  },
+                                  "max_inclusive": {
+                                    "absolute": 62
+                                  }
+                                }
+                              ]
+                            },
+                            "then": {
+                              "type": "minecraft:simple",
+                              "state": {
+                                "id": "minecraft:light",
+                                "properties": {
+                                  "level": "0",
+                                  "waterlogged": "true"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "radius": 8,
+                "half_height": 4,
+                "target": {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_biomes",
+                            "biomes": [
+                              "deep_frozen_ocean"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": [
+                            "minecraft:snow_block",
+                            "minecraft:packed_ice",
+                            "minecraft:blue_ice"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_biomes",
+                          "biomes": [
+                            "frozen_ocean"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": [
+                            "minecraft:snow",
+                            "minecraft:ice",
+                            "minecraft:water"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              "placement": [
+                {
+                  "type": "minecraft:height_range",
+                  "height": {
+                    "above_bottom": 0
+                  }
+                },
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:all_of",
+                    "predicates": [
+                      {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          1,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:moss_block"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "minecraft:height_range",
+                  "height": {
+                    "relative_to_sea_level": 0
+                  }
+                }
+              ]
+            },
+            {
+              "feature": {
+                "type": "minecraft:disk",
+                "state_provider": {
+                  "type": "minecraft:rule_based",
+                  "rules": [
+                    {
+                      "if_true": {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:height_range",
+                            "min_inclusive": {
+                              "absolute": 62
+                            },
+                            "max_inclusive": {
+                              "absolute": 62
+                            }
+                          }
+                        ]
+                      },
+                      "then": {
+                        "type": "minecraft:rule_based",
+                        "rules": [
+                          {
+                            "if_true": {
+                              "type": "minecraft:not",
+                              "predicate": {
+                                "type": "minecraft:matching_biomes",
+                                "biomes": [
+                                  "frozen_ocean",
+                                  "deep_frozen_ocean"
+                                ]
+                              }
+                            },
+                            "then": {
+                              "type": "minecraft:simple",
+                              "state": {
+                                "id": "minecraft:light",
+                                "properties": {
+                                  "level": "0",
+                                  "waterlogged": "true"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "if_true": {
+                              "type": "minecraft:matching_biomes",
+                              "biomes": "frozen_ocean"
+                            },
+                            "then": {
+                              "type": "minecraft:rule_based",
+                              "rules": [
+                                {
+                                  "if_true": {
+                                    "type": "minecraft:matching_blocks",
+                                    "blocks": "minecraft:water"
+                                  },
+                                  "then": {
+                                    "type": "minecraft:noise",
+                                    "seed": -817103696,
+                                    "noise": {
+                                      "base_octave": -5,
+                                      "octave_count": 4,
+                                      "amplitude_modifiers": [
+                                        2,
+                                        3,
+                                        1,
+                                        1
+                                      ]
+                                    },
+                                    "scale": 1,
+                                    "states": [
+                                      "minecraft:water",
+                                      "minecraft:water",
+                                      "minecraft:water",
+                                      {
+                                        "id": "light",
+                                        "properties": {
+                                          "level": "0",
+                                          "waterlogged": "true"
+                                        }
+                                      },
+                                      {
+                                        "id": "light",
+                                        "properties": {
+                                          "level": "0",
+                                          "waterlogged": "true"
+                                        }
+                                      },
+                                      {
+                                        "id": "light",
+                                        "properties": {
+                                          "level": "0",
+                                          "waterlogged": "true"
+                                        }
+                                      },
+                                      "minecraft:water",
+                                      "minecraft:water",
+                                      "minecraft:water"
+                                    ]
+                                  }
+                                },
+                                {
+                                  "if_true": {
+                                    "type": "minecraft:matching_blocks",
+                                    "blocks": "minecraft:ice"
+                                  },
+                                  "then": {
+                                    "type": "minecraft:noise",
+                                    "seed": -817103696,
+                                    "noise": {
+                                      "base_octave": -5,
+                                      "octave_count": 4,
+                                      "amplitude_modifiers": [
+                                        2,
+                                        3,
+                                        1,
+                                        1
+                                      ]
+                                    },
+                                    "scale": 1,
+                                    "states": [
+                                      "minecraft:ice",
+                                      "minecraft:ice",
+                                      "minecraft:ice",
+                                      {
+                                        "id": "light",
+                                        "properties": {
+                                          "level": "0",
+                                          "waterlogged": "true"
+                                        }
+                                      },
+                                      {
+                                        "id": "light",
+                                        "properties": {
+                                          "level": "0",
+                                          "waterlogged": "true"
+                                        }
+                                      },
+                                      {
+                                        "id": "light",
+                                        "properties": {
+                                          "level": "0",
+                                          "waterlogged": "true"
+                                        }
+                                      },
+                                      "minecraft:ice",
+                                      "minecraft:ice",
+                                      "minecraft:ice"
+                                    ]
+                                  }
+                                },
+                                {
+                                  "if_true": {
+                                    "type": "minecraft:matching_blocks",
+                                    "blocks": "minecraft:packed_ice"
+                                  },
+                                  "then": {
+                                    "type": "minecraft:noise",
+                                    "seed": -817103696,
+                                    "noise": {
+                                      "base_octave": -5,
+                                      "octave_count": 4,
+                                      "amplitude_modifiers": [
+                                        2,
+                                        3,
+                                        1,
+                                        1
+                                      ]
+                                    },
+                                    "scale": 1,
+                                    "states": [
+                                      "minecraft:packed_ice",
+                                      "minecraft:packed_ice",
+                                      "minecraft:packed_ice",
+                                      {
+                                        "id": "light",
+                                        "properties": {
+                                          "level": "0",
+                                          "waterlogged": "true"
+                                        }
+                                      },
+                                      {
+                                        "id": "light",
+                                        "properties": {
+                                          "level": "0",
+                                          "waterlogged": "true"
+                                        }
+                                      },
+                                      {
+                                        "id": "light",
+                                        "properties": {
+                                          "level": "0",
+                                          "waterlogged": "true"
+                                        }
+                                      },
+                                      "minecraft:packed_ice",
+                                      "minecraft:packed_ice",
+                                      "minecraft:packed_ice"
+                                    ]
+                                  }
+                                },
+                                {
+                                  "if_true": {
+                                    "type": "minecraft:matching_blocks",
+                                    "blocks": "minecraft:blue_ice"
+                                  },
+                                  "then": {
+                                    "type": "minecraft:noise",
+                                    "seed": -817103696,
+                                    "noise": {
+                                      "base_octave": -5,
+                                      "octave_count": 4,
+                                      "amplitude_modifiers": [
+                                        2,
+                                        3,
+                                        1,
+                                        1
+                                      ]
+                                    },
+                                    "scale": 1,
+                                    "states": [
+                                      "minecraft:blue_ice",
+                                      "minecraft:blue_ice",
+                                      "minecraft:blue_ice",
+                                      {
+                                        "id": "light",
+                                        "properties": {
+                                          "level": "0",
+                                          "waterlogged": "true"
+                                        }
+                                      },
+                                      {
+                                        "id": "light",
+                                        "properties": {
+                                          "level": "0",
+                                          "waterlogged": "true"
+                                        }
+                                      },
+                                      {
+                                        "id": "light",
+                                        "properties": {
+                                          "level": "0",
+                                          "waterlogged": "true"
+                                        }
+                                      },
+                                      "minecraft:blue_ice",
+                                      "minecraft:blue_ice",
+                                      "minecraft:blue_ice"
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "if_true": {
+                        "type": "minecraft:height_range",
+                        "min_inclusive": {
+                          "above_bottom": 0
+                        },
+                        "max_inclusive": {
+                          "absolute": 61
+                        }
+                      },
+                      "then": {
+                        "type": "minecraft:simple",
+                        "state": "minecraft:water"
+                      }
+                    },
+                    {
+                      "if_true": {
+                        "type": "minecraft:height_range",
+                        "min_inclusive": {
+                          "absolute": 63
+                        },
+                        "max_inclusive": {
+                          "below_top": 0
+                        }
+                      },
+                      "then": {
+                        "type": "minecraft:simple",
+                        "state": "minecraft:air"
+                      }
+                    }
+                  ]
+                },
+                "radius": 8,
+                "half_height": 4,
+                "target": {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_biomes",
+                            "biomes": [
+                              "deep_frozen_ocean"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": [
+                            "minecraft:snow_block",
+                            "minecraft:packed_ice",
+                            "minecraft:blue_ice",
+                            "minecraft:water",
+                            "minecraft:ice"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_biomes",
+                          "biomes": [
+                            "frozen_ocean"
+                          ]
+                        },
+                        {
+                          "type": "minecraft:any_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:all_of",
+                              "predicates": [
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "blocks": "minecraft:snow"
+                                },
+                                {
+                                  "type": "minecraft:height_range",
+                                  "min_inclusive": {
+                                    "absolute": 64
+                                  },
+                                  "max_inclusive": {
+                                    "below_top": 0
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              "placement": [
+                {
+                  "type": "minecraft:height_range",
+                  "height": {
+                    "above_bottom": 0
+                  }
+                },
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:all_of",
+                    "predicates": [
+                      {
+                        "type": "minecraft:not",
+                        "predicate": {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            1,
+                            0
+                          ],
+                          "blocks": [
+                            "minecraft:moss_block"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "minecraft:height_range",
+                  "height": {
+                    "relative_to_sea_level": 0
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:disk",
+          "state_provider": {
+            "type": "minecraft:simple",
+            "state": "minecraft:air"
+          },
+          "radius": 8,
+          "half_height": 4,
+          "target": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:snow_block",
+                  "minecraft:ice",
+                  "minecraft:packed_ice",
+                  "minecraft:blue_ice"
+                ]
+              },
+              {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:matching_biomes",
+                  "biomes": [
+                    "deep_frozen_ocean"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          }
+        ]
+      },
+      {
+        "feature": {
+          "type": "minecraft:disk",
+          "state_provider": {
+            "type": "minecraft:simple",
+            "state": "minecraft:air"
+          },
+          "radius": 8,
+          "half_height": 4,
+          "target": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:snow_block",
+                  "minecraft:ice",
+                  "minecraft:packed_ice",
+                  "minecraft:blue_ice"
+                ]
+              },
+              {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:matching_biomes",
+                  "biomes": [
+                    "deep_frozen_ocean"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          }
+        ]
+      },
+      {
+        "feature": {
+          "type": "minecraft:disk",
+          "state_provider": {
+            "type": "minecraft:simple",
+            "state": "minecraft:air"
+          },
+          "radius": 8,
+          "half_height": 4,
+          "target": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:snow_block",
+                  "minecraft:ice",
+                  "minecraft:packed_ice",
+                  "minecraft:blue_ice"
+                ]
+              },
+              {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:matching_biomes",
+                  "biomes": [
+                    "deep_frozen_ocean"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          }
+        ]
+      },
+      {
+        "feature": {
+          "type": "minecraft:disk",
+          "state_provider": {
+            "type": "minecraft:simple",
+            "state": "minecraft:air"
+          },
+          "radius": 8,
+          "half_height": 4,
+          "target": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:snow_block",
+                  "minecraft:ice",
+                  "minecraft:packed_ice",
+                  "minecraft:blue_ice"
+                ]
+              },
+              {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:matching_biomes",
+                  "biomes": [
+                    "deep_frozen_ocean"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          }
+        ]
+      },
+      {
+        "feature": {
+          "type": "minecraft:disk",
+          "state_provider": {
+            "type": "minecraft:simple",
+            "state": "minecraft:air"
+          },
+          "radius": 8,
+          "half_height": 4,
+          "target": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:snow_block",
+                  "minecraft:ice",
+                  "minecraft:packed_ice",
+                  "minecraft:blue_ice"
+                ]
+              },
+              {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:matching_biomes",
+                  "biomes": [
+                    "deep_frozen_ocean"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          }
+        ]
+      },
+      {
+        "feature": {
+          "type": "minecraft:disk",
+          "state_provider": {
+            "type": "minecraft:simple",
+            "state": "minecraft:air"
+          },
+          "radius": 8,
+          "half_height": 4,
+          "target": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:snow_block",
+                  "minecraft:ice",
+                  "minecraft:packed_ice",
+                  "minecraft:blue_ice"
+                ]
+              },
+              {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:matching_biomes",
+                  "biomes": [
+                    "deep_frozen_ocean"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          }
+        ]
+      },
+      {
+        "feature": {
+          "type": "minecraft:disk",
+          "state_provider": {
+            "type": "minecraft:simple",
+            "state": "minecraft:air"
+          },
+          "radius": 8,
+          "half_height": 4,
+          "target": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:snow_block",
+                  "minecraft:ice",
+                  "minecraft:packed_ice",
+                  "minecraft:blue_ice"
+                ]
+              },
+              {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:matching_biomes",
+                  "biomes": [
+                    "deep_frozen_ocean"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": 9,
+            "z": 0
+          }
+        ]
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "relative_to_sea_level": 0
+      }
+    }
+  ]
+}

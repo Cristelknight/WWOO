@@ -1,0 +1,628 @@
+{
+  "type": "minecraft:overlay",
+  "features": {
+    "feature": {
+      "type": "minecraft:simple_random_selector",
+      "features": [
+        {
+          "feature": {
+            "type": "minecraft:simple_block",
+            "to_place": {
+              "type": "minecraft:weighted",
+              "entries": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "minecraft:snow",
+                    "properties": {
+                      "layers": "6"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "minecraft:snow",
+                    "properties": {
+                      "layers": "7"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:air",
+                  "minecraft:snow"
+                ]
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      1,
+                      0,
+                      0
+                    ],
+                    "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      0,
+                      0
+                    ],
+                    "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      1
+                    ],
+                    "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      -1
+                    ],
+                    "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "feature": {
+            "type": "minecraft:simple_block",
+            "to_place": {
+              "type": "minecraft:weighted",
+              "entries": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "minecraft:snow",
+                    "properties": {
+                      "layers": "4"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "minecraft:snow",
+                    "properties": {
+                      "layers": "5"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:air",
+                  "minecraft:snow"
+                ]
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:grass_block",
+                  "minecraft:snow_block",
+                  "minecraft:mud",
+                  "minecraft:stone"
+                ]
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        0,
+                        0
+                      ],
+                      "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        1
+                      ],
+                      "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        -1
+                      ],
+                      "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        -1,
+                        0
+                      ],
+                      "blocks": [
+                        "minecraft:air"
+                      ]
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        -1,
+                        0
+                      ],
+                      "blocks": [
+                        "minecraft:air"
+                      ]
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -1,
+                        1
+                      ],
+                      "blocks": [
+                        "minecraft:air"
+                      ]
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -1,
+                        -1
+                      ],
+                      "blocks": [
+                        "minecraft:air"
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      2,
+                      0,
+                      0
+                    ],
+                    "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -2,
+                      0,
+                      0
+                    ],
+                    "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      2
+                    ],
+                    "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      -2
+                    ],
+                    "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      1,
+                      0,
+                      1
+                    ],
+                    "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      1,
+                      0,
+                      -1
+                    ],
+                    "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      0,
+                      1
+                    ],
+                    "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      0,
+                      -1
+                    ],
+                    "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "feature": {
+            "type": "minecraft:simple_block",
+            "to_place": {
+              "type": "minecraft:weighted",
+              "entries": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "minecraft:snow",
+                    "properties": {
+                      "layers": "2"
+                    }
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "minecraft:snow",
+                    "properties": {
+                      "layers": "3"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "placement": [
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:air",
+                  "minecraft:snow"
+                ]
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:grass_block",
+                  "minecraft:snow_block",
+                  "minecraft:mud",
+                  "minecraft:stone"
+                ]
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        0,
+                        0
+                      ],
+                      "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        1
+                      ],
+                      "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        -1
+                      ],
+                      "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        -1,
+                        0
+                      ],
+                      "blocks": [
+                        "minecraft:air"
+                      ]
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        -1,
+                        0
+                      ],
+                      "blocks": [
+                        "minecraft:air"
+                      ]
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -1,
+                        1
+                      ],
+                      "blocks": [
+                        "minecraft:air"
+                      ]
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -1,
+                        -1
+                      ],
+                      "blocks": [
+                        "minecraft:air"
+                      ]
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        2,
+                        0,
+                        0
+                      ],
+                      "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -2,
+                        0,
+                        0
+                      ],
+                      "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        2
+                      ],
+                      "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        -2
+                      ],
+                      "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        0,
+                        1
+                      ],
+                      "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        0,
+                        -1
+                      ],
+                      "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        0,
+                        1
+                      ],
+                      "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        0,
+                        -1
+                      ],
+                      "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "minecraft:block_predicate_filter",
+              "predicate": {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      3,
+                      0,
+                      0
+                    ],
+                    "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -3,
+                      0,
+                      0
+                    ],
+                    "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      3
+                    ],
+                    "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      -3
+                    ],
+                    "blocks": "#minecraft:blocks_motion_in_heightmap_no_leaves"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "placement": [
+      {
+        "type": "minecraft:count",
+        "count": 240
+      },
+      {
+        "type": "minecraft:count",
+        "count": 10
+      },
+      {
+        "type": "minecraft:offset",
+        "x": {
+          "type": "minecraft:trapezoid",
+          "min": -7,
+          "max": 7,
+          "plateau": 0
+        },
+        "y": 2,
+        "z": {
+          "type": "minecraft:trapezoid",
+          "min": -7,
+          "max": 7,
+          "plateau": 0
+        }
+      },
+      {
+        "type": "minecraft:heightmap",
+        "heightmap": "WORLD_SURFACE_WG"
+      }
+    ]
+  }
+}

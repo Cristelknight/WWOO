@@ -1,0 +1,192 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": [
+            {
+              "type": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1,
+                "min": 0
+              }
+            },
+            {
+              "type": "minecraft:enchanted_count_increase",
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1,
+                "min": 0
+              },
+              "enchantment": "minecraft:looting"
+            }
+          ],
+          "name": "minecraft:tropical_fish"
+        },
+        {
+          "type": "minecraft:item",
+          "modifier": [
+            {
+              "type": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1,
+                "min": 0
+              }
+            },
+            {
+              "type": "minecraft:enchanted_count_increase",
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1,
+                "min": 0
+              },
+              "enchantment": "minecraft:looting"
+            }
+          ],
+          "name": "minecraft:bone_meal"
+        },
+        {
+          "type": "minecraft:item",
+          "modifier": [
+            {
+              "type": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:weighted_list",
+                "distribution": [
+                  {
+                    "weight": 1,
+                    "data": 1
+                  },
+                  {
+                    "weight": 3,
+                    "data": 0
+                  }
+                ]
+              }
+            },
+            {
+              "type": "minecraft:enchanted_count_increase",
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1,
+                "min": 0
+              },
+              "enchantment": "minecraft:looting"
+            }
+          ],
+          "name": "minecraft:spider_eye"
+        },
+        {
+          "type": "minecraft:item",
+          "modifier": [
+            {
+              "type": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1,
+                "min": 0
+              }
+            },
+            {
+              "type": "minecraft:enchanted_count_increase",
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1,
+                "min": 0
+              },
+              "enchantment": "minecraft:looting"
+            }
+          ],
+          "name": "minecraft:glass_bottle"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "modifier": [
+            {
+              "type": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1,
+                "min": 0
+              }
+            },
+            {
+              "type": "minecraft:enchanted_count_increase",
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1,
+                "min": 0
+              },
+              "enchantment": "minecraft:looting"
+            }
+          ],
+          "name": "minecraft:kelp"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "modifier": [
+            {
+              "type": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1,
+                "min": 0
+              }
+            },
+            {
+              "type": "minecraft:enchanted_count_increase",
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1,
+                "min": 0
+              },
+              "enchantment": "minecraft:looting"
+            }
+          ],
+          "name": "minecraft:rotten_flesh"
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 3,
+        "min": 1
+      }
+    },
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "modifier": [
+            {
+              "type": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1,
+                "min": 1
+              }
+            },
+            {
+              "type": "minecraft:enchanted_count_increase",
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1,
+                "min": 0
+              },
+              "enchantment": "minecraft:looting"
+            }
+          ],
+          "name": "minecraft:feather"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "wythers:entities/seagull"
+}

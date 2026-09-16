@@ -1,0 +1,314 @@
+{
+  "feature": {
+    "type": "minecraft:vegetation_patch",
+    "surface": "floor",
+    "depth": 1,
+    "vertical_range": 7,
+    "extra_bottom_block_chance": 0,
+    "extra_edge_column_chance": 0.5,
+    "vegetation_chance": 1,
+    "xz_radius": 8,
+    "replaceable": "minecraft:sulfur",
+    "ground_state": {
+      "type": "minecraft:rule_based",
+      "fallback": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:sulfur"
+        }
+      },
+      "rules": [
+        {
+          "if_true": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_biomes",
+                "biomes": "desert"
+              },
+              {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      1,
+                      0,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:sulfur",
+                      "minecraft:potent_sulfur"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      1,
+                      -1,
+                      0
+                    ],
+                    "blocks": "minecraft:potent_sulfur"
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      0,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:sulfur",
+                      "minecraft:potent_sulfur"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      -1,
+                      0
+                    ],
+                    "blocks": "minecraft:potent_sulfur"
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      1
+                    ],
+                    "blocks": [
+                      "minecraft:sulfur",
+                      "minecraft:potent_sulfur"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      -1,
+                      1
+                    ],
+                    "blocks": "minecraft:potent_sulfur"
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      -1
+                    ],
+                    "blocks": [
+                      "minecraft:sulfur",
+                      "minecraft:potent_sulfur"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      -1,
+                      -1
+                    ],
+                    "blocks": "minecraft:potent_sulfur"
+                  }
+                ]
+              }
+            ]
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:potent_sulfur"
+            }
+          }
+        }
+      ]
+    },
+    "vegetation_feature": {
+      "feature": {
+        "features": [
+          {
+            "chance": 0.075,
+            "feature": {
+              "feature": {
+                "direction": "down",
+                "allowed_placement": {
+                  "type": "minecraft:true"
+                },
+                "prioritize_tip": true,
+                "layers": [
+                  {
+                    "height": 1,
+                    "provider": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:light",
+                        "properties": {
+                          "level": "0",
+                          "waterlogged": "true"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "height": 1,
+                    "provider": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:potent_sulfur",
+                        "properties": {
+                          "potent_sulfur_state": "wet"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "height": {
+                      "type": "minecraft:weighted_list",
+                      "distribution": [
+                        {
+                          "weight": 1,
+                          "data": 1
+                        },
+                        {
+                          "weight": 10,
+                          "data": 0
+                        }
+                      ]
+                    },
+                    "provider": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:magma_block"
+                      }
+                    }
+                  }
+                ],
+                "type": "minecraft:block_column"
+              },
+              "placement": []
+            }
+          }
+        ],
+        "default": {
+          "feature": {
+            "to_place": {
+              "type": "minecraft:simple",
+              "state": {
+                "id": "minecraft:light",
+                "properties": {
+                  "level": "0",
+                  "waterlogged": "true"
+                }
+              }
+            },
+            "type": "minecraft:simple_block"
+          },
+          "placement": []
+        },
+        "type": "minecraft:random_selector"
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "z": 0,
+          "y": -1
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_biomes",
+                "biomes": "desert"
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:potent_sulfur"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  1,
+                  0,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:potent_sulfur",
+                  "minecraft:light"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  -1,
+                  0,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:potent_sulfur",
+                  "minecraft:light"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  0,
+                  1
+                ],
+                "blocks": [
+                  "minecraft:potent_sulfur",
+                  "minecraft:light"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  0,
+                  -1
+                ],
+                "blocks": [
+                  "minecraft:potent_sulfur",
+                  "minecraft:light"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 2
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    }
+  ]
+}

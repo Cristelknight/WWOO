@@ -1,0 +1,232 @@
+{
+  "feature": {
+    "type": "minecraft:overlay",
+    "features": [
+      {
+        "feature": "wythers:other/dripleaf_big",
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 5
+          },
+          {
+            "type": "minecraft:offset",
+            "x": {
+              "type": "minecraft:trapezoid",
+              "min": -2,
+              "max": 2,
+              "plateau": 0
+            },
+            "y": {
+              "type": "minecraft:trapezoid",
+              "min": -1,
+              "max": 1,
+              "plateau": 0
+            },
+            "z": {
+              "type": "minecraft:trapezoid",
+              "min": -2,
+              "max": 2,
+              "plateau": 0
+            }
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_block_tag",
+                      "tag": "wythers:air_and_plants"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "blocks": "minecraft:water"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:grass_block",
+                    "minecraft:dirt"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "feature": {
+          "type": "minecraft:simple_block",
+          "to_place": {
+            "type": "minecraft:weighted",
+            "entries": [
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:small_dripleaf",
+                  "properties": {
+                    "facing": "north",
+                    "half": "lower",
+                    "waterlogged": "false"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:small_dripleaf",
+                  "properties": {
+                    "facing": "south",
+                    "half": "lower",
+                    "waterlogged": "false"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:small_dripleaf",
+                  "properties": {
+                    "facing": "east",
+                    "half": "lower",
+                    "waterlogged": "false"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "id": "minecraft:small_dripleaf",
+                  "properties": {
+                    "facing": "west",
+                    "half": "lower",
+                    "waterlogged": "false"
+                  }
+                }
+              }
+            ]
+          },
+          "schedule_tick": true
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 50
+          },
+          {
+            "type": "minecraft:offset",
+            "x": {
+              "type": "minecraft:trapezoid",
+              "min": -6,
+              "max": 6,
+              "plateau": 0
+            },
+            "y": {
+              "type": "minecraft:trapezoid",
+              "min": -3,
+              "max": 3,
+              "plateau": 0
+            },
+            "z": {
+              "type": "minecraft:trapezoid",
+              "min": -6,
+              "max": 6,
+              "plateau": 0
+            }
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_block_tag",
+                      "tag": "wythers:air_and_plants"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "blocks": "minecraft:water"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:grass_block",
+                    "minecraft:dirt"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 2
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          1,
+          0
+        ],
+        "blocks": "minecraft:moss_block"
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "blocks": [
+            "minecraft:dead_brain_coral_block",
+            "minecraft:sandstone"
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING_NO_LEAVES"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

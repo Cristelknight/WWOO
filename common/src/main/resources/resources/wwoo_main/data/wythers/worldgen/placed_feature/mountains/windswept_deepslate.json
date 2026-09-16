@@ -1,0 +1,314 @@
+{
+  "feature": {
+    "type": "minecraft:vegetation_patch",
+    "surface": "floor",
+    "depth": 1,
+    "vertical_range": 7,
+    "extra_bottom_block_chance": 0,
+    "extra_edge_column_chance": 0.5,
+    "vegetation_chance": 1,
+    "xz_radius": 7,
+    "replaceable": [
+      "minecraft:grass_block"
+    ],
+    "ground_state": {
+      "type": "minecraft:rule_based",
+      "rules": []
+    },
+    "vegetation_feature": {
+      "feature": {
+        "type": "minecraft:overlay",
+        "features": [
+          {
+            "feature": {
+              "type": "minecraft:block_column",
+              "direction": "down",
+              "allowed_placement": {
+                "type": "minecraft:true"
+              },
+              "prioritize_tip": false,
+              "layers": [
+                {
+                  "height": 20,
+                  "provider": {
+                    "type": "minecraft:rule_based",
+                    "rules": [
+                      {
+                        "if_true": {
+                          "type": "minecraft:all_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:matching_biomes",
+                              "biomes": [
+                                "windswept_hills",
+                                "windswept_forest"
+                              ]
+                            },
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "blocks": [
+                                "minecraft:dirt",
+                                "minecraft:stone",
+                                "minecraft:grass_block"
+                              ]
+                            }
+                          ]
+                        },
+                        "then": {
+                          "type": "minecraft:rule_based",
+                          "fallback": {
+                            "type": "minecraft:noise",
+                            "noise": {
+                              "base_octave": -5,
+                              "amplitude_modifiers": [
+                                2,
+                                3,
+                                1,
+                                1
+                              ],
+                              "octave_count": 4,
+                              "normalize": "legacy"
+                            },
+                            "scale": 1,
+                            "seed": -817103696,
+                            "states": [
+                              {
+                                "id": "minecraft:andesite"
+                              },
+                              {
+                                "id": "minecraft:andesite"
+                              },
+                              {
+                                "id": "minecraft:andesite"
+                              },
+                              {
+                                "id": "minecraft:stone"
+                              },
+                              {
+                                "id": "minecraft:tuff"
+                              },
+                              {
+                                "id": "minecraft:deepslate"
+                              },
+                              {
+                                "id": "minecraft:tuff"
+                              },
+                              {
+                                "id": "minecraft:stone"
+                              },
+                              {
+                                "id": "minecraft:andesite"
+                              },
+                              {
+                                "id": "minecraft:andesite"
+                              },
+                              {
+                                "id": "minecraft:andesite"
+                              }
+                            ]
+                          },
+                          "rules": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:height_range",
+                "height": {
+                  "above_bottom": 8
+                }
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:volume_match",
+                  "min": [
+                    0,
+                    -16,
+                    0
+                  ],
+                  "max": [
+                    0,
+                    16,
+                    0
+                  ],
+                  "match": {
+                    "type": "minecraft:not",
+                    "predicate": {
+                      "type": "minecraft:matching_biomes",
+                      "biomes": "sulfur_caves"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "minecraft:heightmap",
+                "heightmap": "WORLD_SURFACE_WG"
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:block_column",
+              "direction": "down",
+              "allowed_placement": {
+                "type": "minecraft:true"
+              },
+              "prioritize_tip": false,
+              "layers": [
+                {
+                  "height": 20,
+                  "provider": {
+                    "type": "minecraft:rule_based",
+                    "rules": [
+                      {
+                        "if_true": {
+                          "type": "minecraft:all_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:matching_biomes",
+                              "biomes": [
+                                "windswept_hills",
+                                "windswept_forest"
+                              ]
+                            },
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "blocks": [
+                                "minecraft:dirt",
+                                "minecraft:stone",
+                                "minecraft:grass_block",
+                                "minecraft:andesite",
+                                "minecraft:tuff",
+                                "minecraft:deepslate",
+                                "minecraft:smooth_basalt"
+                              ]
+                            }
+                          ]
+                        },
+                        "then": {
+                          "type": "minecraft:rule_based",
+                          "fallback": {
+                            "type": "minecraft:noise",
+                            "noise": {
+                              "base_octave": -5,
+                              "amplitude_modifiers": [
+                                2,
+                                3,
+                                1,
+                                1
+                              ],
+                              "octave_count": 4,
+                              "normalize": "legacy"
+                            },
+                            "scale": 1,
+                            "seed": -817103696,
+                            "states": [
+                              {
+                                "id": "minecraft:tuff"
+                              },
+                              {
+                                "id": "minecraft:tuff"
+                              },
+                              {
+                                "id": "minecraft:tuff"
+                              },
+                              {
+                                "id": "minecraft:deepslate"
+                              },
+                              {
+                                "id": "minecraft:smooth_basalt"
+                              },
+                              {
+                                "id": "minecraft:blackstone"
+                              },
+                              {
+                                "id": "minecraft:smooth_basalt"
+                              },
+                              {
+                                "id": "minecraft:deepslate"
+                              },
+                              {
+                                "id": "minecraft:tuff"
+                              },
+                              {
+                                "id": "minecraft:tuff"
+                              },
+                              {
+                                "id": "minecraft:tuff"
+                              }
+                            ]
+                          },
+                          "rules": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:height_range",
+                "height": {
+                  "absolute": 8
+                }
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:volume_match",
+                  "min": [
+                    0,
+                    -16,
+                    0
+                  ],
+                  "max": [
+                    0,
+                    16,
+                    0
+                  ],
+                  "match": {
+                    "type": "minecraft:not",
+                    "predicate": {
+                      "type": "minecraft:not",
+                      "predicate": {
+                        "type": "minecraft:matching_biomes",
+                        "biomes": "sulfur_caves"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "minecraft:heightmap",
+                "heightmap": "WORLD_SURFACE_WG"
+              }
+            ]
+          }
+        ]
+      },
+      "placement": []
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

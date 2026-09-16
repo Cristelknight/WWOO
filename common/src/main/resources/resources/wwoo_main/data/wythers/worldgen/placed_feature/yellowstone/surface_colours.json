@@ -1,0 +1,243 @@
+{
+  "feature": {
+    "type": "minecraft:overlay",
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:disk",
+          "state_provider": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:sulfur"
+            }
+          },
+          "radius": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 2,
+            "max_inclusive": 4
+          },
+          "half_height": 2,
+          "target": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:air"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:dripstone_block"
+                ]
+              }
+            ]
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:disk",
+          "state_provider": {
+            "type": "minecraft:rule_based",
+            "fallback": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:sulfur"
+            }
+          },
+            "rules": [
+              {
+                "if_true": {
+                  "type": "minecraft:volume_match",
+                  "min": [
+                    -1,
+                    -1,
+                    -1
+                  ],
+                  "max": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "match": {
+                    "type": "minecraft:not",
+                    "predicate": {
+                      "type": "minecraft:matching_blocks",
+                      "blocks": "minecraft:potent_sulfur"
+                    }
+                  }
+                },
+                "then": {
+                  "type": "minecraft:simple",
+                  "state": {
+                    "id": "minecraft:smooth_red_sandstone"
+                  }
+                }
+              }
+            ]
+          },
+          "radius": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 3,
+            "max_inclusive": 5
+          },
+          "half_height": 3,
+          "target": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:air"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:dripstone_block",
+                  "minecraft:cinnabar"
+                ]
+              }
+            ]
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:disk",
+          "state_provider": {
+            "type": "minecraft:rule_based",
+            "fallback": {
+              "type": "minecraft:simple",
+              "state": "minecraft:sulfur"
+            },
+            "rules": [
+              {
+                "if_true": {
+                  "type": "minecraft:volume_match",
+                  "min": [
+                    -1,
+                    -1,
+                    -1
+                  ],
+                  "max": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "match": {
+                    "type": "minecraft:not",
+                    "predicate": {
+                      "type": "minecraft:matching_blocks",
+                      "blocks": "minecraft:potent_sulfur"
+                    }
+                  }
+                },
+                "then": {
+                  "type": "minecraft:rule_based",
+                  "fallback": {
+                    "type": "minecraft:simple",
+                    "state": "minecraft:smooth_red_sandstone"
+                  },
+                  "rules": [
+                    {
+                      "if_true": {
+                        "type": "minecraft:volume_match",
+                        "min": [
+                          -2,
+                          -2,
+                          -2
+                        ],
+                        "max": [
+                          2,
+                          2,
+                          2
+                        ],
+                        "match": {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_blocks",
+                            "blocks": "minecraft:potent_sulfur"
+                          }
+                        }
+                      },
+                      "then": {
+                        "type": "minecraft:simple",
+                        "state": "minecraft:cinnabar"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "radius": 8,
+          "half_height": 4,
+          "target": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "blocks": [
+                  "minecraft:air"
+                ]
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:dripstone_block"
+                ]
+              }
+            ]
+          }
+        },
+        "placement": []
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 100
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:offset",
+      "x": 0,
+      "y": -1,
+      "z": 0
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:potent_sulfur"
+      }
+    }
+  ]
+}

@@ -1,0 +1,655 @@
+{
+    "type": "minecraft:rule_based",
+    "fallback": {
+      "type": "minecraft:rule_based",
+      "rules": [
+        {
+          "if_true": {
+            "type": "minecraft:matching_biomes",
+            "biomes": "pale_garden"
+          },
+          "then": {
+            "type": "minecraft:rule_based",
+            "rules": [
+              {
+                "if_true": {
+                  "type": "minecraft:height_range",
+                  "min_inclusive": {
+                    "above_bottom": 0
+                  },
+                  "max_inclusive": {
+                    "absolute": 114
+                  }
+                },
+                "then": {
+                  "type": "minecraft:simple",
+                  "state": {
+                    "id": "minecraft:tuff"
+                  }
+                }
+              },
+              {
+                "if_true": {
+                  "type": "minecraft:height_range",
+                  "min_inclusive": {
+                    "absolute": 134
+                  },
+                  "max_inclusive": {
+                    "below_top": 0
+                  }
+                },
+                "then": {
+                  "type": "minecraft:simple",
+                  "state": {
+                    "id": "minecraft:tuff"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": "minecraft:stone"
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:stone"
+            }
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": "minecraft:tuff"
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:tuff"
+            }
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:height_range",
+            "min_inclusive": {
+              "absolute": 50
+            },
+            "max_inclusive": {
+              "absolute": 149
+            }
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:stone"
+            }
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:height_range",
+            "min_inclusive": {
+              "absolute": 150
+            },
+            "max_inclusive": {
+              "below_top": 0
+            }
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:andesite"
+            }
+          }
+        }
+      ]
+    },
+    "rules": [
+      {
+        "if_true": {
+          "type": "minecraft:all_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                1,
+                0
+              ],
+              "blocks": "minecraft:air"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:grass_block",
+                "minecraft:moss_block",
+                "minecraft:podzol",
+                "minecraft:coarse_dirt"
+              ]
+            }
+          ]
+        },
+        "then": {
+          "type": "minecraft:rule_based",
+          "fallback": {
+            "type": "minecraft:rule_based",
+            "fallback": {
+              "type": "minecraft:simple",
+              "state": {
+                "id": "minecraft:grass_block"
+              }
+            },
+            "rules": [
+              {
+                "if_true": {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": "minecraft:moss_block"
+                },
+                "then": {
+                  "type": "minecraft:simple",
+                  "state": {
+                    "id": "minecraft:moss_block"
+                  }
+                }
+              },
+              {
+                "if_true": {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": "minecraft:podzol"
+                },
+                "then": {
+                  "type": "minecraft:simple",
+                  "state": {
+                    "id": "minecraft:podzol"
+                  }
+                }
+              },
+              {
+                "if_true": {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": "minecraft:coarse_dirt"
+                },
+                "then": {
+                  "type": "minecraft:simple",
+                  "state": {
+                    "id": "minecraft:coarse_dirt"
+                  }
+                }
+              }
+            ]
+          },
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:any_of",
+                    "predicates": [
+                      {
+                        "type": "minecraft:matching_block_tag",
+                        "offset": [
+                          1,
+                          -1,
+                          0
+                        ],
+                        "tag": "wythers:air_and_plants"
+                      },
+                      {
+                        "type": "minecraft:matching_block_tag",
+                        "offset": [
+                          -1,
+                          -1,
+                          0
+                        ],
+                        "tag": "wythers:air_and_plants"
+                      },
+                      {
+                        "type": "minecraft:matching_block_tag",
+                        "offset": [
+                          0,
+                          -1,
+                          1
+                        ],
+                        "tag": "wythers:air_and_plants"
+                      },
+                      {
+                        "type": "minecraft:matching_block_tag",
+                        "offset": [
+                          0,
+                          -1,
+                          -1
+                        ],
+                        "tag": "wythers:air_and_plants"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "minecraft:not",
+                    "predicate": {
+                      "type": "minecraft:any_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              1,
+                              1,
+                              0
+                            ],
+                            "tag": "wythers:air_and_plants"
+                          }
+                        },
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              -1,
+                              1,
+                              0
+                            ],
+                            "tag": "wythers:air_and_plants"
+                          }
+                        },
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              1,
+                              1
+                            ],
+                            "tag": "wythers:air_and_plants"
+                          }
+                        },
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              1,
+                              -1
+                            ],
+                            "tag": "wythers:air_and_plants"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "minecraft:not",
+                    "predicate": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_biomes",
+                          "biomes": "pale_garden"
+                        },
+                        {
+                          "type": "minecraft:height_range",
+                          "min_inclusive": {
+                            "absolute": 117
+                          },
+                          "max_inclusive": {
+                            "absolute": 134
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "then": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:air"
+                }
+              }
+            },
+            {
+              "if_true": {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:any_of",
+                    "predicates": [
+                      {
+                        "type": "minecraft:matching_block_tag",
+                        "offset": [
+                          1,
+                          -1,
+                          0
+                        ],
+                        "tag": "wythers:air_and_plants"
+                      },
+                      {
+                        "type": "minecraft:matching_block_tag",
+                        "offset": [
+                          -1,
+                          -1,
+                          0
+                        ],
+                        "tag": "wythers:air_and_plants"
+                      },
+                      {
+                        "type": "minecraft:matching_block_tag",
+                        "offset": [
+                          0,
+                          -1,
+                          1
+                        ],
+                        "tag": "wythers:air_and_plants"
+                      },
+                      {
+                        "type": "minecraft:matching_block_tag",
+                        "offset": [
+                          0,
+                          -1,
+                          -1
+                        ],
+                        "tag": "wythers:air_and_plants"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "minecraft:any_of",
+                    "predicates": [
+                      {
+                        "type": "minecraft:not",
+                        "predicate": {
+                          "type": "minecraft:matching_block_tag",
+                          "offset": [
+                            1,
+                            1,
+                            0
+                          ],
+                          "tag": "wythers:air_and_plants"
+                        }
+                      },
+                      {
+                        "type": "minecraft:not",
+                        "predicate": {
+                          "type": "minecraft:matching_block_tag",
+                          "offset": [
+                            -1,
+                            1,
+                            0
+                          ],
+                          "tag": "wythers:air_and_plants"
+                        }
+                      },
+                      {
+                        "type": "minecraft:not",
+                        "predicate": {
+                          "type": "minecraft:matching_block_tag",
+                          "offset": [
+                            0,
+                            1,
+                            1
+                          ],
+                          "tag": "wythers:air_and_plants"
+                        }
+                      },
+                      {
+                        "type": "minecraft:not",
+                        "predicate": {
+                          "type": "minecraft:matching_block_tag",
+                          "offset": [
+                            0,
+                            1,
+                            -1
+                          ],
+                          "tag": "wythers:air_and_plants"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "then": {
+                "type": "minecraft:rule_based",
+                "rules": [
+                  {
+                    "if_true": {
+                      "type": "minecraft:matching_biomes",
+                      "biomes": "pale_garden"
+                    },
+                    "then": {
+                      "type": "minecraft:rule_based",
+                      "rules": [
+                        {
+                          "if_true": {
+                            "type": "minecraft:height_range",
+                            "min_inclusive": {
+                              "above_bottom": 0
+                            },
+                            "max_inclusive": {
+                              "absolute": 114
+                            }
+                          },
+                          "then": {
+                            "type": "minecraft:simple",
+                            "state": {
+                              "id": "minecraft:tuff"
+                            }
+                          }
+                        },
+                        {
+                          "if_true": {
+                            "type": "minecraft:height_range",
+                            "min_inclusive": {
+                              "absolute": 134
+                            },
+                            "max_inclusive": {
+                              "below_top": 0
+                            }
+                          },
+                          "then": {
+                            "type": "minecraft:simple",
+                            "state": {
+                              "id": "minecraft:tuff"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+        {
+          "if_true": {
+            "type": "minecraft:height_range",
+            "min_inclusive": {
+              "absolute": 50
+            },
+            "max_inclusive": {
+              "absolute": 149
+            }
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:stone"
+            }
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:height_range",
+            "min_inclusive": {
+              "absolute": 150
+            },
+            "max_inclusive": {
+              "below_top": 0
+            }
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:andesite"
+            }
+          }
+        }
+                ]
+              }
+            },
+            {
+              "if_true": {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "minecraft:grass_block"
+                  },
+                  {
+                    "type": "minecraft:not",
+                    "predicate": {
+                      "type": "minecraft:any_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_block_tag",
+                          "offset": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "tag": "wythers:earthen"
+                        },
+                        {
+                          "type": "minecraft:matching_block_tag",
+                          "offset": [
+                            -1,
+                            0,
+                            0
+                          ],
+                          "tag": "wythers:earthen"
+                        },
+                        {
+                          "type": "minecraft:matching_block_tag",
+                          "offset": [
+                            0,
+                            0,
+                            1
+                          ],
+                          "tag": "wythers:earthen"
+                        },
+                        {
+                          "type": "minecraft:matching_block_tag",
+                          "offset": [
+                            0,
+                            0,
+                            -1
+                          ],
+                          "tag": "wythers:earthen"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "then": {
+                "type": "minecraft:rule_based",
+                "rules": [
+                  {
+                    "if_true": {
+                      "type": "minecraft:matching_biomes",
+                      "biomes": "pale_garden"
+                    },
+                    "then": {
+                      "type": "minecraft:rule_based",
+                      "rules": [
+                        {
+                          "if_true": {
+                            "type": "minecraft:height_range",
+                            "min_inclusive": {
+                              "above_bottom": 0
+                            },
+                            "max_inclusive": {
+                              "absolute": 114
+                            }
+                          },
+                          "then": {
+                            "type": "minecraft:simple",
+                            "state": {
+                              "id": "minecraft:tuff"
+                            }
+                          }
+                        },
+                        {
+                          "if_true": {
+                            "type": "minecraft:height_range",
+                            "min_inclusive": {
+                              "absolute": 134
+                            },
+                            "max_inclusive": {
+                              "below_top": 0
+                            }
+                          },
+                          "then": {
+                            "type": "minecraft:simple",
+                            "state": {
+                              "id": "minecraft:tuff"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+        {
+          "if_true": {
+            "type": "minecraft:height_range",
+            "min_inclusive": {
+              "absolute": 50
+            },
+            "max_inclusive": {
+              "absolute": 149
+            }
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:stone"
+            }
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:height_range",
+            "min_inclusive": {
+              "absolute": 150
+            },
+            "max_inclusive": {
+              "below_top": 0
+            }
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:andesite"
+            }
+          }
+        }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }

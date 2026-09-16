@@ -1,0 +1,117 @@
+{
+  "feature": {
+    "type": "minecraft:simple_random_selector",
+    "features": [
+      {
+        "feature": "wythers:tree/pine/black/3",
+        "placement": []
+      },
+      {
+        "feature": "wythers:tree/pine/black/3",
+        "placement": []
+      },
+      {
+        "feature": "wythers:tree/pine/black/4",
+        "placement": []
+      },
+      {
+        "feature": "wythers:tree/pine/black/4",
+        "placement": []
+      },
+      {
+        "feature": "wythers:tree/pine/black/5",
+        "placement": []
+      },
+      {
+        "feature": "wythers:tree/willow/large",
+        "placement": []
+      },
+      {
+        "feature": "wythers:tree/oak",
+        "placement": []
+      },
+      {
+        "feature": "wythers:tree/oak",
+        "placement": []
+      },
+      {
+        "feature": "wythers:tree/oak",
+        "placement": []
+      },
+      {
+        "feature": "wythers:tree/ginko",
+        "placement": []
+      },
+      {
+        "feature": "wythers:tree/birch/dark",
+        "placement": []
+      },
+      {
+        "feature": "wythers:tree/birch/dark",
+        "placement": []
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 150,
+      "noise_offset": 0.4
+    },
+    {
+      "type": "minecraft:count",
+      "count": 8
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:surface_water_depth_filter",
+      "max_water_depth": 0
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    },
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -2,
+          0
+        ],
+        "blocks": "minecraft:dirt"
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:height_range",
+        "min_inclusive": {
+          "absolute": 60
+        },
+        "max_inclusive": {
+          "absolute": 75
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "id": "minecraft:cherry_sapling",
+          "properties": {
+            "stage": "0"
+          }
+        }
+      }
+    }
+  ]
+}

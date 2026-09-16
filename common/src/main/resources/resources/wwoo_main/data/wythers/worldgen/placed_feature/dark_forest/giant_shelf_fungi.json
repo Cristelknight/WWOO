@@ -1,0 +1,29 @@
+{
+  "feature": "wythers:fungus/giant_shelf_fungus",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:offset",
+      "x": 0,
+      "y": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 0,
+        "max_inclusive": 5
+      },
+      "z": 0
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

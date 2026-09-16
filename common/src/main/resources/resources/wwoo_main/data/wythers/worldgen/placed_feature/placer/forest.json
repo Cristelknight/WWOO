@@ -1,114 +1,49 @@
 {
   "feature": {
     "type": "minecraft:disk",
-    "config": {
-      "state_provider": {
-        "type": "minecraft:rule_based_state_provider",
-        "fallback": {
-          "type": "minecraft:simple_state_provider",
-          "state": {
-            "Name": "minecraft:oak_wood"
-          }
-        },
-        "rules": [
-          {
-            "if_true": {
-              "type": "minecraft:matching_blocks",
-              "blocks": [
-                "minecraft:orange_terracotta"
-              ]
-            },
-            "then": {
-              "type": "minecraft:simple_state_provider",
-              "state": {
-                "Name": "minecraft:terracotta"
-              }
-            }
-          },
-          {
-            "if_true": {
-              "type": "minecraft:matching_blocks",
-              "blocks": [
-                "minecraft:sandstone"
-              ]
-            },
-            "then": {
-              "type": "minecraft:simple_state_provider",
-              "state": {
-                "Name": "minecraft:stripped_oak_wood"
-              }
-            }
-          },
-          {
-            "if_true": {
-              "type": "minecraft:matching_blocks",
-              "blocks": [
-                "minecraft:muddy_mangrove_roots"
-              ]
-            },
-            "then": {
-              "type": "minecraft:simple_state_provider",
-              "state": {
-                "Name": "minecraft:mangrove_wood"
-              }
-            }
-          },
-          {
-            "if_true": {
-              "type": "minecraft:matching_blocks",
-              "blocks": [
-                "minecraft:acacia_wood"
-              ]
-            },
-            "then": {
-              "type": "minecraft:simple_state_provider",
-              "state": {
-                "Name": "minecraft:stripped_acacia_wood"
-              }
-            }
-          },
-          {
-            "if_true": {
-              "type": "minecraft:matching_blocks",
-              "blocks": [
-                "minecraft:smooth_red_sandstone"
-              ]
-            },
-            "then": {
-              "type": "minecraft:simple_state_provider",
-              "state": {
-                "Name": "minecraft:pale_oak_wood"
-              }
-            }
-          }
-        ]
+    "state_provider": {
+      "fallback": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:oak_wood"
+        }
       },
-      "target": {
-        "type": "minecraft:all_of",
-        "predicates": [
-          {
+      "rules": [
+        {
+          "if_true": {
             "type": "minecraft:matching_blocks",
-            "blocks": [
-              "minecraft:bedrock",
-              "minecraft:orange_terracotta",
-              "minecraft:coarse_dirt",
-              "minecraft:rooted_dirt",
-              "minecraft:mud",
-              "minecraft:muddy_mangrove_roots",
-              "minecraft:acacia_wood",
-              "minecraft:sandstone",
-              "minecraft:smooth_red_sandstone"
-            ]
+            "blocks": "spruce_wood"
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": "minecraft:brown_wool"
           }
-        ]
-      },
-      "radius": {
-        "type": "minecraft:uniform",
-        "min_inclusive": 7,
-        "max_inclusive": 7
-      },
-      "half_height": 0
-    }
+        }
+      ],
+      "type": "minecraft:rule_based"
+    },
+    "target": {
+      "type": "minecraft:all_of",
+      "predicates": [
+        {
+          "type": "minecraft:matching_blocks",
+          "blocks": [
+            "minecraft:bedrock",
+            "minecraft:deepslate",
+            "minecraft:tuff",
+            "minecraft:lava",
+            "minecraft:birch_wood",
+            "minecraft:spruce_wood"
+          ]
+        }
+      ]
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 8,
+      "max_inclusive": 8
+    },
+    "half_height": 0
   },
   "placement": [
     {

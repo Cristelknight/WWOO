@@ -1,0 +1,74 @@
+{
+  "feature": {
+    "type": "minecraft:template",
+    "templates": [
+      {
+        "weight": 1,
+        "data": {
+          "id": "wythers:fauna/cheetah"
+        }
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 128
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 2,
+        "max_inclusive": 2
+      }
+    },
+    {
+      "type": "minecraft:offset",
+      "x": {
+        "type": "minecraft:trapezoid",
+        "min": -3,
+        "max": 3,
+        "plateau": 0
+      },
+      "y": 0,
+      "z": {
+        "type": "minecraft:trapezoid",
+        "min": -3,
+        "max": 3,
+        "plateau": 0
+      }
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:any_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -1,
+              0
+            ],
+            "blocks": [
+              "minecraft:grass_block",
+              "minecraft:coarse_dirt",
+              "minecraft:rooted_dirt"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

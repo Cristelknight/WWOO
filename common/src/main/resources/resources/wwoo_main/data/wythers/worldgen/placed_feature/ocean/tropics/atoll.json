@@ -1,0 +1,21 @@
+{
+  "feature": {
+    "type": "minecraft:sequence",
+    "features": [
+      "wythers:ocean/tropics/reef_wall",
+      "wythers:ocean/tropics/reef_cap_59",
+      "wythers:ocean/tropics/reef_cap_60",
+      "wythers:ocean/tropics/reef_cap_61",
+      "wythers:ocean/tropics/reef_cap_62",
+      "wythers:ocean/tropics/island_layer_1"
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": 1,
+      "noise_factor": 500,
+      "noise_offset": 0
+    }
+  ]
+}

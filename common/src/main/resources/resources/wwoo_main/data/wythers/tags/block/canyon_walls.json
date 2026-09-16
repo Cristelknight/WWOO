@@ -1,0 +1,16 @@
+{
+  "values": [
+    "#minecraft:terracotta",
+    "#minecraft:substrate_overworld",
+    "#minecraft:sand",
+    "minecraft:stone",
+    "minecraft:andesite",
+    "minecraft:diorite",
+    "minecraft:granite",
+    "minecraft:calcite",
+    "minecraft:packed_mud",
+    "minecraft:dripstone_block",
+    "minecraft:red_sandstone",
+    "minecraft:smooth_red_sandstone"
+  ]
+}

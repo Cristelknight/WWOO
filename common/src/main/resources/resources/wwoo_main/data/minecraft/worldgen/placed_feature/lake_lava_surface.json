@@ -6,6 +6,10 @@
       "count": 0
     },
     {
+      "type": "minecraft:rarity_filter",
+      "chance": 200
+    },
+    {
       "type": "minecraft:in_square"
     },
     {

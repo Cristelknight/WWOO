@@ -1,0 +1,231 @@
+{
+  "type": "minecraft:overlay",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:tree",
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size",
+          "min_clipped_height": 0,
+          "limit": 0,
+          "lower_size": 0,
+          "upper_size": 0
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:rooted_dirt"
+          }
+        },
+        "trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_wood"
+          }
+        },
+        "foliage_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves"
+          }
+        },
+        "trunk_placer": {
+          "type": "minecraft:cherry_trunk_placer",
+          "base_height": 12,
+          "height_rand_a": 0,
+          "height_rand_b": 0,
+          "branch_count": 3,
+          "branch_horizontal_length": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 2,
+            "max_inclusive": 3
+          },
+          "branch_start_offset_from_top": {
+            "min_inclusive": -15,
+            "max_inclusive": -12
+          },
+          "branch_end_offset_from_top": {
+            "type": "minecraft:uniform",
+            "min_inclusive": -6,
+            "max_inclusive": 0
+          }
+        },
+        "foliage_placer": {
+          "type": "minecraft:acacia_foliage_placer",
+          "radius": 2,
+          "offset": 0
+        },
+        "decorators": []
+      },
+      "placement": []
+    },
+    {
+      "feature": {
+        "type": "minecraft:tree",
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size"
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:rule_based",
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      1,
+                      0
+                    ],
+                    "blocks": "minecraft:spruce_wood"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "minecraft:spruce_wood"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      -1,
+                      0
+                    ],
+                    "blocks": "minecraft:spruce_wood"
+                  }
+                ]
+              },
+              "then": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:spruce_log"
+                }
+              }
+            }
+          ]
+        },
+        "trunk_provider": {
+          "type": "minecraft:rule_based",
+          "fallback": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:spruce_wood"
+            }
+          },
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      1,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:spruce_wood",
+                      "minecraft:spruce_log"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      -1,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:spruce_wood",
+                      "minecraft:spruce_log"
+                    ]
+                  }
+                ]
+              },
+              "then": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:spruce_log"
+                }
+              }
+            }
+          ]
+        },
+        "foliage_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_leaves"
+          }
+        },
+        "trunk_placer": {
+          "type": "minecraft:forking_trunk_placer",
+          "base_height": 4,
+          "height_rand_a": 4,
+          "height_rand_b": 0
+        },
+        "foliage_placer": {
+          "type": "minecraft:acacia_foliage_placer",
+          "radius": 2,
+          "offset": 0
+        },
+        "decorators": []
+      },
+      "placement": [
+        {
+          "type": "minecraft:count",
+          "count": 24
+        },
+        {
+          "type": "minecraft:offset",
+          "x": {
+            "type": "minecraft:trapezoid",
+            "min": -4,
+            "max": 4,
+            "plateau": 0
+          },
+          "y": 0,
+          "z": {
+            "type": "minecraft:trapezoid",
+            "min": -4,
+            "max": 4,
+            "plateau": 0
+          }
+        },
+        {
+          "type": "minecraft:environment_scan",
+          "direction_of_search": "up",
+          "max_steps": 6,
+          "target_condition": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "blocks": "minecraft:spruce_wood"
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:spruce_wood"
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": "minecraft:spruce_wood"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

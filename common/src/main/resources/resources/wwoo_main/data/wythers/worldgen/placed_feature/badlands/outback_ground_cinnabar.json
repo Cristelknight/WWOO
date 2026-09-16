@@ -1,0 +1,651 @@
+{
+  "feature": {
+    "type": "minecraft:vegetation_patch",
+    "surface": "floor",
+    "depth": 1,
+    "vertical_range": 7,
+    "extra_bottom_block_chance": 0,
+    "extra_edge_column_chance": 0.5,
+    "vegetation_chance": 1,
+    "xz_radius": 7,
+    "replaceable": [
+      "minecraft:red_sand",
+      "minecraft:red_sandstone",
+      "minecraft:grass_block",
+      "minecraft:terracotta",
+      "minecraft:orange_terracotta",
+      "minecraft:red_terracotta",
+      "minecraft:white_terracotta",
+      "minecraft:brown_terracotta",
+      "minecraft:gray_terracotta",
+      "minecraft:light_gray_terracotta",
+      "minecraft:yellow_terracotta"
+    ],
+    "ground_state": {
+      "type": "minecraft:rule_based",
+      "rules": []
+    },
+    "vegetation_feature": {
+      "feature": {
+        "type": "minecraft:overlay",
+        "features": [
+          {
+            "feature": {
+              "type": "minecraft:block_column",
+              "direction": "down",
+              "allowed_placement": {
+                "type": "minecraft:true"
+              },
+              "prioritize_tip": false,
+              "layers": [
+                {
+                  "height": 2,
+                  "provider": {
+                    "type": "minecraft:rule_based",
+                    "rules": [
+                      {
+                        "if_true": {
+                          "type": "minecraft:all_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:matching_block_tag",
+                              "offset": [
+                                0,
+                                1,
+                                0
+                              ],
+                              "tag": "wythers:air_and_plants"
+                            },
+                            {
+                              "type": "minecraft:matching_biomes",
+                              "biomes": "wooded_badlands"
+                            }
+                          ]
+                        },
+                        "then": {
+                          "type": "minecraft:rule_based",
+                          "rules": [
+                            {
+                              "if_true": {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:red_sand"
+                              },
+                              "then": {
+                                "type": "minecraft:noise",
+                                "noise": {
+                                  "base_octave": -4,
+                                  "amplitude_modifiers": [
+                                    2,
+                                    1,
+                                    1,
+                                    2
+                                  ],
+                                  "octave_count": 4,
+                                  "normalize": "legacy"
+                                },
+                                "scale": 1,
+                                "seed": -817103696,
+                                "states": [
+                                  {
+                                    "id": "minecraft:red_sand"
+                                  },
+                                  {
+                                    "id": "minecraft:rooted_dirt"
+                                  },
+                                  {
+                                    "id": "minecraft:red_sand"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "if_true": {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": [
+                                  "minecraft:grass_block",
+                                  "minecraft:coarse_dirt",
+                                  "minecraft:dirt"
+                                ]
+                              },
+                              "then": {
+                            "type": "minecraft:noise",
+                            "noise": {
+                              "base_octave": -6,
+                              "amplitude_modifiers": [
+                                2.5,
+                                1,
+                                1,
+                                2
+                              ],
+                              "octave_count": 4,
+                              "normalize": "legacy"
+                            },
+                            "scale": 1,
+                            "seed": -817103696,
+                            "states": [
+                              {
+                                "id": "minecraft:red_terracotta"
+                              },
+                              {
+                                "id": "minecraft:pink_terracotta"
+                              },
+                              {
+                                "id": "minecraft:cinnabar"
+                              },
+                              {
+                                "id": "minecraft:cinnabar"
+                              },
+                              {
+                                "id": "minecraft:light_gray_terracotta"
+                              },
+                              {
+                                "id": "minecraft:cinnabar"
+                              },
+                              {
+                                "id": "minecraft:cinnabar"
+                              },
+                              {
+                                "id": "minecraft:pink_terracotta"
+                              },
+                              {
+                                "id": "minecraft:red_terracotta"
+                              }
+                            ]
+                          }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:height_range",
+                "height": {
+                  "above_bottom": 0
+                }
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        1,
+                        0
+                      ],
+                      "blocks": "minecraft:dripstone_block"
+                    },
+                    {
+                      "type": "minecraft:not",
+                      "predicate": {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          2,
+                          0
+                        ],
+                        "blocks": "minecraft:dripstone_block"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "minecraft:heightmap",
+                "heightmap": "WORLD_SURFACE_WG"
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:block_column",
+              "direction": "down",
+              "allowed_placement": {
+                "type": "minecraft:true"
+              },
+              "prioritize_tip": false,
+              "layers": [
+                {
+                  "height": 2,
+                  "provider": {
+                    "type": "minecraft:rule_based",
+                    "rules": [
+                      {
+                        "if_true": {
+                          "type": "minecraft:all_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:matching_block_tag",
+                              "offset": [
+                                0,
+                                1,
+                                0
+                              ],
+                              "tag": "wythers:air_and_plants"
+                            },
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "blocks": "minecraft:red_sand"
+                            },
+                            {
+                              "type": "minecraft:matching_biomes",
+                              "biomes": "wooded_badlands"
+                            }
+                          ]
+                        },
+                        "then": {
+                          "type": "minecraft:noise",
+                          "noise": {
+                            "base_octave": -4,
+                            "amplitude_modifiers": [
+                              3,
+                              1,
+                              1,
+                              2
+                            ],
+                            "octave_count": 4,
+                            "normalize": "legacy"
+                          },
+                          "scale": 1,
+                          "seed": -817103696,
+                          "states": [
+                            {
+                              "id": "minecraft:rooted_dirt"
+                            },
+                            {
+                              "id": "minecraft:grass_block"
+                            },
+                            {
+                              "id": "minecraft:rooted_dirt"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:height_range",
+                "height": {
+                  "above_bottom": 0
+                }
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        1,
+                        0
+                      ],
+                      "blocks": "minecraft:moss_block"
+                    },
+                    {
+                      "type": "minecraft:not",
+                      "predicate": {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          2,
+                          0
+                        ],
+                        "blocks": "minecraft:moss_block"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "minecraft:heightmap",
+                "heightmap": "WORLD_SURFACE_WG"
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:block_column",
+              "direction": "down",
+              "allowed_placement": {
+                "type": "minecraft:true"
+              },
+              "prioritize_tip": false,
+              "layers": [
+                {
+                  "height": 15,
+                  "provider": {
+                    "type": "minecraft:rule_based",
+                    "rules": [
+                      {
+                        "if_true": {
+                          "type": "minecraft:all_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:matching_block_tag",
+                              "tag": "minecraft:terracotta"
+                            },
+                            {
+                              "type": "minecraft:matching_biomes",
+                              "biomes": "wooded_badlands"
+                            }
+                          ]
+                        },
+                        "then": {
+                          "type": "minecraft:rule_based",
+                          "fallback": {
+                            "type": "minecraft:noise",
+                            "noise": {
+                              "base_octave": -6,
+                              "amplitude_modifiers": [
+                                2.5,
+                                1,
+                                1,
+                                2
+                              ],
+                              "octave_count": 4,
+                              "normalize": "legacy"
+                            },
+                            "scale": 1,
+                            "seed": -817103696,
+                            "states": [
+                              {
+                                "id": "minecraft:red_terracotta"
+                              },
+                              {
+                                "id": "minecraft:pink_terracotta"
+                              },
+                              {
+                                "id": "minecraft:cinnabar"
+                              },
+                              {
+                                "id": "minecraft:cinnabar"
+                              },
+                              {
+                                "id": "minecraft:light_gray_terracotta"
+                              },
+                              {
+                                "id": "minecraft:cinnabar"
+                              },
+                              {
+                                "id": "minecraft:cinnabar"
+                              },
+                              {
+                                "id": "minecraft:pink_terracotta"
+                              },
+                              {
+                                "id": "minecraft:red_terracotta"
+                              }
+                            ]
+                          },
+                          "rules": [
+                            {
+                              "if_true": {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  1,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:red_sand",
+                                  "minecraft:smooth_red_sandstone"
+                                ]
+                              },
+                              "then": {
+                                "type": "minecraft:simple",
+                                "state": "minecraft:smooth_red_sandstone"
+                              }
+                            },
+                            {
+                              "if_true": {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  1,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:rooted_dirt"
+                                ]
+                              },
+                              "then": {
+                                "type": "minecraft:simple",
+                                "state": "minecraft:packed_mud"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:height_range",
+                "height": {
+                  "above_bottom": 0
+                }
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        1,
+                        0
+                      ],
+                      "blocks": "minecraft:dripstone_block"
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "minecraft:heightmap",
+                "heightmap": "WORLD_SURFACE_WG"
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:block_column",
+              "direction": "down",
+              "allowed_placement": {
+                "type": "minecraft:true"
+              },
+              "prioritize_tip": false,
+              "layers": [
+                {
+                  "height": 15,
+                  "provider": {
+                    "type": "minecraft:rule_based",
+                    "rules": [
+                      {
+                        "if_true": {
+                          "type": "minecraft:all_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:matching_block_tag",
+                              "tag": "minecraft:terracotta"
+                            },
+                            {
+                              "type": "minecraft:matching_biomes",
+                              "biomes": "wooded_badlands"
+                            }
+                          ]
+                        },
+                        "then": {
+                          "type": "minecraft:rule_based",
+                          "fallback": {
+                            "type": "minecraft:noise",
+                            "noise": {
+                              "base_octave": -6,
+                              "amplitude_modifiers": [
+                                2.5,
+                                1,
+                                1,
+                                2
+                              ],
+                              "octave_count": 4,
+                              "normalize": "legacy"
+                            },
+                            "scale": 1,
+                            "seed": -817103696,
+                            "states": [
+                              {
+                                "id": "minecraft:light_gray_terracotta"
+                              },
+                              {
+                                "id": "minecraft:dripstone_block"
+                              },
+                              {
+                                "id": "minecraft:packed_mud"
+                              },
+                              {
+                                "id": "minecraft:dripstone_block"
+                              },
+                              {
+                                "id": "minecraft:light_gray_terracotta"
+                              },
+                              {
+                                "id": "minecraft:dripstone_block"
+                              },
+                              {
+                                "id": "minecraft:packed_mud"
+                              },
+                              {
+                                "id": "minecraft:dripstone_block"
+                              },
+                              {
+                                "id": "minecraft:light_gray_terracotta"
+                              }
+                            ]
+                          },
+                          "rules": [
+                            {
+                              "if_true": {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  1,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:red_sand",
+                                  "minecraft:smooth_red_sandstone"
+                                ]
+                              },
+                              "then": {
+                                "type": "minecraft:simple",
+                                "state": "minecraft:smooth_red_sandstone"
+                              }
+                            },
+                            {
+                              "if_true": {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  1,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:rooted_dirt"
+                                ]
+                              },
+                              "then": {
+                                "type": "minecraft:simple",
+                                "state": "minecraft:packed_mud"
+                              }
+                            },
+                            {
+                              "if_true": {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  1,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:grass_block"
+                                ]
+                              },
+                              "then": {
+                                "type": "minecraft:simple",
+                                "state": "minecraft:rooted_dirt"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:height_range",
+                "height": {
+                  "above_bottom": 0
+                }
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        1,
+                        0
+                      ],
+                      "blocks": "minecraft:moss_block"
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "minecraft:heightmap",
+                "heightmap": "WORLD_SURFACE_WG"
+              }
+            ]
+          }
+        ]
+      },
+      "placement": []
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 15
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    }
+  ]
+}

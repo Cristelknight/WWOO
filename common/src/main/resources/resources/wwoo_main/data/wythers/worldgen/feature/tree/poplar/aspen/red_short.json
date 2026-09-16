@@ -1,0 +1,310 @@
+{
+  "type": "minecraft:overlay",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:tree",
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size",
+          "min_clipped_height": 0,
+          "limit": 0,
+          "lower_size": 0,
+          "upper_size": 0
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:rooted_dirt"
+          }
+        },
+        "trunk_provider": {
+          "type": "minecraft:rule_based",
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:matching_block_tag",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "tag": "minecraft:logs"
+                }
+              },
+              "then": {
+                "type": "minecraft:weighted",
+                "entries": [
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:pale_oak_log"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "if_true": {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:not",
+                    "predicate": {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -4,
+                        0
+                      ],
+                      "blocks": "minecraft:pale_oak_log"
+                    }
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      -1,
+                      0
+                    ],
+                    "blocks": "minecraft:pale_oak_log"
+                  }
+                ]
+              },
+              "then": {
+                "type": "minecraft:weighted",
+                "entries": [
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:pale_oak_log"
+                    }
+                  },
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:birch_log"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "if_true": {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "tag": "minecraft:logs"
+              },
+              "then": {
+                "type": "minecraft:weighted",
+                "entries": [
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:stripped_pale_oak_log"
+                    }
+                  },
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:birch_log"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "foliage_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:red_poplar_leaves"
+          }
+        },
+        "trunk_placer": {
+          "type": "minecraft:straight_trunk_placer",
+          "base_height": 5,
+          "height_rand_a": 0,
+          "height_rand_b": 2
+        },
+        "foliage_placer": {
+          "type": "minecraft:random_spread_foliage_placer",
+          "radius": 2,
+          "offset": 0,
+          "foliage_height": 5,
+          "leaf_placement_attempts": 128
+        },
+        "decorators": [
+          {
+            "type": "minecraft:attached_to_leaves",
+            "probability": 1,
+            "exclusion_radius_xz": 0,
+            "exclusion_radius_y": 0,
+            "required_empty_blocks": 1,
+            "block_provider": {
+              "type": "minecraft:simple",
+              "state": {
+                "id": "minecraft:red_poplar_leaves"
+              }
+            },
+            "directions": [
+              "down",
+              "up",
+              "north",
+              "east",
+              "south",
+              "west"
+            ]
+          }
+        ]
+      },
+      "placement": []
+    },
+    {
+      "feature": {
+        "type": "minecraft:tree",
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size",
+          "min_clipped_height": 0,
+          "limit": 0,
+          "lower_size": 0,
+          "upper_size": 0
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:rooted_dirt"
+          }
+        },
+        "trunk_provider": {
+          "type": "minecraft:rule_based",
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:matching_block_tag",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "tag": "minecraft:logs"
+                }
+              },
+              "then": {
+                "type": "minecraft:weighted",
+                "entries": [
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:pale_oak_log"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "if_true": {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:not",
+                    "predicate": {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -4,
+                        0
+                      ],
+                      "blocks": "minecraft:pale_oak_log"
+                    }
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      -1,
+                      0
+                    ],
+                    "blocks": "minecraft:pale_oak_log"
+                  }
+                ]
+              },
+              "then": {
+                "type": "minecraft:weighted",
+                "entries": [
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:pale_oak_log"
+                    }
+                  },
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:birch_log"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "if_true": {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "tag": "minecraft:logs"
+              },
+              "then": {
+                "type": "minecraft:weighted",
+                "entries": [
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:stripped_pale_oak_log"
+                    }
+                  },
+                  {
+                    "weight": 1,
+                    "data": {
+                      "id": "minecraft:birch_log"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "foliage_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:red_poplar_leaves"
+          }
+        },
+        "trunk_placer": {
+          "type": "minecraft:straight_trunk_placer",
+          "base_height": 10,
+          "height_rand_a": 0,
+          "height_rand_b": 2
+        },
+        "foliage_placer": {
+          "type": "minecraft:fancy_foliage_placer",
+          "radius": 1,
+          "offset": 1,
+          "height": 6
+        },
+        "decorators": []
+      },
+      "placement": []
+    }
+  ]
+}

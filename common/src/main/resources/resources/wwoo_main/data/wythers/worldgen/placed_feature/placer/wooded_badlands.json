@@ -1,79 +1,77 @@
 {
   "feature": {
     "type": "minecraft:disk",
-    "config": {
-      "state_provider": {
-        "type": "minecraft:rule_based_state_provider",
-        "fallback": {
-          "type": "minecraft:simple_state_provider",
-          "state": {
-            "Name": "minecraft:smooth_red_sandstone"
-          }
-        },
-        "rules": [
-          {
-            "if_true": {
-              "type": "minecraft:matching_blocks",
-              "blocks": [
-                "minecraft:green_terracotta",
-                "minecraft:lime_terracotta",
-                "minecraft:jungle_wood",
-                "minecraft:bamboo_block",
-                "minecraft:oak_wood"
-              ]
-            },
-            "then": {
-              "type": "minecraft:simple_state_provider",
-              "state": {
-                "Name": "minecraft:pale_oak_wood"
-              }
-            }
-          },
-          {
-            "if_true": {
-              "type": "minecraft:matching_blocks",
-              "blocks": [
-                "minecraft:smooth_sandstone",
-                "minecraft:cut_sandstone"
-              ]
-            },
-            "then": {
-              "type": "minecraft:simple_state_provider",
-              "state": {
-                "Name": "minecraft:gray_terracotta"
-              }
-            }
-          }
-        ]
+    "state_provider": {
+      "fallback": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:smooth_red_sandstone"
+        }
       },
-      "target": {
-        "type": "minecraft:all_of",
-        "predicates": [
-          {
+      "rules": [
+        {
+          "if_true": {
             "type": "minecraft:matching_blocks",
             "blocks": [
-              "minecraft:bedrock",
-              "minecraft:coarse_dirt",
-              "minecraft:rooted_dirt",
-              "minecraft:smooth_sandstone",
-              "minecraft:cut_sandstone",
-              "minecraft:green_concrete",
               "minecraft:green_terracotta",
               "minecraft:lime_terracotta",
               "minecraft:jungle_wood",
-              "minecraft:oak_wood",
-              "minecraft:bamboo_block"
+              "minecraft:bamboo_block",
+              "minecraft:oak_wood"
             ]
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:stripped_pale_oak_wood"
+            }
           }
-        ]
-      },
-      "radius": {
-        "type": "minecraft:uniform",
-        "min_inclusive": 7,
-        "max_inclusive": 7
-      },
-      "half_height": 0
-    }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": [
+              "minecraft:smooth_sandstone",
+              "minecraft:cut_sandstone"
+            ]
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:gray_terracotta"
+            }
+          }
+        }
+      ],
+      "type": "minecraft:rule_based"
+    },
+    "target": {
+      "type": "minecraft:all_of",
+      "predicates": [
+        {
+          "type": "minecraft:matching_blocks",
+          "blocks": [
+            "minecraft:bedrock",
+            "minecraft:coarse_dirt",
+            "minecraft:rooted_dirt",
+            "minecraft:smooth_sandstone",
+            "minecraft:cut_sandstone",
+            "minecraft:green_concrete",
+            "minecraft:green_terracotta",
+            "minecraft:lime_terracotta",
+            "minecraft:jungle_wood",
+            "minecraft:oak_wood",
+            "minecraft:bamboo_block"
+          ]
+        }
+      ]
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 7,
+      "max_inclusive": 7
+    },
+    "half_height": 0
   },
   "placement": [
     {

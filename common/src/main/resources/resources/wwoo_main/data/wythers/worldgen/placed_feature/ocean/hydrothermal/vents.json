@@ -1,0 +1,236 @@
+{
+  "feature": {
+    "type": "minecraft:sequence",
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:disk",
+          "state_provider": {
+            "type": "minecraft:rule_based",
+            "rules": [
+              {
+                "if_true": {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": "minecraft:gravel"
+                },
+                "then": {
+                  "type": "minecraft:noise",
+                  "seed": 123,
+                  "noise": {
+                    "base_octave": -5,
+                    "octave_count": 3,
+                    "normalize": "legacy",
+                    "amplitude_modifiers": [
+                      2,
+                      1,
+                      1
+                    ]
+                  },
+                  "scale": 1,
+                  "states": [
+                    "minecraft:mud",
+                    "minecraft:mud",
+                    "minecraft:mud",
+                    "minecraft:mud",
+                    "minecraft:mud",
+                    "minecraft:mud",
+                    "minecraft:mud",
+                    "minecraft:mud",
+                    "minecraft:blackstone",
+                    "minecraft:magma_block",
+                    "minecraft:blackstone",
+                    "minecraft:mud",
+                    "minecraft:mud",
+                    "minecraft:mud",
+                    "minecraft:mud",
+                    "minecraft:mud",
+                    "minecraft:mud",
+                    "minecraft:mud",
+                    "minecraft:mud"
+                  ]
+                }
+              },
+              {
+                "if_true": {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": "minecraft:stone"
+                },
+                "then": {
+                  "type": "minecraft:noise",
+                  "seed": 123,
+                  "noise": {
+                    "base_octave": -5,
+                    "octave_count": 3,
+                    "normalize": "legacy",
+                    "amplitude_modifiers": [
+                      2,
+                      1,
+                      1
+                    ]
+                  },
+                  "scale": 1,
+                  "states": [
+                    "minecraft:deepslate",
+                    "minecraft:deepslate",
+                    "minecraft:deepslate",
+                    "minecraft:deepslate",
+                    "minecraft:deepslate",
+                    "minecraft:deepslate",
+                    "minecraft:deepslate",
+                    "minecraft:deepslate",
+                    "minecraft:blackstone",
+                    "minecraft:magma_block",
+                    "minecraft:blackstone",
+                    "minecraft:deepslate",
+                    "minecraft:deepslate",
+                    "minecraft:deepslate",
+                    "minecraft:deepslate",
+                    "minecraft:deepslate",
+                    "minecraft:deepslate",
+                    "minecraft:deepslate",
+                    "minecraft:deepslate"
+                  ]
+                }
+              }
+            ]
+          },
+          "radius": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 4,
+            "max_inclusive": 8
+          },
+          "half_height": 4,
+          "target": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:gravel",
+                  "minecraft:stone"
+                ]
+              },
+              {
+                "type": "minecraft:height_range",
+                "min_inclusive": {
+                  "above_bottom": 0
+                },
+                "max_inclusive": {
+                  "absolute": 40
+                }
+              }
+            ]
+          }
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 10
+          },
+          {
+            "type": "minecraft:in_square"
+          },
+          {
+            "type": "minecraft:height_range",
+            "height": {
+              "above_bottom": 0
+            }
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                1,
+                0
+              ],
+              "blocks": "minecraft:sulfur"
+            }
+          },
+          {
+            "type": "minecraft:heightmap",
+            "heightmap": "OCEAN_FLOOR_WG"
+          }
+        ]
+      },
+      {
+        "feature": {
+          "type": "minecraft:block_column",
+          "direction": "up",
+          "allowed_placement": {
+            "type": "minecraft:true"
+          },
+          "prioritize_tip": true,
+          "layers": [
+            {
+              "height": 1,
+              "provider": {
+                "type": "minecraft:simple",
+                "state": "minecraft:lava"
+              }
+            },
+            {
+              "height": 1,
+              "provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:soul_campfire",
+                  "properties": {
+                    "facing": "north",
+                    "lit": "true",
+                    "signal_fire": "true",
+                    "waterlogged": "true"
+                  }
+                }
+              }
+            },
+            {
+              "height": 1,
+              "provider": {
+                "type": "minecraft:simple",
+                "state": "minecraft:magma_block"
+              }
+            }
+          ]
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": 3
+          },
+          {
+            "type": "minecraft:in_square"
+          },
+          {
+            "type": "minecraft:heightmap",
+            "heightmap": "OCEAN_FLOOR_WG"
+          },
+          {
+            "type": "minecraft:block_predicate_filter",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                -1,
+                0
+              ],
+              "blocks": "minecraft:magma_block"
+            }
+          },
+          {
+            "type": "minecraft:offset",
+            "x": 0,
+            "y": -3,
+            "z": 0
+          }
+        ]
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

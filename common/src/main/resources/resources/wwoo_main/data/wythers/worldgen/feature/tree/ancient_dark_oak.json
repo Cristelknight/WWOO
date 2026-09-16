@@ -1,0 +1,816 @@
+{
+  "type": "minecraft:overlay",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:sequence",
+        "features": [
+          {
+            "feature": {
+              "type": "minecraft:overlay",
+              "features": [
+                {
+                  "feature": {
+                    "type": "minecraft:tree",
+                    "minimum_size": {
+                      "type": "minecraft:two_layers_feature_size",
+                      "min_clipped_height": 0,
+                      "limit": 0,
+                      "lower_size": 0,
+                      "upper_size": 0
+                    },
+                    "below_trunk_provider": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:dirt"
+                      }
+                    },
+                    "trunk_provider": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:dark_oak_wood",
+                        "properties": {
+                          "axis": "y"
+                        }
+                      }
+                    },
+                    "foliage_provider": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:air"
+                      }
+                    },
+                    "trunk_placer": {
+                      "type": "minecraft:straight_trunk_placer",
+                      "base_height": 4,
+                      "height_rand_a": 0,
+                      "height_rand_b": 0
+                    },
+                    "foliage_placer": {
+                      "type": "minecraft:fancy_foliage_placer",
+                      "radius": 1,
+                      "offset": 0,
+                      "height": 1
+                    },
+                    "decorators": []
+                  },
+                  "placement": []
+                },
+                {
+                  "feature": "wythers:tree/dark_forest/dark_oak_corner",
+                  "placement": [
+                    {
+                      "type": "minecraft:offset",
+                      "x": 1,
+                      "y": 2,
+                      "z": 1
+                    },
+                    {
+                      "type": "minecraft:environment_scan",
+                      "direction_of_search": "down",
+                      "max_steps": 4,
+                      "target_condition": {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "tag": "wythers:air_and_plants"
+                          },
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "tag": "minecraft:supports_vegetation"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "feature": "wythers:tree/dark_forest/dark_oak_corner",
+                  "placement": [
+                    {
+                      "type": "minecraft:offset",
+                      "x": 1,
+                      "y": 2,
+                      "z": -1
+                    },
+                    {
+                      "type": "minecraft:environment_scan",
+                      "direction_of_search": "down",
+                      "max_steps": 4,
+                      "target_condition": {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "tag": "wythers:air_and_plants"
+                          },
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "tag": "minecraft:supports_vegetation"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "feature": "wythers:tree/dark_forest/dark_oak_corner",
+                  "placement": [
+                    {
+                      "type": "minecraft:offset",
+                      "x": -1,
+                      "y": 2,
+                      "z": 1
+                    },
+                    {
+                      "type": "minecraft:environment_scan",
+                      "direction_of_search": "down",
+                      "max_steps": 4,
+                      "target_condition": {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "tag": "wythers:air_and_plants"
+                          },
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "tag": "minecraft:supports_vegetation"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "feature": "wythers:tree/dark_forest/dark_oak_corner",
+                  "placement": [
+                    {
+                      "type": "minecraft:offset",
+                      "x": -1,
+                      "y": 2,
+                      "z": -1
+                    },
+                    {
+                      "type": "minecraft:environment_scan",
+                      "direction_of_search": "down",
+                      "max_steps": 4,
+                      "target_condition": {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "tag": "wythers:air_and_plants"
+                          },
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "tag": "minecraft:supports_vegetation"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "feature": "wythers:tree/dark_forest/dark_oak_tween",
+                  "placement": [
+                    {
+                      "type": "minecraft:offset",
+                      "x": 1,
+                      "y": 2,
+                      "z": 0
+                    },
+                    {
+                      "type": "minecraft:environment_scan",
+                      "direction_of_search": "down",
+                      "max_steps": 4,
+                      "target_condition": {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "tag": "wythers:air_and_plants"
+                          },
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "tag": "minecraft:supports_vegetation"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "feature": "wythers:tree/dark_forest/dark_oak_tween",
+                  "placement": [
+                    {
+                      "type": "minecraft:offset",
+                      "x": -1,
+                      "y": 2,
+                      "z": 0
+                    },
+                    {
+                      "type": "minecraft:environment_scan",
+                      "direction_of_search": "down",
+                      "max_steps": 4,
+                      "target_condition": {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "tag": "wythers:air_and_plants"
+                          },
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "tag": "minecraft:supports_vegetation"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "feature": "wythers:tree/dark_forest/dark_oak_tween",
+                  "placement": [
+                    {
+                      "type": "minecraft:offset",
+                      "x": 0,
+                      "y": 2,
+                      "z": 1
+                    },
+                    {
+                      "type": "minecraft:environment_scan",
+                      "direction_of_search": "down",
+                      "max_steps": 4,
+                      "target_condition": {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "tag": "wythers:air_and_plants"
+                          },
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "tag": "minecraft:supports_vegetation"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "feature": "wythers:tree/dark_forest/dark_oak_tween",
+                  "placement": [
+                    {
+                      "type": "minecraft:offset",
+                      "x": 0,
+                      "y": 2,
+                      "z": -1
+                    },
+                    {
+                      "type": "minecraft:environment_scan",
+                      "direction_of_search": "down",
+                      "max_steps": 4,
+                      "target_condition": {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "tag": "wythers:air_and_plants"
+                          },
+                          {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "tag": "minecraft:supports_vegetation"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "feature": {
+                    "type": "minecraft:disk",
+                    "state_provider": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:dark_oak_wood"
+                      }
+                    },
+                    "radius": 0,
+                    "half_height": 4,
+                    "target": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": "minecraft:air"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            1,
+                            0
+                          ],
+                          "blocks": "minecraft:dark_oak_wood"
+                        }
+                      ]
+                    }
+                  },
+                  "placement": [
+                    {
+                      "type": "minecraft:offset",
+                      "x": -1,
+                      "y": 3,
+                      "z": 0
+                    }
+                  ]
+                },
+                {
+                  "feature": {
+                    "type": "minecraft:disk",
+                    "state_provider": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:dark_oak_wood"
+                      }
+                    },
+                    "radius": 0,
+                    "half_height": 4,
+                    "target": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": "minecraft:air"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            1,
+                            0
+                          ],
+                          "blocks": "minecraft:dark_oak_wood"
+                        }
+                      ]
+                    }
+                  },
+                  "placement": [
+                    {
+                      "type": "minecraft:offset",
+                      "x": 0,
+                      "y": 3,
+                      "z": 1
+                    }
+                  ]
+                },
+                {
+                  "feature": {
+                    "type": "minecraft:disk",
+                    "state_provider": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:dark_oak_wood"
+                      }
+                    },
+                    "radius": 0,
+                    "half_height": 4,
+                    "target": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "blocks": "minecraft:air"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            1,
+                            0
+                          ],
+                          "blocks": "minecraft:dark_oak_wood"
+                        }
+                      ]
+                    }
+                  },
+                  "placement": [
+                    {
+                      "type": "minecraft:offset",
+                      "x": 0,
+                      "y": 3,
+                      "z": -1
+                    }
+                  ]
+                },
+                {
+                  "feature": {
+                    "type": "minecraft:simple_block",
+                    "to_place": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:dark_oak_wood",
+                        "properties": {
+                          "axis": "y"
+                        }
+                      }
+                    }
+                  },
+                  "placement": [
+                    {
+                      "type": "minecraft:count",
+                      "count": 100
+                    },
+                    {
+                      "type": "minecraft:offset",
+                      "x": {
+                        "type": "minecraft:trapezoid",
+                        "min": -4,
+                        "max": 4,
+                        "plateau": 0
+                      },
+                      "y": 4,
+                      "z": {
+                        "type": "minecraft:trapezoid",
+                        "min": -4,
+                        "max": 4,
+                        "plateau": 0
+                      }
+                    },
+                    {
+                      "type": "minecraft:environment_scan",
+                      "direction_of_search": "down",
+                      "max_steps": 12,
+                      "target_condition": {
+                        "type": "minecraft:any_of",
+                        "predicates": [
+                          {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_block_tag",
+                                "tag": "wythers:air_and_plants"
+                              },
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  -1,
+                                  0
+                                ],
+                                "blocks": [
+                                  "minecraft:dark_oak_wood",
+                                  "minecraft:grass_block",
+                                  "minecraft:podzol"
+                                ]
+                              },
+                              {
+                                "type": "minecraft:any_of",
+                                "predicates": [
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      1,
+                                      1,
+                                      0
+                                    ],
+                                    "blocks": "minecraft:dark_oak_wood"
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      -1,
+                                      1,
+                                      0
+                                    ],
+                                    "blocks": "minecraft:dark_oak_wood"
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      0,
+                                      1,
+                                      1
+                                    ],
+                                    "blocks": "minecraft:dark_oak_wood"
+                                  },
+                                  {
+                                    "type": "minecraft:matching_blocks",
+                                    "offset": [
+                                      0,
+                                      1,
+                                      -1
+                                    ],
+                                    "blocks": "minecraft:dark_oak_wood"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "minecraft:all_of",
+                            "predicates": [
+                              {
+                                "type": "minecraft:matching_blocks",
+                                "offset": [
+                                  0,
+                                  1,
+                                  0
+                                ],
+                                "blocks": "minecraft:dark_oak_wood"
+                              },
+                              {
+                                "type": "minecraft:any_of",
+                                "predicates": [
+                                  {
+                                    "type": "minecraft:matching_block_tag",
+                                    "tag": "minecraft:grass_blocks"
+                                  },
+                                  {
+                                    "type": "minecraft:all_of",
+                                    "predicates": [
+                                      {
+                                        "type": "minecraft:matching_blocks",
+                                        "blocks": "minecraft:dirt"
+                                      },
+                                      {
+                                        "type": "minecraft:any_of",
+                                        "predicates": [
+                                          {
+                                            "type": "minecraft:matching_block_tag",
+                                            "offset": [
+                                              1,
+                                              0,
+                                              0
+                                            ],
+                                            "tag": "wythers:air_and_plants"
+                                          },
+                                          {
+                                            "type": "minecraft:matching_block_tag",
+                                            "offset": [
+                                              -1,
+                                              0,
+                                              0
+                                            ],
+                                            "tag": "wythers:air_and_plants"
+                                          },
+                                          {
+                                            "type": "minecraft:matching_block_tag",
+                                            "offset": [
+                                              0,
+                                              0,
+                                              1
+                                            ],
+                                            "tag": "wythers:air_and_plants"
+                                          },
+                                          {
+                                            "type": "minecraft:matching_block_tag",
+                                            "offset": [
+                                              0,
+                                              0,
+                                              -1
+                                            ],
+                                            "tag": "wythers:air_and_plants"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "feature": {
+                    "type": "minecraft:disk",
+                    "state_provider": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:dark_oak_wood",
+                        "properties": {
+                          "axis": "y"
+                        }
+                      }
+                    },
+                    "radius": 4,
+                    "half_height": 4,
+                    "target": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            1,
+                            0
+                          ],
+                          "blocks": "minecraft:dark_oak_wood"
+                        },
+                        {
+                          "type": "minecraft:any_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:matching_block_tag",
+                              "tag": "minecraft:grass_blocks"
+                            },
+                            {
+                              "type": "minecraft:all_of",
+                              "predicates": [
+                                {
+                                  "type": "minecraft:matching_blocks",
+                                  "blocks": "minecraft:dirt"
+                                },
+                                {
+                                  "type": "minecraft:any_of",
+                                  "predicates": [
+                                    {
+                                      "type": "minecraft:matching_block_tag",
+                                      "offset": [
+                                        1,
+                                        0,
+                                        0
+                                      ],
+                                      "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                      "type": "minecraft:matching_block_tag",
+                                      "offset": [
+                                        -1,
+                                        0,
+                                        0
+                                      ],
+                                      "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                      "type": "minecraft:matching_block_tag",
+                                      "offset": [
+                                        0,
+                                        0,
+                                        1
+                                      ],
+                                      "tag": "wythers:air_and_plants"
+                                    },
+                                    {
+                                      "type": "minecraft:matching_block_tag",
+                                      "offset": [
+                                        0,
+                                        0,
+                                        -1
+                                      ],
+                                      "tag": "wythers:air_and_plants"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "placement": []
+                }
+              ]
+            },
+            "placement": []
+          },
+          {
+            "feature": "wythers:tree/dark_forest/dark_oak_branches_tall",
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": 256
+              },
+              {
+                "type": "minecraft:offset",
+                "x": {
+                  "type": "minecraft:trapezoid",
+                  "min": -8,
+                  "max": 8,
+                  "plateau": 0
+                },
+                "y": 5,
+                "z": {
+                  "type": "minecraft:trapezoid",
+                  "min": -8,
+                  "max": 8,
+                  "plateau": 0
+                }
+              },
+              {
+                "type": "minecraft:environment_scan",
+                "direction_of_search": "up",
+                "max_steps": 20,
+                "target_condition": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "blocks": "minecraft:dark_oak_log"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        1,
+                        0
+                      ],
+                      "blocks": [
+                        "minecraft:air",
+                        "minecraft:leaf_litter",
+                        "minecraft:dark_oak_leaves"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "placement": [
+        {
+          "type": "minecraft:count",
+          "count": 2
+        },
+        {
+          "type": "minecraft:offset",
+          "x": {
+            "type": "minecraft:weighted_list",
+            "distribution": [
+              {
+                "weight": 1,
+                "data": -1
+              },
+              {
+                "weight": 1,
+                "data": 1
+              }
+            ]
+          },
+          "y": 0,
+          "z": {
+            "type": "minecraft:weighted_list",
+            "distribution": [
+              {
+                "weight": 1,
+                "data": -1
+              },
+              {
+                "weight": 1,
+                "data": 1
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

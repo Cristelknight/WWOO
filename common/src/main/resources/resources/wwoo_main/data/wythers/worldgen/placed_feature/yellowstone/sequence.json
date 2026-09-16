@@ -1,0 +1,28 @@
+{
+  "feature": {
+    "type": "minecraft:sequence",
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:overlay",
+          "features": [
+            "wythers:yellowstone/base",
+            "wythers:yellowstone/pool"
+          ]
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:overlay",
+          "features": [
+            "wythers:yellowstone/surface_colours",
+            "wythers:yellowstone/geyser"
+          ]
+        },
+        "placement": []
+      }
+    ]
+  },
+  "placement": []
+}

@@ -1,0 +1,68 @@
+{
+  "feature": {
+    "type": "minecraft:random_selector",
+    "features": [],
+    "default": {
+      "feature": "wythers:tree/bramble",
+      "placement": [
+        {
+          "type": "minecraft:count",
+          "count": 3
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_block_tag",
+        "tag": "wythers:air_and_plants"
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": [
+          "minecraft:grass_block",
+          "minecraft:podzol"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            -2,
+            0
+          ],
+          "blocks": "minecraft:dirt"
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

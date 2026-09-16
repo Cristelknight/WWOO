@@ -1,0 +1,225 @@
+{
+  "type": "minecraft:overlay",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:tree",
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size"
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:rooted_dirt"
+          }
+        },
+        "trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:poplar_log"
+          }
+        },
+        "foliage_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:poplar_wood",
+            "properties": {
+              "axis": "z"
+            }
+          }
+        },
+        "trunk_placer": {
+          "type": "minecraft:straight_trunk_placer",
+          "base_height": 0,
+          "height_rand_a": 0,
+          "height_rand_b": 0
+        },
+        "foliage_placer": {
+          "type": "minecraft:fancy_foliage_placer",
+          "radius": 1,
+          "offset": 0,
+          "height": 1
+        },
+        "decorators": []
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 0,
+          "z": 7
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:tree",
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size"
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:rooted_dirt"
+          }
+        },
+        "trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:poplar_log"
+          }
+        },
+        "foliage_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:poplar_wood",
+            "properties": {
+              "axis": "z"
+            }
+          }
+        },
+        "trunk_placer": {
+          "type": "minecraft:straight_trunk_placer",
+          "base_height": 0,
+          "height_rand_a": 0,
+          "height_rand_b": 0
+        },
+        "foliage_placer": {
+          "type": "minecraft:fancy_foliage_placer",
+          "radius": 1,
+          "offset": 0,
+          "height": 1
+        },
+        "decorators": []
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 0,
+          "z": 6
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:block_column",
+        "direction": "north",
+        "allowed_placement": {
+          "type": "minecraft:true"
+        },
+        "prioritize_tip": true,
+        "layers": [
+          {
+            "height": 3,
+            "provider": {
+              "type": "minecraft:simple",
+              "state": {
+                "id": "minecraft:poplar_wood",
+                "properties": {
+                  "axis": "z"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 1,
+          "z": 5
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:block_column",
+        "direction": "north",
+        "allowed_placement": {
+          "type": "minecraft:true"
+        },
+        "prioritize_tip": true,
+        "layers": [
+          {
+            "height": 5,
+            "provider": {
+              "type": "minecraft:simple",
+              "state": {
+                "id": "minecraft:poplar_wood",
+                "properties": {
+                  "axis": "z"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 2,
+          "z": 2
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:block_column",
+        "direction": "north",
+        "allowed_placement": {
+          "type": "minecraft:true"
+        },
+        "prioritize_tip": true,
+        "layers": [
+          {
+            "height": 4,
+            "provider": {
+              "type": "minecraft:simple",
+              "state": {
+                "id": "minecraft:poplar_wood",
+                "properties": {
+                  "axis": "z"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 3,
+          "z": -3
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:template",
+        "templates": [
+          {
+            "weight": 1,
+            "data": {
+              "id": "wythers:feature/coco_palm_head_tilt",
+              "rotations": [
+                "counterclockwise_90"
+              ]
+            }
+          }
+        ]
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 1,
+          "z": -7
+        }
+      ]
+    }
+  ]
+}

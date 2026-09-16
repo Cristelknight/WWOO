@@ -1,0 +1,280 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "state_provider": {
+      "type": "minecraft:rule_based",
+      "fallback": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:tuff"
+        }
+      },
+      "rules": [
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              1,
+              0
+            ],
+            "blocks": "minecraft:deepslate"
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:deepslate"
+            }
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:grass_block"
+          },
+          "then": {
+            "type": "minecraft:noise",
+            "noise": {
+              "base_octave": -4,
+              "amplitude_modifiers": [
+                2,
+                3
+              ],
+              "octave_count": 2,
+              "normalize": "legacy"
+            },
+            "scale": 1,
+            "seed": -817103696,
+            "states": [
+              {
+                "id": "minecraft:deepslate"
+              },
+              {
+                "id": "minecraft:tuff"
+              },
+              {
+                "id": "minecraft:pale_moss_block"
+              },
+              {
+                "id": "minecraft:pale_moss_block"
+              },
+              {
+                "id": "minecraft:pale_moss_block"
+              },
+              {
+                "id": "minecraft:pale_moss_block"
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:pale_moss_block"
+          },
+          "then": {
+            "type": "minecraft:dual_noise",
+            "noise": {
+              "base_octave": -4,
+              "amplitude_modifiers": [
+                2,
+                2
+              ],
+              "octave_count": 2,
+              "normalize": "legacy"
+            },
+            "scale": 1,
+            "seed": -817103696,
+            "variety": 2,
+            "slow_noise": {
+              "base_octave": -4,
+              "amplitude_modifiers": [
+                2,
+                2
+              ],
+              "octave_count": 2,
+              "normalize": "legacy"
+            },
+            "slow_scale": 1,
+            "states": [
+              {
+                "id": "minecraft:pale_moss_block"
+              },
+              {
+                "id": "minecraft:moss_block"
+              },
+              {
+                "id": "minecraft:mossy_cobblestone"
+              },
+              {
+                "id": "minecraft:cobblestone"
+              },
+              {
+                "id": "minecraft:gravel"
+              }
+            ]
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:mossy_cobblestone"
+          },
+          "then": {
+            "type": "minecraft:dual_noise",
+            "noise": {
+              "base_octave": -4,
+              "amplitude_modifiers": [
+                2,
+                2
+              ],
+              "octave_count": 2,
+              "normalize": "legacy"
+            },
+            "scale": 1,
+            "seed": -817103696,
+            "variety": 2,
+            "slow_noise": {
+              "base_octave": -4,
+              "amplitude_modifiers": [
+                2,
+                2
+              ],
+              "octave_count": 2,
+              "normalize": "legacy"
+            },
+            "slow_scale": 1,
+            "states": [
+              {
+                "id": "minecraft:pale_moss_block"
+              },
+              {
+                "id": "minecraft:mossy_cobblestone"
+              },
+              {
+                "id": "minecraft:mossy_cobblestone"
+              },
+              {
+                "id": "minecraft:mossy_cobblestone"
+              },
+              {
+                "id": "minecraft:cobblestone"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 8,
+      "max_inclusive": 8
+    },
+    "half_height": 4,
+    "target": {
+      "type": "minecraft:all_of",
+      "predicates": [
+        {
+          "type": "minecraft:matching_biomes",
+          "biomes": [
+            "plains",
+            "snowy_plains",
+            "snowy_beach",
+            "frozen_river"
+          ],
+          "offset": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "type": "minecraft:any_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:grass_block",
+                "minecraft:dirt",
+                "minecraft:pale_moss_block",
+                "minecraft:mossy_cobblestone"
+              ]
+            },
+            {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    1,
+                    0
+                  ],
+                  "blocks": "minecraft:deepslate"
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": "minecraft:tuff"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 1000,
+      "noise_offset": 0
+    },
+    {
+      "type": "minecraft:count",
+      "count": 15
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:all_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                1,
+                0
+              ],
+              "blocks": "minecraft:dripstone_block"
+            },
+            {
+              "type": "minecraft:not",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:white_concrete"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    }
+  ]
+}

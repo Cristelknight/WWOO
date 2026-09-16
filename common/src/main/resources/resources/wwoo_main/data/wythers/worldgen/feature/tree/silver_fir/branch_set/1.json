@@ -1,0 +1,65 @@
+{
+  "features": [
+    {
+      "feature": "wythers:tree/silver_fir/branch/1_east",
+      "placement": [
+        {
+          "x": 0,
+          "y": {
+            "min_inclusive": 0,
+            "max_inclusive": 1,
+            "type": "minecraft:uniform"
+          },
+          "z": 0,
+          "type": "minecraft:offset"
+        }
+      ]
+    },
+    {
+      "feature": "wythers:tree/silver_fir/branch/1_south",
+      "placement": [
+        {
+          "x": 0,
+          "y": {
+            "min_inclusive": 0,
+            "max_inclusive": 1,
+            "type": "minecraft:uniform"
+          },
+          "z": 0,
+          "type": "minecraft:offset"
+        }
+      ]
+    },
+    {
+      "feature": "wythers:tree/silver_fir/branch/1_west",
+      "placement": [
+        {
+          "x": 0,
+          "y": {
+            "min_inclusive": 0,
+            "max_inclusive": 1,
+            "type": "minecraft:uniform"
+          },
+          "z": 0,
+          "type": "minecraft:offset"
+        }
+      ]
+    },
+    {
+      "feature": "wythers:tree/silver_fir/branch/1_north",
+      "placement": [
+        {
+          "x": 0,
+          "y": {
+            "min_inclusive": 0,
+            "max_inclusive": 1,
+            "type": "minecraft:uniform"
+          },
+          "z": 0,
+          "type": "minecraft:offset"
+        }
+      ]
+    }
+  ],
+  "type": "minecraft:simple_random_selector"
+}

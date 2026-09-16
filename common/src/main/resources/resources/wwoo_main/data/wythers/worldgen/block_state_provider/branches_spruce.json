@@ -1,0 +1,141 @@
+{
+    "type": "minecraft:rule_based",
+    "fallback": {
+      "type": "minecraft:simple",
+      "state": {
+        "id": "minecraft:spruce_log"
+      }
+    },
+    "rules": [
+      {
+        "if_true": {
+          "type": "minecraft:any_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                1,
+                0,
+                0
+              ],
+              "blocks": "minecraft:spruce_log"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                -1,
+                0,
+                0
+              ],
+              "blocks": "minecraft:spruce_log"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                0,
+                1
+              ],
+              "blocks": "minecraft:spruce_log"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                0,
+                -1
+              ],
+              "blocks": "minecraft:spruce_log"
+            }
+          ]
+        },
+        "then": {
+          "type": "minecraft:rule_based",
+          "fallback": {
+            "id": "minecraft:void_air"
+          },
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": "minecraft:void_air"
+              },
+              "then": {
+                "type": "minecraft:simple",
+                "state": "minecraft:spruce_wood"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "if_true": {
+          "type": "minecraft:all_of",
+          "predicates": [
+            {
+              "type": "minecraft:not",
+              "predicate": {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      1,
+                      0,
+                      0
+                    ],
+                    "blocks": "minecraft:spruce_log"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -1,
+                      0,
+                      0
+                    ],
+                    "blocks": "minecraft:spruce_log"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      1
+                    ],
+                    "blocks": "minecraft:spruce_log"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      0,
+                      -1
+                    ],
+                    "blocks": "minecraft:spruce_log"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:air",
+                "minecraft:spruce_leaves"
+              ]
+            }
+          ]
+        },
+        "then": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:spruce_wood"
+          }
+        }
+      }
+    ]
+  }

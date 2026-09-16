@@ -1,0 +1,376 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "state_provider": {
+      "type": "minecraft:rule_based",
+      "fallback": {
+        "type": "minecraft:noise",
+        "noise": {
+          "base_octave": -6,
+          "amplitude_modifiers": [
+            2,
+            2,
+            2
+          ],
+          "octave_count": 3,
+          "normalize": "legacy"
+        },
+        "scale": 1,
+        "seed": -817103696,
+        "states": [
+          {
+            "id": "minecraft:dead_brain_coral_block"
+          },
+          {
+            "id": "minecraft:dead_brain_coral_block"
+          },
+          {
+            "id": "minecraft:dead_brain_coral_block"
+          },
+          {
+            "id": "minecraft:water"
+          },
+          {
+            "id": "minecraft:water"
+          },
+          {
+            "id": "minecraft:water"
+          },
+          {
+            "id": "minecraft:water"
+          },
+          {
+            "id": "minecraft:water"
+          },
+          {
+            "id": "minecraft:water"
+          },
+          {
+            "id": "minecraft:water"
+          }
+        ]
+      },
+      "rules": [
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:mycelium"
+          },
+          "then": {
+        "type": "minecraft:noise",
+        "noise": {
+          "base_octave": -6,
+          "amplitude_modifiers": [
+            2,
+            2,
+            2
+          ],
+          "octave_count": 3,
+          "normalize": "legacy"
+        },
+        "scale": 1,
+        "seed": -817103696,
+        "states": [
+          {
+            "id": "minecraft:dead_brain_coral_block"
+          },
+          {
+            "id": "minecraft:dead_brain_coral_block"
+          },
+          {
+            "id": "minecraft:dead_brain_coral_block"
+          },
+          {
+            "id": "minecraft:mycelium"
+          },
+          {
+            "id": "minecraft:mycelium"
+          },
+          {
+            "id": "minecraft:mycelium"
+          },
+          {
+            "id": "minecraft:mycelium"
+          },
+          {
+            "id": "minecraft:mycelium"
+          },
+          {
+            "id": "minecraft:mycelium"
+          },
+          {
+            "id": "minecraft:mycelium"
+          }
+        ]
+      }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:dirt"
+          },
+          "then": {
+        "type": "minecraft:noise",
+        "noise": {
+          "base_octave": -6,
+          "amplitude_modifiers": [
+            2,
+            2,
+            2
+          ],
+          "octave_count": 3,
+          "normalize": "legacy"
+        },
+        "scale": 1,
+        "seed": -817103696,
+        "states": [
+          {
+            "id": "minecraft:dead_brain_coral_block"
+          },
+          {
+            "id": "minecraft:dead_brain_coral_block"
+          },
+          {
+            "id": "minecraft:dead_brain_coral_block"
+          },
+          {
+            "id": "minecraft:dirt"
+          },
+          {
+            "id": "minecraft:dirt"
+          },
+          {
+            "id": "minecraft:dirt"
+          },
+          {
+            "id": "minecraft:dirt"
+          },
+          {
+            "id": "minecraft:dirt"
+          },
+          {
+            "id": "minecraft:dirt"
+          },
+          {
+            "id": "minecraft:dirt"
+          }
+        ]
+      }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:stone"
+              },
+              {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      1,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:mycelium",
+                      "minecraft:dirt"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      2,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:mycelium",
+                      "minecraft:dirt"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      3,
+                      0
+                    ],
+                    "blocks": [
+                      "minecraft:mycelium",
+                      "minecraft:dirt"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "then": {
+            "type": "minecraft:noise",
+            "noise": {
+              "base_octave": -6,
+              "amplitude_modifiers": [
+                2,
+                2,
+                2
+              ],
+              "octave_count": 3,
+              "normalize": "legacy"
+            },
+            "scale": 1,
+            "seed": -817103696,
+            "states": [
+              {
+                "id": "minecraft:tuff"
+              },
+              {
+                "id": "minecraft:tuff"
+              },
+              {
+                "id": "minecraft:tuff"
+              },
+              {
+                "id": "minecraft:tuff"
+              },
+              {
+                "id": "minecraft:tuff"
+              },
+              {
+                "id": "minecraft:tuff"
+              },
+              {
+                "id": "minecraft:tuff"
+              },
+              {
+                "id": "minecraft:tuff"
+              },
+              {
+                "id": "minecraft:tuff"
+              },
+              {
+                "id": "minecraft:tuff"
+              }
+            ]
+          }
+        },
+		{
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:dead_brain_coral_block"
+          },
+          "then": {
+            "type": "minecraft:noise",
+            "noise": {
+              "base_octave": -3,
+              "amplitude_modifiers": [
+                1,
+                1
+              ],
+              "octave_count": 2,
+              "normalize": "legacy"
+            },
+            "scale": 1,
+            "seed": -817103696,
+            "states": [
+              {
+                "id": "minecraft:water"
+              },
+              {
+                "id": "minecraft:water"
+              },
+              {
+                "id": "minecraft:water"
+              },
+              {
+                "id": "minecraft:water"
+              },
+              {
+                "id": "minecraft:water"
+              },
+              {
+                "id": "minecraft:tuff"
+              },
+              {
+                "id": "minecraft:mossy_cobblestone"
+              },
+              {
+                "id": "minecraft:tuff"
+              },
+              {
+                "id": "minecraft:water"
+              },
+              {
+                "id": "minecraft:water"
+              },
+              {
+                "id": "minecraft:water"
+              },
+              {
+                "id": "minecraft:water"
+              },
+              {
+                "id": "minecraft:water"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "target": {
+      "type": "minecraft:all_of",
+      "predicates": [
+        {
+          "type": "minecraft:any_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:air",
+                "minecraft:water",
+                "minecraft:mycelium",
+                "minecraft:dirt",
+                "minecraft:stone"
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:dead_brain_coral_block"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:matching_biomes",
+          "biomes": [
+            "minecraft:mushroom_fields"
+          ]
+        }
+      ]
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 8,
+      "max_inclusive": 8
+    },
+    "half_height": 4
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 15
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "absolute": 58
+      }
+    }
+  ]
+}

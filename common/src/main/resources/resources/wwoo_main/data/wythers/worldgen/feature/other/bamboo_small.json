@@ -1,0 +1,78 @@
+{
+  "type": "minecraft:block_column",
+  "direction": "up",
+  "allowed_placement": {
+    "type": "minecraft:matching_blocks",
+    "blocks": "minecraft:air"
+  },
+  "prioritize_tip": true,
+  "layers": [
+    {
+      "height": {
+        "type": "minecraft:biased_to_bottom",
+        "min_inclusive": 1,
+        "max_inclusive": 4
+      },
+      "provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:bamboo",
+          "properties": {
+            "age": "0",
+            "leaves": "none",
+            "stage": "0"
+          }
+        }
+      }
+    },
+    {
+      "height": 1,
+      "provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:bamboo",
+          "properties": {
+            "age": "0",
+            "leaves": "small",
+            "stage": "0"
+          }
+        }
+      }
+    },
+    {
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 1,
+        "max_inclusive": 3
+      },
+      "provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:bamboo",
+          "properties": {
+            "age": "0",
+            "leaves": "large",
+            "stage": "0"
+          }
+        }
+      }
+    },
+    {
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 0,
+        "max_inclusive": 1
+      },
+      "provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:light",
+          "properties": {
+            "level": "0",
+            "waterlogged": "false"
+          }
+        }
+      }
+    }
+  ]
+}

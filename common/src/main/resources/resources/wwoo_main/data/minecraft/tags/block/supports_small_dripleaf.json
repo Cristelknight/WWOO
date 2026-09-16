@@ -1,6 +1,7 @@
 {
   "values": [
-    "#minecraft:dirt",
-    "#minecraft:sand"
+    "#minecraft:supports_vegetation",
+    "#minecraft:sand",
+    "minecraft:small_dripleaf"
   ]
 }

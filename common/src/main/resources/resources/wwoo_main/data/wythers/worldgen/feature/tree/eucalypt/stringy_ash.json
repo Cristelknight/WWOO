@@ -1,0 +1,795 @@
+{
+  "type": "minecraft:sequence",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:overlay",
+        "features": [
+          {
+            "feature": {
+              "type": "minecraft:tree",
+              "minimum_size": {
+                "type": "minecraft:two_layers_feature_size",
+                "min_clipped_height": 0,
+                "limit": 0,
+                "lower_size": 0,
+                "upper_size": 0
+              },
+              "below_trunk_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:rooted_dirt"
+                }
+              },
+              "trunk_provider": {
+                "type": "minecraft:rule_based",
+                "rules": [
+                  {
+                    "if_true": {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -1,
+                          0
+                        ],
+                        "blocks": "#minecraft:leaves"
+                      },
+                    "then": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:stripped_poplar_wood"
+                      }
+                    }
+                  },
+                  {
+                    "if_true": {
+                      "type": "minecraft:matching_block_tag",
+                      "offset": [
+                        0,
+                        -1,
+                        0
+                      ],
+                      "tag": "wythers:air_and_plants"
+                    },
+                    "then": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:stripped_poplar_wood"
+                      }
+                    }
+                  },
+                  {
+                    "if_true": {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -1,
+                        0
+                      ],
+                      "blocks": [
+                        "minecraft:stripped_poplar_wood",
+                        "minecraft:stripped_poplar_log"
+                      ]
+                    },
+                    "then": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:stripped_poplar_log"
+                      }
+                    }
+                  },
+                  {
+                    "if_true": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "tag": "wythers:air_and_plants"
+                          }
+                        },
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "tag": "minecraft:leaves"
+                          }
+                        },
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              -2,
+                              0
+                            ],
+                            "tag": "minecraft:logs"
+                          }
+                        }
+                      ]
+                    },
+                    "then": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:acacia_log"
+                      }
+                    }
+                  },
+                  {
+                    "if_true": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              -4,
+                              0
+                            ],
+                            "blocks": "minecraft:acacia_log"
+                          }
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ],
+                          "blocks": "minecraft:acacia_log"
+                        }
+                      ]
+                    },
+                    "then": {
+                      "type": "minecraft:weighted",
+                      "entries": [
+                        {
+                          "weight": 1,
+                          "data": {
+                            "id": "minecraft:acacia_log"
+                          }
+                        },
+                        {
+                          "weight": 2,
+                          "data": {
+                            "id": "minecraft:stripped_poplar_log"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "if_true": {
+                      "type": "minecraft:matching_block_tag",
+                      "offset": [
+                        0,
+                        -2,
+                        0
+                      ],
+                      "tag": "minecraft:logs"
+                    },
+                    "then": {
+                      "type": "minecraft:weighted",
+                      "entries": [
+                        {
+                          "weight": 1,
+                          "data": {
+                            "id": "minecraft:stripped_poplar_log"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "foliage_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:acacia_leaves"
+                }
+              },
+              "trunk_placer": {
+                "type": "minecraft:fancy_trunk_placer",
+                "base_height": 10,
+                "height_rand_a": 0,
+                "height_rand_b": 5
+              },
+              "foliage_placer": {
+                "type": "minecraft:random_spread_foliage_placer",
+                "radius": 2,
+                "offset": 0,
+                "foliage_height": 2,
+                "leaf_placement_attempts": 32
+              },
+              "decorators": [
+                {
+                  "type": "minecraft:attached_to_leaves",
+                  "probability": 1,
+                  "exclusion_radius_xz": 0,
+                  "exclusion_radius_y": 0,
+                  "required_empty_blocks": 1,
+                  "block_provider": {
+                    "type": "minecraft:simple",
+                    "state": {
+                      "id": "minecraft:acacia_leaves"
+                    }
+                  },
+                  "directions": [
+                    "down",
+                    "up",
+                    "north",
+                    "east",
+                    "south",
+                    "west"
+                  ]
+                }
+              ]
+            },
+            "placement": []
+          },
+          {
+            "feature": {
+              "type": "minecraft:tree",
+              "minimum_size": {
+                "type": "minecraft:two_layers_feature_size",
+                "min_clipped_height": 0,
+                "limit": 0,
+                "lower_size": 0,
+                "upper_size": 0
+              },
+              "below_trunk_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:rooted_dirt"
+                }
+              },
+              "trunk_provider": {
+                "type": "minecraft:rule_based",
+                "rules": [
+                  {
+                    "if_true": {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          -1,
+                          0
+                        ],
+                        "blocks": "#minecraft:leaves"
+                      },
+                    "then": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:stripped_poplar_wood"
+                      }
+                    }
+                  },
+                  {
+                    "if_true": {
+                      "type": "minecraft:matching_block_tag",
+                      "offset": [
+                        0,
+                        -1,
+                        0
+                      ],
+                      "tag": "wythers:air_and_plants"
+                    },
+                    "then": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:stripped_poplar_wood"
+                      }
+                    }
+                  },
+                  {
+                    "if_true": {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        -1,
+                        0
+                      ],
+                      "blocks": [
+                        "minecraft:stripped_poplar_wood",
+                        "minecraft:stripped_poplar_log"
+                      ]
+                    },
+                    "then": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:stripped_poplar_log"
+                      }
+                    }
+                  },
+                  {
+                    "if_true": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "tag": "wythers:air_and_plants"
+                          }
+                        },
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              -1,
+                              0
+                            ],
+                            "tag": "minecraft:leaves"
+                          }
+                        },
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_block_tag",
+                            "offset": [
+                              0,
+                              -2,
+                              0
+                            ],
+                            "tag": "minecraft:logs"
+                          }
+                        }
+                      ]
+                    },
+                    "then": {
+                      "type": "minecraft:simple",
+                      "state": {
+                        "id": "minecraft:acacia_log"
+                      }
+                    }
+                  },
+                  {
+                    "if_true": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:not",
+                          "predicate": {
+                            "type": "minecraft:matching_blocks",
+                            "offset": [
+                              0,
+                              -4,
+                              0
+                            ],
+                            "blocks": "minecraft:acacia_log"
+                          }
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ],
+                          "blocks": "minecraft:acacia_log"
+                        }
+                      ]
+                    },
+                    "then": {
+                      "type": "minecraft:weighted",
+                      "entries": [
+                        {
+                          "weight": 1,
+                          "data": {
+                            "id": "minecraft:acacia_log"
+                          }
+                        },
+                        {
+                          "weight": 2,
+                          "data": {
+                            "id": "minecraft:stripped_poplar_log"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "if_true": {
+                      "type": "minecraft:matching_block_tag",
+                      "offset": [
+                        0,
+                        -2,
+                        0
+                      ],
+                      "tag": "minecraft:logs"
+                    },
+                    "then": {
+                      "type": "minecraft:weighted",
+                      "entries": [
+                        {
+                          "weight": 1,
+                          "data": {
+                            "id": "minecraft:stripped_poplar_log"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "foliage_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:acacia_leaves"
+                }
+              },
+              "trunk_placer": {
+                "type": "minecraft:forking_trunk_placer",
+                "base_height": 10,
+                "height_rand_a": 0,
+                "height_rand_b": 7
+              },
+              "foliage_placer": {
+                "type": "minecraft:random_spread_foliage_placer",
+                "radius": 2,
+                "offset": 0,
+                "foliage_height": 2,
+                "leaf_placement_attempts": 32
+              },
+              "decorators": [
+                {
+                  "type": "minecraft:attached_to_leaves",
+                  "probability": 1,
+                  "exclusion_radius_xz": 0,
+                  "exclusion_radius_y": 0,
+                  "required_empty_blocks": 1,
+                  "block_provider": {
+                    "type": "minecraft:simple",
+                    "state": {
+                      "id": "minecraft:acacia_leaves"
+                    }
+                  },
+                  "directions": [
+                    "down",
+                    "up",
+                    "north",
+                    "east",
+                    "south",
+                    "west"
+                  ]
+                },
+                {
+                  "type": "minecraft:place_on_ground",
+                  "block_state_provider": {
+                    "type": "minecraft:weighted",
+                    "entries": [
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "north",
+                            "segment_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "east",
+                            "segment_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "south",
+                            "segment_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "west",
+                            "segment_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "north",
+                            "segment_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "east",
+                            "segment_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "south",
+                            "segment_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "west",
+                            "segment_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "north",
+                            "segment_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "east",
+                            "segment_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "south",
+                            "segment_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "west",
+                            "segment_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      }
+                    ]
+                  },
+                  "height": 2,
+                  "radius": 4,
+                  "tries": 96
+                },
+                {
+                  "type": "minecraft:place_on_ground",
+                  "block_state_provider": {
+                    "type": "minecraft:weighted",
+                    "entries": [
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "north",
+                            "segment_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "east",
+                            "segment_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "south",
+                            "segment_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "west",
+                            "segment_amount": "1"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "north",
+                            "segment_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "east",
+                            "segment_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "south",
+                            "segment_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "west",
+                            "segment_amount": "2"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "north",
+                            "segment_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "east",
+                            "segment_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "south",
+                            "segment_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "west",
+                            "segment_amount": "3"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "north",
+                            "segment_amount": "4"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "east",
+                            "segment_amount": "4"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "south",
+                            "segment_amount": "4"
+                          }
+                        },
+                        "weight": 1
+                      },
+                      {
+                        "data": {
+                          "id": "minecraft:leaf_litter",
+                          "properties": {
+                            "facing": "west",
+                            "segment_amount": "4"
+                          }
+                        },
+                        "weight": 1
+                      }
+                    ]
+                  },
+                  "height": 2,
+                  "tries": 150
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": 2
+              }
+            ]
+          }
+        ]
+      },
+      "placement": []
+    },
+    {
+      "feature": "wythers:tree/eucalypt/bark_moss",
+      "placement": []
+    }
+  ]
+}

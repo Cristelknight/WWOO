@@ -1,0 +1,27 @@
+{
+  "feature": {
+    "type": "minecraft:block_column",
+    "direction": "up",
+    "allowed_placement": {
+      "type": "minecraft:matching_fluids",
+      "fluids": "minecraft:water"
+    },
+    "prioritize_tip": true,
+    "layers": [
+      {
+        "height": {
+          "type": "minecraft:uniform",
+          "min_inclusive": 1,
+          "max_inclusive": 3
+        },
+        "provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:horn_coral_block"
+          }
+        }
+      }
+    ]
+  },
+  "placement": []
+}

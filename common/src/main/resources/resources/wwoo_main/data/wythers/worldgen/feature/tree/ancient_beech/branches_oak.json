@@ -1,0 +1,98 @@
+{
+  "ignore_vines": true,
+  "minimum_size": {
+    "type": "minecraft:two_layers_feature_size",
+    "min_clipped_height": 1,
+    "limit": 1,
+    "lower_size": 1,
+    "upper_size": 1
+  },
+  "trunk_provider": {
+    "type": "minecraft:simple",
+    "state": {
+      "id": "minecraft:stripped_poplar_wood",
+      "properties": {
+        "axis": "y"
+      }
+    }
+  },
+  "foliage_provider": {
+    "type": "minecraft:simple",
+    "state": {
+      "id": "minecraft:oak_leaves"
+    }
+  },
+  "trunk_placer": {
+    "type": "minecraft:poplar_trunk_placer",
+    "base_height": 6,
+    "branch_amount": {
+      "type": "minecraft:uniform",
+      "max_inclusive": 2,
+      "min_inclusive": 1
+    },
+    "height_rand_a": 2,
+    "height_rand_b": 0,
+    "trunk_height_above_branches": 4
+  },
+  "foliage_placer": {
+    "type": "minecraft:poplar_foliage_placer",
+    "height": {
+      "type": "minecraft:uniform",
+      "max_inclusive": 6,
+      "min_inclusive": 5
+    },
+    "offset": 0,
+    "radius": {
+      "type": "minecraft:weighted_list",
+      "distribution": [
+        {
+          "data": 5,
+          "weight": 1
+        },
+        {
+          "data": 6,
+          "weight": 1
+        },
+        {
+          "data": 7,
+          "weight": 1
+        },
+        {
+          "data": 8,
+          "weight": 1
+        }
+      ]
+    },
+    "side_hole_chance": 0.15
+  },
+  "decorators": [
+    {
+      "type": "minecraft:attached_to_leaves",
+      "probability": 1,
+      "exclusion_radius_xz": 1,
+      "exclusion_radius_y": 1,
+      "required_empty_blocks": 1,
+      "block_provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:oak_leaves",
+          "properties": {
+            "distance": "7",
+            "persistent": "false",
+            "waterlogged": "false"
+          }
+        }
+      },
+      "directions": [
+        "down"
+      ]
+    }
+  ],
+  "below_trunk_provider": {
+    "type": "minecraft:simple",
+    "state": {
+      "id": "minecraft:stripped_poplar_wood"
+    }
+  },
+  "type": "minecraft:tree"
+}

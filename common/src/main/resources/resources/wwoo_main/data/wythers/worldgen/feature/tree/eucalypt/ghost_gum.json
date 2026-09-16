@@ -1,0 +1,188 @@
+{
+  "type": "minecraft:overlay",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:tree",
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size",
+          "min_clipped_height": 0,
+          "limit": 0,
+          "lower_size": 0,
+          "upper_size": 0
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:rooted_dirt"
+          }
+        },
+        "trunk_provider": {
+          "type": "minecraft:rule_based",
+          "fallback": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:stripped_pale_oak_log"
+            }
+          },
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "tag": "wythers:air_and_plants"
+              },
+              "then": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:stripped_pale_oak_wood"
+                }
+              }
+            }
+          ]
+        },
+        "foliage_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:birch_leaves"
+          }
+        },
+        "trunk_placer": {
+          "type": "minecraft:fancy_trunk_placer",
+          "base_height": 10,
+          "height_rand_a": 0,
+          "height_rand_b": 3
+        },
+        "foliage_placer": {
+          "type": "minecraft:random_spread_foliage_placer",
+          "radius": 2,
+          "offset": 0,
+          "foliage_height": 2,
+          "leaf_placement_attempts": 32
+        },
+        "decorators": [
+          {
+            "type": "minecraft:attached_to_leaves",
+            "probability": 1,
+            "exclusion_radius_xz": 0,
+            "exclusion_radius_y": 0,
+            "required_empty_blocks": 1,
+            "block_provider": {
+              "type": "minecraft:simple",
+              "state": {
+                "id": "minecraft:birch_leaves"
+              }
+            },
+            "directions": [
+              "down",
+              "up",
+              "north",
+              "east",
+              "south",
+              "west"
+            ]
+          }
+        ]
+      },
+      "placement": []
+    },
+    {
+      "feature": {
+        "type": "minecraft:tree",
+        "minimum_size": {
+          "type": "minecraft:two_layers_feature_size",
+          "min_clipped_height": 0,
+          "limit": 0,
+          "lower_size": 0,
+          "upper_size": 0
+        },
+        "below_trunk_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:rooted_dirt"
+          }
+        },
+        "trunk_provider": {
+          "type": "minecraft:rule_based",
+          "fallback": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:stripped_pale_oak_log"
+            }
+          },
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "tag": "wythers:air_and_plants"
+              },
+              "then": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:stripped_pale_oak_wood"
+                }
+              }
+            }
+          ]
+        },
+        "foliage_provider": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:birch_leaves"
+          }
+        },
+        "trunk_placer": {
+          "type": "minecraft:forking_trunk_placer",
+          "base_height": 8,
+          "height_rand_a": 0,
+          "height_rand_b": 3
+        },
+        "foliage_placer": {
+          "type": "minecraft:random_spread_foliage_placer",
+          "radius": 2,
+          "offset": 0,
+          "foliage_height": 2,
+          "leaf_placement_attempts": 32
+        },
+        "decorators": [
+          {
+            "type": "minecraft:attached_to_leaves",
+            "probability": 1,
+            "exclusion_radius_xz": 0,
+            "exclusion_radius_y": 0,
+            "required_empty_blocks": 1,
+            "block_provider": {
+              "type": "minecraft:simple",
+              "state": {
+                "id": "minecraft:birch_leaves"
+              }
+            },
+            "directions": [
+              "down",
+              "up",
+              "north",
+              "east",
+              "south",
+              "west"
+            ]
+          }
+        ]
+      },
+      "placement": [
+        {
+          "type": "minecraft:count",
+          "count": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "type": "minecraft:block_column",
+  "direction": "west",
+  "allowed_placement": {
+    "type": "minecraft:matching_block_tag",
+    "tag": "wythers:air_and_plants"
+  },
+  "prioritize_tip": true,
+  "layers": [
+    {
+      "height": 1,
+      "provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:attached_pumpkin_stem",
+          "properties": {
+            "facing": "west"
+          }
+        }
+      }
+    },
+    {
+      "height": 1,
+      "provider": {
+        "type": "minecraft:weighted",
+        "entries": [
+          {
+            "weight": 5,
+            "data": {
+              "id": "minecraft:pumpkin"
+            }
+          },
+          {
+            "weight": 1,
+            "data": {
+              "id": "minecraft:carved_pumpkin",
+              "properties": {
+                "facing": "west"
+              }
+            }
+          },
+          {
+            "weight": 0,
+            "data": {
+              "id": "minecraft:jack_o_lantern",
+              "properties": {
+                "facing": "west"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

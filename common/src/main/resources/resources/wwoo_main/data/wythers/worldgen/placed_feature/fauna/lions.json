@@ -1,0 +1,155 @@
+{
+  "feature": {
+    "type": "minecraft:overlay",
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:template",
+          "templates": [
+            {
+              "weight": 1,
+              "data": {
+                "id": "wythers:fauna/lion"
+              }
+            }
+          ]
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min_inclusive": 3,
+              "max_inclusive": 4
+            }
+          },
+          {
+            "type": "minecraft:offset",
+            "x": {
+              "type": "minecraft:trapezoid",
+              "min": -3,
+              "max": 3,
+              "plateau": 0
+            },
+            "y": 3,
+            "z": {
+              "type": "minecraft:trapezoid",
+              "min": -3,
+              "max": 3,
+              "plateau": 0
+            }
+          },
+          {
+            "type": "minecraft:environment_scan",
+            "direction_of_search": "down",
+            "max_steps": 5,
+            "target_condition": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_block_tag",
+                  "tag": "wythers:air_and_plants"
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:grass_block",
+                    "minecraft:coarse_dirt",
+                    "minecraft:rooted_dirt"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "feature": {
+          "type": "minecraft:template",
+          "templates": [
+            {
+              "weight": 1,
+              "data": {
+                "id": "wythers:fauna/lion_cub"
+              }
+            }
+          ]
+        },
+        "placement": [
+          {
+            "type": "minecraft:count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min_inclusive": 0,
+              "max_inclusive": 2
+            }
+          },
+          {
+            "type": "minecraft:offset",
+            "x": {
+              "type": "minecraft:trapezoid",
+              "min": -3,
+              "max": 3,
+              "plateau": 0
+            },
+            "y": 3,
+            "z": {
+              "type": "minecraft:trapezoid",
+              "min": -3,
+              "max": 3,
+              "plateau": 0
+            }
+          },
+          {
+            "type": "minecraft:environment_scan",
+            "direction_of_search": "down",
+            "max_steps": 5,
+            "target_condition": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_block_tag",
+                  "tag": "wythers:air_and_plants"
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "blocks": [
+                    "minecraft:grass_block",
+                    "minecraft:coarse_dirt",
+                    "minecraft:rooted_dirt"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 256
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

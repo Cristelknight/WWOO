@@ -1,0 +1,640 @@
+{
+  "feature": {
+    "type": "minecraft:random_selector",
+    "features": [
+      {
+        "chance": 0.0003,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/giant_kapok/1",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.0003,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/giant_kapok/2",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.001,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/giant_poplar_yellow/1",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.001,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/giant_poplar_yellow/2",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.001,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/giant_poplar_red/1",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.001,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/giant_poplar_red/2",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.01,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/mega_cherry",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.0025,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/giant_cherry/1",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.0025,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/giant_cherry/2",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.01,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/mega_acacia",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.005,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/giant_acacia/1",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.005,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/giant_acacia/2",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.05,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/mega_mangrove",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.025,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/giant_mangrove/1",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.025,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/giant_mangrove/2",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.005,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/mega_smoothwood",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.0025,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/giant_smoothwood/1",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.0025,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/giant_smoothwood/2",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/giant/1",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rafflesia_placed",
+                "placement": [
+                  {
+                    "type": "minecraft:random_chance",
+                    "chance": 0.25
+                  },
+                  {
+                    "type": "minecraft:offset",
+                    "x": {
+                      "type": "minecraft:weighted_list",
+                      "distribution": [
+                        {
+                          "weight": 1,
+                          "data": -3
+                        },
+                        {
+                          "weight": 1,
+                          "data": 3
+                        }
+                      ]
+                    },
+                    "y": 5,
+                    "z": {
+                      "type": "minecraft:weighted_list",
+                      "distribution": [
+                        {
+                          "weight": 1,
+                          "data": -3
+                        },
+                        {
+                          "weight": 1,
+                          "data": 3
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "minecraft:environment_scan",
+                    "direction_of_search": "down",
+                    "max_steps": 8,
+                    "target_condition": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_block_tag",
+                          "tag": "wythers:air_and_plants"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ],
+                          "blocks": "minecraft:podzol"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": {
+            "type": "minecraft:sequence",
+            "features": [
+              {
+                "feature": "wythers:tree/jungle/giant/2",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rainforest_floor",
+                "placement": []
+              },
+              {
+                "feature": "wythers:other/rafflesia_placed",
+                "placement": [
+                  {
+                    "type": "minecraft:random_chance",
+                    "chance": 0.95
+                  },
+                  {
+                    "type": "minecraft:offset",
+                    "x": {
+                      "type": "minecraft:weighted_list",
+                      "distribution": [
+                        {
+                          "weight": 1,
+                          "data": -5
+                        },
+                        {
+                          "weight": 1,
+                          "data": 5
+                        }
+                      ]
+                    },
+                    "y": 5,
+                    "z": {
+                      "type": "minecraft:weighted_list",
+                      "distribution": [
+                        {
+                          "weight": 1,
+                          "data": -5
+                        },
+                        {
+                          "weight": 1,
+                          "data": 5
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "minecraft:environment_scan",
+                    "direction_of_search": "down",
+                    "max_steps": 8,
+                    "target_condition": {
+                      "type": "minecraft:all_of",
+                      "predicates": [
+                        {
+                          "type": "minecraft:matching_block_tag",
+                          "tag": "wythers:air_and_plants"
+                        },
+                        {
+                          "type": "minecraft:matching_blocks",
+                          "offset": [
+                            0,
+                            -1,
+                            0
+                          ],
+                          "blocks": "minecraft:podzol"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "placement": []
+        }
+      }
+    ],
+    "default": {
+      "feature": {
+        "type": "minecraft:sequence",
+        "features": [
+          {
+            "feature": "wythers:tree/jungle/mega",
+            "placement": []
+          },
+          {
+            "feature": "wythers:other/rainforest_floor",
+            "placement": []
+          }
+        ]
+      },
+      "placement": []
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 20
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          2,
+          0
+        ],
+        "blocks": "minecraft:moss_block"
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:any_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:spruce_wood",
+                "minecraft:smooth_sandstone",
+                "minecraft:smooth_red_sandstone",
+                "minecraft:stripped_pale_oak_wood",
+                "minecraft:gray_terracotta"
+              ]
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                1,
+                0
+              ],
+              "blocks": "sulfur"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:any_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_block_tag",
+            "tag": "wythers:air_and_plants"
+          },
+          {
+            "type": "minecraft:matching_blocks",
+            "blocks": [
+              "minecraft:small_dripleaf",
+              "minecraft:big_dripleaf_stem"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": [
+          "minecraft:grass_block",
+          "minecraft:podzol",
+          "minecraft:brown_concrete_powder"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -2,
+          0
+        ],
+        "blocks": [
+          "minecraft:dirt"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

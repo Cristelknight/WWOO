@@ -1,0 +1,390 @@
+{
+  "feature": {
+    "type": "minecraft:random_selector",
+    "features": [],
+    "default": {
+      "feature": {
+        "type": "minecraft:simple_random_selector",
+        "features": [
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/neon_tetra"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 7,
+                  "max_inclusive": 15
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/neon_tetra"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 7,
+                  "max_inclusive": 15
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/orange_platy"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/golden_platy"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/rummynose"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 7,
+                  "max_inclusive": 15
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/tiger_barb"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 8,
+                  "data": {
+                    "id": "wythers:fauna/fish/betta/blue_red"
+                  }
+                },
+                {
+                  "weight": 4,
+                  "data": {
+                    "id": "wythers:fauna/fish/betta/blue"
+                  }
+                },
+                {
+                  "weight": 4,
+                  "data": {
+                    "id": "wythers:fauna/fish/betta/red"
+                  }
+                },
+                {
+                  "weight": 2,
+                  "data": {
+                    "id": "wythers:fauna/fish/betta/red_white"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/betta/red_yellow"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/betta/yellow"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/betta/golden"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 1,
+                  "max_inclusive": 5
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/cichlid/teal"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/cichlid/blue"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/cichlid/yellow"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/cichlid/purple"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/cichlid/zebra"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/discus/teal"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/discus/silver_teal"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/discus/yellow"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/discus/red_white"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/discus/golden"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/discus/orange"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/discus/red_sky"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/discus/sky_red"
+                  }
+                },
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/discus/sky"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "placement": []
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 2
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:matching_blocks",
+          "offset": [
+            0,
+            1,
+            0
+          ],
+          "blocks": "minecraft:dripstone_block"
+        }
+      }
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE"
+    },
+    {
+      "type": "minecraft:offset",
+      "x": 0,
+      "y": -1,
+      "z": 0
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "minecraft:water"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_biomes",
+        "biomes": [
+          "river",
+          "jungle",
+          "bamboo_jungle",
+          "sparse_jungle"
+        ]
+      }
+    }
+  ]
+}

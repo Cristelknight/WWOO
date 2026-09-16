@@ -1,0 +1,154 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "features": [
+    {
+      "feature": {
+        "features": [
+          {
+            "feature": {
+              "type": "minecraft:tree",
+              "ignore_vines": true,
+              "minimum_size": {
+                "type": "minecraft:two_layers_feature_size",
+                "limit": 1,
+                "lower_size": 0,
+                "upper_size": 1
+              },
+              "trunk_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:mangrove_wood",
+                  "properties": {
+                    "axis": "y"
+                  }
+                }
+              },
+              "foliage_provider": "wythers:maple_leaves",
+              "trunk_placer": {
+                "type": "minecraft:forking_trunk_placer",
+                "base_height": 7,
+                "height_rand_a": 0,
+                "height_rand_b": 0
+              },
+              "foliage_placer": {
+                "type": "minecraft:acacia_foliage_placer",
+                "radius": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 2,
+                  "max_inclusive": 2
+                },
+                "offset": 0
+              },
+              "decorators": [
+                {
+                  "type": "minecraft:attached_to_leaves",
+                  "probability": 1,
+                  "exclusion_radius_xz": 0,
+                  "exclusion_radius_y": 0,
+                  "required_empty_blocks": 1,
+                  "block_provider": {
+                    "type": "minecraft:simple",
+                    "state": {
+                      "id": "minecraft:air"
+                    }
+                  },
+                  "directions": [
+                    "up"
+                  ]
+                },
+                {
+                  "type": "minecraft:attached_to_leaves",
+                  "probability": 1,
+                  "exclusion_radius_xz": 1,
+                  "exclusion_radius_y": 1,
+                  "required_empty_blocks": 1,
+                  "block_provider": "wythers:maple_leaves",
+                  "directions": [
+                    "down"
+                  ]
+                }
+              ],
+              "below_trunk_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:mangrove_wood",
+                  "properties": {
+                    "axis": "y"
+                  }
+                }
+              }
+            },
+            "placement": []
+          },
+          {
+            "feature": {
+              "type": "minecraft:tree",
+              "ignore_vines": true,
+              "minimum_size": {
+                "type": "minecraft:two_layers_feature_size",
+                "limit": 1,
+                "lower_size": 0,
+                "upper_size": 1
+              },
+              "trunk_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:mangrove_wood",
+                  "properties": {
+                    "axis": "y"
+                  }
+                }
+              },
+              "foliage_provider": "wythers:maple_leaves",
+              "trunk_placer": {
+                "type": "minecraft:forking_trunk_placer",
+                "base_height": 11,
+                "height_rand_a": 0,
+                "height_rand_b": 0
+              },
+              "foliage_placer": {
+                "type": "minecraft:acacia_foliage_placer",
+                "radius": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 2,
+                  "max_inclusive": 2
+                },
+                "offset": 0
+              },
+              "decorators": [
+                {
+                  "type": "minecraft:attached_to_leaves",
+                  "probability": 1,
+                  "exclusion_radius_xz": 1,
+                  "exclusion_radius_y": 1,
+                  "required_empty_blocks": 1,
+                  "block_provider": "wythers:maple_leaves",
+                  "directions": [
+                    "down"
+                  ]
+                }
+              ],
+              "below_trunk_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:mangrove_wood",
+                  "properties": {
+                    "axis": "y"
+                  }
+                }
+              }
+            },
+            "placement": []
+          }
+        ],
+        "type": "minecraft:simple_random_selector"
+      },
+      "placement": [
+        {
+          "type": "minecraft:count",
+          "count": 7
+        }
+      ]
+    }
+  ]
+}

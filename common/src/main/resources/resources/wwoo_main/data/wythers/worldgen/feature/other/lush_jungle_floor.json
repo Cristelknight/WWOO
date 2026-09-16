@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:disk",
+  "state_provider": {
+    "type": "minecraft:noise",
+    "seed": 1,
+    "noise": {
+      "base_octave": -4,
+      "amplitude_modifiers": [
+        2,
+        2
+      ],
+      "octave_count": 2,
+      "normalize": "legacy"
+    },
+    "scale": 1,
+    "states": [
+      {
+        "id": "minecraft:podzol"
+      },
+      {
+        "id": "minecraft:brown_concrete_powder"
+      },
+      {
+        "id": "minecraft:podzol"
+      },
+      {
+        "id": "minecraft:brown_concrete_powder"
+      }
+    ]
+  },
+  "radius": {
+    "type": "minecraft:uniform",
+    "min_inclusive": 6,
+    "max_inclusive": 7
+  },
+  "half_height": 3,
+  "target": {
+    "type": "minecraft:matching_blocks",
+    "blocks": "minecraft:grass_block"
+  }
+}

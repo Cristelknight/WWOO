@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:overlay",
+  "features": [
+    {
+      "feature": "wythers:tree/pine/ponderosa_large",
+      "placement": []
+    },
+    {
+      "feature": "wythers:tree/pine/ponderosa_large",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 1,
+          "y": 0,
+          "z": 0
+        }
+      ]
+    },
+    {
+      "feature": "wythers:tree/pine/ponderosa_large",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 0,
+          "z": 1
+        }
+      ]
+    },
+    {
+      "feature": "wythers:tree/pine/ponderosa_large",
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 1,
+          "y": 0,
+          "z": 1
+        }
+      ]
+    }
+  ]
+}

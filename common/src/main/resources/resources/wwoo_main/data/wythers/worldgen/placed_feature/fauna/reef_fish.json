@@ -1,0 +1,519 @@
+{
+  "feature": {
+    "type": "minecraft:random_selector",
+    "features": [],
+    "default": {
+      "feature": {
+        "type": "minecraft:simple_random_selector",
+        "features": [
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/electrum_angelfish_1"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/electrum_angelfish_2"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/electrum_angelfish_3"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/electrum_angelfish_4"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/electrum_angelfish_5"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/clownfish_1"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/clownfish_1"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/banggai_cardinalfish_1"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/banggai_cardinalfish_2"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/banggai_cardinalfish_3"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/moorish_idol_1"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/moorish_idol_2"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/blue_tang_1"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/magenta_dasher"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/mandarin_dragonet"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/royal_gramma"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/yellow_goby"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 5,
+                  "max_inclusive": 10
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/red_cod"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 1,
+                  "max_inclusive": 3
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/rock_cod"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 0,
+                  "max_inclusive": 1
+                }
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:template",
+              "templates": [
+                {
+                  "weight": 1,
+                  "data": {
+                    "id": "wythers:fauna/fish/grouper"
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 0,
+                  "max_inclusive": 1
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "placement": []
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 16
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE"
+    },
+    {
+      "type": "minecraft:offset",
+      "x": 0,
+      "y": -1,
+      "z": 0
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "minecraft:water"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_biomes",
+        "biomes": [
+          "lukewarm_ocean",
+          "deep_lukewarm_ocean",
+          "beach",
+          "stony_shore",
+          "river",
+          "jungle",
+          "bamboo_jungle",
+          "sparse_jungle",
+          "savanna"
+        ]
+      }
+    }
+  ]
+}

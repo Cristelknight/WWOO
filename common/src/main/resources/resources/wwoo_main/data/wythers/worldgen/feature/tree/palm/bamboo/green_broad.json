@@ -1,0 +1,505 @@
+{
+  "type": "minecraft:sequence",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:block_column",
+        "direction": "up",
+        "allowed_placement": {
+          "type": "minecraft:matching_blocks",
+          "blocks": "minecraft:air"
+        },
+        "prioritize_tip": true,
+        "layers": [
+          {
+            "height": {
+              "type": "minecraft:biased_to_bottom",
+              "min_inclusive": 7,
+              "max_inclusive": 12
+            },
+            "provider": {
+              "type": "minecraft:simple",
+              "state": {
+                "id": "minecraft:bamboo",
+                "properties": {
+                  "age": "0",
+                  "leaves": "none",
+                  "stage": "1"
+                }
+              }
+            }
+          },
+          {
+            "height": 1,
+            "provider": {
+              "type": "minecraft:simple",
+              "state": {
+                "id": "minecraft:bamboo",
+                "properties": {
+                  "age": "1",
+                  "leaves": "large",
+                  "stage": "0"
+                }
+              }
+            }
+          },
+          {
+            "height": 1,
+            "provider": {
+              "type": "minecraft:simple",
+              "state": {
+                "id": "minecraft:bamboo",
+                "properties": {
+                  "age": "1",
+                  "leaves": "none",
+                  "stage": "0"
+                }
+              }
+            }
+          },
+          {
+            "height": 1,
+            "provider": {
+              "type": "minecraft:simple",
+              "state": {
+                "id": "minecraft:azalea_leaves",
+                "properties": {
+                  "distance": "1",
+                  "persistent": "false",
+                  "waterlogged": "false"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "placement": []
+    },
+    {
+      "feature": {
+        "type": "minecraft:overlay",
+        "features": [
+          {
+            "feature": {
+              "type": "minecraft:block_column",
+              "direction": "east",
+              "allowed_placement": {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": [
+                      "minecraft:air",
+                      "minecraft:vine"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:all_of",
+                    "predicates": [
+                      {
+                        "type": "minecraft:matching_block_tag",
+                        "tag": "minecraft:leaves"
+                      },
+                      {
+                        "type": "minecraft:not",
+                        "predicate": {
+                          "type": "minecraft:all_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "blocks": "minecraft:azalea_leaves"
+                            },
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                0,
+                                -1,
+                                0
+                              ],
+                              "blocks": "minecraft:bamboo"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "prioritize_tip": false,
+              "layers": [
+                {
+                  "height": 1,
+                  "provider": {
+                    "type": "minecraft:simple",
+                    "state": {
+                      "id": "minecraft:big_dripleaf",
+                      "properties": {
+                        "facing": "west",
+                        "tilt": "partial",
+                        "waterlogged": "false"
+                      }
+                    }
+                  }
+                },
+                {
+                  "height": 1,
+                  "provider": {
+                    "type": "minecraft:simple",
+                    "state": {
+                      "id": "minecraft:big_dripleaf",
+                      "properties": {
+                        "facing": "east",
+                        "tilt": "unstable",
+                        "waterlogged": "false"
+                      }
+                    }
+                  }
+                },
+                {
+                  "height": 1,
+                  "provider": {
+                    "type": "minecraft:simple",
+                    "state": {
+                      "id": "minecraft:big_dripleaf",
+                      "properties": {
+                        "facing": "east",
+                        "tilt": "full",
+                        "waterlogged": "false"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 1,
+                "y": 0,
+                "z": 0
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:block_column",
+              "direction": "west",
+              "allowed_placement": {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": [
+                      "minecraft:air",
+                      "minecraft:vine"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:all_of",
+                    "predicates": [
+                      {
+                        "type": "minecraft:matching_block_tag",
+                        "tag": "minecraft:leaves"
+                      },
+                      {
+                        "type": "minecraft:not",
+                        "predicate": {
+                          "type": "minecraft:all_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "blocks": "minecraft:azalea_leaves"
+                            },
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                0,
+                                -1,
+                                0
+                              ],
+                              "blocks": "minecraft:bamboo"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "prioritize_tip": false,
+              "layers": [
+                {
+                  "height": 1,
+                  "provider": {
+                    "type": "minecraft:simple",
+                    "state": {
+                      "id": "minecraft:big_dripleaf",
+                      "properties": {
+                        "facing": "east",
+                        "tilt": "partial",
+                        "waterlogged": "false"
+                      }
+                    }
+                  }
+                },
+                {
+                  "height": 1,
+                  "provider": {
+                    "type": "minecraft:simple",
+                    "state": {
+                      "id": "minecraft:big_dripleaf",
+                      "properties": {
+                        "facing": "west",
+                        "tilt": "unstable",
+                        "waterlogged": "false"
+                      }
+                    }
+                  }
+                },
+                {
+                  "height": 1,
+                  "provider": {
+                    "type": "minecraft:simple",
+                    "state": {
+                      "id": "minecraft:big_dripleaf",
+                      "properties": {
+                        "facing": "west",
+                        "tilt": "full",
+                        "waterlogged": "false"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": -1,
+                "y": 0,
+                "z": 0
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:block_column",
+              "direction": "south",
+              "allowed_placement": {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": [
+                      "minecraft:air",
+                      "minecraft:vine"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:all_of",
+                    "predicates": [
+                      {
+                        "type": "minecraft:matching_block_tag",
+                        "tag": "minecraft:leaves"
+                      },
+                      {
+                        "type": "minecraft:not",
+                        "predicate": {
+                          "type": "minecraft:all_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "blocks": "minecraft:azalea_leaves"
+                            },
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                0,
+                                -1,
+                                0
+                              ],
+                              "blocks": "minecraft:bamboo"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "prioritize_tip": false,
+              "layers": [
+                {
+                  "height": 1,
+                  "provider": {
+                    "type": "minecraft:simple",
+                    "state": {
+                      "id": "minecraft:big_dripleaf",
+                      "properties": {
+                        "facing": "north",
+                        "tilt": "partial",
+                        "waterlogged": "false"
+                      }
+                    }
+                  }
+                },
+                {
+                  "height": 1,
+                  "provider": {
+                    "type": "minecraft:simple",
+                    "state": {
+                      "id": "minecraft:big_dripleaf",
+                      "properties": {
+                        "facing": "south",
+                        "tilt": "unstable",
+                        "waterlogged": "false"
+                      }
+                    }
+                  }
+                },
+                {
+                  "height": 1,
+                  "provider": {
+                    "type": "minecraft:simple",
+                    "state": {
+                      "id": "minecraft:big_dripleaf",
+                      "properties": {
+                        "facing": "south",
+                        "tilt": "full",
+                        "waterlogged": "false"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": 0,
+                "z": 1
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:block_column",
+              "direction": "north",
+              "allowed_placement": {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": [
+                      "minecraft:air",
+                      "minecraft:vine"
+                    ]
+                  },
+                  {
+                    "type": "minecraft:all_of",
+                    "predicates": [
+                      {
+                        "type": "minecraft:matching_block_tag",
+                        "tag": "minecraft:leaves"
+                      },
+                      {
+                        "type": "minecraft:not",
+                        "predicate": {
+                          "type": "minecraft:all_of",
+                          "predicates": [
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "blocks": "minecraft:azalea_leaves"
+                            },
+                            {
+                              "type": "minecraft:matching_blocks",
+                              "offset": [
+                                0,
+                                -1,
+                                0
+                              ],
+                              "blocks": "minecraft:bamboo"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "prioritize_tip": false,
+              "layers": [
+                {
+                  "height": 1,
+                  "provider": {
+                    "type": "minecraft:simple",
+                    "state": {
+                      "id": "minecraft:big_dripleaf",
+                      "properties": {
+                        "facing": "south",
+                        "tilt": "partial",
+                        "waterlogged": "false"
+                      }
+                    }
+                  }
+                },
+                {
+                  "height": 1,
+                  "provider": {
+                    "type": "minecraft:simple",
+                    "state": {
+                      "id": "minecraft:big_dripleaf",
+                      "properties": {
+                        "facing": "north",
+                        "tilt": "unstable",
+                        "waterlogged": "false"
+                      }
+                    }
+                  }
+                },
+                {
+                  "height": 1,
+                  "provider": {
+                    "type": "minecraft:simple",
+                    "state": {
+                      "id": "minecraft:big_dripleaf",
+                      "properties": {
+                        "facing": "north",
+                        "tilt": "full",
+                        "waterlogged": "false"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": 0,
+                "z": -1
+              }
+            ]
+          }
+        ]
+      },
+      "placement": [
+        {
+          "type": "minecraft:environment_scan",
+          "direction_of_search": "up",
+          "max_steps": 30,
+          "target_condition": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:azalea_leaves"
+          }
+        },
+        {
+          "type": "minecraft:count",
+          "count": 2
+        }
+      ]
+    }
+  ]
+}

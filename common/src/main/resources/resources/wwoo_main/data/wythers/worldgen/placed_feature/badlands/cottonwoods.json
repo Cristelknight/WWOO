@@ -1,0 +1,159 @@
+{
+  "feature": {
+    "type": "minecraft:random_selector",
+    "features": [],
+    "default": {
+      "feature": "wythers:tree/poplar/cottonwood/yellow",
+      "placement": []
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 5
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 0
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:smooth_sandstone",
+                "minecraft:cut_sandstone"
+              ]
+            }
+          },
+          {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                1,
+                0
+              ],
+              "blocks": "minecraft:dripstone_block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_block_tag",
+        "tag": "wythers:air_and_plants"
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": [
+          "minecraft:grass_block",
+          "minecraft:rooted_dirt",
+          "minecraft:coarse_dirt"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:height_range",
+        "min_inclusive": {
+          "absolute": 63
+        },
+        "max_inclusive": {
+          "absolute": 67
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:any_of",
+        "predicates": [
+          {
+            "type": "minecraft:matching_biomes",
+            "biomes": "river"
+          },
+          {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_biomes",
+                "biomes": [
+                  "badlands",
+                  "eroded_badlands"
+                ]
+              },
+              {
+                "type": "minecraft:any_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      3,
+                      -1,
+                      0
+                    ],
+                    "blocks": "minecraft:water"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      -3,
+                      -1,
+                      0
+                    ],
+                    "blocks": "minecraft:water"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      -1,
+                      3
+                    ],
+                    "blocks": "minecraft:water"
+                  },
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      -1,
+                      -3
+                    ],
+                    "blocks": "minecraft:water"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

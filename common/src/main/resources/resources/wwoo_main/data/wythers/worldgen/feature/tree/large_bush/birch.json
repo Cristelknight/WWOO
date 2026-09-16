@@ -1,0 +1,214 @@
+{
+  "type": "minecraft:sequence",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:overlay",
+        "features": [
+          {
+            "feature": {
+              "type": "minecraft:tree",
+              "minimum_size": {
+                "type": "minecraft:two_layers_feature_size"
+              },
+              "below_trunk_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:rooted_dirt"
+                }
+              },
+              "trunk_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:mangrove_roots",
+                  "properties": {
+                    "waterlogged": "false"
+                  }
+                }
+              },
+              "foliage_provider": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:birch_leaves",
+                  "properties": {
+                    "distance": "7",
+                    "persistent": "false",
+                    "waterlogged": "false"
+                  }
+                }
+              },
+              "trunk_placer": {
+                "type": "minecraft:straight_trunk_placer",
+                "base_height": 1,
+                "height_rand_a": 0,
+                "height_rand_b": 0
+              },
+              "foliage_placer": {
+                "type": "minecraft:fancy_foliage_placer",
+                "radius": 1,
+                "offset": 0,
+                "height": 2
+              },
+              "decorators": []
+            },
+            "placement": [
+              {
+                "type": "minecraft:environment_scan",
+                "direction_of_search": "down",
+                "max_steps": 3,
+                "target_condition": {
+                  "type": "minecraft:matching_block_tag",
+                  "offset": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "tag": "minecraft:grass_blocks"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "placement": []
+    },
+    {
+      "feature": {
+        "type": "minecraft:ore",
+        "targets": [
+          {
+            "target": {
+              "predicate_type": "minecraft:tag_match",
+              "tag": "wythers:bush_replaceable"
+            },
+            "state": {
+              "id": "minecraft:birch_leaves",
+              "properties": {
+                "distance": "1",
+                "persistent": "true",
+                "waterlogged": "false"
+              }
+            }
+          }
+        ],
+        "size": 30,
+        "discard_chance_on_air_exposure": 0
+      },
+      "placement": [
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 3,
+          "z": 0
+        },
+        {
+          "type": "minecraft:environment_scan",
+          "direction_of_search": "down",
+          "max_steps": 7,
+          "target_condition": {
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              -2,
+              0
+            ],
+            "blocks": "minecraft:mangrove_roots"
+          }
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:disk",
+        "state_provider": {
+          "type": "minecraft:rule_based",
+          "rules": [
+            {
+              "if_true": {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_block_tag",
+                    "offset": [
+                      0,
+                      1,
+                      0
+                    ],
+                    "tag": "wythers:bush_branch_adjacent"
+                  },
+                  {
+                    "type": "minecraft:matching_block_tag",
+                    "tag": "minecraft:leaves"
+                  },
+                  {
+                    "type": "minecraft:matching_block_tag",
+                    "offset": [
+                      1,
+                      0,
+                      0
+                    ],
+                    "tag": "wythers:bush_branch_adjacent"
+                  },
+                  {
+                    "type": "minecraft:matching_block_tag",
+                    "offset": [
+                      -1,
+                      0,
+                      0
+                    ],
+                    "tag": "wythers:bush_branch_adjacent"
+                  },
+                  {
+                    "type": "minecraft:matching_block_tag",
+                    "offset": [
+                      0,
+                      0,
+                      1
+                    ],
+                    "tag": "wythers:bush_branch_adjacent"
+                  },
+                  {
+                    "type": "minecraft:matching_block_tag",
+                    "offset": [
+                      0,
+                      0,
+                      -1
+                    ],
+                    "tag": "wythers:bush_branch_adjacent"
+                  },
+                  {
+                    "type": "minecraft:matching_block_tag",
+                    "offset": [
+                      0,
+                      -1,
+                      0
+                    ],
+                    "tag": "wythers:bush_branch_adjacent"
+                  }
+                ]
+              },
+              "then": {
+                "type": "minecraft:simple",
+                "state": {
+                  "id": "minecraft:mangrove_roots"
+                }
+              }
+            }
+          ]
+        },
+        "radius": 6,
+        "half_height": 4,
+        "target": {
+          "type": "minecraft:all_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "blocks": "minecraft:birch_leaves"
+            }
+          ]
+        }
+      },
+      "placement": []
+    }
+  ]
+}

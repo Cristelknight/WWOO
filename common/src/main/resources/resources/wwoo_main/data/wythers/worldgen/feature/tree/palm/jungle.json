@@ -1,0 +1,60 @@
+{
+  "type": "minecraft:tree",
+  "decorators": [],
+  "foliage_placer": {
+    "type": "minecraft:jungle_foliage_placer",
+    "offset": 1,
+    "radius": 0,
+    "height": 0
+  },
+  "foliage_provider": {
+    "type": "minecraft:weighted",
+    "entries": [
+      {
+        "data": {
+          "id": "minecraft:azalea_leaves",
+          "properties": {
+            "distance": "7",
+            "persistent": "false",
+            "waterlogged": "false"
+          }
+        },
+        "weight": 3
+      }
+    ]
+  },
+  "ignore_vines": false,
+  "minimum_size": {
+    "type": "minecraft:two_layers_feature_size",
+    "limit": 0,
+    "lower_size": 0,
+    "upper_size": 1
+  },
+  "trunk_placer": {
+    "type": "minecraft:bending_trunk_placer",
+    "base_height": 12,
+    "bend_length": {
+      "type": "minecraft:uniform",
+      "max_inclusive": 2,
+      "min_inclusive": 2
+    },
+    "height_rand_a": 0,
+    "height_rand_b": 0,
+    "min_height_for_leaves": 12
+  },
+  "trunk_provider": {
+    "type": "minecraft:simple",
+    "state": {
+      "id": "minecraft:poplar_wood",
+      "properties": {
+        "axis": "y"
+      }
+    }
+  },
+  "below_trunk_provider": {
+    "type": "minecraft:simple",
+    "state": {
+      "id": "minecraft:rooted_dirt"
+    }
+  }
+}

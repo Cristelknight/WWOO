@@ -1,0 +1,109 @@
+{
+  "feature": {
+  "type": "minecraft:simple_random_selector",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "type": "minecraft:simple",
+          "state": "minecraft:lilac"
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:count",
+          "count": 96
+        },
+        {
+          "type": "minecraft:offset",
+          "x": {
+            "type": "minecraft:trapezoid",
+            "max": 7,
+            "min": -7,
+            "plateau": 0
+          },
+          "y": {
+            "type": "minecraft:trapezoid",
+            "max": 3,
+            "min": -3,
+            "plateau": 0
+          },
+          "z": {
+            "type": "minecraft:trapezoid",
+            "max": 7,
+            "min": -7,
+            "plateau": 0
+          }
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_block_tag",
+            "tag": "minecraft:air"
+          }
+        },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "offset": [
+          0,
+          -1,
+          0
+        ],
+        "blocks": "minecraft:grass_block"
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:height_range",
+        "min_inclusive": {
+          "absolute": 65
+        },
+        "max_inclusive": {
+          "below_top": 0
+        }
+      }
+    },
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_to_count_ratio": -1,
+      "noise_factor": 80,
+      "noise_offset": 0
+    }
+      ]
+    }
+  ]
+},
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 3
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:clamped",
+        "max_inclusive": 3,
+        "min_inclusive": 0,
+        "source": {
+          "type": "minecraft:uniform",
+          "max_inclusive": 3,
+          "min_inclusive": -1
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

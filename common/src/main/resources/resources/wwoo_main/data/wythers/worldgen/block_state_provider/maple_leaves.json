@@ -1,0 +1,53 @@
+{
+    "type": "minecraft:dual_noise",
+    "noise": {
+      "base_octave": -1,
+      "amplitude_modifiers": [
+        2,
+        2,
+        2
+      ],
+      "octave_count": 3,
+      "normalize": "legacy"
+    },
+    "scale": 1,
+    "seed": -817103696,
+    "variety": 1,
+    "slow_noise": {
+      "base_octave": -2,
+      "amplitude_modifiers": [
+        2,
+        2,
+        2
+      ],
+      "octave_count": 3,
+      "normalize": "legacy"
+    },
+    "slow_scale": 1,
+    "states": [
+      {
+        "id": "minecraft:orange_poplar_leaves",
+        "properties": {
+          "distance": "1",
+          "persistent": "false",
+          "waterlogged": "false"
+        }
+      },
+      {
+        "id": "minecraft:red_poplar_leaves",
+        "properties": {
+          "distance": "1",
+          "persistent": "false",
+          "waterlogged": "false"
+        }
+      },
+      {
+        "id": "minecraft:red_poplar_leaves",
+        "properties": {
+          "distance": "1",
+          "persistent": "false",
+          "waterlogged": "false"
+        }
+      }
+    ]
+  }

@@ -1,0 +1,198 @@
+{
+  "feature": {
+    "type": "minecraft:disk",
+    "state_provider": {
+      "type": "minecraft:rule_based",
+      "fallback": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:tuff_bricks"
+        }
+      },
+      "rules": [
+        {
+          "if_true": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:tuff_bricks"
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "blocks": "minecraft:grass_block"
+              }
+            ]
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:rooted_dirt"
+            }
+          }
+        },
+        {
+          "if_true": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:chiseled_tuff"
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:grass_block"
+            }
+          }
+        }
+      ]
+    },
+    "radius": 8,
+    "half_height": 4,
+    "target": {
+      "type": "minecraft:any_of",
+      "predicates": [
+        {
+          "type": "minecraft:all_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_blocks",
+              "blocks": [
+                "minecraft:tuff_bricks",
+                "minecraft:chiseled_tuff"
+              ]
+            },
+            {
+              "type": "minecraft:has_sturdy_face",
+              "offset": [
+                1,
+                0,
+                0
+              ],
+              "direction": "up"
+            },
+            {
+              "type": "minecraft:has_sturdy_face",
+              "offset": [
+                -1,
+                0,
+                0
+              ],
+              "direction": "up"
+            },
+            {
+              "type": "minecraft:has_sturdy_face",
+              "offset": [
+                0,
+                0,
+                1
+              ],
+              "direction": "up"
+            },
+            {
+              "type": "minecraft:has_sturdy_face",
+              "offset": [
+                0,
+                0,
+                -1
+              ],
+              "direction": "up"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:all_of",
+          "predicates": [
+            {
+              "type": "minecraft:matching_block_tag",
+              "tag": "minecraft:dirt"
+            },
+            {
+              "type": "minecraft:matching_blocks",
+              "offset": [
+                0,
+                1,
+                0
+              ],
+              "blocks": [
+                "minecraft:tuff_bricks",
+                "minecraft:chiseled_tuff",
+                "minecraft:polished_tuff_slab",
+                "minecraft:polished_tuff_stairs"
+              ]
+            },
+            {
+              "type": "minecraft:any_of",
+              "predicates": [
+                {
+                  "type": "minecraft:not",
+                  "predicate": {
+                    "type": "minecraft:has_sturdy_face",
+                    "offset": [
+                      1,
+                      0,
+                      0
+                    ],
+                    "direction": "up"
+                  }
+                },
+                {
+                  "type": "minecraft:not",
+                  "predicate": {
+                    "type": "minecraft:has_sturdy_face",
+                    "offset": [
+                      -1,
+                      0,
+                      0
+                    ],
+                    "direction": "up"
+                  }
+                },
+                {
+                  "type": "minecraft:not",
+                  "predicate": {
+                    "type": "minecraft:has_sturdy_face",
+                    "offset": [
+                      0,
+                      0,
+                      1
+                    ],
+                    "direction": "up"
+                  }
+                },
+                {
+                  "type": "minecraft:not",
+                  "predicate": {
+                    "type": "minecraft:has_sturdy_face",
+                    "offset": [
+                      0,
+                      0,
+                      -1
+                    ],
+                    "direction": "up"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 15
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "feature": {
+    "type": "minecraft:sequence",
+    "features": [
+      "wythers:mushroom/terrain_layer_0",
+      "wythers:mushroom/terrain_layer_1",
+      "wythers:mushroom/terrain_layer_2",
+      "wythers:mushroom/terrain_layer_3",
+      "wythers:mushroom/terrain_layer_4",
+      "wythers:mushroom/terrain_layer_5",
+      "wythers:mushroom/terrain_layer_6",
+      "wythers:mushroom/terrain_layer_7",
+      "wythers:mushroom/terrain_layer_8",
+      "wythers:mushroom/terrain_layer_9",
+      "wythers:mushroom/mycelium_layer"
+    ]
+  },
+  "placement": []
+}

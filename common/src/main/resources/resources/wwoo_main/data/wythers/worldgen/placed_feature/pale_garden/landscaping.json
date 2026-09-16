@@ -1,0 +1,11 @@
+{
+  "feature": {
+    "type": "minecraft:sequence",
+    "features": [
+      "wythers:pale_garden/floor",
+      "wythers:pale_garden/edges",
+      "wythers:pale_garden/ground_cleanup"
+    ]
+  },
+  "placement": []
+}

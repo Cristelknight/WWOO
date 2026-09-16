@@ -8,4 +8,4 @@
    **Be carefull when deleting files other than biomes!**
    
 ### Mod version 2.6.0 or above
-The same except the second step. The data folder is now located in ```resources/wwoo_main/```. So the same example for biomes would be ```resources/wwoo_main/data/minecraft/worldgen/biome/```
+The same, except the second step. The data folder is now located in ```resources/wwoo_main/```. So the same example for biomes would be ```resources/wwoo_main/data/minecraft/worldgen/biome/```

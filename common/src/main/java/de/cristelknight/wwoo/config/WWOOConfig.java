@@ -12,17 +12,17 @@ import net.minecraft.util.Util;
 import java.util.HashMap;
 
 public record WWOOConfig(
-        boolean navigableRivers,
-        /*boolean cliffsAndCoves,*/
-        boolean toweringTepuis,
+        /*boolean navigableRivers,
+        boolean cliffsAndCoves,
+        boolean toweringTepuis,*/
         boolean removeOres
 ) {
 
     public static final Codec<WWOOConfig> CODEC = RecordCodecBuilder.create(builder ->
             builder.group(
-                    Codec.BOOL.fieldOf("navigableRivers").forGetter(WWOOConfig::navigableRivers),
+                    //Codec.BOOL.fieldOf("navigableRivers").forGetter(WWOOConfig::navigableRivers),
                     //Codec.BOOL.fieldOf("cliffsAndCoves").forGetter(WWOOConfig::cliffsAndCoves),
-                    Codec.BOOL.fieldOf("toweringTepuis").forGetter(WWOOConfig::toweringTepuis),
+                    //Codec.BOOL.fieldOf("toweringTepuis").forGetter(WWOOConfig::toweringTepuis),
                     Codec.BOOL.fieldOf("removeOres").forGetter(WWOOConfig::removeOres)
             ).apply(builder, WWOOConfig::new)
     );
@@ -41,9 +41,9 @@ public record WWOOConfig(
         @Override
         public WWOOConfig getDefault() {
             return new WWOOConfig(
+                    /*false,
                     false,
-                    /*false,*/
-                    false,
+                    false,*/
                     true
             );
         }

@@ -1,5 +1,14 @@
 # Changelog
 
+## [3.0.0]
+- Complete rewrite for 26.3
+  - Some biomes overhauls are still missing or unfinished
+    - Missing: Ice Spikes, Mangrove Swamp
+    - Unfinished: Mushroom Fields, Swamp, Windswept Biomes
+  - Please point out any world-gen related bugs or issues you run into on our [discord]([Discord](https://discord.gg/G2UJ2FAuYh))!
+- Due to the location of Dappled Forest, the autumnal forest has been moved to the Windswept Forest biome, and the Dappled Forest has been overhauled into a temperate Asian landscape, only home of the giant panda.
+
+
 ## [2.7.1]
 - Updated to 26.2
   - does not use new blocks added in 26.2, straight port from 26.1.2

@@ -1,0 +1,305 @@
+{
+  "feature": {
+    "type": "minecraft:overlay",
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:overlay",
+          "features": [
+            {
+              "feature": {
+                "type": "minecraft:disk",
+                "state_provider": {
+                  "type": "minecraft:rule_based",
+                  "fallback": {
+                    "type": "minecraft:noise",
+                    "noise": {
+                      "base_octave": -5,
+                      "amplitude_modifiers": [
+                        1,
+                        1
+                      ],
+                      "octave_count": 2,
+                      "normalize": "legacy"
+                    },
+                    "scale": 1,
+                    "seed": -817103696,
+                    "states": [
+                      {
+                        "id": "minecraft:tuff"
+                      },
+                      {
+                        "id": "minecraft:tuff"
+                      },
+                      {
+                        "id": "minecraft:tuff"
+                      },
+                      {
+                        "id": "minecraft:deepslate",
+                        "properties": {
+                          "axis": "z"
+                        }
+                      },
+                      {
+                        "id": "minecraft:deepslate",
+                        "properties": {
+                          "axis": "z"
+                        }
+                      },
+                      {
+                        "id": "minecraft:deepslate",
+                        "properties": {
+                          "axis": "z"
+                        }
+                      }
+                    ]
+                  },
+                  "rules": [
+                    {
+                      "if_true": {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          1,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:air",
+                          "minecraft:water"
+                        ]
+                      },
+                      "then": {
+                        "type": "minecraft:noise",
+                        "noise": {
+                          "base_octave": -5,
+                          "amplitude_modifiers": [
+                            1,
+                            1
+                          ],
+                          "octave_count": 2,
+                          "normalize": "legacy"
+                        },
+                        "scale": 1,
+                        "seed": -817103696,
+                        "states": [
+                          {
+                            "id": "minecraft:mossy_cobblestone"
+                          },
+                          {
+                            "id": "minecraft:mossy_cobblestone"
+                          },
+                          {
+                            "id": "minecraft:tuff"
+                          },
+                          {
+                            "id": "minecraft:deepslate",
+                            "properties": {
+                              "axis": "z"
+                            }
+                          },
+                          {
+                            "id": "minecraft:mud"
+                          },
+                          {
+                            "id": "minecraft:mud"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "radius": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 8,
+                  "max_inclusive": 8
+                },
+                "half_height": 4,
+                "target": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_biomes",
+                      "biomes": [
+                        "river"
+                      ]
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "blocks": [
+                        "minecraft:dirt",
+                        "minecraft:grass_block"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "placement": [
+                {
+                  "type": "minecraft:count",
+                  "count": 30
+                },
+                {
+                  "type": "minecraft:in_square"
+                },
+                {
+                  "type": "minecraft:heightmap",
+                  "heightmap": "OCEAN_FLOOR_WG"
+                }
+              ]
+            },
+            {
+              "feature": {
+                "type": "minecraft:disk",
+                "state_provider": {
+                  "type": "minecraft:rule_based",
+                  "fallback": {
+                    "type": "minecraft:noise",
+                    "noise": {
+                      "base_octave": -5,
+                      "amplitude_modifiers": [
+                        1,
+                        1
+                      ],
+                      "octave_count": 2,
+                      "normalize": "legacy"
+                    },
+                    "scale": 1,
+                    "seed": -817103696,
+                    "states": [
+                      {
+                        "id": "minecraft:tuff"
+                      },
+                      {
+                        "id": "minecraft:tuff"
+                      },
+                      {
+                        "id": "minecraft:tuff"
+                      },
+                      {
+                        "id": "minecraft:deepslate",
+                        "properties": {
+                          "axis": "z"
+                        }
+                      },
+                      {
+                        "id": "minecraft:deepslate",
+                        "properties": {
+                          "axis": "z"
+                        }
+                      },
+                      {
+                        "id": "minecraft:deepslate",
+                        "properties": {
+                          "axis": "z"
+                        }
+                      }
+                    ]
+                  },
+                  "rules": [
+                    {
+                      "if_true": {
+                        "type": "minecraft:matching_blocks",
+                        "offset": [
+                          0,
+                          1,
+                          0
+                        ],
+                        "blocks": [
+                          "minecraft:air",
+                          "minecraft:water"
+                        ]
+                      },
+                      "then": {
+                        "type": "minecraft:noise",
+                        "noise": {
+                          "base_octave": -5,
+                          "amplitude_modifiers": [
+                            1,
+                            1
+                          ],
+                          "octave_count": 2,
+                          "normalize": "legacy"
+                        },
+                        "scale": 1,
+                        "seed": -817103696,
+                        "states": [
+                          {
+                            "id": "minecraft:mossy_cobblestone"
+                          },
+                          {
+                            "id": "minecraft:mossy_cobblestone"
+                          },
+                          {
+                            "id": "minecraft:tuff"
+                          },
+                          {
+                            "id": "minecraft:deepslate",
+                            "properties": {
+                              "axis": "z"
+                            }
+                          },
+                          {
+                            "id": "minecraft:mud"
+                          },
+                          {
+                            "id": "minecraft:mud"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "radius": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 3,
+                  "max_inclusive": 5
+                },
+                "half_height": 1,
+                "target": {
+                  "type": "minecraft:all_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_biomes",
+                      "biomes": [
+                        "taiga"
+                      ]
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "blocks": [
+                        "minecraft:dirt",
+                        "minecraft:grass_block"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "placement": [
+                {
+                  "type": "minecraft:count",
+                  "count": 30
+                },
+                {
+                  "type": "minecraft:in_square"
+                },
+                {
+                  "type": "minecraft:heightmap",
+                  "heightmap": "OCEAN_FLOOR_WG"
+                },
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:matching_fluids",
+                    "fluids": "minecraft:water"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "placement": []
+      }
+    ]
+  },
+  "placement": []
+}

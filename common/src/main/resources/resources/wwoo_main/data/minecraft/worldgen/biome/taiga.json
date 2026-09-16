@@ -137,7 +137,9 @@
       "wythers:bedrock_seal",
       "wythers:stony_cliffs",
       "wythers:placer/taiga",
-      "wythers:yellowstone/sequence"
+      "wythers:yellowstone/sequence",
+      "wythers:mountains/scree",
+      "wythers:mountains/scree_spread"
     ],
     [
       "minecraft:lake_lava_underground",
@@ -154,6 +156,7 @@
     [],
     [],
     [
+      "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
       "minecraft:ore_granite_lower",
@@ -181,6 +184,7 @@
       "minecraft:underwater_magma",
       "minecraft:disk_clay",
       "minecraft:disk_gravel",
+      "wythers:taigas/gravel_shore",
       "wythers:forest/boreal"
     ],
     [],

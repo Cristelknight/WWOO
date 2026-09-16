@@ -137,7 +137,6 @@
         "water_creature": []
       }
     },
-    "minecraft:gameplay/piglins_zombify": false,
     "minecraft:gameplay/snow_golem_melts": true,
     "minecraft:visual/sky_color": 7782102,
     "minecraft:visual/fog_color": 13880215,

@@ -39,7 +39,6 @@
         "water_creature": []
       }
     },
-    "minecraft:gameplay/piglins_zombify": false,
     "minecraft:gameplay/can_pillager_patrol_spawn": false,
     "minecraft:gameplay/increased_fire_burnout": true,
     "minecraft:visual/sky_color": 6269917,

@@ -74,7 +74,6 @@
         "water_creature": []
       }
     },
-    "minecraft:gameplay/piglins_zombify": false,
     "minecraft:audio/background_music": {},
     "minecraft:audio/music_volume": 0,
     "minecraft:visual/sky_color": 12171705,

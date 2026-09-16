@@ -85,7 +85,6 @@
         "water_creature": []
       }
     },
-    "minecraft:gameplay/piglins_zombify": false,
     "minecraft:visual/sky_color": 6078719,
     "minecraft:visual/fog_color": 9760255
   },

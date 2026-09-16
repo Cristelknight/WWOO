@@ -116,7 +116,6 @@
         ]
       }
     },
-    "minecraft:gameplay/piglins_zombify": false,
     "minecraft:visual/sky_color": 5211317,
     "minecraft:visual/fog_color": 13224393,
     "minecraft:visual/cloud_color": "#66ffffff"

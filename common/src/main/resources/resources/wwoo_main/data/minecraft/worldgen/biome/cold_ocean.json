@@ -130,7 +130,6 @@
         ]
       }
     },
-    "minecraft:gameplay/piglins_zombify": false,
     "minecraft:visual/sky_color": 8699120
   },
   "carvers": [

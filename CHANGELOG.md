@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.0.1]
+- very small fixes
+- added gravel shores to taiga biome
+
 ## [3.0.0]
 - Complete rewrite for 26.3
   - Some biomes overhauls are still missing or unfinished
